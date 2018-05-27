@@ -1,9 +1,13 @@
 backend:
   name: git-gateway
   branch: master
+  
+#publish_mode: editorial_workflow  #use for adding full preview
 
 media_folder: static/img
 public_folder: /img
+
+display_url: https://www.amandabrookfield.com
 
 collections:
   - name: "blog"
