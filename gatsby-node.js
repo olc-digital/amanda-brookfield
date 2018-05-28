@@ -84,15 +84,15 @@ exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
   }
 }
 
-exports.onCreatePage = async ({page, boundActionCreators}) => {
-  const {createPage} = boundActionCreators
+// exports.onCreatePage = async ({page, boundActionCreators}) => {
+//   const {createPage} = boundActionCreators
 
-  return new Promise((resolve, reject) => {
-    if (page.path.match(/^\/books/)) {
-      page.layout = 'books'
-      createPage(page)
-    }
+//   return new Promise((resolve, reject) => {
+//     if (page.path.match(/^\/books/)) {
+//       page.layout = 'books'
+//       createPage(page)
+//     }
 
-    resolve()
-  })
-}
+//     resolve()
+//   })
+// }

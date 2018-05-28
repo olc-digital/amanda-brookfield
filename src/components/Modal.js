@@ -1,7 +1,7 @@
 import React from 'react'
 import {books, publishers} from '../data'
 
-const Modal = ({isActive, bookId = 'DEFAULT', closeModal}) => {
+const Modal = ({isActive, bookId = 'FTLOAD', closeModal}) => {
   return (
     <div className={'modal ' + (isActive && 'is-active')}>
       <div className="modal-background" onClick={closeModal} />
