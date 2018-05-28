@@ -2,9 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import BaseLayout from './_base'
+import BooksSidebar from '../components/BooksSidebar'
 
 const TemplateWrapper = ({children}) => {
-  return <BaseLayout>{children()}</BaseLayout>
+  return (
+    <BaseLayout>
+      <BooksSidebar />
+      {children()}
+    </BaseLayout>
+  )
 }
 
 TemplateWrapper.propTypes = {
