@@ -6,25 +6,25 @@ html {
 }
 
 body {
-  font: 16px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font: 16px 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   color: #000;
 }
 
 @font-face {
-  font-family: "ariesregular";
-  src: url("../assets/fonts/aries-roman-webfont.eot");
-  src: url("../assets/fonts/aries-roman-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../assets/fonts/aries-roman-webfont.woff") format("woff"),
-    url("../assets/fonts/aries-roman-webfont.ttf") format("truetype"),
-    url("../assets/fonts/aries-roman-webfont.svg#ariesregular") format("svg");
+  font-family: 'ariesregular';
+  src: url('../assets/fonts/aries-roman-webfont.eot');
+  src: url('../assets/fonts/aries-roman-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/aries-roman-webfont.woff') format('woff'),
+    url('../assets/fonts/aries-roman-webfont.ttf') format('truetype'),
+    url('../assets/fonts/aries-roman-webfont.svg#ariesregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 .aries {
-  font-family: "ariesregular", arial;
+  font-family: 'ariesregular', arial;
 }
 
 /* ~~ Element/tag selectors ~~ */
@@ -76,7 +76,7 @@ a:focus {
   margin: 0 auto;
 }
 .generalheading {
-  font-family: "ariesregular";
+  font-family: 'ariesregular';
   font-size: 25px;
 }
 a.generalheading {
@@ -129,7 +129,7 @@ a.generalheading {
   text-align: right;
 }
 #titlelink {
-  font-family: "ariesregular";
+  font-family: 'ariesregular';
   font-size: 90px;
   line-height: 80px;
   text-decoration: none;
@@ -178,16 +178,20 @@ a#bloglink {
 a#eventslink {
   background-position: -751px 0;
 }
-a#bookslink:hover {
+a#bookslink:hover,
+a#bookslink.active {
   background-position: 0 180px;
 }
-a#authorlink:hover {
+a#authorlink:hover,
+a#authorlink.active {
   background-position: -250px 180px;
 }
-a#bloglink:hover {
+a#bloglink:hover,
+a#bloglink.active {
   background-position: -495px 180px;
 }
-a#eventslink:hover {
+a#eventslink:hover,
+a#eventslink.active {
   background-position: -751px 180px;
 }
 /*------------------------------- 
@@ -209,7 +213,7 @@ a#eventslink:hover {
   clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
   text-align: center;
   font-size: 18px;
-  font-family: "ariesregular";
+  font-family: 'ariesregular';
 }
 .footer a {
   text-decoration: none;
@@ -238,7 +242,7 @@ a#eventslink:hover {
   padding: 30px 0 30px 0;
 }
 .homeheading {
-  font-family: "ariesregular";
+  font-family: 'ariesregular';
   font-size: 28px;
 }
 .homeheading--inline {
@@ -249,7 +253,7 @@ a#eventslink:hover {
 }
 a.button {
   display: inline-block;
-  font-family: "ariesregular";
+  font-family: 'ariesregular';
   font-size: 20px;
   padding-top: 9px;
   text-decoration: none;
@@ -267,7 +271,7 @@ a.buybutton {
 }
 a.buttonsmall {
   display: inline-block;
-  font-family: "ariesregular";
+  font-family: 'ariesregular';
   font-size: 12px;
   padding-top: 5px;
   text-decoration: none;
@@ -399,7 +403,7 @@ a#linksicon:hover {
   width: 130px;
 }
 .booksheading {
-  font-family: "ariesregular";
+  font-family: 'ariesregular';
   font-size: 25px;
   margin-bottom: 10px;
   display: block;
@@ -492,11 +496,11 @@ div#content h3,
 div#content h4,
 div#content h5,
 div#content h6 {
-  font-family: "ariesregular";
+  font-family: 'ariesregular';
   font-size: 25px;
 }
 h3.widgettitle {
-  font-family: "ariesregular";
+  font-family: 'ariesregular';
   font-size: 25px;
 }
 body div#content {
@@ -511,7 +515,7 @@ div.sidebar a {
   font-size: 16px;
 }
 div.navigation a {
-  font-family: "ariesregular";
+  font-family: 'ariesregular';
   font-style: normal;
 }
 /*------------------------------- 

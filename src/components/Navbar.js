@@ -12,22 +12,22 @@ const Navbar = () => (
     <nav id="navtop">
       <ul>
         <li>
-          <Link to="/books" id="bookslink">
+          <Link to="/books" id="bookslink" activeClassName="active">
             <span>Books</span>
           </Link>
         </li>
         <li>
-          <Link to="/author" id="authorlink">
+          <Link to="/author" id="authorlink" activeClassName="active">
             <span>Author</span>
           </Link>
         </li>
         <li>
-          <Link to="/blog" id="bloglink">
+          <Link to="/blog" id="bloglink" activeClassName="active">
             <span>Blog</span>
           </Link>
         </li>
         <li>
-          <Link to="/events" id="eventslink">
+          <Link to="/events" id="eventslink" activeClassName="active">
             <span>Events</span>
           </Link>
         </li>
