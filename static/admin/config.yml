@@ -50,7 +50,6 @@ collections:
 
   - name: "books"
     label: "Books"
-    folder: "src/pages/books"
     files:
       - file: "src/pages/books/for-the-love-of-a-dog.md"
         label: "For The Love of A Dog"
