@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const FeatureGrid = ({ gridItems }) => (
+const FeatureGrid = ({gridItems}) => (
   <div className="columns is-multiline">
     {gridItems.map(item => (
       <div key={item.image} className="column is-6">
@@ -21,7 +21,7 @@ FeatureGrid.propTypes = {
     PropTypes.shape({
       image: PropTypes.string,
       text: PropTypes.string,
-    })
+    }),
   ),
 }
 

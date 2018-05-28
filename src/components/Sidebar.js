@@ -1,11 +1,11 @@
 import React from 'react'
 
-import tlKindle from '../img/tl-kindle.jpg'
-import afmKindle from '../img/afm-kindle.jpg'
-import rlKindle from '../img/rl-kindle.jpg'
-import sidebarLine from '../img/sidebarline.jpg'
+import tlKindle from '../assets/tl-kindle.jpg'
+import afmKindle from '../assets/afm-kindle.jpg'
+import rlKindle from '../assets/rl-kindle.jpg'
+import sidebarLine from '../assets/sidebarline.jpg'
 
-const Sidebar = () => (
+const Sidebar = ({openModal}) => (
   <div className="sidebar1">
     <div className="sidebarsec" id="kindle">
       <a
@@ -40,7 +40,13 @@ const Sidebar = () => (
           >
             Read More
           </a>
-          <a href="#buytl" className="buybuttonsmall buttonsmall" rel="facebox">
+          <a
+            href="#"
+            className="buybuttonsmall buttonsmall"
+            onClick={e => {
+              openModal(e, 'TL')
+            }}
+          >
             Buy
           </a>
           <a
@@ -49,7 +55,13 @@ const Sidebar = () => (
           >
             Read More
           </a>
-          <a href="#buyrl" className="buybuttonsmall buttonsmall" rel="facebox">
+          <a
+            href="#"
+            className="buybuttonsmall buttonsmall"
+            onClick={e => {
+              openModal(e, 'RL')
+            }}
+          >
             Buy
           </a>
           <a
@@ -59,9 +71,11 @@ const Sidebar = () => (
             Read More
           </a>
           <a
-            href="#buyafm"
+            href="#"
             className="buybuttonsmall buttonsmall"
-            rel="facebox"
+            onClick={e => {
+              openModal(e, 'AFM')
+            }}
           >
             Buy
           </a>
