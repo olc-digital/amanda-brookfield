@@ -42,54 +42,54 @@ export default class BooksPage extends Component {
         />
         <div className="bookscontent" style={{width: '680px'}}>
           <div id="grid">
-            <Link to="/books/for-the-love-of-a-dog" className="hoverfade">
+            <Link to="/books/for-the-love-of-dog" className="hoverfade">
               <img src={ftload} alt="For the Love of a Dog" />
             </Link>
-            <a href="books/the-love-child.html" className="hoverfade">
+            <Link to="/books/the-love-child" className="hoverfade">
               <img src={tlc} alt="The Love Child" />
-            </a>
-            <a href="books/before-i-knew-you.html" className="hoverfade">
+            </Link>
+            <Link to="/books/before-i-knew-you" className="hoverfade">
               <img src={biky} alt="Before I Knew You" />
-            </a>
-            <a href="books/life-begins.html" className="hoverfade">
+            </Link>
+            <Link to="/books/life-begins" className="hoverfade">
               <img src={lb} alt="Life Begins" />
-            </a>
-            <a href="books/the-simple-rules-of-love.html" className="hoverfade">
+            </Link>
+            <Link to="/books/the-simple-rules-of-love" className="hoverfade">
               <img src={tsrol} alt="The Simple Rules of Love" />
-            </a>
-            <a href="books/relative-love.html" className="hoverfade">
+            </Link>
+            <Link to="/books/relative-love" className="hoverfade">
               <img src={rl} alt="Relative Love" />
-            </a>
-            <a href="books/sisters-and-husbands.html" className="hoverfade">
+            </Link>
+            <Link to="/books/sisters-and-husbands" className="hoverfade">
               <img src={sah} alt="Sisters and Husbands" />
-            </a>
-            <a href="books/a-family-man.html" className="hoverfade">
+            </Link>
+            <Link to="/books/a-family-man" className="hoverfade">
               <img src={afm} alt="A Family Man" />
-            </a>
-            <a href="books/the-lover.html" className="hoverfade">
+            </Link>
+            <Link to="/books/the-lover" className="hoverfade">
               <img src={tl} alt="The Lover" />
-            </a>
-            <a href="books/single-lives.html" className="hoverfade">
+            </Link>
+            <Link to="/books/single-lives" className="hoverfade">
               <img src={sl} alt="Single Lives" />
-            </a>
-            <a href="books/marriage-games.html" className="hoverfade">
+            </Link>
+            <Link to="/books/marriage-games" className="hoverfade">
               <img src={mg} alt="Marriage Games" />
-            </a>
-            <a href="books/the-godmother.html" className="hoverfade">
+            </Link>
+            <Link to="/books/the-godmother" className="hoverfade">
               <img src={tg} alt="The Grandmother" />
-            </a>
-            <a href="books/a-cast-of-smiles.html" className="hoverfade">
+            </Link>
+            <Link to="/books/a-cast-of-smiles" className="hoverfade">
               <img src={acos} alt="A Cast of Smiles" />
-            </a>
-            <a href="books/a-summer-affair.html" className="hoverfade">
+            </Link>
+            <Link to="/books/a-summer-affair" className="hoverfade">
               <img src={asa} alt="A Summer Affair" />
-            </a>
-            <a href="books/walls-of-glass.html" className="hoverfade">
+            </Link>
+            <Link to="/books/walls-of-glass" className="hoverfade">
               <img src={wog} alt="Walls of Glass" />
-            </a>
-            <a href="books/alice-alone.html" className="hoverfade">
+            </Link>
+            <Link to="/books/alice-alone" className="hoverfade">
               <img src={aa} alt="Alice Alone" />
-            </a>
+            </Link>
           </div>
         </div>
       </Fragment>

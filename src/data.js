@@ -77,7 +77,7 @@ export default {
     },
 
     SAH: {
-      title: 'Sisters &amp; Husbands',
+      title: 'Sisters & Husbands',
       link: '/books/sisters-and-husbands',
       color: '#473a89',
       covers: {
