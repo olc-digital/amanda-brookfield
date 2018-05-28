@@ -42,9 +42,9 @@ export default class BooksPage extends Component {
         />
         <div className="bookscontent" style={{width: '680px'}}>
           <div id="grid">
-            <a href="books/for-the-love-of-a-dog.html" className="hoverfade">
+            <Link to="/books/for-the-love-of-a-dog" className="hoverfade">
               <img src={ftload} alt="For the Love of a Dog" />
-            </a>
+            </Link>
             <a href="books/the-love-child.html" className="hoverfade">
               <img src={tlc} alt="The Love Child" />
             </a>

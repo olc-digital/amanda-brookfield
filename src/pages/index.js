@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 import Sidebar from '../components/Sidebar'
-import Modal from '../components/Modal'
 
 import portrait from '../assets/amandaphoto.jpg'
 import contentLine from '../assets/contentline.jpg'
@@ -12,26 +11,10 @@ import tlccover from '../assets/tlccover.jpg'
 import bikycover from '../assets/bikycover.jpg'
 
 export default class IndexPage extends Component {
-  state = {
-    isModalActive: false,
-    bookId: undefined,
-  }
-  openModal = (e, bookId) => {
-    e.preventDefault()
-    this.setState({isModalActive: true, bookId})
-  }
-  closeModal = () => {
-    this.setState({isModalActive: false})
-  }
   render() {
     return (
       <section className="section">
-        <Modal
-          isActive={this.state.isModalActive}
-          bookId={this.state.bookId}
-          closeModal={this.closeModal}
-        />
-        <Sidebar openModal={this.openModal} />
+        <Sidebar openModal={this.props.openModal} />
         <div className="homecontent">
           <div className="paddedcontent">
             <div id="welcomehome">
@@ -89,7 +72,7 @@ export default class IndexPage extends Component {
                     href="#"
                     className="readmore button"
                     onClick={e => {
-                      this.openModal(e, 'FTLOAD')
+                      this.props.openModal(e, 'FTLOAD')
                     }}
                   >
                     Pre-order
@@ -127,7 +110,7 @@ export default class IndexPage extends Component {
                     href="#"
                     className="buybutton button"
                     onClick={e => {
-                      this.openModal(e, 'TLC')
+                      this.props.openModal(e, 'TLC')
                     }}
                   >
                     Buy
@@ -164,7 +147,7 @@ export default class IndexPage extends Component {
                     href="#"
                     className="buybutton button"
                     onClick={e => {
-                      this.openModal(e, 'BIKY')
+                      this.props.openModal(e, 'BIKY')
                     }}
                   >
                     Buy
