@@ -4,32 +4,32 @@ import Link from 'gatsby-link'
 const Navbar = () => (
   <header className="header">
     <div id="title">
-      <a id="titlelink" href="index.html">
+      <Link to="/" id="titlelink">
         AMANDA
         <br /> BROOKFIELD
-      </a>
+      </Link>
     </div>
     <nav id="navtop">
       <ul>
         <li>
-          <a href="books.html" id="bookslink">
+          <Link to="/books" id="bookslink">
             <span>Books</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="author.html" id="authorlink">
+          <Link to="/author" id="authorlink">
             <span>Author</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/blog/" id="bloglink">
+          <Link to="/blog" id="bloglink">
             <span>Blog</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="events.html" id="eventslink">
+          <Link to="/events" id="eventslink">
             <span>Events</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

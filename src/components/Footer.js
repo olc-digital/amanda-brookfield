@@ -1,23 +1,24 @@
-import React from "react";
+import React from 'react'
+import Link from 'gatsby-link'
 
-import footerLine from "../assets/footerline.jpg";
+import footerLine from '../assets/footerline.jpg'
 
 const Footer = () => (
   <footer className="footer">
     <div className="footerline">
       <img src={footerLine} />
     </div>
-    <a href="index.html">Home</a>
+    <Link to="/">Home</Link>
     <span> | </span>
-    <a href="books.html">Books</a>
+    <Link to="/books">Books</Link>
     <span> | </span>
-    <a href="author.html">Author</a>
+    <Link to="/author">Author</Link>
     <span> | </span>
-    <a href="/blog/">Blog</a>
+    <Link to="/blog">Blog</Link>
     <span> | </span>
-    <a href="pressevents.html">Events</a>
+    <Link to="/events">Events</Link>
     <br /> © Amanda Brookfield 2018
   </footer>
-);
+)
 
-export default Footer;
+export default Footer
