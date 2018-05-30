@@ -1,16 +1,14 @@
-// const fileName = 'amandabrookfield.wordpress.2018-05-28.xml'
-
 const fs = require('fs')
 const moment = require('moment')
 const parseString = require('xml2js')
 const parser = new parseString.Parser()
 const kebabCase = require('just-kebab-case')
-const converter = require('html-to-markdown')
+const mdConverter = require('html-to-markdown')
 
 const fileName = 'amandabrookfield.wordpress.2018-05-28.xml'
 const data = fs.readFileSync(`${__dirname}/${fileName}`)
 
-const createFileContents = (title, body, date, description, tags) => `\
+const generateStringContents = (title, body, date, description, tags) => `\
 ---
 templateKey: blog-post
 title: ${title}
@@ -40,8 +38,8 @@ function toMarkdown({
   const moDate = moment(date)
   const filename = `${moDate.format('YYYY-MM-DD')}-${kebabName ||
     kebabCase(title)}.md`
-  const markdownBody = converter.convert(body) //turndownService.turndown(body)
-  const data = createFileContents(
+  const markdownBody = mdConverter.convert(body)
+  const data = generateStringContents(
     title,
     markdownBody,
     moDate,
