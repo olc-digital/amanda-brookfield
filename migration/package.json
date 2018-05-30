@@ -1,0 +1,17 @@
+{
+  "name": "ab-migation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "migrate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "html-to-markdown": "^1.0.0",
+    "just-kebab-case": "^1.0.0",
+    "moment": "^2.22.1",
+    "xml2js": "^0.4.19"
+  }
+}
