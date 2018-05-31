@@ -16,6 +16,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             }
             frontmatter {
               tags
+              date(formatString: "YYYY")
               templateKey
             }
           }
@@ -47,16 +48,21 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 
     // Tag pages:
     let tags = []
+    let years = []
     // Iterate through each post, putting all found tags into `tags`
     posts.forEach(edge => {
       if (_.get(edge, `node.frontmatter.tags`)) {
         tags = tags.concat(edge.node.frontmatter.tags)
       }
+      if (_.get(edge, `node.frontmatter.date`)) {
+        years = years.concat(edge.node.frontmatter.date)
+      }
     })
     // Eliminate duplicate tags
     tags = _.uniq(tags)
+    years = _.uniq(years)
 
-    // Make tag pages
+    // // Make tag pages
     tags.forEach(tag => {
       const tagPath = `/tags/${_.kebabCase(tag)}/`
 
@@ -65,6 +71,16 @@ exports.createPages = ({boundActionCreators, graphql}) => {
         component: path.resolve(`src/templates/tags.js`),
         context: {
           tag,
+        },
+      })
+    })
+    years.forEach(year => {
+      const yearPath = `/years/${_.kebabCase(year)}/`
+      createPage({
+        path: yearPath,
+        component: path.resolve(`src/templates/years.js`),
+        context: {
+          yearGlob: `${year}*`,
         },
       })
     })
@@ -80,6 +96,12 @@ exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
       name: `slug`,
       node,
       value,
+    })
+    const date = node.frontmatter.date || null
+    createNodeField({
+      name: `year`,
+      node,
+      value: new Date(date).getFullYear(),
     })
   }
 }

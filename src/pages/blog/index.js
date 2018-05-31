@@ -5,10 +5,27 @@ import Link from 'gatsby-link'
 export default class IndexPage extends React.Component {
   render() {
     const {data} = this.props
-    const {edges: posts} = data.allMarkdownRemark
-
+    const {edges: posts, group: years} = data.allMarkdownRemark
     return (
       <section className="section">
+        <h3>Recent Posts</h3>
+        <ul>
+          {posts.map(({node: post}) => (
+            <li key={post.id}>
+              <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+            </li>
+          ))}
+        </ul>
+        <h3>Archive</h3>
+        <ul>
+          {years.map(({fieldValue: year, totalCount}, i) => (
+            <li key={i}>
+              <Link to={'/'}>
+                {year} ({totalCount})
+              </Link>
+            </li>
+          ))}
+        </ul>
         <div className="container">
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
@@ -56,6 +73,10 @@ export const pageQuery = graphql`
       sort: {order: DESC, fields: [frontmatter___date]}
       filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
     ) {
+      group(field: fields___year) {
+        fieldValue
+        totalCount
+      }
       edges {
         node {
           excerpt(pruneLength: 400)

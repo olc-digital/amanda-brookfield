@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    titlePrefix: 'Amanda Brookfield:',
+    title:
+      'Amanda Brookfield: Official website of the bestselling Penguin author',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

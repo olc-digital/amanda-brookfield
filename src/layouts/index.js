@@ -23,7 +23,7 @@ export default class MainLayout extends Component {
   render() {
     return (
       <div className="container">
-        <Helmet title="Amanda Brookfield: Official website of the bestselling Penguin author" />
+        <Helmet title={this.props.data.site.siteMetadata.title} />
         <Navbar />
         {this.props.location.pathname.match(/^\/books/) && <BooksSidebar />}
         <div>
@@ -46,3 +46,13 @@ export default class MainLayout extends Component {
 MainLayout.propTypes = {
   children: PropTypes.func,
 }
+
+export const pageQuery = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

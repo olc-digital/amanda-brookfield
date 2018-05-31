@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
+import {kebabCase} from 'lodash'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Content, { HTMLContent } from '../components/Content'
+import Content, {HTMLContent} from '../components/Content'
 
 export const BlogPostTemplate = ({
   content,
@@ -27,7 +27,7 @@ export const BlogPostTemplate = ({
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
+              <div style={{marginTop: `4rem`}}>
                 <h4>Tags</h4>
                 <ul className="taglist">
                   {tags.map(tag => (
@@ -50,18 +50,24 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.instanceOf(Helmet),
+  helmet: PropTypes.object,
 }
 
-const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+const BlogPost = ({data}) => {
+  const {markdownRemark: post, site} = data
 
   return (
     <BlogPostTemplate
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
-      helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
+      helmet={
+        <Helmet
+          title={`${site.siteMetadata.titlePrefix} ${
+            post.frontmatter.title
+          } | Blog`}
+        />
+      }
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}
     />
@@ -78,7 +84,7 @@ export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       id
       html
       frontmatter {
@@ -86,6 +92,11 @@ export const pageQuery = graphql`
         title
         description
         tags
+      }
+    }
+    site {
+      siteMetadata {
+        titlePrefix
       }
     }
   }
