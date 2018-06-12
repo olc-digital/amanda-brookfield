@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {Component} from 'react'
+import {Timeline} from 'react-twitter-widgets'
 
 import tlKindle from '../assets/tl-kindle.jpg'
 import afmKindle from '../assets/afm-kindle.jpg'
@@ -135,13 +136,16 @@ const Sidebar = ({openModal}) => (
           <img src={sidebarLine} />{' '}
         </div>
         <div id="twittertimeline" style={{width: '263px'}}>
-          <a
-            className="twitter-timeline"
-            href="https://twitter.com/words100"
-            data-widget-id="278857650773557248"
-          >
-            Tweets by @words100
-          </a>
+          <Timeline
+            dataSource={{
+              sourceType: 'profile',
+              screenName: 'ABrookfield1',
+            }}
+            options={{
+              username: 'ABrookfield1',
+              height: '450',
+            }}
+          />
         </div>
       </div>
     </div>

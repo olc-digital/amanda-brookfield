@@ -23,7 +23,9 @@ export default class MainLayout extends Component {
   render() {
     return (
       <div className="container">
-        <Helmet title={this.props.data.site.siteMetadata.title} />
+        <Helmet>
+          <title>{this.props.data.site.siteMetadata.title}</title>
+        </Helmet>
         <Navbar />
         {this.props.location.pathname.match(/^\/books/) && <BooksSidebar />}
         <div>

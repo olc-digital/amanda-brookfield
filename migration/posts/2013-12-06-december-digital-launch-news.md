@@ -11,9 +11,9 @@ tags:
 
 &nbsp;
 
-** <a href="http://www.amazon.co.uk/dp/B00H2GYBVO">http://www.amazon.co.uk/dp/B00H2GYBVO **</strong>
+** <a href="http://www.amazon.co.uk/dp/B00H2GYBVO">http://www.amazon.co.uk/dp/B00H2GYBVO</a> **
 
-** <a href="http://www.amazon.co.uk/dp/B00H2GYBP0">http://www.amazon.co.uk/dp/B00H2GYBP0 **</strong>
+** <a href="http://www.amazon.co.uk/dp/B00H2GYBP0">http://www.amazon.co.uk/dp/B00H2GYBP0</a> **
 
 &nbsp;
 

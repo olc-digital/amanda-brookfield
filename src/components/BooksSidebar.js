@@ -24,54 +24,51 @@ const BooksSidebar = () => (
       <span className="booksheading">Articles</span>
       <ul>
         <li>
-          <a
-            href="otherpubs/how-i-found-my-voice.html"
-            className="hoverfadetext"
-          >
+          <Link to="otherpubs/how-i-found-my-voice" className="hoverfadetext">
             How I Found My Voice
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="otherpubs/under-one-roof.html" className="hoverfadetext">
+          <Link to="otherpubs/under-one-roof" className="hoverfadetext">
             Under One Roof
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="otherpubs/losing-my-father.html" className="hoverfadetext">
+          <Link to="otherpubs/losing-my-father" className="hoverfadetext">
             Losing My Father
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="otherpubs/gap-year-a-mothers-story.html"
+          <Link
+            to="otherpubs/gap-year-a-mothers-story"
             className="hoverfadetext"
           >
-            Gap Year - A Mother's Story
-          </a>
+            Gap Year - A Mother’s Story
+          </Link>
         </li>
       </ul>
       <br />
       <span className="booksheading">Short Stories</span>
       <ul>
         <li>
-          <a href="otherpubs/the-house-sitter.html" className="hoverfadetext">
+          <Link to="otherpubs/the-house-sitter" className="hoverfadetext">
             The House Sitter
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="otherpubs/afterlife.html" className="hoverfadetext">
+          <Link to="otherpubs/afterlife" className="hoverfadetext">
             Afterlife
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="otherpubs/the-farewell.html" className="hoverfadetext">
+          <Link to="otherpubs/the-farewell" className="hoverfadetext">
             The Farewell
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="otherpubs/guardian-angel.html" className="hoverfadetext">
+          <Link to="otherpubs/guardian-angel" className="hoverfadetext">
             Guardian Angel
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
