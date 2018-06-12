@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {Timeline} from 'react-twitter-widgets'
 
 import tlKindle from '../assets/tl-kindle.jpg'
