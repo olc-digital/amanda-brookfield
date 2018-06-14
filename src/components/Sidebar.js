@@ -1,5 +1,6 @@
 import React from 'react'
 import {Timeline} from 'react-twitter-widgets'
+import FacebookProvider, {Like} from 'react-facebook'
 
 import tlKindle from '../assets/tl-kindle.jpg'
 import afmKindle from '../assets/afm-kindle.jpg'
@@ -104,17 +105,17 @@ const Sidebar = ({openModal}) => (
             margin: '0 10px',
           }}
         >
-          <div
-            className="fb-like"
-            data-href="http://www.facebook.com/amandabrookfield100"
-            data-send="false"
-            data-layout="button_count"
-            data-width="450"
-            data-show-faces="false"
-            data-font="arial"
-          >
-            {' '}
-          </div>
+          <FacebookProvider appId="176347892451294">
+            <Like
+              href="http://www.facebook.com/amandabrookfield100"
+              showFaces={false}
+              layout="button_count"
+              send={false}
+              font="arial"
+              width="450"
+              className="fb-like"
+            />
+          </FacebookProvider>
         </div>
         <a
           href="http://www.facebook.com/amandabrookfield100"
