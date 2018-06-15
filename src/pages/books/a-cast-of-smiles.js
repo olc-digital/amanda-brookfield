@@ -1,36 +1,23 @@
 import React from 'react'
 import BookInfo from '../../components/BookInfo'
 
-import ftloadCover from '../../assets/covers/bftload.jpg'
+import ftloadCover from '../../assets/covers/bacos.jpg'
 
 const BookDescription = ({openModal}) => {
   return (
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
-      blurb={`After the death of her mother and the end of a new relationship
-            leave her heartbroken, novelist Amanda Brookfield finds her once 
-            secure world imploding. As despair deepens, she latches onto the 
-            idea of getting a puppy just to revive her optimistic spirit. 
-            <br />
-            <br />Aware that her lifestyle will not suit becoming a dog-owner 
-            and warned by friends not to give up her freedom, Amanda nonetheless
-            cannot resist Mabel, an eight week old golden doodle. Arming herself
-            with an arsenal of equipment, she soon learns that there are no
-            short-cuts to training and caring for a dog. In the daily challenges
-            that ensue, the constant ups and downs, Amanda realises she is
-            starting to come to terms with her bereavement and the prospect of
-            facing the rest of her life alone.
-            <br />
-            <br />
-            <em>For The Love of a Dog</em> charts the bigger, more poignant
-            story about the labour of emotional recovery after the trauma of
-            loss. Mabel shines like a light throughout, the innocent architect
-            of rebuilding her owner’s shattered self-belief. Mabel’s own journey
-            is equally captivating, as she blossoms into a mischievous,
-            endearing head-turner of a companion – as affectionate as she is
-            glorious.`}
-      reviews={false}
+      blurb={`A group of young professional friends, with the world at their feet, gather for the glittering wedding of Julian
+          and Veronica. Yet behind their façade of jollity old passions and resentments are stirring. Gloria is tiring of
+          the endless pursuit of lovers, Katherine is tormented by her unrequited feelings for Julian, while George longs
+          to be accepted properly by his friends instead of the butt of their jokes. As the knots of emotional dishonesty
+          tighten, tragedy brews, promising to change all their lives forever.`}
+      reviews={`<div class="reviewtext">What is refreshing here is the author's conspicuous sanity and her sharp line in defence of reason… It could be
+            sentimental, but it isn’t.</div>
+          <div class="reviewref">The Guardian</div>
+          <div class="reviewtext">Amanda Brookfield's voice is young and clear… keeps a firm authorial hand </div>
+          <div class="reviewref">Observer</div>`}
     />
   )
 }

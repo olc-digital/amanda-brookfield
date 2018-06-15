@@ -270,7 +270,6 @@ a.buybutton {
   background-image: url(../assets/buybg.jpg);
 }
 a.buttonsmall {
-  display: inline-block;
   font-family: 'ariesregular';
   font-size: 12px;
   padding-top: 5px;
@@ -282,11 +281,13 @@ a.readmoresmall {
   width: 68px;
   height: 23px;
   background-image: url(../assets/readmorebgsmall.gif);
+  background-repeat: no-repeat;
 }
 a.buybuttonsmall {
   width: 32px;
   height: 21px;
   background-image: url(../assets/buybgsmall.jpg);
+  background-repeat: no-repeat;
 }
 .sidebar1 {
   float: right;
@@ -304,7 +305,6 @@ a.buybuttonsmall {
 .sidebaricon {
   width: 52px;
   height: 52px;
-  display: inline-block;
   float: left;
 }
 a#kindleicon {
@@ -314,6 +314,9 @@ a#kindleicon {
   margin-top: 3px;
 }
 a#kindleicon:hover {
+  background-position: 116px 0;
+}
+.sidebarsec:hover a#kindleicon {
   background-position: 116px 0;
 }
 .sidebarcontentcontainer.kindletop {
@@ -351,25 +354,16 @@ a#kindleicon:hover {
 a#fbicon {
   background-image: url(../assets/fb.jpg);
 }
-a#fbicon:hover {
-  background-position: 52px 0;
-}
 a#twittericon {
-  background-image: url(../assets/twitter.jpg);
-}
-a#twittericon:hover {
-  background-position: 53px 0;
+  background-image: url(../assets/twitter.png);
 }
 a#contacticon {
   background-image: url(../assets/contact.jpg);
 }
-a#contacticon:hover {
-  background-position: 52px 0;
-}
 a#linksicon {
   background-image: url(../assets/links.jpg);
 }
-a#linksicon:hover {
+.sidebarsec:hover > a {
   background-position: 52px 0;
 }
 .sidebarcontentcontainer {
@@ -379,6 +373,8 @@ a#linksicon:hover {
 .sidebarline {
   margin: 0;
   padding-bottom: 5px;
+  height: 3px;
+  line-height: 0;
 }
 #facebook .sidebarline {
   padding-bottom: 15px;
@@ -386,6 +382,9 @@ a#linksicon:hover {
 
 .sidebarcontentcontainer ul {
   list-style: none;
+}
+.sidebarcontentcontainer li {
+  margin-bottom: 4px;
 }
 /*------------------------------- 
 ------------ BOOKS ------------ 
@@ -443,8 +442,6 @@ a#linksicon:hover {
   /* text-align: justify; */
   width: 365px;
   float: left;
-}
-.bookreviews {
 }
 .reviewtext {
   font-style: italic;

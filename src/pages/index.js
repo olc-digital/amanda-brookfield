@@ -62,12 +62,12 @@ export default class IndexPage extends Component {
                 with it; I was barely capable of looking after myself, let alone
                 a dog…
                 <div style={{textAlign: 'center', padding: '15px 0 0 0'}}>
-                  <a
-                    href="books/for-the-love-of-a-dog.html"
+                  <Link
+                    to="/books/for-the-love-of-a-dog"
                     className="readmore button"
                   >
                     Read More
-                  </a>
+                  </Link>
                   <a
                     href="#"
                     className="readmore button"
@@ -100,12 +100,9 @@ export default class IndexPage extends Component {
                 truly over, their daughter Stevie their one remaining
                 connection...
                 <div style={{textAlign: 'center', padding: '15px 0 0 0'}}>
-                  <a
-                    href="books/the-love-child.html"
-                    className="readmore button"
-                  >
+                  <Link to="/books/the-love-child" className="readmore button">
                     Read More
-                  </a>
+                  </Link>
                   <a
                     href="#"
                     className="buybutton button"
@@ -137,12 +134,12 @@ export default class IndexPage extends Component {
                 unexpected ways, throwing them at the mercy of their pasts and
                 each other.
                 <div style={{textAlign: 'center', padding: '15px 0 0 0'}}>
-                  <a
-                    href="books/before-i-knew-you.html"
+                  <Link
+                    to="/books/before-i-knew-you"
                     className="readmore button"
                   >
                     Read More
-                  </a>
+                  </Link>
                   <a
                     href="#"
                     className="buybutton button"
