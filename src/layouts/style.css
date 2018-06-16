@@ -405,6 +405,10 @@ a#linksicon {
 .sidebarcontentcontainer li {
   margin-bottom: 4px;
 }
+
+.homeShowcase {
+  display: flex;
+}
 /*------------------------------- 
 ------------ BOOKS ------------ 
 ---------------------------------*/

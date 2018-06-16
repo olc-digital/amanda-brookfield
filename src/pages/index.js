@@ -23,6 +23,7 @@ export default class IndexPage extends Component {
                 alt="Amanda Brookfield portrait"
                 className="amanda-portrait"
               />
+
               <div className="hometext">
                 <span className="homeheading homeheading--inline">Welcome</span>&nbsp;to
                 my official website. There’s lots to dip into, with sneak-peeks
@@ -44,12 +45,14 @@ export default class IndexPage extends Component {
             <div className="contentlines" style={{paddingTop: '35px'}}>
               <img src={contentLine} />
             </div>
-            <div id="tlchome">
-              <img
-                src={ftloadcover}
-                alt="For the Love of a Dog cover"
-                style={{float: 'left', padding: '0 15px 100px 0px'}}
-              />
+            <div id="tlchome" className="homeShowcase">
+              <div>
+                <img
+                  src={ftloadcover}
+                  alt="For the Love of a Dog cover"
+                  style={{paddingRight: '15px'}}
+                />
+              </div>
               <div className="hometext">
                 <span className="homeheading">For the Love of a Dog</span>
                 <br />For release in November 2018, &nbsp;
@@ -83,12 +86,14 @@ export default class IndexPage extends Component {
             <div className="contentlines">
               <img src={contentLine} />
             </div>
-            <div id="tlchome">
-              <img
-                src={tlccover}
-                alt="The Love Child cover"
-                style={{float: 'left', padding: '0 15px 0 0px'}}
-              />
+            <div id="tlchome" className="homeShowcase">
+              <div>
+                <img
+                  src={tlccover}
+                  alt="The Love Child cover"
+                  style={{paddingRight: '15px'}}
+                />
+              </div>
               <div className="hometext">
                 <span className="homeheading">The Love Child</span>
                 <br /> Published in Jan 2013,
@@ -118,12 +123,14 @@ export default class IndexPage extends Component {
             <div className="contentlines">
               <img src={contentLine} />
             </div>
-            <div id="bikyhome">
-              <img
-                src={bikycover}
-                alt="Before I Knew You cover"
-                style={{float: 'left', padding: '0 15px 0 0px'}}
-              />
+            <div id="bikyhome" className="homeShowcase">
+              <div>
+                <img
+                  src={bikycover}
+                  alt="Before I Knew You cover"
+                  style={{paddingRight: '15px'}}
+                />
+              </div>
               <div className="hometext">
                 <span className="homeheading">Before I Knew You</span>
                 <br /> Released in March 2011,
