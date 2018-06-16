@@ -421,8 +421,9 @@ a#linksicon {
   width: 130px;
 }
 .hoverfade:hover {
-  -webkit-opacity: 0.7;
-  -moz-opacity: 0.7;
+  opacity: 0.7;
+}
+.hoverfadenow {
   opacity: 0.7;
 }
 .booksheading {

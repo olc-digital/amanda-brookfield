@@ -17,6 +17,7 @@ export default class BooksPage extends Component {
     this.setState({isModalActive: false})
   }
   render() {
+    const {handleHoverBook, hoverBookId} = this.props
     return (
       <Fragment>
         <Modal
@@ -27,7 +28,19 @@ export default class BooksPage extends Component {
         <div className="bookscontent" style={{width: '680px'}}>
           <div id="grid">
             {Object.entries(books).map(([key, book]) => (
-              <Link to={book.link} key={key} className="hoverfade">
+              <Link
+                to={book.link}
+                key={key}
+                className={
+                  'hoverfade ' + (hoverBookId === book.slug && 'hoverfadenow')
+                }
+                onMouseEnter={e => {
+                  handleHoverBook(e, book.slug)
+                }}
+                onMouseLeave={e => {
+                  handleHoverBook(e, undefined)
+                }}
+              >
                 <img src={book.covers.grid} alt={book.title} />
               </Link>
             ))}

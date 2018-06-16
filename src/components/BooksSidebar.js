@@ -3,14 +3,26 @@ import Link from 'gatsby-link'
 
 import {books, articles, shortStories} from '../data'
 
-const BooksSidebar = () => (
+const BooksSidebar = ({handleHoverBook, hoverBookId}) => (
   <div>
     <div className="sidebarbooks" style={{width: '220px'}}>
       <span className="booksheading">Books</span>
       <ul>
-        {Object.values(books).map(({link, color, title}) => (
+        {Object.values(books).map(({link, color, title, slug}) => (
           <li key={link}>
-            <Link to={link} className="hoverfadetext" style={{color}}>
+            <Link
+              to={link}
+              onMouseEnter={e => {
+                handleHoverBook(e, slug)
+              }}
+              onMouseLeave={e => {
+                handleHoverBook(e, undefined)
+              }}
+              className={
+                'hoverfade ' + (hoverBookId === slug && 'hoverfadenow')
+              }
+              style={{color}}
+            >
               {title}
             </Link>
           </li>
