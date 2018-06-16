@@ -416,16 +416,20 @@ a#linksicon {
   margin: 0 auto;
 }
 
-#grid a img {
-  border: solid 2px #ffffff;
-  width: 130px;
-}
-.hoverfade:hover {
-  opacity: 0.7;
-}
+.hoverfade:hover,
 .hoverfadenow {
   opacity: 0.7;
 }
+.hoverbook {
+  border: solid 2px #ffffff;
+  width: 130px;
+}
+
+.hoverbook:hover,
+.hoverbooknow {
+  border: 2px solid rgb(255, 102, 102);
+}
+
 .booksheading {
   font-family: 'ariesregular';
   font-size: 25px;

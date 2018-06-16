@@ -25,7 +25,7 @@ export default {
       title: 'For the Love of a Dog',
       slug: 'for-the-love-of-a-dog',
       link: '/books/for-the-love-of-a-dog',
-      color: '#c6b2ce',
+      color: '#e1482d',
       covers: {
         grid: ftloadGrid,
         main: '',

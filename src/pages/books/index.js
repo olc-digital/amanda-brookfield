@@ -31,9 +31,6 @@ export default class BooksPage extends Component {
               <Link
                 to={book.link}
                 key={key}
-                className={
-                  'hoverfade ' + (hoverBookId === book.slug && 'hoverfadenow')
-                }
                 onMouseEnter={e => {
                   handleHoverBook(e, book.slug)
                 }}
@@ -41,7 +38,13 @@ export default class BooksPage extends Component {
                   handleHoverBook(e, undefined)
                 }}
               >
-                <img src={book.covers.grid} alt={book.title} />
+                <img
+                  className={
+                    'hoverbook ' + (hoverBookId === book.slug && 'hoverbooknow')
+                  }
+                  src={book.covers.grid}
+                  alt={book.title}
+                />
               </Link>
             ))}
           </div>
