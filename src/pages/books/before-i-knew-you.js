@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'biky'}
       blurb={`Before I Knew You tells the unsettling story of what happens when two very different families swap houses across
           the Atlantic one August. William and Beth, newly-weds from Connecticut, need to visit London so that William can
           spend time with his three sons from his first marriage, while Sophie and Andrew, who have two teenage daughters,

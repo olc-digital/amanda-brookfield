@@ -6,7 +6,7 @@ import cover from '../../assets/covers/btlc.jpg'
 const BookDescription = ({openModal}) => {
   return (
     <BookInfo
-      bookId="TLC"
+      bookId="tlc"
       cover={cover}
       openModal={openModal}
       blurb={`<p>When Janine and Dougie fell in love they thought it would be for ever. 

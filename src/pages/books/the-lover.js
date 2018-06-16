@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'tl'}
       blurb={`<p>After twenty years of contentedly playing the role of home-maker and mother, Frances Copeland's life is shattered
             by the sudden death of her husband. With no career to fall back on and her son and daughter leaving home, the
             solitude of bereavement hits particularly hard.</p>

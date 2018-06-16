@@ -1,6 +1,7 @@
 import React from 'react'
 import {Timeline} from 'react-twitter-widgets'
 import FacebookProvider, {Like} from 'react-facebook'
+import Link from 'gatsby-link'
 
 import tlKindle from '../assets/tl-kindle.jpg'
 import afmKindle from '../assets/afm-kindle.jpg'
@@ -24,15 +25,15 @@ const Sidebar = ({openModal}) => (
       </div>
       <div className="sidebarcontentcontainer kindlebot">
         <div style={{marginTop: '10px'}}>
-          <a href="books/the-lover.html">
+          <Link to="/books/the-lover.html">
             <img src={tlKindle} />
-          </a>
-          <a href="books/relative-love.html">
+          </Link>
+          <Link to="/books/relative-love.html">
             <img src={rlKindle} />
-          </a>
-          <a href="books/a-family-man.html">
+          </Link>
+          <Link to="/books/a-family-man.html">
             <img src={afmKindle} />
-          </a>
+          </Link>
         </div>
         <div style={{margin: '0px 0 5px 0px'}}>
           <a

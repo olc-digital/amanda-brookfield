@@ -15,9 +15,13 @@ import asaGrid from './assets/covers/grid/A-Summer-Affair.jpg'
 import wogGrid from './assets/covers/grid/Walls-of-Glass.jpg'
 import aaGrid from './assets/covers/grid/Alice-Alone.jpg'
 
+import pubPenguin from './assets/penguin.jpg'
+import pubHeadOfZeus from './assets/logo-head-of-zeus.jpg'
+import pubAmazon from './assets/amazon.jpg'
+
 export default {
   books: {
-    FTLOAD: {
+    ftload: {
       title: 'For the Love of a Dog',
       slug: 'for-the-love-of-a-dog',
       link: '/books/for-the-love-of-a-dog',
@@ -32,7 +36,7 @@ export default {
       ],
     },
 
-    TLC: {
+    tlc: {
       title: 'The Love Child',
       slug: 'the-love-child',
       link: '/books/the-love-child',
@@ -49,7 +53,7 @@ export default {
       ],
     },
 
-    BIKY: {
+    biky: {
       title: 'Before I Knew You',
       slug: 'before-i-knew-you',
       link: '/books/before-i-knew-you',
@@ -66,7 +70,7 @@ export default {
       ],
     },
 
-    LB: {
+    lb: {
       title: 'Life Begins',
       slug: 'life-begins',
       link: '/books/life-begins',
@@ -74,10 +78,16 @@ export default {
       covers: {
         grid: lbGrid,
       },
-      options: [],
+      options: [
+        {
+          type: 'PENGUIN',
+          url: 'https://www.penguin.co.uk/books/55361/life-begins/',
+        },
+        {type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0141021837'},
+      ],
     },
 
-    TSROL: {
+    tsrol: {
       title: 'The Simple Rules of Love',
       slug: 'the-simple-rules-of-love',
       link: '/books/the-simple-rules-of-love',
@@ -85,10 +95,17 @@ export default {
       covers: {
         grid: tsrolGrid,
       },
-      options: [],
+      options: [
+        {
+          type: 'PENGUIN',
+          url:
+            'https://www.penguin.co.uk/books/55360/the-simple-rules-of-love/',
+        },
+        {type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0141021829'},
+      ],
     },
 
-    RL: {
+    rl: {
       title: 'Relative Love',
       slug: 'relative-love',
       link: '/books/relative-love',
@@ -99,7 +116,7 @@ export default {
       options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00H2GYBVO'}],
     },
 
-    SAH: {
+    sah: {
       title: 'Sisters & Husbands',
       slug: 'sisters-and-husbands',
       link: '/books/sisters-and-husbands',
@@ -107,10 +124,10 @@ export default {
       covers: {
         grid: sahGrid,
       },
-      options: [],
+      options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340770120'}],
     },
 
-    AFM: {
+    afm: {
       title: 'A Family Man',
       slug: 'a-family-man',
       link: '/books/a-family-man',
@@ -121,7 +138,7 @@ export default {
       options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00H2GYBP0'}],
     },
 
-    TL: {
+    tl: {
       title: 'The Lover',
       slug: 'the-lover',
       link: '/books/the-lover',
@@ -132,7 +149,7 @@ export default {
       options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00Q8NUXI2'}],
     },
 
-    SL: {
+    sl: {
       title: 'Single Lives',
       slug: 'single-lives',
       link: '/books/single-lives',
@@ -140,10 +157,10 @@ export default {
       covers: {
         grid: slGrid,
       },
-      options: [],
+      options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/034071266X'}],
     },
 
-    MG: {
+    mg: {
       title: 'Marriage Games',
       slug: 'marriage-games',
       link: '/books/marriage-games',
@@ -151,10 +168,10 @@ export default {
       covers: {
         grid: mgGrid,
       },
-      options: [],
+      options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340671521'}],
     },
 
-    TG: {
+    tg: {
       title: 'The Godmother',
       slug: 'the-godmother',
       link: '/books/the-godmother',
@@ -162,10 +179,10 @@ export default {
       covers: {
         grid: tgGrid,
       },
-      options: [],
+      options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340671505'}],
     },
 
-    ACOS: {
+    acos: {
       title: 'A Cast of Smiles',
       slug: 'a-cast-of-smiles',
       link: '/books/a-cast-of-smiles',
@@ -173,10 +190,10 @@ export default {
       covers: {
         grid: acosGrid,
       },
-      options: [],
+      options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340624493'}],
     },
 
-    ASA: {
+    asa: {
       title: 'A Summer Affair',
       slug: 'a-summer-affair',
       link: '/books/a-summer-affair',
@@ -184,10 +201,10 @@ export default {
       covers: {
         grid: asaGrid,
       },
-      options: [],
+      options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340623411'}],
     },
 
-    WOG: {
+    wog: {
       title: 'Walls of Glass',
       slug: 'walls-of-glass',
       link: '/books/walls-of-glass',
@@ -195,10 +212,10 @@ export default {
       covers: {
         grid: wogGrid,
       },
-      options: [],
+      options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340623403'}],
     },
 
-    AA: {
+    aa: {
       title: 'Alice Alone',
       slug: 'alice-alone',
       link: '/books/alice-alone',
@@ -206,7 +223,7 @@ export default {
       covers: {
         grid: aaGrid,
       },
-      options: [],
+      options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340624485'}],
     },
   },
   articles: [
@@ -239,15 +256,15 @@ export default {
   publishers: {
     PENGUIN: {
       name: 'Penguin',
-      logo: '',
+      logo: pubPenguin,
     },
     AMAZON: {
       name: 'Amazon',
-      logo: '',
+      logo: pubAmazon,
     },
     HEAD_OF_ZEUS: {
       name: 'Head of Zeus',
-      logo: '',
+      logo: pubHeadOfZeus,
     },
   },
 }

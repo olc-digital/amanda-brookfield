@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'mg'}
       blurb={`The Tarrants and the Howards have been friends for many years, sharing holidays with their young children and enjoying
           convivial meals at each other’s dining tables. But behind this companionship lurk seeds of a great and growing
           unhappiness, sown by events deep in their past. As these unresolved dilemmas begin to surface, the strains between

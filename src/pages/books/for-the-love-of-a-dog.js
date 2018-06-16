@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'ftload'}
       blurb={`After the death of her mother and the end of a new relationship
             leave her heartbroken, novelist Amanda Brookfield finds her once 
             secure world imploding. As despair deepens, she latches onto the 

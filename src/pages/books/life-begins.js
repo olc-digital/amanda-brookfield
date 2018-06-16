@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'lb'}
       blurb={`Life Begins tells the story of 39-year-old Charlotte Turner, trying to get her life back on track after a miserable
           marriage. She discovers in the process that readiness to embrace a better future is not in itself a reliable route
           to happiness. Her forlorn twelve year old son is a constant source of anxiety, while her once close still-married

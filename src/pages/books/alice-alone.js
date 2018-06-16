@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'aa'}
       blurb={`When the last of her three children leaves home, fifty-one-year-old Alice Hatton is forced to face the uncomfortable
           truth that she retains little affection for her golf-playing, lawyer husband, Peter. Lacking confidence, having
           known no occupation other than motherhood, she succumbs to obvious attempts at consolation – a new hairstyle, a

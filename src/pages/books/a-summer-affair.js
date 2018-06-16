@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'asa'}
       blurb={`While Kate Latimer is delighting in the discovery that there is life after children – pursuing the luxury of time
           to herself and the possibility of a creative career - her forty-six-year-old husband, Nicholas, finds himself sliding
           inexorably into the thick of a mid-life crisis. The evident happiness of his spouse, the growing independence of

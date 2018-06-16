@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'wog'}
       blurb={`A rich banker husband, a comfortable home, two beautiful children – Jane Lytton appears to have everything a woman
           could want, except a man who loves her enough to make her happy. Her decision to walk away from her marriage is
           greeted with a mixture of vitriol and measured, uncomprehending sympathy. With her needy younger sister, Mattie,

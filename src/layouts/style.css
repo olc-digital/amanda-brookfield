@@ -493,6 +493,9 @@ img.cover {
   padding: 15px 0;
   color: #39f;
 }
+.inspiration {
+  line-height: 1.6;
+}
 a.authhoverfade {
   -webkit-opacity: 0.7;
   -moz-opacity: 0.7;

@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'afm'}
       blurb={`Thirty-one-year-old Matthew Webster’s world is shattered when his wife walks out, leaving him to look after their
           four-year-old son, Joshua, alone. Grief and shock are compounded by the sudden need to juggle childcare with his
           demanding job as a theatre critic. Matthew works hard to rebuild his life, but is thwarted constantly by unanswered

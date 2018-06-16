@@ -7,6 +7,7 @@ const BookDescription = ({openModal}) => (
   <BookInfo
     cover={ftloadCover}
     openModal={openModal}
+    bookId={'acos'}
     blurb={`A group of young professional friends, with the world at their feet, gather for the glittering wedding of Julian
           and Veronica. Yet behind their façade of jollity old passions and resentments are stirring. Gloria is tiring of
           the endless pursuit of lovers, Katherine is tormented by her unrequited feelings for Julian, while George longs

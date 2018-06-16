@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'rl'}
       blurb={`The Harrison family, gathering for Christmas at their big country house, inhabit a tight safe world of privilege
           and tradition. But this year, time is catching up with the elderly Pamela and John, while troubles are brewing
           in the lives of their four children: Cassie, the cosseted youngest, is in the throes of a secret affair with a

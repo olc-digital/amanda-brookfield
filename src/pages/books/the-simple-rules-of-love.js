@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'tsrol'}
       blurb={`The Simple Rules of Love is a multi-generational story of love, lies and family ties. The Harrisons, a close-knit,
           affluent clan who gather regularly at Ashley House, their beautiful old family home, are looking forward to 42-year-old
           Cassie’s long awaited wedding and an exotic family holiday. But all such celebrations threaten to subside into

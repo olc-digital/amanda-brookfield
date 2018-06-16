@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 
 const Inspiration = () => (
   <div>
-    <span className="justify" style={{fontSize: '16px'}}>
+    <div className="justify inspiration" style={{fontSize: '16px'}}>
       <div
         className="generalheading inspirationheading"
         style={{paddingTop: '0px'}}
@@ -118,7 +118,7 @@ const Inspiration = () => (
           position of being the one to tell it.
         </li>
       </ul>
-    </span>
+    </div>
   </div>
 )
 

@@ -8,6 +8,7 @@ const BookDescription = ({openModal}) => {
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
+      bookId={'tg'}
       blurb={`Rachel Elliot is singe and attractive, a director of a successful advertising agency, with a handsome lover, several
           close friends and a clutch of young godchildren. But as her fortieth birthday approaches so does a sneaking sense
           of futility. With typical resolution, she decides that the answer to this new problem is to have a child of her
