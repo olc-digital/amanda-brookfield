@@ -1,36 +1,20 @@
 import React from 'react'
 import BookInfo from '../../components/BookInfo'
 
-import ftloadCover from '../../assets/covers/bftload.jpg'
+import ftloadCover from '../../assets/covers/bmg.jpg'
 
 const BookDescription = ({openModal}) => {
   return (
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
-      blurb={`After the death of her mother and the end of a new relationship
-            leave her heartbroken, novelist Amanda Brookfield finds her once 
-            secure world imploding. As despair deepens, she latches onto the 
-            idea of getting a puppy just to revive her optimistic spirit. 
-            <br />
-            <br />Aware that her lifestyle will not suit becoming a dog-owner 
-            and warned by friends not to give up her freedom, Amanda nonetheless
-            cannot resist Mabel, an eight week old golden doodle. Arming herself
-            with an arsenal of equipment, she soon learns that there are no
-            short-cuts to training and caring for a dog. In the daily challenges
-            that ensue, the constant ups and downs, Amanda realises she is
-            starting to come to terms with her bereavement and the prospect of
-            facing the rest of her life alone.
-            <br />
-            <br />
-            <em>For The Love of a Dog</em> charts the bigger, more poignant
-            story about the labour of emotional recovery after the trauma of
-            loss. Mabel shines like a light throughout, the innocent architect
-            of rebuilding her owner’s shattered self-belief. Mabel’s own journey
-            is equally captivating, as she blossoms into a mischievous,
-            endearing head-turner of a companion – as affectionate as she is
-            glorious.`}
-      reviews={false}
+      blurb={`The Tarrants and the Howards have been friends for many years, sharing holidays with their young children and enjoying
+          convivial meals at each other’s dining tables. But behind this companionship lurk seeds of a great and growing
+          unhappiness, sown by events deep in their past. As these unresolved dilemmas begin to surface, the strains between
+          the two families become impossible to ignore. And when infidelity casts its ugly shadow onto the proceedings, the
+          collapse of their apparently ordered world seems inevitable.`}
+      reviews={`<div class="reviewtext">Amanda Brookfield explores the dark side of happy families.</div>
+          <div class="reviewref">Bolton Evening News</div>`}
     />
   )
 }

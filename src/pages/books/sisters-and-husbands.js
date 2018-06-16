@@ -1,36 +1,28 @@
 import React from 'react'
 import BookInfo from '../../components/BookInfo'
 
-import ftloadCover from '../../assets/covers/bftload.jpg'
+import ftloadCover from '../../assets/covers/bsh.jpg'
 
 const BookDescription = ({openModal}) => {
   return (
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
-      blurb={`After the death of her mother and the end of a new relationship
-            leave her heartbroken, novelist Amanda Brookfield finds her once 
-            secure world imploding. As despair deepens, she latches onto the 
-            idea of getting a puppy just to revive her optimistic spirit. 
-            <br />
-            <br />Aware that her lifestyle will not suit becoming a dog-owner 
-            and warned by friends not to give up her freedom, Amanda nonetheless
-            cannot resist Mabel, an eight week old golden doodle. Arming herself
-            with an arsenal of equipment, she soon learns that there are no
-            short-cuts to training and caring for a dog. In the daily challenges
-            that ensue, the constant ups and downs, Amanda realises she is
-            starting to come to terms with her bereavement and the prospect of
-            facing the rest of her life alone.
-            <br />
-            <br />
-            <em>For The Love of a Dog</em> charts the bigger, more poignant
-            story about the labour of emotional recovery after the trauma of
-            loss. Mabel shines like a light throughout, the innocent architect
-            of rebuilding her owner’s shattered self-belief. Mabel’s own journey
-            is equally captivating, as she blossoms into a mischievous,
-            endearing head-turner of a companion – as affectionate as she is
-            glorious.`}
-      reviews={false}
+      blurb={`Ever since the death of their father twenty years before, beautiful thirty-two-year-old Anna has acted as her younger
+          sister Becky’s support, playing the peace-maker in her stormy relationship with their mother, and counselling her
+          through the traumas of a life that has always appeared charmless and problematic in comparison to her own. Now
+          married to wealthy, handsome David Lawrence, with a luxurious country home and a successful career in broadcasting,
+          Anna’s good fortune looks set to continue. But when she unexpectedly falls pregnant and Becky’s marriage runs into
+          trouble, the door to the sisters past suddenly swings open, exploding all their longheld perceptions both of each
+          other and themselves.`}
+      reviews={`<div class="reviewtext">Through her characters, Brookfield skillfully illuminates the relationships, dilemmas and compromises that define
+            so many lives.</div>
+          <div class="reviewref">The Sunday Express</div>
+          <div class="reviewtext">Few contemporary British novelists writing today expore the messy tangles of close human relationships with quite
+            such warm perceptiveness as Brookfield.</div>
+          <div class="reviewref">Henry Sutton, Daily Mirror</div>
+          <div class="reviewtext">I savoured every second of this deeply satisfying book. Amanda Brookfield goes from strength to strength.</div>
+          <div class="reviewref">Patricia Scanlan</div>`}
     />
   )
 }

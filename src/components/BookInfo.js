@@ -23,7 +23,8 @@ export default class BookInfo extends Component {
             </a>
             {reviews && (
               <Frag>
-                {' '}|{' '}
+                {' '}
+                |{' '}
                 <a
                   href="#"
                   onClick={this.showReviews}

@@ -28,8 +28,8 @@ export default class IndexPage extends Component {
                 my official website. There’s lots to dip into, with sneak-peeks
                 at my inspirations as well as information about all my fifteen
                 best-sellers, including&nbsp;
-                <em>Alice Alone</em>,
-                <em>Relative Love</em> and
+                <em>Alice Alone</em>,&nbsp;
+                <em>Relative Love</em> and&nbsp;
                 <em>Life Begins</em>.
                 <br />
                 <br />

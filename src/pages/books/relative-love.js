@@ -1,36 +1,34 @@
 import React from 'react'
 import BookInfo from '../../components/BookInfo'
 
-import ftloadCover from '../../assets/covers/bftload.jpg'
+import ftloadCover from '../../assets/covers/brl.jpg'
 
 const BookDescription = ({openModal}) => {
   return (
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
-      blurb={`After the death of her mother and the end of a new relationship
-            leave her heartbroken, novelist Amanda Brookfield finds her once 
-            secure world imploding. As despair deepens, she latches onto the 
-            idea of getting a puppy just to revive her optimistic spirit. 
-            <br />
-            <br />Aware that her lifestyle will not suit becoming a dog-owner 
-            and warned by friends not to give up her freedom, Amanda nonetheless
-            cannot resist Mabel, an eight week old golden doodle. Arming herself
-            with an arsenal of equipment, she soon learns that there are no
-            short-cuts to training and caring for a dog. In the daily challenges
-            that ensue, the constant ups and downs, Amanda realises she is
-            starting to come to terms with her bereavement and the prospect of
-            facing the rest of her life alone.
-            <br />
-            <br />
-            <em>For The Love of a Dog</em> charts the bigger, more poignant
-            story about the labour of emotional recovery after the trauma of
-            loss. Mabel shines like a light throughout, the innocent architect
-            of rebuilding her owner’s shattered self-belief. Mabel’s own journey
-            is equally captivating, as she blossoms into a mischievous,
-            endearing head-turner of a companion – as affectionate as she is
-            glorious.`}
-      reviews={false}
+      blurb={`The Harrison family, gathering for Christmas at their big country house, inhabit a tight safe world of privilege
+          and tradition. But this year, time is catching up with the elderly Pamela and John, while troubles are brewing
+          in the lives of their four children: Cassie, the cosseted youngest, is in the throes of a secret affair with a
+          married man, while awkward Elizabeth struggles with a faltering second marriage. Peter, who will inherit Ashley
+          House, is beginning to meet resistance to the idea from his career-orientated wife, Helen. Only carefree Charlie
+          and his wife, Serena, seem truly content, with nothing to vex them but their adolescent twin girls and the simpler
+          teething troubles of their toddler. But tragedy, of the most unforeseeable and devastating kind, is lying in wait.
+          The family, so apparently secure, is rocked to its core. Hidden turmoil, secrets past and present, are forced to
+          the surface, laying bare the fragility of human happiness and the myriad faces of love in an imperfect world.
+        `}
+      reviews={`<div class="reviewtext">This book, about deep and complex family love from this accomplished author, is told with true passion</div>
+          <div class="reviewref">Family Circle</div>
+          <div class="reviewtext">My favorite Amanda Brookfield read! The characters are so life like and the descriptions are excellent - just read
+            the first page of this book and I am certain you will want to read more!</div>
+          <div class="reviewref">Amazon Reviewer</div>
+          <div class="reviewtext">Great family saga</div>
+          <div class="reviewref">Amazon Reviewer</div>
+          <div class="reviewtext">As always a thoroughly enjoyable read.</div>
+          <div class="reviewref">Amazon Reviewer</div>
+          <div class="reviewtext">Loved this , got it for a good price on kindle and couldent wait to buy the sequel ,The simple rules of love.</div>
+          <div class="reviewref">Amazon Reviewer</div>`}
     />
   )
 }

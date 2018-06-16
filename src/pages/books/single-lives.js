@@ -1,36 +1,22 @@
 import React from 'react'
 import BookInfo from '../../components/BookInfo'
 
-import ftloadCover from '../../assets/covers/bftload.jpg'
+import ftloadCover from '../../assets/covers/bsl.jpg'
 
 const BookDescription = ({openModal}) => {
   return (
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
-      blurb={`After the death of her mother and the end of a new relationship
-            leave her heartbroken, novelist Amanda Brookfield finds her once 
-            secure world imploding. As despair deepens, she latches onto the 
-            idea of getting a puppy just to revive her optimistic spirit. 
-            <br />
-            <br />Aware that her lifestyle will not suit becoming a dog-owner 
-            and warned by friends not to give up her freedom, Amanda nonetheless
-            cannot resist Mabel, an eight week old golden doodle. Arming herself
-            with an arsenal of equipment, she soon learns that there are no
-            short-cuts to training and caring for a dog. In the daily challenges
-            that ensue, the constant ups and downs, Amanda realises she is
-            starting to come to terms with her bereavement and the prospect of
-            facing the rest of her life alone.
-            <br />
-            <br />
-            <em>For The Love of a Dog</em> charts the bigger, more poignant
-            story about the labour of emotional recovery after the trauma of
-            loss. Mabel shines like a light throughout, the innocent architect
-            of rebuilding her owner’s shattered self-belief. Mabel’s own journey
-            is equally captivating, as she blossoms into a mischievous,
-            endearing head-turner of a companion – as affectionate as she is
-            glorious.`}
-      reviews={false}
+      blurb={`Thirty-three-year-old newspaper columnist, Annie Jordan, thinks that the only thing missing from her life is romance.
+          Her glamorous friends, flatmate Marina and gay easy-going Jake, seem to be suffering from the same problem, in
+          spite of far more promising social lives. Yet love, when it comes, brings as many problems as it solves. As her
+          life starts to unravel, Annie finds it increasingly difficult to keep her darkening state of mind separate from
+          her newspaper column and fears that she may lose her job. Illness and the confusing secretive behaviour of a new
+          neighbour compound her difficulties, but also compel her to realise that she has no hope of finding lasting happiness
+          with another person until she has begun to understand herself.`}
+      reviews={`<div class="reviewtext">Witty and Engaging</div>
+          <div class="reviewref">Family Circle</div>`}
     />
   )
 }

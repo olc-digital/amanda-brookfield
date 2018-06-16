@@ -1,36 +1,34 @@
 import React from 'react'
 import BookInfo from '../../components/BookInfo'
 
-import ftloadCover from '../../assets/covers/bftload.jpg'
+import ftloadCover from '../../assets/covers/blb.jpg'
 
 const BookDescription = ({openModal}) => {
   return (
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
-      blurb={`After the death of her mother and the end of a new relationship
-            leave her heartbroken, novelist Amanda Brookfield finds her once 
-            secure world imploding. As despair deepens, she latches onto the 
-            idea of getting a puppy just to revive her optimistic spirit. 
-            <br />
-            <br />Aware that her lifestyle will not suit becoming a dog-owner 
-            and warned by friends not to give up her freedom, Amanda nonetheless
-            cannot resist Mabel, an eight week old golden doodle. Arming herself
-            with an arsenal of equipment, she soon learns that there are no
-            short-cuts to training and caring for a dog. In the daily challenges
-            that ensue, the constant ups and downs, Amanda realises she is
-            starting to come to terms with her bereavement and the prospect of
-            facing the rest of her life alone.
-            <br />
-            <br />
-            <em>For The Love of a Dog</em> charts the bigger, more poignant
-            story about the labour of emotional recovery after the trauma of
-            loss. Mabel shines like a light throughout, the innocent architect
-            of rebuilding her owner’s shattered self-belief. Mabel’s own journey
-            is equally captivating, as she blossoms into a mischievous,
-            endearing head-turner of a companion – as affectionate as she is
-            glorious.`}
-      reviews={false}
+      blurb={`Life Begins tells the story of 39-year-old Charlotte Turner, trying to get her life back on track after a miserable
+          marriage. She discovers in the process that readiness to embrace a better future is not in itself a reliable route
+          to happiness. Her forlorn twelve year old son is a constant source of anxiety, while her once close still-married
+          girlfriends seem to treat her differently now that she is single, as do their husbands... Yet the biggest hurdle
+          Charlotte faces is her own past, boomeranging back at every turn, flinging out answers to questions she has spent
+          thirty years trying to leave behind.`}
+      reviews={`<div class="reviewtext">An absorbing look at one woman's midlife crisis.</div>
+          <div class="reviewref">Bella</div>
+          <div class="reviewtext">A warm-hearted, perceptive tale of hope and renewal that shows it is possible to start life again.</div>
+          <div class="reviewref">Prima</div>
+          <div class="reviewtext">It makes you realise how sometimes even when you think your life is routine and mundane, that much can happen with
+            just one small change...some of it was heartbreaking, much of it was satisfying. It left me with a feel good
+            factor, something that is my mark of a good book.</div>
+          <div class="reviewref">Amazon Reviewer</div>
+          <div class="reviewtext">It was a great read and, just like the holiday, I didn’t want it to end.</div>
+          <div class="reviewref">Amazon Reviewer</div>
+          <div class="reviewtext">I thought it was a beautifully crafted piece of storytelling. I loved the way you kept changing the perspective
+            of the story by using different characters to move the narrative along. The theme of trust shaken in childhood
+            and impacting on adult relationships was an interesting one and I loved the fact that while you handled it earnestly
+            there was always a positive, feel good quality to the story.</div>
+          <div class="reviewref">Amazon Reviewer</div>`}
     />
   )
 }

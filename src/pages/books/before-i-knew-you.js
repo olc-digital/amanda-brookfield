@@ -1,36 +1,34 @@
 import React from 'react'
 import BookInfo from '../../components/BookInfo'
 
-import ftloadCover from '../../assets/covers/bftload.jpg'
+import ftloadCover from '../../assets/covers/bbiky.jpg'
 
 const BookDescription = ({openModal}) => {
   return (
     <BookInfo
       cover={ftloadCover}
       openModal={openModal}
-      blurb={`After the death of her mother and the end of a new relationship
-            leave her heartbroken, novelist Amanda Brookfield finds her once 
-            secure world imploding. As despair deepens, she latches onto the 
-            idea of getting a puppy just to revive her optimistic spirit. 
-            <br />
-            <br />Aware that her lifestyle will not suit becoming a dog-owner 
-            and warned by friends not to give up her freedom, Amanda nonetheless
-            cannot resist Mabel, an eight week old golden doodle. Arming herself
-            with an arsenal of equipment, she soon learns that there are no
-            short-cuts to training and caring for a dog. In the daily challenges
-            that ensue, the constant ups and downs, Amanda realises she is
-            starting to come to terms with her bereavement and the prospect of
-            facing the rest of her life alone.
-            <br />
-            <br />
-            <em>For The Love of a Dog</em> charts the bigger, more poignant
-            story about the labour of emotional recovery after the trauma of
-            loss. Mabel shines like a light throughout, the innocent architect
-            of rebuilding her owner’s shattered self-belief. Mabel’s own journey
-            is equally captivating, as she blossoms into a mischievous,
-            endearing head-turner of a companion – as affectionate as she is
-            glorious.`}
-      reviews={false}
+      blurb={`Before I Knew You tells the unsettling story of what happens when two very different families swap houses across
+          the Atlantic one August. William and Beth, newly-weds from Connecticut, need to visit London so that William can
+          spend time with his three sons from his first marriage, while Sophie and Andrew, who have two teenage daughters,
+          are looking for a holiday that might rescue them both from the daily grind and a gradual disintegration of their
+          relationship. Neither family finds what they expect. Strangers when they borrow each other's respective homes,
+          their lives then start to intertwine in unexpected ways, throwing them at the mercy of their pasts and each other.`}
+      reviews={`<div class="reviewtext">A thoughtful, gripping and interesting read.</div>
+          <div class="reviewref">Irish Times</div>
+          <div class="reviewtext">No one gets to the heart of human relationships quite so perceptively as Brookfield.</div>
+          <div class="reviewref">The Mirror</div>
+          <div class="reviewtext">An intriguing and at times tragic tale.</div>
+          <div class="reviewref">Sussex Society</div>
+          <div class="reviewtext">Unputdownable. Perceptive. Poignant. I loved it.</div>
+          <div class="reviewref">Patricia Scanlan</div>
+          <div class="reviewtext">This acute and seductive novel twists and turns, delighting as it surprises.</div>
+          <div class="reviewref">Jonathan Hourigan (City-AM)</div>
+          <div class="reviewtext">There should have been a trumpet fanfare when this book was launched, for Amanda Brookfield is, surely, the queen
+            of the relationship novel. I have read (and enjoyed) all her previous books but this one is - in my opinion -
+            the best. It is the story of how apparently even secure relationships can fall apart. Is there a happy ending?
+            I am not going to spoil your enjoyment...just buy and read and enjoy this splendid book.</div>
+          <div class="reviewref">Amazon 5 Star Review</div>`}
     />
   )
 }
