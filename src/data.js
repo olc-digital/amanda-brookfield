@@ -1,11 +1,29 @@
+import ftloadGrid from './assets/covers/grid/For-the-Love-of-a-Dog.jpg'
+import tlcGrid from './assets/covers/grid/The-Love-Child.jpg'
+import bikyGrid from './assets/covers/grid/Before-I-Knew-You.jpg'
+import lbGrid from './assets/covers/grid/Life-Begins.jpg'
+import tsrolGrid from './assets/covers/grid/The-Simple-Rules-of-Love.jpg'
+import rlGrid from './assets/covers/grid/Relative-Love.jpg'
+import sahGrid from './assets/covers/grid/Sisters-and-Husbands.jpg'
+import afmGrid from './assets/covers/grid/A-Family-Man.jpg'
+import tlGrid from './assets/covers/grid/The-Lover.jpg'
+import slGrid from './assets/covers/grid/Single-Lives.jpg'
+import mgGrid from './assets/covers/grid/Marriage-Games.jpg'
+import tgGrid from './assets/covers/grid/The-Grandmother.jpg'
+import acosGrid from './assets/covers/grid/A-Cast-of-Smiles.jpg'
+import asaGrid from './assets/covers/grid/A-Summer-Affair.jpg'
+import wogGrid from './assets/covers/grid/Walls-of-Glass.jpg'
+import aaGrid from './assets/covers/grid/Alice-Alone.jpg'
+
 export default {
   books: {
     FTLOAD: {
       title: 'For the Love of a Dog',
+      slug: 'for-the-love-of-a-dog',
       link: '/books/for-the-love-of-a-dog',
       color: '#c6b2ce',
       covers: {
-        grid: '',
+        grid: ftloadGrid,
         main: '',
       },
       options: [
@@ -16,10 +34,11 @@ export default {
 
     TLC: {
       title: 'The Love Child',
+      slug: 'the-love-child',
       link: '/books/the-love-child',
       color: '#d05d31',
       covers: {
-        grid: '',
+        grid: tlcGrid,
       },
       options: [
         {
@@ -32,10 +51,11 @@ export default {
 
     BIKY: {
       title: 'Before I Knew You',
+      slug: 'before-i-knew-you',
       link: '/books/before-i-knew-you',
       color: '#46556a',
       covers: {
-        grid: '',
+        grid: bikyGrid,
       },
       options: [
         {
@@ -48,130 +68,143 @@ export default {
 
     LB: {
       title: 'Life Begins',
+      slug: 'life-begins',
       link: '/books/life-begins',
       color: '#c3405f',
       covers: {
-        grid: '',
+        grid: lbGrid,
       },
       options: [],
     },
 
     TSROL: {
       title: 'The Simple Rules of Love',
+      slug: 'the-simple-rules-of-love',
       link: '/books/the-simple-rules-of-love',
       color: '#248dab',
       covers: {
-        grid: '',
+        grid: tsrolGrid,
       },
       options: [],
     },
 
     RL: {
       title: 'Relative Love',
+      slug: 'relative-love',
       link: '/books/relative-love',
       color: '#df2f55',
       covers: {
-        grid: '',
+        grid: rlGrid,
       },
       options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00H2GYBVO'}],
     },
 
     SAH: {
       title: 'Sisters & Husbands',
+      slug: 'sisters-and-husbands',
       link: '/books/sisters-and-husbands',
       color: '#473a89',
       covers: {
-        grid: '',
+        grid: sahGrid,
       },
       options: [],
     },
 
     AFM: {
       title: 'A Family Man',
+      slug: 'a-family-man',
       link: '/books/a-family-man',
       color: '#33ce4f',
       covers: {
-        grid: '',
+        grid: afmGrid,
       },
       options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00H2GYBP0'}],
     },
 
     TL: {
       title: 'The Lover',
+      slug: 'the-lover',
       link: '/books/the-lover',
       color: '#fbbb01',
       covers: {
-        grid: '',
+        grid: tlGrid,
       },
       options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00Q8NUXI2'}],
     },
 
     SL: {
       title: 'Single Lives',
+      slug: 'single-lives',
       link: '/books/single-lives',
       color: '#e72104',
       covers: {
-        grid: '',
+        grid: slGrid,
       },
       options: [],
     },
 
     MG: {
       title: 'Marriage Games',
+      slug: 'marriage-games',
       link: '/books/marriage-games',
       color: '#dc8d4b',
       covers: {
-        grid: '',
+        grid: mgGrid,
       },
       options: [],
     },
 
     TG: {
       title: 'The Godmother',
+      slug: 'the-godmother',
       link: '/books/the-godmother',
       color: '#b5a2fe',
       covers: {
-        grid: '',
+        grid: tgGrid,
       },
       options: [],
     },
 
     ACOS: {
       title: 'A Cast of Smiles',
+      slug: 'a-cast-of-smiles',
       link: '/books/a-cast-of-smiles',
       color: '#d69aa2',
       covers: {
-        grid: '',
+        grid: acosGrid,
       },
       options: [],
     },
 
     ASA: {
       title: 'A Summer Affair',
+      slug: 'a-summer-affair',
       link: '/books/a-summer-affair',
       color: '#bf2525',
       covers: {
-        grid: '',
+        grid: asaGrid,
       },
       options: [],
     },
 
     WOG: {
       title: 'Walls of Glass',
+      slug: 'walls-of-glass',
       link: '/books/walls-of-glass',
       color: '#5f9be4',
       covers: {
-        grid: '',
+        grid: wogGrid,
       },
       options: [],
     },
 
     AA: {
       title: 'Alice Alone',
+      slug: 'alice-alone',
       link: '/books/alice-alone',
       color: '#c6b2ce',
       covers: {
-        grid: '',
+        grid: aaGrid,
       },
       options: [],
     },
