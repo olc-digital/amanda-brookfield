@@ -119,8 +119,27 @@ a.generalheading {
   padding: 10px;
 }
 
+/*-------------------------------
+------------ ANIMATIONS ---------
+---------------------------------*/
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*------------------------------- 
------------- HEADER ------------ 
+------------ HEADER ------------- 
 ---------------------------------*/
 .header {
 }
@@ -142,10 +161,10 @@ a.generalheading {
 #navtop ul {
   list-style: none;
   width: 900px;
-  float: left;
+  display: flex;
+  justify-content: space-between;
 }
 #navtop ul li {
-  display: inline;
   padding: 0 49px;
   height: 180px;
   width: 147px;
@@ -466,21 +485,7 @@ img.cover {
 .bookabout {
   line-height: 1.6;
 }
-.fade-in {
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.3s;
-}
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 /*------------------------------- 
 ------------ AUTHOR ------------ 
 ---------------------------------*/
@@ -557,10 +562,15 @@ div.navigation a {
 
 .modal.is-active {
   display: flex;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.1s;
 }
 
 .modal-background {
-  background-color: rgba(10, 10, 10, 0.86);
+  background-color: rgba(10, 10, 10, 0.4);
 }
 .modal-content,
 .modal-card {
@@ -576,6 +586,6 @@ div.navigation a {
   .modal-card {
     margin: 0 auto;
     max-height: calc(100vh - 40px);
-    width: 640px;
+    width: 320px;
   }
 }

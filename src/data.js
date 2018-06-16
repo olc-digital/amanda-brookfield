@@ -209,6 +209,33 @@ export default {
       options: [],
     },
   },
+  articles: [
+    {
+      title: 'How I Found My Voice',
+      link: '/books/articles/how-i-found-my-voice',
+    },
+    {title: 'Under One Roof', link: '/books/articles/under-one-roof'},
+    {title: 'Losing My Father', link: '/books/articles/losing-my-father'},
+    {
+      title: 'Gap Year - A Mother’s Story',
+      link: '/books/articles/gap-year-a-mothers-story',
+    },
+  ],
+  shortStories: [
+    {
+      title: 'The House Sitter',
+      link: '/books/short-stories/the-house-sitter',
+    },
+    {title: 'Afterlife', link: '/books/short-stories/afterlife'},
+    {
+      title: 'The Farewell',
+      link: '/books/short-stories/the-farewell',
+    },
+    {
+      title: 'Guardian Angel',
+      link: '/books/short-stories/guardian-angel',
+    },
+  ],
   publishers: {
     PENGUIN: {
       name: 'Penguin',
