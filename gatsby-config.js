@@ -7,6 +7,16 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-37149508-1',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        exclude: ['/admin/**'],
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
