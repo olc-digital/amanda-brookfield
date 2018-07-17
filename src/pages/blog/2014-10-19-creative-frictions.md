@@ -27,7 +27,7 @@ This is one of the earliest and toughest lessons to learn as a writer.  I first
 
 Never have I written more efficiently than when my two sons were at nursery school.  I had a measly two hours at my desk a day  - TWO HOURS! - and boy did I throw myself into them.  I produced a book a year for seven years, much to the delight of my then publishers  My writing may have lacked a certain depth and not been as polished, but the time-friction definitely made me productive.
 
-Since those days, I have learnt to relish the luxury of more time rather than being defeated by it, but different frictions have exerted their power instead.  Things like, Indecision, Dread, Indolence, Perfectionism, Fear of Failure...it is in fighting these that the alchemy of creativity has managed to assert itself to produce eight more novels.
+Since those days, I have learnt to relish the luxury of more time rather than being defeated by it, but different frictions have exerted their power instead.  Things like, Indecision, Dread, Indolence, Perfectionism, Fear of Failur... t is in fighting these that the alchemy of creativity has managed to assert itself to produce eight more novels.
 
 But now (with novel 16) a new friction has come into play, the most 'creative' yet.  It's called RSI.  Thanks to so many hours at my desk this year, chiselling at the coal-face of my manuscript, my right shoulder has decided to adopt a position which, inconveniently, fires shooting pains down my right arm.  Horrible! Infuriating.  Painful.  I am writing this slowly, with breaks every couple of minutes to twiddle my wrists and windmill my arms.  I am having hours of weekly physio.  I am booked to see a Shoulder Specialist.  There is talk of injections.  Aaaaaaaaaaaaaaaagh.
 

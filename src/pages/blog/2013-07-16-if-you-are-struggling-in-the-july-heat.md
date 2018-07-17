@@ -11,13 +11,13 @@ I make a point never to complain about hot weather in the UK.  EVER.
 
 For those who may be struggling to stay positive, here are 10 of my reasons why the heatwave is a Wonderful Thing:
 
-1. The faint but indelible feeling of being...On Holiday!
+1. The faint but indelible feeling of bein... n Holiday!
 
 2. It takes about one minute to get dressed in the mornings.  T-shirt, shorts, flip-flops.  Job Done. (More time in bed).
 
 3. The butter is soft-soft.  Easier to spread on bread.  Less gets used.  Healthier!
 
-4. The chink of cutlery across the garden fence....your neighbours exist! They are happy sun-seekers just like you!
+4. The chink of cutlery across the garden fence... our neighbours exist! They are happy sun-seekers just like you!
 
 5. EATING OUTSIDE, even at night, without the need of a fleece and thick socks. (Socks might be required against the midges, but I prefer *Off!* - fine so long as one remembers to wash one's hands before dipping into the crisps/nuts/dips accompanying the pre-prandial drink.
 

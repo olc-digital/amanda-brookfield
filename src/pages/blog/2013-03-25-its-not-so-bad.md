@@ -7,7 +7,7 @@ tags:
   - newsletters
 ---
 
-It is hard not to be gloomy at the moment, don't you find?  For Brits it is always hard, but what with the "triple-dip recession" imminent (does that mean the double-dip is finished....???!!), dumps of wall-high snow landing across the country, crushing limp frost-bitten daffodils and necessitating the rescue of pensioners, it is especially difficult.  With friends, shopkeepers, cabbies, blogs....our national Licence To Moan has never been stronger.
+It is hard not to be gloomy at the moment, don't you find?  For Brits it is always hard, but what with the "triple-dip recession" imminent (does that mean the double-dip is finished....???!!), dumps of wall-high snow landing across the country, crushing limp frost-bitten daffodils and necessitating the rescue of pensioners, it is especially difficult.  With friends, shopkeepers, cabbies, blogs... ur national Licence To Moan has never been stronger.
 
 BUT I have some perspective for you.  It comes from the life of the poet John Keats, about whom I have been reading in Nicholas Roe's stunning biography.  Here are some facts. I think they speak for themselves.
 

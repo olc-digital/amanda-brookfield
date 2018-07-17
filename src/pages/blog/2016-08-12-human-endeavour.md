@@ -17,7 +17,7 @@ Those women rowers who weren't supposed to get anywhere because one of them had 
 
 That skinny lad who got bronze flipping into impossible positions in the gymnastics
 
-Those divers, not just Tom Daley, but that pair who got gold who share a house together in Harrogate...or somewhere..... one of whom was in a coma four years ago, not expected to walk again let alone dive.
+Those divers, not just Tom Daley, but that pair who got gold who share a house together in Harrogat... r somewhere..... one of whom was in a coma four years ago, not expected to walk again let alone dive.
 
 Not to mention the cyclists, Frome worn to a skeleton, and those three young lads (I never understand the cycling races) who beat the New Zealanders to gold by a slither of a second.........
 

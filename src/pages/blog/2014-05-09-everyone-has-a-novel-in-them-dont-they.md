@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Everyone has a novel in them....don't they?
+title: Everyone has a novel in them... on't they?
 date: 2014-05-09T09:02:09.000Z
 description: 
 tags: 
@@ -11,7 +11,7 @@ Yes, of course Everyone 'has a novel in them'.  Because the lives of each and e
 
 Till you try it.
 
-People who haven't tried it like to corner novelists with conversational gambits like:  'Hey, here's something for your next book...just listen to this, you won't believe it....'  They then launch into an anecdote - or life-story! - in the belief that they are handing over an invaluable 'free' gift.  Or (worse), they nod at the disclosure that one writes fiction for a living and then remark that they are thinking of writing their own life story one day.  As if it is merely shortage of time that is preventing them from bashing out a bestseller.
+People who haven't tried it like to corner novelists with conversational gambits like:  'Hey, here's something for your next boo... ust listen to this, you won't believe it...   They then launch into an anecdote - or life-story! - in the belief that they are handing over an invaluable 'free' gift.  Or (worse), they nod at the disclosure that one writes fiction for a living and then remark that they are thinking of writing their own life story one day.  As if it is merely shortage of time that is preventing them from bashing out a bestseller.
 
 I am sorry if  I sound obnoxious.  In fact during such conversations I always aim to be as encouraging as I can.   'Great,' I say, 'just do it!  Start, then finish.  Spit it out.  Get it down.'  This is not just because I have been raised to behave politely, but because I genuinely hope that I might be standing in front of the next Hemingway or Eliot.  Nothing would make me happier.
 

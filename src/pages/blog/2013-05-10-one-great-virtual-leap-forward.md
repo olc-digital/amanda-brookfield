@@ -7,7 +7,7 @@ tags:
   - newsletters
 ---
 
-I have decided that the British seasons are like one of those fairground Big Dipper rides....tantalisingly sluggish to the top of a steep climb (that's winter), then whizzing down the slope on the other side (that's May-Oct) at a hundred times the speed. We are in that whizzing bit now and I want it to slow down.  I don't know where April went.  It passed in a blink.  I got drunk on all that sunshine.  I did things like GARDENING. (I never garden). I also, finally, mustered the confidence (the sun has multifarious beneficial effects) to acquire my first IPHONE.  It is the very latest model, sleek and white and I know it is just a question of time before I sit on it or drop it.  Until then, it has produced several radical changes to my humdrum life. Namely:
+I have decided that the British seasons are like one of those fairground Big Dipper rides... antalisingly sluggish to the top of a steep climb (that's winter), then whizzing down the slope on the other side (that's May-Oct) at a hundred times the speed. We are in that whizzing bit now and I want it to slow down.  I don't know where April went.  It passed in a blink.  I got drunk on all that sunshine.  I did things like GARDENING. (I never garden). I also, finally, mustered the confidence (the sun has multifarious beneficial effects) to acquire my first IPHONE.  It is the very latest model, sleek and white and I know it is just a question of time before I sit on it or drop it.  Until then, it has produced several radical changes to my humdrum life. Namely:
 
 1. I get glances of respect from my twentysomething sons, wondering if I might not be a Lost Cause after all.
 

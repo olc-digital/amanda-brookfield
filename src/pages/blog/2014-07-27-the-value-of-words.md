@@ -11,7 +11,7 @@ My novel **A Family Man**, which took a year to write, is currently available to
 
 The experience has sharpened my awareness of two things.
 
-First, the power of Amazon.  The POWER of Amazon.  It is a behemoth.  For any writer wishing to sell books (and...er...that sort of goes with the territory...writers write to be _read_), Amazon is _the_ global publisher, an awesome institution that must be courted, used, worked with, but never - NEVER - ignored.
+First, the power of Amazon.  The POWER of Amazon.  It is a behemoth.  For any writer wishing to sell books (an... ... hat sort of goes with the territor... riters write to be _read_), Amazon is _the_ global publisher, an awesome institution that must be courted, used, worked with, but never - NEVER - ignored.
 
 Second, it got me thinking about the value of the written word.  99p is very small sum of money.  **A Family Man** took 365 days to write. **Relative Love** took 730.  As a maths exercise the work-reward ratio is depressing.  I actually tried to do the sum but gave up, long division, especially when all the numbers come AFTER the decimal point, not being my idea of a fun-challenge.  But that is part of the point.  I am good with words not numbers.  I write books for a living.  I need the support of an industry with integrity to help me sell them.
 

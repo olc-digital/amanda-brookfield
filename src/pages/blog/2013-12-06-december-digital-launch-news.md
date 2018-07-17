@@ -9,9 +9,9 @@ tags:
 
 **December 6th: Digital Publication Day for my novels '[Relative Love](http://www.amazon.co.uk/dp/B00H2GYBVO)' and '[A Family Man](http://www.amazon.co.uk/dp/B00H2GYBP0)':**
 
-I can dimly - very dimly - remember when I thought 'digital publishing' wasn't going to be something that would affect me too much....ha ha ha.
+I can dimly - very dimly - remember when I thought 'digital publishing' wasn't going to be something that would affect me too much... a ha ha.
 
-I never was any good at reading global trends.  It was one of the reasons why I knew it was a wise decision to leave my first career in advertising.  In fact, you are reading words written by an Account Manager who, when asked to help pitch for a new product called 'decaffeinated coffee', (it was Hag, circa 1983), announced many times (quite loudly) to anyone prepared to listen: "Coffee WITHOUT caffeine? Like that's ever going to catch on..."
+I never was any good at reading global trends.  It was one of the reasons why I knew it was a wise decision to leave my first career in advertising.  In fact, you are reading words written by an Account Manager who, when asked to help pitch for a new product called 'decaffeinated coffee', (it was Hag, circa 1983), announced many times (quite loudly) to anyone prepared to listen: "Coffee WITHOUT caffeine? Like that's ever going to catch o...
 
 I had a business computer client too, whom I would secretly scoff at for his claim that one day - in our life time - there would be a 'personal' computer in every home....
 
