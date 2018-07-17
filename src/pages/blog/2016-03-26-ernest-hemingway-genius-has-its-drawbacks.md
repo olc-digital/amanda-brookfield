@@ -1,13 +1,11 @@
 ---
 templateKey: blog-post
-title: "Ernest Hemingway: Genius has its drawbacks"
+title: 'Ernest Hemingway: Genius has its drawbacks'
 date: 2016-03-26T13:55:14.000Z
-description: 
-tags: 
+tags:
   - newsletters
 ---
-
-What does it take to win the Nobel Prize for Literature for heaven's sake. I mean, to WIN THE NOBEL PRIZE FOR LITERATURE!!!!!! It makes the Man Booker, or the Orange, or the Costa Award - or indeed anything else - look lik... eanuts.
+What does it take to win the Nobel Prize for Literature for heaven's sake. I mean, to WIN THE NOBEL PRIZE FOR LITERATURE!!!!! It makes the Man Booker, or the Orange, or the Costa Award - or indeed anything else - look like... peanuts.
 
 To be honest, and with some shame, I must admit that, while being aware that Ernest Hemingway knew a thing or two about the craft of writing and had churned out some cracking novels (several of which I had read), I had actually FORGOTTEN (if I ever knew) that he actually won the Nobel Prize for Literature.  It was in 1954, since you ask.  And the only reason I was 'reminded' of it was because the other day I plucked one of the hundreds of original penguin paperbacks from the packed book shelves lining my late mother's home and found myself staring at this fact, emblazoned in glorious old-fashioned font, on the jacket of his novel 'To Have and Have Not'.
 
