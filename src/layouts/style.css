@@ -54,6 +54,7 @@ p {
 
 a {
   outline: none;
+  text-decoration: none;
 }
 a img {
   border: none;
@@ -63,7 +64,6 @@ a img {
 a:link,
 a:visited {
   color: #a00;
-  text-decoration: underline;
 }
 
 a:hover,
@@ -71,7 +71,6 @@ a:active,
 a:focus {
   color: #f66;
   /*color: #2e6fc7;*/
-  text-decoration: none;
 }
 /* ~~ General classes ~~ */
 .container {
@@ -567,7 +566,9 @@ a.authhoverfade:hover {
   font-style: italic;
   text-decoration: underline dotted;
 }
-
+.keep-reading {
+  float: right;
+}
 /*------------------------------- 
 ------------ EVENTS ------------ 
 ---------------------------------*/

@@ -11,7 +11,7 @@ export default class IndexPage extends React.Component {
         <aside className="blog-sidebar">
           <h2>Recent Posts</h2>
           <ul>
-            {posts.map(({node: post}) => (
+            {posts.slice(0, 5).map(({node: post}) => (
               <li key={post.id}>
                 <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
               </li>
@@ -19,7 +19,7 @@ export default class IndexPage extends React.Component {
           </ul>
           <h2>Archive</h2>
           <ul>
-            {years.map(({fieldValue: year, totalCount}, i) => (
+            {years.reverse().map(({fieldValue: year, totalCount}, i) => (
               <li key={i}>
                 <Link to={'/'}>
                   {year} ({totalCount})
@@ -39,10 +39,8 @@ export default class IndexPage extends React.Component {
               <small className="blog-date">{post.frontmatter.date}</small>
 
               <p>
-                {post.excerpt}
-                <br />
-                <br />
-                <Link className="button is-small" to={post.fields.slug}>
+                {post.excerpt}{' '}
+                <Link className="keep-reading" to={post.fields.slug}>
                   Keep Reading →
                 </Link>
               </p>
