@@ -20,5 +20,3 @@ I have fallen in love.  With a car.  This is not something I would have expect
 In summary then: Surprise. Exultation. Physical attraction. Blindness.  Faith.
 
 I told you it was Love.
-
-&nbsp;

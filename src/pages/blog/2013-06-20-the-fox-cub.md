@@ -20,5 +20,3 @@ I know I'm I just a novelist, who makes up stories.  And they are just foxes.
 But then again, all lives are stories.  Every existence, animal or human, has a beginning, a middle and an end.  And in the process each creature will encounter tragedies, like mutilated legs, and joys, like sunshine and caring Mums.
 
 The novelist's job is to notice and to write the stories down.
-
-&nbsp;

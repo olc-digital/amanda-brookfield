@@ -23,14 +23,12 @@ Whenever something goes wrong in my life my instinct is always to try to underst
 
 2. 'Good Girls' will not be a Global Bestseller and make them squillions.  (No, it won't).
 
-3.  Each publisher probably thinks that because 'Good Girls' is a strong, well-written story, "somewhere else" is bound to accept it for publication.  (No, by definition, that is not the case)
+3. Each publisher probably thinks that because 'Good Girls' is a strong, well-written story, "somewhere else" is bound to accept it for publication.  (No, by definition, that is not the case)
 
 4. My clutch of extremely - maddeningly - complimentary rejection letters tells me that Literary Houses judge 'Good Girls' to be too "commercial", while Commercial Houses think it too "literary." i.e. It is a novel that does not fit neatly into an easy marketing 'box'.
 
-4. The story in 'Good Girls' unfurls gradually, taking the reader to some unforseeable, very dark, as well as richly rewarding places.  In other words it is a novel - like all my novels - that requires a certain immersion and commitment for its power to be felt.  But we live in a world that is increasingly about the Quick-Hit: Quick fame, Quick money, Quick thrills, Quick Entertainment.
+5. The story in 'Good Girls' unfurls gradually, taking the reader to some unforseeable, very dark, as well as richly rewarding places.  In other words it is a novel - like all my novels - that requires a certain immersion and commitment for its power to be felt.  But we live in a world that is increasingly about the Quick-Hit: Quick fame, Quick money, Quick thrills, Quick Entertainment.
 
 All of the above notwithstanding, and despite my battered confidence, I remain certain that the many thousands of readers who have enjoyed my previous 15 books will like 'Good Girls'.  Some may even love it.  But because I am not (yet) a global bestseller they remain a minority; and the harsh truth is that as our world sweeps on in its noisy, mighty, unstoppable way, it is always the minorities - the smaller quieter voices - who are the first to be drowned out.
 
 There.  I have fixed my glare upon my problem and I am comforted.
-
-&nbsp;

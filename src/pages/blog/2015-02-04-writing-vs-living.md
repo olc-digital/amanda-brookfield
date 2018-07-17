@@ -14,5 +14,3 @@ So I was somewhat taken aback when a well-meaning acquaintance to whom I had bro
 Nora Ephron famously said of life's experiences that for a writer everything is 'grist to the mill'.  Yes, it can be.  But only after a process of fermentation and resurfacing and the protective, refracting prism of the imagination.  In the meantime the tsunami of real life hits the writer as hard as the next person.  Joy is joyous and pain hurts like fuck.  The shock of loss renders the mind blank.  On hearing that Mum was dying I couldn't even think how to open my front door.
 
 Writing is tough.  But nothing like as tough as the business of being alive.
-
-&nbsp;

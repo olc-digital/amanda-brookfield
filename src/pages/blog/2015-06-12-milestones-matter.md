@@ -20,5 +20,3 @@ So.  A milestone indeed.  Just as much as turning twenty-one is a milestone, o
 So I have written him a letter.  A REAL letter.  On paper with ink, from a real fountain pen.  In it I have said everything I want to say.  He can read it in his own good time, without the burden of managing my response.  A letter has a weight to it, literally, more than any text or murmured words, half forgotten in weeks to come.  A letter goes into a drawer and continues to exist.  From time to time it gets found, dusted off, read again, re-treasured.
 
 Yes, for some matters, still, only a letter will do.
-
-&nbsp;
