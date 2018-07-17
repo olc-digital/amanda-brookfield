@@ -23,6 +23,17 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-family: 'ariesregular', arial;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+}
 .aries {
   font-family: 'ariesregular', arial;
 }
@@ -34,19 +45,13 @@ dl {
   padding: 0;
   margin: 0;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+
 p {
   margin-top: 0;
-  padding-right: 0px;
-  padding-left: 0px;
-  text-align: justify;
   line-height: 1.6;
+  text-align: justify;
 }
+
 a {
   outline: none;
 }
@@ -517,6 +522,13 @@ img.cover {
 .inspiration {
   line-height: 1.6;
 }
+.inspiration ul {
+  margin-top: 10px;
+  padding-left: 40px;
+}
+.inspiration li {
+  margin-bottom: 20px;
+}
 a.authhoverfade {
   -webkit-opacity: 0.7;
   -moz-opacity: 0.7;
@@ -532,36 +544,30 @@ a.authhoverfade:hover {
 /*------------------------------- 
 ------------ BLOG ------------ 
 ---------------------------------*/
-body div#wrapper {
-  padding: 0 20px;
+.blog-container {
+  display: flex;
 }
-body div#content h2,
-div#content h3,
-div#content h4,
-div#content h5,
-div#content h6 {
-  font-family: 'ariesregular';
-  font-size: 25px;
+.blog-sidebar {
+  flex: 1 0 auto;
+  width: 180px;
+  margin-right: 40px;
 }
-h3.widgettitle {
-  font-family: 'ariesregular';
-  font-size: 25px;
+.blog-post-title {
+  margin: 0;
 }
-body div#content {
-  margin: 0 0 0 200px;
-}
-div.sidebar ul li ul {
+.blog-sidebar ul {
+  list-style: none;
   padding-left: 15px;
+  margin-bottom: 40px;
+}
+.blog-sidebar li {
+  margin: 4px 0 6px;
+}
+.blog-date {
+  font-style: italic;
+  text-decoration: underline dotted;
 }
 
-div.sidebar a {
-  text-decoration: none;
-  font-size: 16px;
-}
-div.navigation a {
-  font-family: 'ariesregular';
-  font-style: normal;
-}
 /*------------------------------- 
 ------------ EVENTS ------------ 
 ---------------------------------*/

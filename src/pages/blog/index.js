@@ -7,42 +7,37 @@ export default class IndexPage extends React.Component {
     const {data} = this.props
     const {edges: posts, group: years} = data.allMarkdownRemark
     return (
-      <section className="section">
-        <h3>Recent Posts</h3>
-        <ul>
+      <section className="blog-container">
+        <aside className="blog-sidebar">
+          <h2>Recent Posts</h2>
+          <ul>
+            {posts.map(({node: post}) => (
+              <li key={post.id}>
+                <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+              </li>
+            ))}
+          </ul>
+          <h2>Archive</h2>
+          <ul>
+            {years.map(({fieldValue: year, totalCount}, i) => (
+              <li key={i}>
+                <Link to={'/'}>
+                  {year} ({totalCount})
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </aside>
+        <div className="">
           {posts.map(({node: post}) => (
-            <li key={post.id}>
-              <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-            </li>
-          ))}
-        </ul>
-        <h3>Archive</h3>
-        <ul>
-          {years.map(({fieldValue: year, totalCount}, i) => (
-            <li key={i}>
-              <Link to={'/'}>
-                {year} ({totalCount})
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-          </div>
-          {posts.map(({node: post}) => (
-            <div
-              className="content"
-              style={{border: '1px solid #eaecee', padding: '2em 4em'}}
-              key={post.id}
-            >
-              <p>
-                <Link className="has-text-primary" to={post.fields.slug}>
+            <div key={post.id}>
+              <h2 className="blog-post-title">
+                <Link className="" to={post.fields.slug}>
                   {post.frontmatter.title}
                 </Link>
-                <span> &bull; </span>
-                <small>{post.frontmatter.date}</small>
-              </p>
+              </h2>
+              <small className="blog-date">{post.frontmatter.date}</small>
+
               <p>
                 {post.excerpt}
                 <br />
@@ -87,7 +82,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "dddd Do MMMM, YYYY")
           }
         }
       }

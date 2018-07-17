@@ -6,7 +6,7 @@ import {books, articles, shortStories} from '../data'
 const BooksSidebar = ({handleHoverBook, hoverBookId}) => (
   <div>
     <div className="sidebarbooks" style={{width: '220px'}}>
-      <span className="booksheading">Books</span>
+      <h2>Books</h2>
       <ul>
         {Object.values(books).map(({link, color, title, slug}) => (
           <li key={link}>
@@ -29,7 +29,7 @@ const BooksSidebar = ({handleHoverBook, hoverBookId}) => (
         ))}
       </ul>
       <br />
-      <span className="booksheading">Articles</span>
+      <h2>Articles</h2>
       <ul>
         {articles.map(({link, title}) => (
           <li key={link}>
@@ -40,7 +40,7 @@ const BooksSidebar = ({handleHoverBook, hoverBookId}) => (
         ))}
       </ul>
       <br />
-      <span className="booksheading">Short Stories</span>
+      <h2>Short Stories</h2>
       <ul>
         {shortStories.map(({link, title}) => (
           <li key={link}>
