@@ -31,7 +31,7 @@ Since those days, I have learnt to relish the luxury of more time rather than be
 
 But now (with novel 16) a new friction has come into play, the most 'creative' yet.  It's called RSI.  Thanks to so many hours at my desk this year, chiselling at the coal-face of my manuscript, my right shoulder has decided to adopt a position which, inconveniently, fires shooting pains down my right arm.  Horrible! Infuriating.  Painful.  I am writing this slowly, with breaks every couple of minutes to twiddle my wrists and windmill my arms.  I am having hours of weekly physio.  I am booked to see a Shoulder Specialist.  There is talk of injections.  Aaaaaaaaaaaaaaaagh.
 
-And never - NEVER - have I been more eager to work.  I can hear the end of my novel in my head.  I know what it is about, where it is going, how to get it there...........those days of abstract distractions -  navel-gazing or watching the foxes in the garden  - are a distant memory.  ALL I WANT TO DO IS WRITE.  Perhaps, precisely because, for the first time in twenty five years, I can't.
+And never - NEVER - have I been more eager to work.  I can hear the end of my novel in my head.  I know what it is about, where it is going, how to get it there........... those days of abstract distractions -  navel-gazing or watching the foxes in the garden  - are a distant memory.  ALL I WANT TO DO IS WRITE.  Perhaps, precisely because, for the first time in twenty five years, I can't.
 
 I prefer the old type of frictions.  I want them back.  I'll never moan about them again.  I promise. When the RSI is cured, I am going to be the most grateful, efficient, productive novelist the world has ever seen.
 

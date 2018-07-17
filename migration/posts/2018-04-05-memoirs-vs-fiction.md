@@ -21,7 +21,7 @@ But then my mother went and died and the man I loved walked away and the seams o
 
 It was a friend in the publishing world who first suggested I write about what I was going through.  In fact, being a clever cookie, she suggested I write about getting Mabel - not just a blog post, but a proper book.  What she knew, and I hadn't quite grasped, was that you cannot write about a dog without writing about the dog's owner.  And so my latest book, a memoir and first work of non-fiction, was born:
 
-** For The Love of a Dog: a memoir of meltdown, recovery, and a golden doodle **
+**For The Love of a Dog: a memoir of meltdown, recovery, and a golden doodle**
 
 In the process, this is what I discovered:
 

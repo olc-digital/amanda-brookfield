@@ -32,5 +32,3 @@ In the process, this is what I discovered:
 * My inner life remains as safe as I need it to be
 
 * Many people are interested in dogs, as well as generously empathetic towards the meltdowns of their owners
-
-&nbsp;
