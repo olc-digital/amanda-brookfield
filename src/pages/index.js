@@ -75,7 +75,7 @@ export default class IndexPage extends Component {
                     href="#"
                     className="readmore button"
                     onClick={e => {
-                      this.props.openModal(e, 'FTLOAD')
+                      this.props.openModal(e, 'ftload')
                     }}
                   >
                     Pre-order
@@ -112,7 +112,7 @@ export default class IndexPage extends Component {
                     href="#"
                     className="buybutton button"
                     onClick={e => {
-                      this.props.openModal(e, 'TLC')
+                      this.props.openModal(e, 'tlc')
                     }}
                   >
                     Buy
@@ -151,7 +151,7 @@ export default class IndexPage extends Component {
                     href="#"
                     className="buybutton button"
                     onClick={e => {
-                      this.props.openModal(e, 'BIKY')
+                      this.props.openModal(e, 'biky')
                     }}
                   >
                     Buy
