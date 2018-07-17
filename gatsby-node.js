@@ -62,24 +62,25 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     tags = _.uniq(tags)
     years = _.uniq(years)
 
-    // // Make tag pages
-    tags.forEach(tag => {
-      const tagPath = `/blog/tags/${_.kebabCase(tag)}/`
+    // Make tag pages
+    // tags.forEach(tag => {
+    //   const tagPath = `/blog/tags/${_.kebabCase(tag)}/`
 
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
-        context: {
-          tag,
-        },
-      })
-    })
+    //   createPage({
+    //     path: tagPath,
+    //     component: path.resolve(`src/templates/tags.js`),
+    //     context: {
+    //       tag,
+    //     },
+    //   })
+    // })
     years.forEach(year => {
       const yearPath = `/blog/years/${year}/`
       createPage({
         path: yearPath,
         component: path.resolve(`src/templates/years.js`),
         context: {
+          year,
           yearGlob: `${year}*`,
         },
       })

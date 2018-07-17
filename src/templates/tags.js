@@ -13,6 +13,7 @@ class TagRoute extends React.Component {
       </li>
     ))
     const tag = this.props.pathContext.tag
+    console.log(this.props.pathContext)
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount} post${
@@ -26,7 +27,7 @@ class TagRoute extends React.Component {
           <div className="columns">
             <div
               className="column is-10 is-offset-1"
-              style={{ marginBottom: '6rem' }}
+              style={{marginBottom: '6rem'}}
             >
               <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
               <ul className="taglist">{postLinks}</ul>
@@ -52,8 +53,8 @@ export const tagPageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      sort: {fields: [frontmatter___date], order: DESC}
+      filter: {frontmatter: {tags: {in: [$tag]}}}
     ) {
       totalCount
       edges {

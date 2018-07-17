@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import BlogPostPreview from '../../components/BlogPostPreview'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -19,34 +20,22 @@ export default class IndexPage extends React.Component {
           </ul>
           <h2>Archive</h2>
           <ul>
-            {years.reverse().map(({fieldValue: year, totalCount}, i) => {
-              return (
-                <li key={i}>
-                  <Link to={`/blog/years/${year}/`}>
-                    {year} ({totalCount})
-                  </Link>
-                </li>
-              )
-            })}
+            {years
+              .map(({fieldValue: year, totalCount}, i) => {
+                return (
+                  <li key={i}>
+                    <Link to={`/blog/years/${year}/`}>
+                      {year} ({totalCount})
+                    </Link>
+                  </li>
+                )
+              })
+              .reverse()}
           </ul>
         </aside>
         <div>
           {posts.map(({node: post}) => (
-            <div className="blog-post-preview" key={post.id}>
-              <h2 className="blog-post-preview-title">
-                <Link className="" to={post.fields.slug}>
-                  {post.frontmatter.title}
-                </Link>
-              </h2>
-              <div className="blog-date">{post.frontmatter.date}</div>
-
-              <p>
-                {post.excerpt}{' '}
-                <Link className="keep-reading" to={post.fields.slug}>
-                  Keep Reading →
-                </Link>
-              </p>
-            </div>
+            <BlogPostPreview key={post.id} {...post} />
           ))}
         </div>
       </section>
