@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 
-class TagRoute extends React.Component {
+class YearRoute extends React.Component {
   render() {
     console.log('erm', this.props.data)
     const posts = this.props.data.allMarkdownRemark.edges
@@ -42,7 +42,7 @@ class TagRoute extends React.Component {
   }
 }
 
-export default TagRoute
+export default YearRoute
 
 export const yearPageQuery = graphql`
   query YearPage($yearGlob: String) {

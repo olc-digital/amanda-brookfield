@@ -549,9 +549,12 @@ a.authhoverfade:hover {
 .blog-sidebar {
   flex: 1 0 auto;
   width: 180px;
-  margin-right: 40px;
+  margin-right: 20px;
 }
-.blog-post-title {
+.blog-post-preview {
+  margin-bottom: 40px;
+}
+.blog-post-preview-title {
   margin: 0;
 }
 .blog-sidebar ul {
@@ -563,8 +566,10 @@ a.authhoverfade:hover {
   margin: 4px 0 6px;
 }
 .blog-date {
+  margin: 6px 0 8px;
   font-style: italic;
   text-decoration: underline dotted;
+  font-size: 16px;
 }
 .keep-reading {
   float: right;

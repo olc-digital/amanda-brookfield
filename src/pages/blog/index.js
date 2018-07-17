@@ -19,24 +19,26 @@ export default class IndexPage extends React.Component {
           </ul>
           <h2>Archive</h2>
           <ul>
-            {years.reverse().map(({fieldValue: year, totalCount}, i) => (
-              <li key={i}>
-                <Link to={'/'}>
-                  {year} ({totalCount})
-                </Link>
-              </li>
-            ))}
+            {years.reverse().map(({fieldValue: year, totalCount}, i) => {
+              return (
+                <li key={i}>
+                  <Link to={`/blog/years/${year}/`}>
+                    {year} ({totalCount})
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </aside>
-        <div className="">
+        <div>
           {posts.map(({node: post}) => (
-            <div key={post.id}>
-              <h2 className="blog-post-title">
+            <div className="blog-post-preview" key={post.id}>
+              <h2 className="blog-post-preview-title">
                 <Link className="" to={post.fields.slug}>
                   {post.frontmatter.title}
                 </Link>
               </h2>
-              <small className="blog-date">{post.frontmatter.date}</small>
+              <div className="blog-date">{post.frontmatter.date}</div>
 
               <p>
                 {post.excerpt}{' '}
