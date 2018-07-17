@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import {books} from '../../data'
 
 const Inspiration = () => (
   <div>
@@ -49,7 +50,7 @@ const Inspiration = () => (
         This is a game I play all the time in order to get under the skin of my
         characters.
         <br />For example, in writing my novel{' '}
-        <Link href="/books/the-godmother">The Godmother</Link>, I asked myself:
+        <Link to={books.tg.link}>The Godmother</Link>, I asked myself:
         <br />
         <span className="red italic">
           What if I had pursued a career in business and hadn’t had children, or
@@ -58,7 +59,7 @@ const Inspiration = () => (
         </span>
       </p>
       <p>
-        Or, in writing <Link to="/books/a-family-man">A Family Man</Link>:
+        Or, in writing <Link to={books.afm.link}>A Family Man</Link>:
         <br />
         <span className="red italic">
           What if a decent, hard-working thirtysomething Dad came home one
@@ -68,7 +69,7 @@ const Inspiration = () => (
         <br />
       </p>
       <p>
-        Or, in writing <Link to="/books/relative-love">Relative Love</Link>:
+        Or, in writing <Link to={books.rl.link}>Relative Love</Link>:
         <br />
         <span className="red italic">
           What if the worst, most unforeseeable tragedy befell a close family?
@@ -76,7 +77,7 @@ const Inspiration = () => (
         <br />
       </p>
       <p>
-        Or, in writing <Link href="/books/life-begins">Life Begins</Link>
+        Or, in writing <Link to={books.lb.link}>Life Begins</Link>:
         <br />
         <span className="red italic">
           What if the direction of an entire life was based on a single, seismic
@@ -84,7 +85,7 @@ const Inspiration = () => (
         </span>
       </p>
       <p>
-        Or, in writing <Link to="/books/the-love-child">The Love Child</Link>
+        Or, in writing <Link to={books.tlc.link}>The Love Child</Link>:
         <br />
         <span className="red italic">
           What if a 40 year old had sex with his best friend's just-sixteen year
