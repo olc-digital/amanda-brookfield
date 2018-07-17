@@ -15,9 +15,9 @@ I think it was having children that finally saw off the last of the kennel-maid 
 
 Then I found myself divorced and my youngest re-started his Get A Dog campaign.  One day I found this propped on my desk:
 
-** _AGAINST: Time, Flexibility probs, Long term, Need to reinforce garden_ **
+**_AGAINST: Time, Flexibility probs, Long term, Need to reinforce garden_**
 
-** _FOR: Happy for 12 years, Healthy (prolong life), May make dog friends, New idea for book/blogs, Puppy tweets, Facebook pictures, May eat Tiger Lily (problem rescue-cat, now a sweetheart) , Companion in empty house, Incentive for people to visit, You may actually love it, New Chapter in life, If not now it won't be before you are 60 - poor dog!_ **
+**_FOR: Happy for 12 years, Healthy (prolong life), May make dog friends, New idea for book/blogs, Puppy tweets, Facebook pictures, May eat Tiger Lily (problem rescue-cat, now a sweetheart) , Companion in empty house, Incentive for people to visit, You may actually love it, New Chapter in life, If not now it won't be before you are 60 - poor dog!_**
 
 I quote the list to show a. What a battle that child fought  and b. What a clever, prescient chap he was/is!
 
