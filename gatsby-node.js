@@ -64,7 +64,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 
     // // Make tag pages
     tags.forEach(tag => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
+      const tagPath = `/blog/tags/${_.kebabCase(tag)}/`
 
       createPage({
         path: tagPath,
@@ -75,7 +75,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
       })
     })
     years.forEach(year => {
-      const yearPath = `/years/${_.kebabCase(year)}/`
+      const yearPath = `/blog/years/${year}/`
       createPage({
         path: yearPath,
         component: path.resolve(`src/templates/years.js`),
