@@ -95,6 +95,12 @@ a.generalheading {
   text-decoration: none;
 }
 
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
 .buycontainer {
   padding: 20px;
   background: white;
@@ -294,13 +300,14 @@ a.buttonsmall {
   padding-top: 5px;
   text-decoration: none;
   text-align: center;
-  float: left;
+  display: inline-block;
 }
 a.readmoresmall {
   width: 68px;
   height: 23px;
   background-image: url(../assets/readmorebgsmall.gif);
   background-repeat: no-repeat;
+  display: inline-block;
 }
 a.buybuttonsmall {
   width: 32px;
@@ -312,14 +319,15 @@ a.buybuttonsmall {
   float: right;
   width: 320px;
 }
+
 .sidebarsec {
   clear: both;
   font-size: 13px;
   padding-bottom: 15px;
   min-height: 52px;
 }
-#kindle {
-  min-height: 130px;
+.kindle-hero-section {
+  clear: both;
 }
 .sidebaricon {
   width: 52px;
@@ -334,6 +342,10 @@ a#kindleicon {
 }
 a#kindleicon:hover {
   background-position: 116px 0;
+}
+.sidebarcontentcontainer {
+  float: left;
+  padding: 0 0 5px 5px;
 }
 .sidebarsec:hover a#kindleicon {
   background-position: 116px 0;
@@ -353,20 +365,23 @@ a#kindleicon:hover {
 .kindletext {
   text-align: justify;
 }
-.sidebarcontentcontainer.kindlebot {
+.sidebarcontentcontainer.kindlebottom {
   padding-left: 0px;
 }
-.kindlebot > div > a {
-  float: left;
-  margin: 0 0 6px 6px;
+.kindlebottom {
+  float: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
 }
-.kindlebot > div > a.buybuttonsmall {
+
+.kindlebottom a.buybuttonsmall {
   margin-left: 0px;
 }
-.kindlebot > div > a:first-child {
+.kindlebottom > div > a:first-child {
   margin-left: 0px;
 }
-.kindlebot > div > a > img {
+.kindlebottom > div > a > img {
   width: 100px;
   height: auto;
 }
@@ -385,10 +400,7 @@ a#linksicon {
 .sidebarsec:hover > a {
   background-position: 52px 0;
 }
-.sidebarcontentcontainer {
-  float: left;
-  padding: 0 0 5px 5px;
-}
+
 .sidebarline {
   margin: 0;
   padding-bottom: 5px;

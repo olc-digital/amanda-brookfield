@@ -49,7 +49,7 @@ export default class MainLayout extends Component {
         <Footer />
         <Modal
           isActive={this.state.isModalActive}
-          bookId={this.state.bookId}
+          bookId={this.state.modalBookId}
           closeModal={this.closeModal}
         />
       </div>

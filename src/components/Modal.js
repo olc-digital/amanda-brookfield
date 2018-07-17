@@ -2,6 +2,7 @@ import React from 'react'
 import {books, publishers} from '../data'
 
 const Modal = ({isActive, bookId = 'ftload', closeModal}) => {
+  console.log(bookId)
   return (
     <div className={'modal ' + (isActive && 'is-active')}>
       <div className="modal-background" onClick={closeModal} />

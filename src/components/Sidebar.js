@@ -3,86 +3,53 @@ import {Timeline} from 'react-twitter-widgets'
 import FacebookProvider, {Like} from 'react-facebook'
 import Link from 'gatsby-link'
 
-import tlKindle from '../assets/tl-kindle.jpg'
-import afmKindle from '../assets/afm-kindle.jpg'
-import rlKindle from '../assets/rl-kindle.jpg'
+import {books} from '../data'
+
 import sidebarLine from '../assets/sidebarline.jpg'
 
 const Sidebar = ({openModal}) => (
   <div className="sidebar1">
-    <div className="sidebarsec" id="kindle">
-      <a
-        href="http://www.amazon.co.uk/Amanda-Brookfield/e/B005Q0BMSI/ref=la_B005Q0BMSI_rf_p_n_binding_browse-b_3?rh=n%3A266239%2Cp_82%3AB005Q0BMSI%2Cp_n_binding_browse-bin%3A368165031&bbn=266239&ie=UTF8&qid=1386278626&rnid=492562011"
-        className="sidebaricon"
-        id="kindleicon"
-        target="_blank"
-        rel="noopener noreferrer"
-      />
-      <div className="sidebarcontentcontainer kindletop">
-        <div className="kindletitle">
-          Also available on Kindle are my bestsellers:
+    <div className="sidebarsec">
+      <div className="clearfix">
+        <a
+          href="http://www.amazon.co.uk/Amanda-Brookfield/e/B005Q0BMSI/ref=la_B005Q0BMSI_rf_p_n_binding_browse-b_3?rh=n%3A266239%2Cp_82%3AB005Q0BMSI%2Cp_n_binding_browse-bin%3A368165031&bbn=266239&ie=UTF8&qid=1386278626&rnid=492562011"
+          className="sidebaricon"
+          id="kindleicon"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+        <div className="sidebarcontentcontainer kindletop">
+          <div className="kindletitle">
+            Also available on Kindle are my bestsellers:
+          </div>
         </div>
       </div>
-      <div className="sidebarcontentcontainer kindlebot">
-        <div style={{marginTop: '10px'}}>
-          <Link to="/books/the-lover.html">
-            <img src={tlKindle} />
-          </Link>
-          <Link to="/books/relative-love.html">
-            <img src={rlKindle} />
-          </Link>
-          <Link to="/books/a-family-man.html">
-            <img src={afmKindle} />
-          </Link>
-        </div>
-        <div style={{margin: '0px 0 5px 0px'}}>
-          <a
-            href="books/the-lover.html"
-            className="readmoresmall buttonsmall"
-            style={{marginLeft: '0px'}}
-          >
-            Read More
-          </a>
-          <a
-            href="#"
-            className="buybuttonsmall buttonsmall"
-            onClick={e => {
-              openModal(e, 'TL')
-            }}
-          >
-            Buy
-          </a>
-          <a
-            href="books/relative-love.html"
-            className="readmoresmall buttonsmall"
-          >
-            Read More
-          </a>
-          <a
-            href="#"
-            className="buybuttonsmall buttonsmall"
-            onClick={e => {
-              openModal(e, 'RL')
-            }}
-          >
-            Buy
-          </a>
-          <a
-            href="books/a-family-man.html"
-            className="readmoresmall buttonsmall"
-          >
-            Read More
-          </a>
-          <a
-            href="#"
-            className="buybuttonsmall buttonsmall"
-            onClick={e => {
-              openModal(e, 'AFM')
-            }}
-          >
-            Buy
-          </a>
-        </div>
+      <div className="sidebarcontentcontainer kindlebottom">
+        {['tl', 'rl', 'afm'].map(bookId => (
+          <div key={bookId}>
+            <Link to={books[bookId].link}>
+              <img src={books[bookId].covers.kindle} />
+            </Link>
+            <div>
+              <Link
+                to={books[bookId].link}
+                className="readmoresmall buttonsmall"
+                style={{marginLeft: '0px'}}
+              >
+                Read More
+              </Link>
+              <a
+                href="#"
+                className="buybuttonsmall buttonsmall"
+                onClick={e => {
+                  openModal(e, bookId)
+                }}
+              >
+                Buy
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
     <div className="sidebarsec" id="facebook">

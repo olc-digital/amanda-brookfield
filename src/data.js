@@ -15,6 +15,10 @@ import asaGrid from './assets/covers/grid/A-Summer-Affair.jpg'
 import wogGrid from './assets/covers/grid/Walls-of-Glass.jpg'
 import aaGrid from './assets/covers/grid/Alice-Alone.jpg'
 
+import tlKindle from './assets/tl-kindle.jpg'
+import afmKindle from './assets/afm-kindle.jpg'
+import rlKindle from './assets/rl-kindle.jpg'
+
 import pubPenguin from './assets/penguin.jpg'
 import pubHeadOfZeus from './assets/logo-head-of-zeus.jpg'
 import pubAmazon from './assets/amazon.jpg'
@@ -112,6 +116,7 @@ export default {
       color: '#df2f55',
       covers: {
         grid: rlGrid,
+        kindle: rlKindle,
       },
       options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00H2GYBVO'}],
     },
@@ -134,6 +139,7 @@ export default {
       color: '#33ce4f',
       covers: {
         grid: afmGrid,
+        kindle: afmKindle,
       },
       options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00H2GYBP0'}],
     },
@@ -145,6 +151,7 @@ export default {
       color: '#fbbb01',
       covers: {
         grid: tlGrid,
+        kindle: tlKindle,
       },
       options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00Q8NUXI2'}],
     },
