@@ -485,7 +485,7 @@ a#linksicon {
 .booktext {
   /* text-align: justify; */
   width: 365px;
-  float: left;
+  float: right;
 }
 .reviewtext {
   font-style: italic;
@@ -501,7 +501,6 @@ a#linksicon {
   margin-top: 25px;
   text-align: center;
 }
-
 img.cover {
   float: left;
   padding-right: 20px;
