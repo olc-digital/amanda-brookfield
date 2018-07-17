@@ -8,10 +8,10 @@ const mdConverter = require('html-to-markdown')
 const fileName = 'amandabrookfield.wordpress.2018-05-28.xml'
 const data = fs.readFileSync(`${__dirname}/${fileName}`)
 
-const generateStringContents = (title, body, date, description, tags) => `\
+const generateFrontmatter = (title, body, date, description, tags) => `\
 ---
 templateKey: blog-post
-title: ${title}
+title: "${title}"
 date: ${date.toISOString()}
 description: ${description}
 tags: ${tags.map(tag => `\n  - ${tag.$.nicename}`).join('')}
@@ -39,7 +39,7 @@ function toMarkdown({
   const filename = `${moDate.format('YYYY-MM-DD')}-${kebabName ||
     kebabCase(title)}.md`
   const markdownBody = mdConverter.convert(body)
-  const data = generateStringContents(
+  const data = generateFrontmatter(
     title,
     markdownBody,
     moDate,
