@@ -146,8 +146,6 @@ a.generalheading {
 /*------------------------------- 
 ------------ HEADER ------------- 
 ---------------------------------*/
-.header {
-}
 #title {
   padding: 20px 0;
   text-align: right;
@@ -191,8 +189,6 @@ a.generalheading {
   text-indent: -10000px;
 }
 
-a#bookslink {
-}
 a#authorlink {
   background-position: -250px 0;
 }
