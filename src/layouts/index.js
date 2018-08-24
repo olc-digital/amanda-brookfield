@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import styled from 'react-emotion'
 
 import Navbar from '../components/Navbar'
-import BookPageContainer from '../components/BookPageContainer'
+import BookPageLayout from '../components/BookPageLayout'
 import Footer from '../components/Footer'
 import Modal from '../components/Modal'
 import './style.css'
@@ -42,9 +42,9 @@ export default class MainLayout extends Component {
   }
 
   render() {
-    const Content = this.props.location.pathname.match(/^\/books/)
-      ? BookPageContainer
-      : Fragment
+    const ContentLayout = this.props.location.pathname.match(/^\/books/)
+      ? BookPageLayout
+      : RenderDiv
     return (
       <div>
         <Helmet>
@@ -54,18 +54,16 @@ export default class MainLayout extends Component {
         <ContainerGrid>
           <Navbar />
           <ContentArea>
-            <Content>
-              <RenderDiv
-                render={({hoverBookId, handleHoverBook}) => {
-                  return this.props.children({
-                    ...this.props,
-                    openModal: this.openModal,
-                    hoverBookId,
-                    handleHoverBook,
-                  })
-                }}
-              />
-            </Content>
+            <ContentLayout
+              render={({hoverBookId, handleHoverBook}) => {
+                return this.props.children({
+                  ...this.props,
+                  openModal: this.openModal,
+                  hoverBookId,
+                  handleHoverBook,
+                })
+              }}
+            />
           </ContentArea>
           <Footer />
         </ContainerGrid>

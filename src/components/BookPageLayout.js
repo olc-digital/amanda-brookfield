@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react'
-import BooksSidebar from '../components/BooksSidebar'
+import BooksSidebar from './BooksSidebar'
 
 export default class BookPageContainer extends Component {
   state = {
@@ -16,7 +16,7 @@ export default class BookPageContainer extends Component {
           handleHoverBook={this.handleHoverBook}
           hoverBookId={this.state.hoverBookId}
         />
-        {React.cloneElement(this.props.children, {
+        {this.props.render({
           hoverBookId: this.state.hoverBookId,
           handleHoverBook: this.handleHoverBook,
         })}
