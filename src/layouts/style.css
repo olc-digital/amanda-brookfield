@@ -73,12 +73,7 @@ a:focus {
   /*color: #2e6fc7;*/
 }
 /* ~~ General classes ~~ */
-.container {
-  width: 900px;
-  padding: 0 20px;
-  background-color: #fff;
-  margin: 0 auto;
-}
+
 .generalheading {
   font-family: 'ariesregular';
   font-size: 25px;
