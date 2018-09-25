@@ -12,7 +12,7 @@ module.exports = {
         trackingId: 'UA-37149508-1',
         head: false,
         anonymize: true,
-        respectDNT: true,
+        respectDNT: false,
         exclude: ['/admin/**'],
       },
     },
