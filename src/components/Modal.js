@@ -1,5 +1,6 @@
 import React from 'react'
 import {books, publishers} from '../data'
+import {OutboundLink} from 'gatsby-plugin-google-analytics'
 
 const Modal = ({isActive, bookId = 'ftload', closeModal}) => {
   return (
@@ -12,10 +13,15 @@ const Modal = ({isActive, bookId = 'ftload', closeModal}) => {
           </div>
           <div className="buyoptions">
             {books[bookId].options.map(({type, url}, i) => (
-              <a key={i} href={url} target="_blank" rel="noopener noreferrer">
+              <OutboundLink
+                key={i}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={publishers[type].logo} />
                 <div style={{paddingTop: '8px'}}>{publishers[type].name}</div>
-              </a>
+              </OutboundLink>
             ))}
           </div>
         </div>

@@ -20,7 +20,7 @@ const Events = () => (
             Wed 7th November 2018
           </td>
           <td width="70%" valign="top">
-            Cotswold Christmas Fair (Mabel's first public appearance)
+            {"Cotswold Christmas Fair (Mabel's first public appearance)"}
           </td>
         </tr>
       </tbody>

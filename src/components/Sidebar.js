@@ -2,6 +2,7 @@ import React from 'react'
 import {Timeline} from 'react-twitter-widgets'
 import FacebookProvider, {Like} from 'react-facebook'
 import Link from 'gatsby-link'
+import {OutboundLink} from 'gatsby-plugin-google-analytics'
 
 import {books} from '../data'
 
@@ -11,7 +12,7 @@ const Sidebar = ({openModal}) => (
   <div className="sidebar1">
     <div className="sidebarsec">
       <div className="clearfix">
-        <a
+        <OutboundLink
           href="http://www.amazon.co.uk/Amanda-Brookfield/e/B005Q0BMSI/ref=la_B005Q0BMSI_rf_p_n_binding_browse-b_3?rh=n%3A266239%2Cp_82%3AB005Q0BMSI%2Cp_n_binding_browse-bin%3A368165031&bbn=266239&ie=UTF8&qid=1386278626&rnid=492562011"
           className="sidebaricon"
           id="kindleicon"
@@ -53,7 +54,7 @@ const Sidebar = ({openModal}) => (
       </div>
     </div>
     <div className="sidebarsec" id="facebook">
-      <a
+      <OutboundLink
         href="http://www.facebook.com/amandabrookfield100"
         className="sidebaricon"
         id="fbicon"
@@ -85,13 +86,13 @@ const Sidebar = ({openModal}) => (
             />
           </FacebookProvider>
         </div>
-        <a
+        <OutboundLink
           href="http://www.facebook.com/amandabrookfield100"
           rel="noopener noreferrer"
           target="_blank"
         >
           Join Amanda on Facebook!
-        </a>
+        </OutboundLink>
       </div>
     </div>
     <div className="sidebarsec" id="twitter">
@@ -157,7 +158,7 @@ const Sidebar = ({openModal}) => (
         </div>
         <ul>
           <li>
-            <a href="http://headofzeus.com//">Head of Zeus</a>
+            <a href="http://headofzeus.com/">Head of Zeus</a>
           </li>
           <li>
             <a href="https://www.penguin.co.uk/">Penguin</a>
