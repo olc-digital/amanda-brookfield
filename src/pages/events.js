@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
 const Events = () => (
   <div>
@@ -10,10 +9,18 @@ const Events = () => (
       <tbody>
         <tr>
           <td width="30%" valign="top">
-            1st November 2018
+            Thurs 1st November 2018
           </td>
           <td width="70%" valign="top">
             <strong>FOR THE LOVE OF A DOG</strong> PUBLICATION DAY!
+          </td>
+        </tr>
+        <tr>
+          <td width="30%" valign="top">
+            Wed 7th November 2018
+          </td>
+          <td width="70%" valign="top">
+            Cotswold Christmas Fair (Mabel's first public appearance)
           </td>
         </tr>
       </tbody>
