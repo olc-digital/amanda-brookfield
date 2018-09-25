@@ -136,6 +136,13 @@ const Sidebar = ({openModal}) => (
         <span style={{fontSize: '12px'}}>
           c/o Publicity, Penguin, 80 Strand, WC2R ORL
         </span>
+        <br />
+        <br />
+        <span style={{fontSize: '12px'}}>
+          c/o Head of Zeus, 5-8 Hardwick Street, Clerkenwell, London EC1R 4G
+        </span>
+        <br />
+        <br />
       </div>
     </div>
     <div className="sidebarsec" id="links">
@@ -150,7 +157,10 @@ const Sidebar = ({openModal}) => (
         </div>
         <ul>
           <li>
-            <a href="http://www.penguin.co.uk/">Penguin</a>
+            <a href="http://headofzeus.com//">Head of Zeus</a>
+          </li>
+          <li>
+            <a href="https://www.penguin.co.uk/">Penguin</a>
           </li>
           <li>
             <a href="https://www.penguin.co.uk/authors/amanda-brookfield/31470/">
