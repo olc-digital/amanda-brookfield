@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 
 import Sidebar from '../components/Sidebar'
 
-import portrait from '../assets/amandaphoto.jpg'
+import portrait from '../assets/amanda-portrait.jpg'
 import contentLine from '../assets/contentline.jpg'
 import ftloadcover from '../assets/ftloadcover.jpg'
 import tlccover from '../assets/tlccover.jpg'
@@ -34,12 +34,14 @@ export default class IndexPage extends Component {
                 <em>Life Begins</em>.
                 <br />
                 <br />
-                <strong>
-                  THE BIG NEWS: my latest book&nbsp;
-                  <em>For The Love of a Dog</em> will be published by Head of
-                  Zeus this autumn. It is available now to pre-order, both in
-                  hardback and e-book.
-                </strong>
+                <div>
+                  <strong>
+                    THE BIG NEWS: my latest book&nbsp;
+                    <em>For The Love of a Dog</em> will be published by Head of
+                    Zeus this autumn. It is available now to pre-order, both in
+                    hardback and Kindle e-book.
+                  </strong>
+                </div>
               </div>
             </div>
             <div className="contentlines" style={{paddingTop: '35px'}}>
