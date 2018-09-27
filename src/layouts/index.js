@@ -48,6 +48,7 @@ export default class MainLayout extends Component {
     return (
       <div>
         <Helmet>
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <title>{this.props.data.site.siteMetadata.title}</title>
           <link rel="shortcut icon" href={favicon} type="image/png" />
         </Helmet>
