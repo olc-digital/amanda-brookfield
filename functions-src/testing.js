@@ -1,6 +1,6 @@
 import Twitter from 'twitter'
-import dotenv from 'dotenv'
-dotenv.config()
+// import dotenv from 'dotenv'
+// dotenv.config()
 
 const {
   TWITTER_ACCESS_TOKEN_KEY,
@@ -20,6 +20,7 @@ exports.handler = function(event, context, callback) {
   console.log('logging logging')
   console.log(event)
   console.log(context)
+  console.log('state', event.payload.state)
   console.log(TWITTER_CONSUMER_SECRET)
 
   // conditions:
