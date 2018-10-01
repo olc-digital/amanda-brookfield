@@ -1,8 +1,0 @@
----
-templateKey: blog-post
-title: another test
-date: '2018-10-01T18:48:04+01:00'
-tags:
-  - test
----
-test
