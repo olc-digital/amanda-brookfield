@@ -11,17 +11,17 @@ exports.handler = function(event, context, callback) {
   console.log('logging logging')
   console.log(event)
   console.log(context)
-  client.post('statuses/update', {status: 'I Love Twitterz'}, function(
-    error,
-    tweet,
-    response
-  ) {
-    if (error) throw error
-    console.log(tweet) // Tweet body.
-    console.log(response) // Raw response object.
-    callback(null, {
-      statusCode: 200,
-      body: `Posted Successfully`,
-    })
+  // client.post('statuses/update', {status: 'I Love Twitterz'}, function(
+  //   error,
+  //   tweet,
+  //   response
+  // ) {
+  //   if (error) throw error
+  //   console.log(tweet) // Tweet body.
+  //   console.log(response) // Raw response object.
+  // })
+  callback(null, {
+    statusCode: 200,
+    body: `Posted Successfully`,
   })
 }
