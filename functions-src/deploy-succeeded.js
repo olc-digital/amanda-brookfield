@@ -20,7 +20,6 @@ exports.handler = function(event, context, callback) {
   console.log('logging logging')
   console.log(event)
   console.log(context)
-
   console.log(TWITTER_CONSUMER_SECRET)
 
   // conditions:
