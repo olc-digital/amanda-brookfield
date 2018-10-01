@@ -22,7 +22,7 @@ exports.handler = function(event, context, callback) {
   console.log(context)
   console.log('state', event.payload.state)
   console.log(TWITTER_CONSUMER_SECRET)
-
+  console.log('hello')
   // conditions:
   // file must be called 'deploy-succeeded.js'
   // (must be a POST)
