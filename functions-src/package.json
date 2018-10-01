@@ -4,11 +4,13 @@
   "description": "",
   "main": "hello.js",
   "scripts": {
+    "serve": "netlify-lambda build .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "twitter": "^1.7.1"
   }
 }
