@@ -18,7 +18,9 @@ var client = new Twitter({
 
 exports.handler = function(event, context, callback) {
   console.log('logging logging')
-  console.log('>>> EVENT', JSON.stringify(event))
+  console.log('>>> EVENT BODY', JSON.stringify(event.body))
+  delete event.body
+  console.log('>>> EVENT REST', JSON.stringify(event))
 
   console.log('>>> CONTEXT', JSON.stringify(context))
 
