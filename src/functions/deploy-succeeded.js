@@ -31,8 +31,9 @@ exports.handler = async (event, context, callback) => {
     // const bod = JSON.stringify(event.body)
     // console.log(bod.slice(0, bod.length / 2))
     // console.log(JSON.parse(event.body))
-    console.log(Object.keys(JSON.parse(event.body)))
-    const {state, context, title} = JSON.parse(event.body)
+    console.log(JSON.parse(event.body).payload)
+    console.log(JSON.parse(event.body).site)
+    const {state, context, title} = JSON.parse(event.body).payload
     console.log('STATE:', state)
     console.log('CONTEXT:', context)
     console.log('TITLE:', title)
