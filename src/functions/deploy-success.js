@@ -26,23 +26,20 @@ exports.handler = async (event, context, callback) => {
   // file must be called 'deploy-succeeded.js'
   try {
     const {state, context, title} = JSON.parse(event.body)
-    console.log('>>> EVENT TYPE', state)
-    console.log('>>> ENV', context)
-    console.log('>>> TITLE', title)
     if (
       state !== stateCondition ||
       context !== contextCondition ||
       !title.startsWith(titlePrefixCondition)
     ) {
-      console.log('Non blogpost-ready call to function')
+      console.log('No new blogpost detected')
       return callback(null, {
         statusCode: 200,
         body: `Non blogpost-ready call complete`,
       })
     }
+    console.log('New blogpost detected - Posting to twitter')
     const slug = title.substring(title.indexOf('“') + 1, title.lastIndexOf('”'))
     const href = `${urlPrefix}/${slug}`
-    console.log('href', href)
     await client.post('statuses/update', {
       status: `${tweetCopy} ${href}`,
     })
