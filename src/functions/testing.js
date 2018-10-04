@@ -26,10 +26,10 @@ exports.handler = function(event, context, callback) {
     console.log('failed to extract event details')
     console.log(err)
   }
-  console.log('>>> EVENT BODY', JSON.stringify(event.body))
-  delete event.body
-  console.log('>>> EVENT REST', JSON.stringify(event))
-  console.log('>>> CONTEXT', JSON.stringify(context))
+  // console.log('>>> EVENT BODY', JSON.stringify(event.body))
+  // delete event.body
+  // console.log('>>> EVENT REST', JSON.stringify(event))
+  // console.log('>>> CONTEXT', JSON.stringify(context))
 
   // conditions:
   // file must be called 'deploy-succeeded.js'
