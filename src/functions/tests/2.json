@@ -1,0 +1,114 @@
+{
+  "jef": {
+    "jef": {
+      "jef": [{"hi": "35.047Z"}],
+      "summary": {
+        "status": "ready",
+        "messages": [
+          {
+            "type": "info",
+            "title": "156 new files uploaded",
+            "description": "78 generated pages and 78 assets changed.",
+            "details":
+              "New pages include:\\n- index.html\\n- 404/index.html\\n- about/index.html\\n- author/index.html\\n- blog/index.html\\n- books/index.html\\n- events/index.html\\n- products/index.html\\n- 404.html\\n- blog/2012-08-03-august-3rd-olympic-note/index.html\\n"
+          },
+          {
+            "type": "info",
+            "title": "2 redirect rules processed",
+            "description": "All redirect rules deployed without errors.",
+            "details": ""
+          },
+          {
+            "type": "info",
+            "title": "80 header rules processed",
+            "description": "All header rules deployed without errors.",
+            "details": ""
+          },
+          {
+            "type": "info",
+            "title": "All linked resources are secure",
+            "description":
+              "Congratulations! No insecure mixed content found in your files.",
+            "details": null
+          }
+        ]
+      },
+      "screenshot_url":
+        "https: //353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/5bb6710ddd28ef1bcdac2c94/screenshot.png",
+      "site_capabilities": {
+        "title": "Netlify Team Free",
+        "asset_acceleration": true,
+        "form_processing": true,
+        "cdn_propagation": "partial",
+        "build_gc_exchange": "buildbot-gc",
+        "build_node_pool": "buildbot-external-ssd",
+        "build_cluster": "ha2",
+        "domain_aliases": true,
+        "secure_site": false,
+        "prerendering": true,
+        "proxying": true,
+        "ssl": "custom",
+        "rate_cents": 0,
+        "yearly_rate_cents": 0,
+        "cdn_network": "free_cdn_network",
+        "branch_deploy": true,
+        "managed_dns": true,
+        "geo_ip": true,
+        "split_testing": true,
+        "id": "nf_team_dev",
+        "identity": {
+          "active_users": {"included": 1000, "unit": "users", "used": 0},
+          "invite_only_users": {"included": 5, "unit": "users", "used": 1}
+        },
+        "functions": {
+          "invocations": {"included": 125000, "unit": "requests", "used": 3},
+          "runtime": {"included": 360000, "unit": "seconds", "used": 0}
+        }
+      }
+    },
+    "managed_dns": true,
+    "jwt_secret": null,
+    "account_slug": "crhallen",
+    "account_name": "Christian Allen",
+    "account_type": "personal",
+    "capabilities": {
+      "title": "Netlify Team Free",
+      "asset_acceleration": true,
+      "form_processing": true,
+      "cdn_propagation": "partial",
+      "build_gc_exchange": "buildbot-gc",
+      "build_node_pool": "buildbot-external-ssd",
+      "build_cluster": "ha2",
+      "domain_aliases": true,
+      "secure_site": false,
+      "prerendering": true,
+      "proxying": true,
+      "ssl": "custom",
+      "rate_cents": 0,
+      "yearly_rate_cents": 0,
+      "cdn_network": "free_cdn_network",
+      "branch_deploy": true,
+      "managed_dns": true,
+      "geo_ip": true,
+      "split_testing": true,
+      "id": "nf_team_dev",
+      "identity": {
+        "active_users": {"included": 1000, "unit": "users", "used": 0},
+        "invite_only_users": {"included": 5, "unit": "users", "used": 1}
+      },
+      "functions": {
+        "invocations": {"included": 125000, "unit": "requests", "used": 3},
+        "runtime": {"included": 360000, "unit": "seconds", "used": 0}
+      }
+    },
+    "active_subscription_ids": [],
+    "external_contributors_enabled": true,
+    "paid_individual_site_subscription": false,
+    "dns_zone_id": null,
+    "identity_instance_id": "5b086464c9659251a47644e1",
+    "use_functions": true,
+    "parent_user_id": null,
+    "automatic_tls_provisioning": null,
+    "disabled": null
+  }
+}

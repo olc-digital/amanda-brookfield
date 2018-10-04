@@ -23,9 +23,11 @@ const client = new Twitter({
 })
 
 exports.handler = async (event, context, callback) => {
-  // file must be called 'deploy-succeeded.js'
+  // This is triggered by deploy-succeeded event.  file must be called 'deploy-succeeded.js'
+  // Then get data from JSON.parse(event.body).payload
+  // Regular web-triggered functions get data from JSON.parse(event.body)
   try {
-    const {state, context, title} = JSON.parse(event.body)
+    const {state, context, title} = JSON.parse(event.body).payload
     console.log('STATE:', state)
     console.log('CONTEXT:', context)
     console.log('TITLE:', title)
