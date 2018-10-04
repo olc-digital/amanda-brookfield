@@ -27,8 +27,7 @@ exports.handler = async (event, context, callback) => {
   // Then get data from event.payload
   // Regular web-triggered functions get data from event.body
   try {
-    console.log(Object.keys(event))
-    console.log(Object.keys(event.body))
+    console.log(event.body)
     const {state, context, title} = event.body.payload
     console.log('STATE:', state)
     console.log('CONTEXT:', context)
