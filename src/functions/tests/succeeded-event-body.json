@@ -1,0 +1,107 @@
+{
+  "id": "5bb6341d82d3f13f14f22a72",
+  "site_id": "37c8cf9a-c7ef-4a70-a1f2-87a1c52b86ee",
+  "build_id": "5bb6341d82d3f13f14f22a73",
+  "state": "ready",
+  "name": "amandabrookfield",
+  "url": "https: //www.amandabrookfield.co.uk",
+  "ssl_url": "https://www.amandabrookfield.co.uk",
+  "admin_url": "https://app.netlify.com/sites/amandabrookfield",
+  "deploy_url": "http://5bb6341d82d3f13f14f22a72.amandabrookfield.netlify.com",
+  "deploy_ssl_url":
+    "https://5bb6341d82d3f13f14f22a72--amandabrookfield.netlify.com",
+  "created_at": "2018-10-04T15:39:09.845Z",
+  "updated_at": "2018-10-04T15:39:11.360Z",
+  "user_id": "5a8ffa827b6ee873e6ff8994",
+  "error_message": null,
+  "required": [],
+  "required_functions": null,
+  "commit_ref": null,
+  "review_id": null,
+  "branch": "master",
+  "commit_url": null,
+  "skipped": null,
+  "locked": null,
+  "log_access_attributes": {
+    "type": "firebase",
+    "url": "https://netlify.firebaseio.com/builds/5bb63864dd28ef178366ac06/log"
+  },
+  "title": "Create Blog “2018-10-04-test2”",
+  "review_url": null,
+  "published_at": "2018-10-04T16:02:30.642Z",
+  "context": "production",
+  "deploy_time": 188,
+  "available_functions": [
+    {
+      "n": "hello",
+      "d": "7152a61e7a46f189a3a261c23e0757485a4b58c29f3ebff70107010ec8af2297",
+      "id": "e5e5e4edf1738cd2234fb8de955562b935d7eeca288e0848f50f6fad68cb5f3a",
+      "s": 1459,
+      "r": "js",
+      "c": "2018-10-01T18:53:59.818Z"
+    }
+  ],
+  "summary": {
+    "status": "ready",
+    "messages": [
+      {
+        "type": "info",
+        "title": "158 new files uploaded",
+        "description": "79 generated pages and 79 assets changed.",
+        "details":
+          "New pages include:\n- index.html\n- 404/index.html\n- author/index.html\n- about/index.html\n- blog/index.html\n- products/index.html\n- 404.html\n- books/index.html\n- events/index.html\n- blog/2012-04-01-spring-newsletter-2012/index.html\n"
+      },
+      {
+        "type": "info",
+        "title": "2 redirect rules processed",
+        "description": "All redirect rules deployed without errors.",
+        "details": ""
+      },
+      {
+        "type": "info",
+        "title": "81 header rules processed",
+        "description": "All header rules deployed without errors.",
+        "details": ""
+      },
+      {
+        "type": "info",
+        "title": "All linked resources are secure",
+        "description":
+          "Congratulations! No insecure mixed content found in your files.",
+        "details": null
+      }
+    ]
+  },
+  "screenshot_url":
+    "https://353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/5bb63864dd28ef178366ac05/screenshot.png",
+  "site_capabilities": {
+    "title": "Netlify Team Free",
+    "asset_acceleration": true,
+    "form_processing": true,
+    "cdn_propagation": "partial",
+    "build_gc_exchange": "buildbot-gc",
+    "build_node_pool": "buildbot-external-ssd",
+    "build_cluster": "ha2",
+    "domain_aliases": true,
+    "secure_site": false,
+    "prerendering": true,
+    "proxying": true,
+    "ssl": "custom",
+    "rate_cents": 0,
+    "yearly_rate_cents": 0,
+    "cdn_network": "free_cdn_network",
+    "branch_deploy": true,
+    "managed_dns": true,
+    "geo_ip": true,
+    "split_testing": true,
+    "id": "nf_team_dev",
+    "identity": {
+      "active_users": {"included": 1000, "unit": "users", "used": 0},
+      "invite_only_users": {"included": 5, "unit": "users", "used": 1}
+    },
+    "functions": {
+      "invocations": {"included": 125000, "unit": "requests", "used": 3},
+      "runtime": {"included": 360000, "unit": "seconds", "used": 0}
+    }
+  }
+}
