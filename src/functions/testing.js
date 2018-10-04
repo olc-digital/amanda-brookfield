@@ -9,7 +9,12 @@ const {
   TWITTER_CONSUMER_SECRET,
 } = process.env
 
-var client = new Twitter({
+const titlePrefixCondition = 'Create Blog '
+const contextCondition = 'production'
+const stateCondition = 'ready'
+const urlPrefix = 'amandabrookfield.co.uk/blog'
+
+const client = new Twitter({
   consumer_key: TWITTER_CONSUMER_KEY,
   consumer_secret: TWITTER_CONSUMER_SECRET,
   access_token_key: TWITTER_ACCESS_TOKEN_KEY,
@@ -17,21 +22,6 @@ var client = new Twitter({
 })
 
 exports.handler = function(event, context, callback) {
-  console.log('logging logging')
-  try {
-    const body = JSON.parse(event.body)
-    console.log('>>> EVENT TYPE', body.state)
-    console.log('>>> ENV', body.context)
-    console.log('>>> TITLE', body.title)
-  } catch (err) {
-    console.log('failed to extract event details')
-    console.log(err)
-  }
-  // console.log('>>> EVENT BODY', JSON.stringify(event.body))
-  // delete event.body
-  // console.log('>>> EVENT REST', JSON.stringify(event))
-  // console.log('>>> CONTEXT', JSON.stringify(context))
-
   // conditions:
   // file must be called 'deploy-succeeded.js'
   // (must be a POST)
@@ -40,7 +30,18 @@ exports.handler = function(event, context, callback) {
   // state = ready
   // context = production
   // title = "Create Blog "...
-
+  try {
+    const {state, context, title} = JSON.parse(event.body)
+    console.log('>>> EVENT TYPE', state)
+    console.log('>>> ENV', context)
+    console.log('>>> TITLE', title)
+    const slug = title.substring(title.indexOf('“') + 1, title.lastIndexOf('”'))
+    const href = `${urlPrefix}/${slug}`
+    console.log('href', href)
+  } catch (err) {
+    console.log('failed to extract event details')
+    console.log(err)
+  }
   //need to extract url of post:  x.substring(
   //   x.indexOf("“") + 1,
   //     x.lastIndexOf("”")
