@@ -18,13 +18,10 @@ var client = new Twitter({
 
 exports.handler = function(event, context, callback) {
   console.log('logging logging')
+  console.log('>>> EVENT', JSON.stringify(event))
 
-  console.log('>>> EVENT')
-  console.log(JSON.stringify(event))
-  console.log('>>> CONTEXT')
-  console.log(JSON.stringify(context))
-  console.log('state', event && event.payload && event.payload.state)
-  console.log('hello')
+  console.log('>>> CONTEXT', JSON.stringify(context))
+
   // conditions:
   // file must be called 'deploy-succeeded.js'
   // (must be a POST)

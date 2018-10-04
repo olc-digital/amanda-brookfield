@@ -1,0 +1,21 @@
+{
+  "callbackWaitsForEmptyEventLoop": true,
+  "logGroupName":
+    "/aws/lambda/e69afec23e0c35e62705c06dfe048e9a7f132ded23ac83d002f85cdf3504a244",
+  "logStreamName": "2018/10/04/[$LATEST]bfab05678bd24c4dafb308e323740d13",
+  "functionName":
+    "e69afec23e0c35e62705c06dfe048e9a7f132ded23ac83d002f85cdf3504a244",
+  "memoryLimitInMB": "128",
+  "functionVersion": "$LATEST",
+  "clientContext": {
+    "identity": {
+      "url": "https://develop--amandabrookfield.netlify.com/.netlify/identity",
+      "token":
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mzg2Njc2MTEsInN1YiI6IjAifQ.PLNE39UeMvsHCw3a6voghginyI7S-iGnpX_1SIagqCU"
+    }
+  },
+  "invokeid": "a3f64dc5-c7eb-11e8-965d-c3a8c0e83f44",
+  "awsRequestId": "a3f64dc5-c7eb-11e8-965d-c3a8c0e83f44",
+  "invokedFunctionArn":
+    "arn:aws:lambda:us-east-1:812122390002:function:e69afec23e0c35e62705c06dfe048e9a7f132ded23ac83d002f85cdf3504a244"
+}

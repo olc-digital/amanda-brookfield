@@ -14782,10 +14782,12 @@ var client = new _twitter2.default({
 
 exports.handler = function (event, context, callback) {
   console.log('logging logging');
-  console.log(event);
-  console.log(context);
+
+  console.log('>>> EVENT');
+  console.log(JSON.stringify(event));
+  console.log('>>> CONTEXT');
+  console.log(JSON.stringify(context));
   console.log('state', event && event.payload && event.payload.state);
-  console.log(TWITTER_CONSUMER_SECRET);
   console.log('hello');
   // conditions:
   // file must be called 'deploy-succeeded.js'
