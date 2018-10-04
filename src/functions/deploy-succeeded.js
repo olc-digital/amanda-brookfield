@@ -26,6 +26,9 @@ exports.handler = async (event, context, callback) => {
   // file must be called 'deploy-succeeded.js'
   try {
     const {state, context, title} = JSON.parse(event.body)
+    console.log('STATE:', state)
+    console.log('CONTEXT:', context)
+    console.log('TITLE:', title)
     if (
       state !== stateCondition ||
       context !== contextCondition ||
