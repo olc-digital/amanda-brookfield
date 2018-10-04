@@ -27,8 +27,12 @@ exports.handler = async (event, context, callback) => {
   // Then get data from event.payload
   // Regular web-triggered functions get data from event.body
   try {
-    console.log(event.body)
-    const {state, context, title} = event.body.payload
+    console.log(event.body.slice(0, event.body.length / 2))
+    const bod = JSON.strinigy(event.body)
+    console.log(bod.slice(0, bod.length / 2))
+    console.log(event.body.slice(0, event.body.length / 2))
+    console.log(JSON.parse(event.body))
+    const {state, context, title} = JSON.parse(event.body)
     console.log('STATE:', state)
     console.log('CONTEXT:', context)
     console.log('TITLE:', title)
