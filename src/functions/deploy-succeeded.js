@@ -27,15 +27,8 @@ exports.handler = async (event, context, callback) => {
   // Then get data from event.payload
   // Regular web-triggered functions get data from event.body
   try {
-    // JSON.stringify(event)
-    //   .split(',')
-    //   .forEach(console.log)
-    console.log(event.body.payload)
-    // if (1 === 1)
-    //   return callback(null, {
-    //     statusCode: 200,
-    //     body: `Tweeted Successfully`,
-    //   })
+    console.log(Object.keys(event))
+    console.log(Object.keys(event.body))
     const {state, context, title} = event.body.payload
     console.log('STATE:', state)
     console.log('CONTEXT:', context)
