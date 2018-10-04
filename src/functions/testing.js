@@ -18,10 +18,17 @@ var client = new Twitter({
 
 exports.handler = function(event, context, callback) {
   console.log('logging logging')
+  try {
+    console.log('>>> EVENT TYPE', event.body.state)
+    console.log('>>> ENV', event.body.context)
+    console.log('>>> TITLE', event.body.title)
+  } catch (err) {
+    console.log('failed to extract event details')
+    console.log(err)
+  }
   console.log('>>> EVENT BODY', JSON.stringify(event.body))
   delete event.body
   console.log('>>> EVENT REST', JSON.stringify(event))
-
   console.log('>>> CONTEXT', JSON.stringify(context))
 
   // conditions:
