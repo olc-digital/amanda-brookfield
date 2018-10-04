@@ -19,9 +19,10 @@ var client = new Twitter({
 exports.handler = function(event, context, callback) {
   console.log('logging logging')
   try {
-    console.log('>>> EVENT TYPE', event.body.state)
-    console.log('>>> ENV', event.body.context)
-    console.log('>>> TITLE', event.body.title)
+    const body = JSON.parse(event.body)
+    console.log('>>> EVENT TYPE', body.state)
+    console.log('>>> ENV', body.context)
+    console.log('>>> TITLE', body.title)
   } catch (err) {
     console.log('failed to extract event details')
     console.log(err)
