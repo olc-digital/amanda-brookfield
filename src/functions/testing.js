@@ -35,6 +35,17 @@ exports.handler = function(event, context, callback) {
     console.log('>>> EVENT TYPE', state)
     console.log('>>> ENV', context)
     console.log('>>> TITLE', title)
+    if (
+      state !== stateCondition ||
+      context !== contextCondition ||
+      !title.startsWith(titlePrefixCondition)
+    ) {
+      console.log('Non blogpost call to function')
+      return callback(null, {
+        statusCode: 200,
+        body: `Non blogpost call complete`,
+      })
+    }
     const slug = title.substring(title.indexOf('“') + 1, title.lastIndexOf('”'))
     const href = `${urlPrefix}/${slug}`
     console.log('href', href)
