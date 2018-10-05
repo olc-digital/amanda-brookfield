@@ -1,7 +1,7 @@
 import React, {Fragment, Component} from 'react'
 import Link from 'gatsby-link'
-import {books} from '../../data'
-
+import Helmet from 'react-helmet'
+import {books, metaDescriptions} from '../../data'
 import Modal from '../../components/Modal'
 
 export default class BooksPage extends Component {
@@ -20,6 +20,9 @@ export default class BooksPage extends Component {
     const {handleHoverBook, hoverBookId} = this.props
     return (
       <Fragment>
+        <Helmet>
+          <meta name="description" content={metaDescriptions.books} />
+        </Helmet>
         <Modal
           isActive={this.state.isModalActive}
           bookId={this.state.bookId}

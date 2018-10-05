@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
+import {metaDescriptions} from '../data'
 
 import Sidebar from '../components/Sidebar'
 
@@ -14,6 +16,9 @@ export default class IndexPage extends Component {
   render() {
     return (
       <section className="section">
+        <Helmet>
+          <meta name="description" content={metaDescriptions.home} />
+        </Helmet>
         <Sidebar openModal={this.props.openModal} />
         <div className="homecontent">
           <div className="paddedcontent">

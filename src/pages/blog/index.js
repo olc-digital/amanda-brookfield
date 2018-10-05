@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 import BlogPostPreview from '../../components/BlogPostPreview'
+import {metaDescriptions} from '../../data'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -9,6 +11,9 @@ export default class IndexPage extends React.Component {
     const {edges: posts, group: years} = data.allMarkdownRemark
     return (
       <section className="blog-container">
+        <Helmet>
+          <meta name="description" content={metaDescriptions.blog} />
+        </Helmet>
         <aside className="blog-sidebar">
           <h2>Recent Posts</h2>
           <ul>
