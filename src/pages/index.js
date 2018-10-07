@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import {OutboundLink} from 'gatsby-plugin-google-analytics'
 
 import Sidebar from '../components/Sidebar'
 
@@ -18,11 +19,7 @@ export default class IndexPage extends Component {
         <div className="homecontent">
           <div className="paddedcontent">
             <div id="welcomehome">
-              <img
-                src={portrait}
-                alt="Amanda Brookfield portrait"
-                className="amanda-portrait"
-              />
+              <img src={portrait} className="amanda-portrait" />
 
               <div className="hometext">
                 <span className="homeheading homeheading--inline">Welcome</span>&nbsp;to
@@ -66,6 +63,15 @@ export default class IndexPage extends Component {
                 to cheer myself up. I never thought I would actually go through
                 with it; I was barely capable of looking after myself, let alone
                 a dog…
+                <br />
+                <br />
+                <OutboundLink
+                  href="https://www.instagram.com/amanda_and_mabel_brookfield/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Follow Amanda and Mable on Instagram!
+                </OutboundLink>
                 <div style={{textAlign: 'center', padding: '15px 0 0 0'}}>
                   <Link
                     to="/books/for-the-love-of-a-dog"

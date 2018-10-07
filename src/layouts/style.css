@@ -382,6 +382,9 @@ a#kindleicon:hover {
   width: 100px;
   height: auto;
 }
+a#instaicon {
+  background-image: url(../assets/insta.png);
+}
 a#fbicon {
   background-image: url(../assets/fb.jpg);
 }

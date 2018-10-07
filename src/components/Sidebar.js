@@ -3,7 +3,6 @@ import {Timeline} from 'react-twitter-widgets'
 import FacebookProvider, {Like} from 'react-facebook'
 import Link from 'gatsby-link'
 import {OutboundLink} from 'gatsby-plugin-google-analytics'
-
 import {books} from '../data'
 
 import sidebarLine from '../assets/sidebarline.jpg'
@@ -51,6 +50,26 @@ const Sidebar = ({openModal}) => (
             </div>
           </div>
         ))}
+      </div>
+    </div>
+    <div className="sidebarsec" id="instagram">
+      <OutboundLink
+        href="https://www.instagram.com/amanda_and_mabel_brookfield/"
+        className="sidebaricon"
+        id="instaicon"
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+      <div className="sidebarcontentcontainer">
+        <OutboundLink
+          href="https://www.instagram.com/amanda_and_mabel_brookfield/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <div style={{margin: '18px 0 0 10px'}}>
+            Follow Amanda and Mabel on Instagram
+          </div>
+        </OutboundLink>
       </div>
     </div>
     <div className="sidebarsec" id="facebook">
