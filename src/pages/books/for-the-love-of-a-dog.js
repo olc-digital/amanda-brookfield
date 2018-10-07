@@ -30,7 +30,17 @@ const BookDescription = ({openModal}) => {
             of rebuilding her owner’s shattered self-belief. Mabel’s own journey
             is equally captivating, as she blossoms into a mischievous,
             endearing head-turner of a companion – as affectionate as she is
-            glorious.`}
+            glorious.
+            <br />
+            <br />
+            <a
+              href="https://www.instagram.com/amanda_and_mabel_brookfield/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              Follow Amanda and Mable on Instagram
+            </a>
+            `}
       reviews={false}
     />
   )
