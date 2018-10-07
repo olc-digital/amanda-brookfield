@@ -24,6 +24,18 @@ import pubHeadOfZeus from './assets/logo-head-of-zeus.jpg'
 import pubAmazon from './assets/amazon.jpg'
 
 export default {
+  metaDescriptions: {
+    home:
+      'Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1',
+    books:
+      'My gallery of bestselling women’s fiction gives plot out-lines that will satisfy readers looking for romantic, realistic, heart-rending stories about love, loss, family secrets and hope.',
+    author:
+      'Read about my personal life-story and how I became a bestselling Penguin novelist. Discover the truth behind my literary inspirations and my private fears. Learn some secret writing tips.',
+    blog:
+      'My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives.',
+    events:
+      'Get up-to-date news of my latest book events and public appearances. Come and meet me and my amazing dog, Mabel, for signings of my new memoir bestseller ‘For the Love of a Dog.’',
+  },
   books: {
     ftload: {
       title: 'For the Love of a Dog',

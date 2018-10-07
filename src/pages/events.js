@@ -1,7 +1,12 @@
 import React from 'react'
+import Helmet from 'react-helmet'
+import {metaDescriptions} from '../data'
 
 const Events = () => (
   <div>
+    <Helmet>
+      <meta name="description" content={metaDescriptions.events} />
+    </Helmet>
     <div className="booksheading" style={{paddingBottom: '10px'}}>
       Upcoming Events
     </div>
