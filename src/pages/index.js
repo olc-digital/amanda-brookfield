@@ -75,7 +75,7 @@ export default class IndexPage extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Follow Amanda and Mable on Instagram
+                  Follow Amanda and Mabel on Instagram
                 </OutboundLink>
                 <div style={{textAlign: 'center', padding: '15px 0 0 0'}}>
                   <Link
