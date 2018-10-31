@@ -38,10 +38,15 @@ const BookDescription = ({openModal}) => {
               target="_blank"
               rel="noopener noreferrer"
               >
-              Follow Amanda and Mable on Instagram
+              Follow Amanda and Mabel on Instagram
             </a>
             `}
-      reviews={false}
+      reviews={`<div class="reviewtext">By turns terrifically moving and tea-snortingly funny, ‘For the Love of a Dog’ is my life-affirming must-read of the year.</div>
+          <div class="reviewref">Chris Manby</div>
+          <div class="reviewtext">Sharing Amanda and Mabel’s blossoming mutual devotion is a privilege, terribly addictive to read, as laughter-filled as it is honest.</div>
+          <div class="reviewref">Fiona Walker</div>
+          <div class="reviewtext">With great artistry and wisdom, Amanda Brookfield has illuminated what it means to get your life on track.  This is a book that’ll teach you to sit, be still, and listen to yourself.</div>
+          <div class="reviewref">Henry Sutton</div>`}
     />
   )
 }

@@ -40,7 +40,7 @@ export default class IndexPage extends Component {
                   <strong>
                     THE BIG NEWS: my latest book&nbsp;
                     <em>For The Love of a Dog</em> will be published by Head of
-                    Zeus this autumn. It is available now to pre-order, both in
+                    Zeus this autumn. It is available now to buy, both in
                     hardback and Kindle e-book.
                   </strong>
                 </div>
@@ -56,18 +56,38 @@ export default class IndexPage extends Component {
                   alt="For the Love of a Dog cover"
                   style={{paddingRight: '15px'}}
                 />
+                <div
+                  style={{fontSize: 13, width: '200px', margin: '20px auto'}}
+                >
+                  {[
+                    {
+                      copy: 'Addictive...as laughter filled as it is honest.',
+                      saidBy: 'Fiona Walker',
+                    },
+                    {
+                      copy: 'Great artistry and wisdom.',
+                      saidBy: 'Henry Sutton',
+                    },
+                  ].map(({copy, saidBy}) => (
+                    <div key={copy}>
+                      <div className="reviewtext">{copy}</div>
+                      <div className="reviewref">{saidBy}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div />
               </div>
               <div className="hometext">
                 <span className="homeheading">For the Love of a Dog</span>
-                <br />For release in November 2018, &nbsp;
-                <em>For The Love of a Dog</em> is a funny and poignant memoir of
-                emotional meltdown and recovery with the unwitting aid of a
-                golden doodle puppy called Mabel. Following the death of my
-                mother and the end of a post-divorce relationship, my world fell
-                apart and desolation closed in. Talk of getting a puppy was just
-                to cheer myself up. I never thought I would actually go through
-                with it; I was barely capable of looking after myself, let alone
-                a dog…
+                <br />Published in November 2018, <em>For The Love of a Dog</em>
+                is a funny and poignant memoir of emotional meltdown and
+                recovery with the unwitting aid of a golden doodle puppy called
+                Mabel. Following the death of my mother and the end of a
+                post-divorce relationship, my world fell apart and desolation
+                closed in. Talk of getting a puppy was just to cheer myself up.
+                I never thought I would actually go through with it; I was
+                barely capable of looking after myself, let alone a dog…
                 <br />
                 <br />
                 <OutboundLink
@@ -91,7 +111,7 @@ export default class IndexPage extends Component {
                       this.props.openModal(e, 'ftload')
                     }}
                   >
-                    Pre-order
+                    Buy
                   </a>
                 </div>
               </div>
