@@ -116,7 +116,7 @@ const Sidebar = ({openModal}) => (
     </div>
     <div className="sidebarsec" id="twitter">
       <a
-        href="http://www.twitter.com/words100"
+        href="http://www.twitter.com/ABrookfield1"
         className="sidebaricon"
         id="twittericon"
       />
