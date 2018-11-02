@@ -80,14 +80,15 @@ export default class IndexPage extends Component {
               </div>
               <div className="hometext">
                 <span className="homeheading">For the Love of a Dog</span>
-                <br />Published in November 2018, <em>For The Love of a Dog</em>
-                is a funny and poignant memoir of emotional meltdown and
-                recovery with the unwitting aid of a golden doodle puppy called
-                Mabel. Following the death of my mother and the end of a
-                post-divorce relationship, my world fell apart and desolation
-                closed in. Talk of getting a puppy was just to cheer myself up.
-                I never thought I would actually go through with it; I was
-                barely capable of looking after myself, let alone a dog…
+                <br />
+                Published in November 2018, <em>For The Love of a Dog</em> is a
+                funny and poignant memoir of emotional meltdown and recovery
+                with the unwitting aid of a golden doodle puppy called Mabel.
+                Following the death of my mother and the end of a post-divorce
+                relationship, my world fell apart and desolation closed in. Talk
+                of getting a puppy was just to cheer myself up. I never thought
+                I would actually go through with it; I was barely capable of
+                looking after myself, let alone a dog…
                 <br />
                 <br />
                 <OutboundLink
