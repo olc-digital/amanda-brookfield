@@ -1,5 +1,5 @@
 {
-  "plugins": ["react"],
+  "plugins": ["react", "import"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -18,8 +18,9 @@
   },
   "extends": [
     "eslint:recommended",
-    "eslint-config-prettier",
-    "plugin:react/recommended"
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "eslint-config-prettier"
   ],
   "rules": {
     "strict": 0,
