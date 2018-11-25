@@ -809,7 +809,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.6.6.tgz#62266c5f0eac6941fece302abad69f2ee7e25e44"
   integrity sha512-ojhgxzUHZ7am3D2jHkMzPpsBAiB005GF5YU4ea+8DNPybMk01JJUM9V9YRlF/GE95tcOm8DxQvWA2jq19bGalQ==
 
-"@emotion/is-prop-valid@^0.6.1":
+"@emotion/is-prop-valid@^0.6.1", "@emotion/is-prop-valid@^0.6.8":
   version "0.6.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.6.8.tgz#68ad02831da41213a2089d2cab4e8ac8b30cbd85"
   integrity sha512-IMSL7ekYhmFlILXcouA6ket3vV7u9BqStlXzbKOF9HBtpUPMMlHU+bBxrLOa2NvleVwNIxeq/zL8LafLbeUXcA==
@@ -840,6 +840,11 @@
   version "0.6.7"
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.6.7.tgz#53e9f1892f725b194d5e6a1684a7b394df592397"
   integrity sha512-Arj1hncvEVqQ2p7Ega08uHLr1JuRYBuO5cIvcA+WWEQ5+VmkOE3ZXzl04NbQxeQpWX78G7u6MqxKuNX3wvYZxg==
+
+"@emotion/unitless@^0.7.0":
+  version "0.7.3"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/@emotion/unitless/-/unitless-0.7.3.tgz#6310a047f12d21a1036fb031317219892440416f"
+  integrity sha1-YxCgR/EtIaEDb7AxMXIZiSRAQW8=
 
 "@emotion/utils@^0.8.2":
   version "0.8.2"
@@ -1792,6 +1797,14 @@ babel-plugin-remove-graphql-queries@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.5.1.tgz#006b0cce315d633d19c6595d97bb14c1dbb1a2d9"
   integrity sha512-yRoSVCSxxCXUOcfy83yE4TFWvvX9bZRvcG/mAOKnD+uL+GCi/M2jBRKRXn6PKFY3YoxJ2hS1xqJ+ZZu9ghnhPw==
+
+"babel-plugin-styled-components@>= 1", babel-plugin-styled-components@^1.8.0:
+  version "1.8.0"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/babel-plugin-styled-components/-/babel-plugin-styled-components-1.8.0.tgz#9dd054c8e86825203449a852a5746f29f2dab857"
+  integrity sha1-ndBUyOhoJSA0SahSpXRvKfLauFc=
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.0.0"
+    lodash "^4.17.10"
 
 babel-plugin-syntax-class-properties@^6.8.0:
   version "6.13.0"
@@ -3622,6 +3635,11 @@ crypto-random-string@^1.0.0:
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
   integrity sha1-ojD2T1aDEOFJgAmUB5DsmVRbyn4=
 
+css-color-keywords@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/css-color-keywords/-/css-color-keywords-1.0.0.tgz#fea2616dc676b2962686b3af8dbdbe180b244e05"
+  integrity sha1-/qJhbcZ2spYmhrOvjb2+GAskTgU=
+
 css-color-names@0.0.4, css-color-names@^0.0.4:
   version "0.0.4"
   resolved "http://registry.npmjs.org/css-color-names/-/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
@@ -3699,6 +3717,15 @@ css-selector-tokenizer@^0.7.0:
     cssesc "^0.1.0"
     fastparse "^1.1.1"
     regexpu-core "^1.0.0"
+
+css-to-react-native@^2.2.2:
+  version "2.2.2"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/css-to-react-native/-/css-to-react-native-2.2.2.tgz#c077d0f7bf3e6c915a539e7325821c9dd01f9965"
+  integrity sha1-wHfQ978+bJFaU55zJYIcndAfmWU=
+  dependencies:
+    css-color-keywords "^1.0.0"
+    fbjs "^0.8.5"
+    postcss-value-parser "^3.3.0"
 
 css-tree@1.0.0-alpha.28:
   version "1.0.0-alpha.28"
@@ -4927,23 +4954,7 @@ eslint-plugin-graphql@^2.0.0:
     graphql-config "^2.0.1"
     lodash "^4.11.1"
 
-eslint-plugin-import@^2.14.0:
-  version "2.14.0"
-  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/eslint-plugin-import/-/eslint-plugin-import-2.14.0.tgz#6b17626d2e3e6ad52cfce8807a845d15e22111a8"
-  integrity sha1-axdibS4+atUs/OiAeoRdFeIhEag=
-  dependencies:
-    contains-path "^0.1.0"
-    debug "^2.6.8"
-    doctrine "1.5.0"
-    eslint-import-resolver-node "^0.3.1"
-    eslint-module-utils "^2.2.0"
-    has "^1.0.1"
-    lodash "^4.17.4"
-    minimatch "^3.0.3"
-    read-pkg-up "^2.0.0"
-    resolve "^1.6.0"
-
-eslint-plugin-import@^2.9.0:
+eslint-plugin-import@^2.14.0, eslint-plugin-import@^2.9.0:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.14.0.tgz#6b17626d2e3e6ad52cfce8807a845d15e22111a8"
   integrity sha512-FpuRtniD/AY6sXByma2Wr0TXvXJ4nA/2/04VPlfpmUDPOpOY264x+ILiwnrk/k4RINgDAyFZByxqPUbSQ5YE7g==
@@ -5545,7 +5556,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.0, fbjs@^0.8.14, fbjs@^0.8.9:
+fbjs@^0.8.0, fbjs@^0.8.14, fbjs@^0.8.5, fbjs@^0.8.9:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -6118,6 +6129,13 @@ gatsby-plugin-sharp@^2.0.5:
     progress "^1.1.8"
     sharp "^0.21.0"
     svgo "^0.7.2"
+
+gatsby-plugin-styled-components@^3.0.3:
+  version "3.0.3"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.3.tgz#bda731fad14ac070b17000aea4c8714cba1cd84b"
+  integrity sha1-vacx+tFKwHCxcACupMhxTLoc2Es=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
 
 gatsby-react-router-scroll@^2.0.1:
   version "2.0.1"
@@ -9321,6 +9339,11 @@ mem@^4.0.0:
     mimic-fn "^1.0.0"
     p-is-promise "^1.1.0"
 
+memoize-one@^4.0.0:
+  version "4.0.3"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/memoize-one/-/memoize-one-4.0.3.tgz#cdfdd942853f1a1b4c71c5336b8c49da0bf0273c"
+  integrity sha1-zf3ZQoU/GhtMccUza4xJ2gvwJzw=
+
 memory-fs@^0.4.0, memory-fs@~0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/memory-fs/-/memory-fs-0.4.1.tgz#3a9a20b8462523e447cfbc7e8bb80ed667bfc552"
@@ -12175,6 +12198,11 @@ react-is@16.3.1:
   resolved "http://registry.npmjs.org/react-is/-/react-is-16.3.1.tgz#ee66e6d8283224a83b3030e110056798488359ba"
   integrity sha512-3XpazGqS5DEOLiuR6JQ2Sg6URq/33d1BHJVaUvtMz579KRhd2D0pqabNEe5czv785yzKBPZimOf0UNIXa3jw1A==
 
+react-is@^16.6.0:
+  version "16.6.3"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
+  integrity sha1-0tdGL8/L5uwNpWrWkEfkflbn6sA=
+
 react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
@@ -14192,6 +14220,22 @@ style-to-object@^0.2.1:
   integrity sha512-GcbtvfsqyKmIPpHeOHZ5Rmwsx2MDJct4W9apmTGcbPTbpA2FcgTFl2Z43Hm4Qb61MWGPNK8Chki7ITiY7lLOow==
   dependencies:
     css "2.2.4"
+
+styled-components@^4.1.1:
+  version "4.1.1"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/styled-components/-/styled-components-4.1.1.tgz#943922048fae556e286bcbfdd29da4f1399446bc"
+  integrity sha1-lDkiBI+uVW4oa8v90p2k8TmURrw=
+  dependencies:
+    "@emotion/is-prop-valid" "^0.6.8"
+    "@emotion/unitless" "^0.7.0"
+    babel-plugin-styled-components ">= 1"
+    css-to-react-native "^2.2.2"
+    memoize-one "^4.0.0"
+    prop-types "^15.5.4"
+    react-is "^16.6.0"
+    stylis "^3.5.0"
+    stylis-rule-sheet "^0.0.10"
+    supports-color "^5.5.0"
 
 stylehacks@^4.0.0:
   version "4.0.1"

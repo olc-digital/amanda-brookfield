@@ -1,14 +1,21 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
 
-import Navbar from '../components/Navbar'
+import MobileNavbar from './MobileNavbar'
+
+const LayoutGrid = styled.div`
+  display: grid;
+`
 
 const TemplateWrapper = ({children}) => (
-  <div>
+  <>
     <Helmet title="Home | Gatsby + Netlify CMS" />
-    <Navbar />
-    <div>{children}</div>
-  </div>
+    <LayoutGrid>
+      <MobileNavbar />
+      <div>{children}</div>
+    </LayoutGrid>
+  </>
 )
 
 export default TemplateWrapper
