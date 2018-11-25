@@ -38,13 +38,15 @@
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "serve-functions": "netlify-lambda serve functions-src",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "lint": "eslint src",
+    "format": "npm run prettier -- --write",
+    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
+    "validate": "npm run lint && npm run prettier -- --list-different",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@cherihung/eslint-config-gatsby": "^1.0.7",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
+    "eslint": "^5.5.0",
+    "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.8.2",
     "prettier": "^1.7.4",
     "rimraf": "^2.6.2"
