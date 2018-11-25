@@ -2,11 +2,43 @@
 templateKey: blog-post
 title: December Deliberations
 date: 2012-12-23T18:18:48.000Z
-description: 
-tags: 
+description:
+tags:
   - newsletters
 ---
 
-Each December I resolve to stay healthy and relaxed  in the run-up to Christmas.  It is just a case - I tell myself - of maintaining the right attitude, keeping perspective, not letting the festive season _ loom _; not letting it become the deadline for absolutely everything, quite apart from the mandatory production of cooked turkeys and wrapped gifts.  But loom it does.  Deadlines abound.   And then I fall ill.  Last year it was a chest infection and tennis elbow (both arms... er.... lots of shopping).  The year before it was flu (and I mean REAL flu where you are in bed for 10 days and simply want to die).  The year before that was one of the snowy ones and my back 'went' thanks to shoveling the drive.  This year has topped all its predecessors however, in the form of the presentation of that decidedly un-festive and curiously named disease, Shingles.  Which, for those who do not know, is chicken pox (in all its glory), followed by neuralgia, which basically means your skin hurts. Even clothes on your skin hurt.  Oh yes, it's been a cracking December.
+Each December I resolve to stay healthy and relaxed  in the run-up to Christmas.
+ It is just a case - I tell myself - of maintaining the right attitude, keeping
+perspective, not letting the festive season _ loom _; not letting it become the
+deadline for absolutely everything, quite apart from the mandatory production of
+cooked turkeys and wrapped gifts.  But loom it does.  Deadlines abound.   And
+then I fall ill.  Last year it was a chest infection and tennis elbow (both
+arms... er.... lots of shopping).  The year before it was flu (and I mean REAL
+flu where you are in bed for 10 days and simply want to die).  The year before
+that was one of the snowy ones and my back 'went' thanks to shoveling the drive.
+ This year has topped all its predecessors however, in the form of the
+presentation of that decidedly un-festive and curiously named disease, Shingles.
+ Which, for those who do not know, is chicken pox (in all its glory), followed
+by neuralgia, which basically means your skin hurts. Even clothes on your skin
+hurt.  Oh yes, it's been a cracking December.
 
-But there have been silver linings.  Like time on a sofa with books and the telly and cups of tea.  Time, in other words, to feed slothful addictions with the minimum of guilt.  I have eaten a lot of chocolate and caught up on all my taped episodes of Downton, The Killing and Homeland.  I have also watched, avidly, the final rounds of the two big TV winter talent shows.  Like most people I thought Strictly beat the X Factor by some distance, but I would also say that both competitions shared one interesting thing in common.  And that is:  No matter how good contestants are in the early weeks, or in middle rounds, or later on; when it comes to clinching victory it is * only * the final performance that counts.  Something 'extra' is required for it too; something that renders the  'back list'  of songs/dances, no matter how brilliant, wholly irrelevant.  Which is why the X Factor judges had to fight so hard - and so obviously - to keep the talented James Arthur safe, and why Louis Smith saw off the brilliant Denise Van Outen last night.  She had been consistently and staggeringly impressive, week after week - a true, performing 'artist'.  Louis on the other hand, had been a genius gymnast, going through the motions of dance.  But in that final performance something happened.  An alchemy took place; a perfect fusion between the gymnast in him and the dancer.  The effect was sublime.  It made me very happy.  It put me thoroughly in the mood for Christmas.
+But there have been silver linings.  Like time on a sofa with books and the
+telly and cups of tea.  Time, in other words, to feed slothful addictions with
+the minimum of guilt.  I have eaten a lot of chocolate and caught up on all my
+taped episodes of Downton, The Killing and Homeland.  I have also watched,
+avidly, the final rounds of the two big TV winter talent shows.  Like most
+people I thought Strictly beat the X Factor by some distance, but I would also
+say that both competitions shared one interesting thing in common.  And that is:
+ No matter how good contestants are in the early weeks, or in middle rounds, or
+later on; when it comes to clinching victory it is * only * the final
+performance that counts.  Something 'extra' is required for it too; something
+that renders the  'back list'  of songs/dances, no matter how brilliant, wholly
+irrelevant.  Which is why the X Factor judges had to fight so hard - and so
+obviously - to keep the talented James Arthur safe, and why Louis Smith saw off
+the brilliant Denise Van Outen last night.  She had been consistently and
+staggeringly impressive, week after week - a true, performing 'artist'.  Louis
+on the other hand, had been a genius gymnast, going through the motions of
+dance.  But in that final performance something happened.  An alchemy took
+place; a perfect fusion between the gymnast in him and the dancer.  The effect
+was sublime.  It made me very happy.  It put me thoroughly in the mood for
+Christmas.

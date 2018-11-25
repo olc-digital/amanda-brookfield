@@ -9,8 +9,7 @@
             "type": "info",
             "title": "156 new files uploaded",
             "description": "78 generated pages and 78 assets changed.",
-            "details":
-              "New pages include:\\n- index.html\\n- 404/index.html\\n- about/index.html\\n- author/index.html\\n- blog/index.html\\n- books/index.html\\n- events/index.html\\n- products/index.html\\n- 404.html\\n- blog/2012-08-03-august-3rd-olympic-note/index.html\\n"
+            "details": "New pages include:\\n- index.html\\n- 404/index.html\\n- about/index.html\\n- author/index.html\\n- blog/index.html\\n- books/index.html\\n- events/index.html\\n- products/index.html\\n- 404.html\\n- blog/2012-08-03-august-3rd-olympic-note/index.html\\n"
           },
           {
             "type": "info",
@@ -27,14 +26,12 @@
           {
             "type": "info",
             "title": "All linked resources are secure",
-            "description":
-              "Congratulations! No insecure mixed content found in your files.",
+            "description": "Congratulations! No insecure mixed content found in your files.",
             "details": null
           }
         ]
       },
-      "screenshot_url":
-        "https: //353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/5bb6710ddd28ef1bcdac2c94/screenshot.png",
+      "screenshot_url": "https: //353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/5bb6710ddd28ef1bcdac2c94/screenshot.png",
       "site_capabilities": {
         "title": "Netlify Team Free",
         "asset_acceleration": true,

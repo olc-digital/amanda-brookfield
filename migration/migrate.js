@@ -44,7 +44,7 @@ function toMarkdown({
     markdownBody,
     moDate,
     description,
-    tags
+    tags,
   )
   fs.writeFileSync(`./posts/${filename}`, data)
 }
