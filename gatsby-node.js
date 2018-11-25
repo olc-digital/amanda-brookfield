@@ -1,10 +1,10 @@
 const _ = require('lodash')
 const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const {createFilePath} = require('gatsby-source-filesystem')
+const {fmImagesToRelative} = require('gatsby-remark-relative-images')
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+exports.createPages = ({actions, graphql}) => {
+  const {createPage} = actions
 
   return graphql(`
     {
@@ -47,54 +47,55 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-      // Tag pages:
-      let tags = []
-      let years = []
-      // Iterate through each post, putting all found tags into `tags`
-      posts.forEach(edge => {
-        if (_.get(edge, `node.frontmatter.tags`)) {
-          tags = tags.concat(edge.node.frontmatter.tags)
-        }
-        if (_.get(edge, `node.frontmatter.date`)) {
-          years = years.concat(edge.node.frontmatter.date)
-        }
-      })
-      // Eliminate duplicate tags
-      tags = _.uniq(tags)
-      years = _.uniq(years)
+    // Tag pages:
+    let tags = []
+    let years = []
+    // Iterate through each post, putting all found tags into `tags`
+    posts.forEach(edge => {
+      if (_.get(edge, `node.frontmatter.tags`)) {
+        tags = tags.concat(edge.node.frontmatter.tags)
+      }
+      if (_.get(edge, `node.frontmatter.date`)) {
+        years = years.concat(edge.node.frontmatter.date)
+      }
+    })
+    // Eliminate duplicate tags
+    tags = _.uniq(tags)
+    years = _.uniq(years)
 
-      // Make tag pages
-      // tags.forEach(tag => {
-      //   const tagPath = `/blog/tags/${_.kebabCase(tag)}/`
+    // Make tag pages
+    tags.forEach(tag => {
+      const tagPath = `/blog/tags/${_.kebabCase(tag)}/`
 
-      //   createPage({
-      //     path: tagPath,
-      //     component: path.resolve(`src/templates/tags.js`),
-      //     context: {
-      //       tag,
-      //     },
-      //   })
-      // })
-      years.forEach(year => {
-        const yearPath = `/blog/years/${year}/`
-        createPage({
-          path: yearPath,
-          component: path.resolve(`src/templates/years.js`),
-          context: {
-            year,
-            yearGlob: `${year}*`,
-          },
-        })
+      createPage({
+        path: tagPath,
+        component: path.resolve(`src/templates/tags.js`),
+        context: {
+          tag,
+        },
       })
     })
+
+    // years.forEach(year => {
+    //   const yearPath = `/blog/years/${year}/`
+    //   createPage({
+    //     path: yearPath,
+    //     component: path.resolve(`src/templates/years.js`),
+    //     context: {
+    //       year,
+    //       yearGlob: `${year}*`,
+    //     },
+    //   })
+    // })
+  })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = ({node, actions, getNode}) => {
+  const {createNodeField} = actions
   fmImagesToRelative(node) // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({node, getNode})
     createNodeField({
       name: `slug`,
       node,
