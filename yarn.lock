@@ -14734,11 +14734,6 @@ typedarray@^0.0.6:
   resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeface-crimson-text@^0.0.54:
-  version "0.0.54"
-  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/typeface-crimson-text/-/typeface-crimson-text-0.0.54.tgz#65641dadb39a2ad022692a8e9b2d48ab0c45663e"
-  integrity sha1-ZWQdrbOaKtAiaSqOmy1IqwxFZj4=
-
 ua-parser-js@^0.7.18:
   version "0.7.19"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"

@@ -26,7 +26,6 @@
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "styled-components": "^4.1.1",
-    "typeface-crimson-text": "^0.0.54",
     "uuid": "^3.2.1"
   },
   "keywords": [
