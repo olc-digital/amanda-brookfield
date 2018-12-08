@@ -36,7 +36,7 @@ export default class IndexPage extends React.Component {
           <BannerImage src="//picsum.photos/200/300/" />
         </div>
         <div>
-          Welcome to my official website. There’s lots o to dip into, with
+          Welcome to my official website. There’s lots to to dip into, with
           sneak-peeks at my inspirations as well as information about all my
           fifteen best-sellers, including Alice Alone, Relative Love and Life
           Begins.
