@@ -60,8 +60,8 @@
 
 "@babel/helper-annotate-as-pure@^7.0.0":
   version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.0.0.tgz#323d39dd0b50e10c7c06ca7d7638e6864d8c5c32"
-  integrity sha512-3UYcJUj9kvSLbLbUIfQTqzcy5VX7GRZ/CCDrnOaZorFFM01aXp1+GJwuFGV4NDDoAS+mOUyHcO6UD/RfqOks3Q==
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.0.0.tgz#323d39dd0b50e10c7c06ca7d7638e6864d8c5c32"
+  integrity sha1-Mj053QtQ4Qx8Bsp9djjmhk2MXDI=
   dependencies:
     "@babel/types" "^7.0.0"
 
@@ -783,7 +783,16 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@babel/types@^7.0.0", "@babel/types@^7.1.2", "@babel/types@^7.1.5", "@babel/types@^7.1.6":
+"@babel/types@^7.0.0":
+  version "7.2.0"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/@babel/types/-/types-7.2.0.tgz#7941c5b2d8060e06f9601d6be7c223eef906d5d8"
+  integrity sha1-eUHFstgGDgb5YB1r58Ij7vkG1dg=
+  dependencies:
+    esutils "^2.0.2"
+    lodash "^4.17.10"
+    to-fast-properties "^2.0.0"
+
+"@babel/types@^7.1.2", "@babel/types@^7.1.5", "@babel/types@^7.1.6":
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.1.6.tgz#0adb330c3a281348a190263aceb540e10f04bcce"
   integrity sha512-DMiUzlY9DSjVsOylJssxLHSgj6tWM9PRFJOGW/RaOglVOK9nzTxoOMfTfRQXGUCUQ/HmlG2efwC+XqUEJ5ay4w==
@@ -1798,12 +1807,21 @@ babel-plugin-remove-graphql-queries@^2.5.1:
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.5.1.tgz#006b0cce315d633d19c6595d97bb14c1dbb1a2d9"
   integrity sha512-yRoSVCSxxCXUOcfy83yE4TFWvvX9bZRvcG/mAOKnD+uL+GCi/M2jBRKRXn6PKFY3YoxJ2hS1xqJ+ZZu9ghnhPw==
 
-"babel-plugin-styled-components@>= 1", babel-plugin-styled-components@^1.8.0:
+"babel-plugin-styled-components@>= 1":
   version "1.8.0"
   resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/babel-plugin-styled-components/-/babel-plugin-styled-components-1.8.0.tgz#9dd054c8e86825203449a852a5746f29f2dab857"
   integrity sha1-ndBUyOhoJSA0SahSpXRvKfLauFc=
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.0.0"
+    lodash "^4.17.10"
+
+babel-plugin-styled-components@^1.8.0:
+  version "1.9.3"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/babel-plugin-styled-components/-/babel-plugin-styled-components-1.9.3.tgz#facc61da441d15b291128b36cba07f309ed324f0"
+  integrity sha1-+sxh2kQdFbKREos2y6B/MJ7TJPA=
+  dependencies:
+    "@babel/helper-annotate-as-pure" "^7.0.0"
+    babel-plugin-syntax-jsx "^6.18.0"
     lodash "^4.17.10"
 
 babel-plugin-syntax-class-properties@^6.8.0:
@@ -14237,6 +14255,11 @@ styled-components@^4.1.1:
     stylis-rule-sheet "^0.0.10"
     supports-color "^5.5.0"
 
+styled-normalize@^8.0.4:
+  version "8.0.4"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/styled-normalize/-/styled-normalize-8.0.4.tgz#6a0885dc16c61d88813dab8f5137da928fe0c947"
+  integrity sha1-agiF3BbGHYiBPauPUTfako/gyUc=
+
 stylehacks@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/stylehacks/-/stylehacks-4.0.1.tgz#3186595d047ab0df813d213e51c8b94e0b9010f2"
@@ -14558,7 +14581,7 @@ to-fast-properties@^1.0.3:
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
   integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
 
 to-object-path@^0.3.0:

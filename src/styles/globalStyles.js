@@ -1,11 +1,19 @@
 import {createGlobalStyle} from 'styled-components'
+import styledNormalize from 'styled-normalize'
 import fontFiles from './fonts'
 
 export default createGlobalStyle`
+  ${styledNormalize}
+  * {
+    box-sizing: border-box;
+  }
   html {
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 
       'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
       'Helvetica Neue', sans-serif;
+  }
+  h1, h2, h3, h4, h5, p {
+    margin: 0;
   }
   @font-face {
     font-family: "Crimson Text";

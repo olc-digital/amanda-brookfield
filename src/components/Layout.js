@@ -3,7 +3,8 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import GlobalStyles from '../styles/globalStyles'
 import PreloadFonts from './PreloadFonts'
-import MobileNavbar from './MobileNavbar'
+import Nav from './organisms/Nav'
+import Header from './molecules/Header'
 
 const LayoutGrid = styled.div`
   display: grid;
@@ -11,12 +12,11 @@ const LayoutGrid = styled.div`
 
 const TemplateWrapper = ({children}) => (
   <>
-    <Helmet>
-      <title>Home | Gatsby + Netlify CMS</title>
-    </Helmet>
+    <Helmet title="Home | Gatsby + Netlify CMS" />
     <PreloadFonts />
     <LayoutGrid>
-      <MobileNavbar />
+      <Header />
+      <Nav />
       <div>{children}</div>
     </LayoutGrid>
     <GlobalStyles />

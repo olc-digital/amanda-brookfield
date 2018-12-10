@@ -2,38 +2,27 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Layout from '../components/Layout'
 import styled from 'styled-components'
+import Img from '../components/atoms/Img'
+import bannerImage1x from '../img/home-banner.jpg'
+import bannerImage2x from '../img/home-banner@2x.jpg'
+import bannerImage3x from '../img/home-banner@3x.jpg'
+
 const LongContent = styled.div`
   height: 2000px;
   width: 100px;
   background: deepskyblue;
 `
-const BannerImage = styled.img`
+const BannerImage = styled(Img)`
   width: 100%;
   height: auto;
-`
-
-const Crimson = styled.div`
-  font-family: 'Crimson Text', arial;
-  font-weight: 700;
-`
-const KalamNormal = styled.div`
-  font-family: 'Kalam';
-  font-weight: 400;
-`
-const KalamBold = styled.div`
-  font-family: 'Kalam';
-  font-weight: 700;
 `
 
 export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <Crimson>Crimson</Crimson>
-        <KalamNormal>Kalam 1</KalamNormal>
-        <KalamBold>Kalam 2</KalamBold>
         <div>
-          <BannerImage src="//picsum.photos/200/300/" />
+          <BannerImage srcSet={[bannerImage1x, bannerImage2x, bannerImage3x]} />
         </div>
         <div>
           Welcome to my official website. There’s lots to to dip into, with
