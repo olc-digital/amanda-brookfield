@@ -5,6 +5,8 @@ import GlobalStyles from '../styles/globalStyles'
 import PreloadFonts from './PreloadFonts'
 import Nav from './organisms/Nav'
 import Header from './molecules/Header'
+import {ThemeProvider} from 'styled-components'
+import theme from '../styles/theme.js'
 
 const LayoutGrid = styled.div`
   display: grid;
@@ -12,14 +14,18 @@ const LayoutGrid = styled.div`
 
 const TemplateWrapper = ({children}) => (
   <>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
-    <PreloadFonts />
-    <LayoutGrid>
-      <Header />
-      <Nav />
-      <div>{children}</div>
-    </LayoutGrid>
-    <GlobalStyles />
+    <ThemeProvider theme={theme}>
+      <>
+        <Helmet title="Home | Gatsby + Netlify CMS" />
+        <PreloadFonts />
+        <LayoutGrid>
+          <Header />
+          <Nav />
+          <div>{children}</div>
+        </LayoutGrid>
+        <GlobalStyles />
+      </>
+    </ThemeProvider>
   </>
 )
 

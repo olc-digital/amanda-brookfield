@@ -3,43 +3,67 @@ import {Link} from 'gatsby'
 import styled from 'styled-components'
 import media from '../../styles/mediaQueries'
 import Button from '../atoms/Button'
+import Img from '../atoms/Img'
+import close from '../../img/close.svg'
+import booksOutline from '../../img/books-outline.png'
 
 const menuWidth = '220px'
+const shiftDistance = '230px'
 const Menu = styled.nav`
+  position: fixed;
+  top: 0;
+  left: -${shiftDistance};
   display: grid;
   grid-auto-rows: min-content;
-  padding: 0 24px;
   width: ${menuWidth};
   height: 100vh;
+  padding: 0 24px;
   transform: translateX(0);
   transition: transform 300ms ease-in;
-  position: fixed;
-  left: -${menuWidth};
-  top: 0;
   background: white;
+  box-shadow: 2px 0 4px 0 rgba(38, 40, 42, 0.25);
   &.slideIn {
-    transform: translateX(100%);
+    transform: translateX(${shiftDistance});
   }
   ${media.abovePhone`
     transform: none !important;
     transition: transform 0ms ease-in;
+    box-shadow: none;
     position: static;
     height: auto;
     width: auto;
     display: flex;
+    justify-content: center;
   `}
 `
-const MenuItem = styled.div`
-  a {
+const MenuLink = styled(Link)`
+  display: block;
+  padding: 24px 0;
+  margin: 0 24px;
+  border-bottom: solid ${({theme}) => theme.lightGrey} 1px;
+  font-family: 'Crimson Text';
+  font-size: 20px;
+  line-height: 0.7;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: ${({theme}) => theme.black};
+  ${media.abovePhone`
+    text-align: center;
+    border-bottom: 0;
+  `}
+`
+
+const NavImage = styled.div`
+  display: none;
+  ${media.abovePhone`
+    background: url('${({url}) => url}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    height: 91px;
+    width: 75px;
     display: block;
-    padding: 24px 0;
-    border-bottom: solid #eff1f3 1px;
-    font-family: 'Crimson Text';
-    font-size: 20px;
-    line-height: 0.7;
-    letter-spacing: 1px;
-    text-decoration: none;
-  }
+  `}
 `
 const Hamburger = styled(Button)`
   background: red;
@@ -53,13 +77,18 @@ const Hamburger = styled(Button)`
   `}
 `
 const CloseNavButton = styled(Button)`
+  width: 16px;
+  height: 16px;
+  margin: 24px 0 20px;
+  padding: 0;
+  cursor: pointer;
   ${media.abovePhone`
     display: none;
   `}
 `
 
 class Nav extends Component {
-  state = {mobileVisible: true}
+  state = {mobileVisible: false}
 
   render() {
     const {mobileVisible} = this.state
@@ -68,23 +97,16 @@ class Nav extends Component {
         <Hamburger onClick={() => this.setState({mobileVisible: true})} />
         <Menu className={mobileVisible ? 'slideIn' : ''}>
           <CloseNavButton onClick={() => this.setState({mobileVisible: false})}>
-            X
+            <Img src={close} />
           </CloseNavButton>
-          <MenuItem>
-            <Link to="/">Home</Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to="/books">Books</Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to="/author">Author</Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to="/blog">Blog</Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to="/events">Events</Link>
-          </MenuItem>
+          <MenuLink to="/">
+            <NavImage url={booksOutline} />
+            Home
+          </MenuLink>
+          <MenuLink to="/books">Books</MenuLink>
+          <MenuLink to="/author">Author</MenuLink>
+          <MenuLink to="/blog">Blog</MenuLink>
+          <MenuLink to="/events">Events</MenuLink>
         </Menu>
       </div>
     )
