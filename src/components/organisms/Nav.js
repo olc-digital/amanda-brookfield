@@ -101,6 +101,14 @@ const CloseNavButton = styled(Button)`
   `}
 `
 
+const BackdropClickTarget = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+`
+
 const NavLinks = [
   {to: '/', text: 'Home', mobileOnly: true},
   {
@@ -130,26 +138,19 @@ const NavLinks = [
 ]
 class Nav extends Component {
   state = {isMobileNavVisible: false}
-
-  // componentDidMount() {
-  //   const isMobileNavVisible =
-  //     this.props.location && this.props.location.state.isMobileNavVisible
-  //   console.log(this.props.location)
-  //   this.setState({
-  //     isMobileNavVisible,
-  //   })
-  // }
+  hideMobileNav = () => this.setState({isMobileNavVisible: false})
+  showMobileNav = () => this.setState({isMobileNavVisible: true})
 
   render() {
-    console.log(this.props.location)
     const {isMobileNavVisible} = this.state
     return (
       <div>
-        <Hamburger onClick={() => this.setState({isMobileNavVisible: true})} />
+        <Hamburger onClick={this.showMobileNav} />
+        {isMobileNavVisible && (
+          <BackdropClickTarget onClick={this.hideMobileNav} />
+        )}
         <Menu className={isMobileNavVisible ? 'slideIn' : ''}>
-          <CloseNavButton
-            onClick={() => this.setState({isMobileNavVisible: false})}
-          >
+          <CloseNavButton onClick={this.hideMobileNav}>
             <Img src={close} />
           </CloseNavButton>
           {NavLinks.map(item => (
@@ -159,10 +160,7 @@ class Nav extends Component {
               outlineImage={item.outlineImage}
               colourImage={item.colourImage}
             >
-              <Link
-                to={item.to}
-                onClick={() => this.setState({isMobileNavVisible: false})}
-              >
+              <Link to={item.to} onClick={this.hideMobileNav}>
                 {item.text}
               </Link>
             </MenuLink>

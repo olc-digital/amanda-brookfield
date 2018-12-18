@@ -36,10 +36,17 @@ const SubTitle = styled(SecondaryFont)`
 const Header = () => {
   return (
     <HeaderWrapper>
-      <Link to="/">
-        <MainTitle as="h1">Amanda Brookfield</MainTitle>
-        <SubTitle as="h2">Best Selling Novelist</SubTitle>
-      </Link>
+      <div
+        css={`
+          width: 300px;
+          margin: 0 auto;
+        `}
+      >
+        <Link to="/">
+          <MainTitle as="h1">Amanda Brookfield</MainTitle>
+          <SubTitle as="h2">Best Selling Novelist</SubTitle>
+        </Link>
+      </div>
     </HeaderWrapper>
   )
 }
