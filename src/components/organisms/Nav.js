@@ -1,11 +1,21 @@
 import React, {Component} from 'react'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
-import media from '../../styles/mediaQueries'
+
 import Button from '../atoms/Button'
 import Img from '../atoms/Img'
+import media from '../../styles/mediaQueries'
+
 import close from '../../img/close.svg'
 import booksOutline from '../../img/books-outline.png'
+import booksColour from '../../img/books-colour.png'
+import eventOutline from '../../img/event-outline.png'
+import eventColour from '../../img/event-colour.png'
+import penOutline from '../../img/pen-outline.png'
+import penColour from '../../img/pen-colour.png'
+import authorOutline from '../../img/author-outline.png'
+import authorColour from '../../img/author-colour.png'
+import menuIcon from '../../img/menu-icon.svg'
 
 const menuWidth = '220px'
 const shiftDistance = '230px'
@@ -19,7 +29,7 @@ const Menu = styled.nav`
   height: 100vh;
   padding: 0 24px;
   transform: translateX(0);
-  transition: transform 300ms ease-in;
+  transition: transform 200ms ease-in;
   background: white;
   box-shadow: 2px 0 4px 0 rgba(38, 40, 42, 0.25);
   &.slideIn {
@@ -36,37 +46,41 @@ const Menu = styled.nav`
     justify-content: center;
   `}
 `
-const MenuLink = styled(Link)`
-  display: block;
-  padding: 24px 0;
-  margin: 0 24px;
-  border-bottom: solid ${({theme}) => theme.lightGrey} 1px;
-  font-family: 'Crimson Text';
-  font-size: 20px;
-  line-height: 0.7;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: ${({theme}) => theme.black};
-  ${media.abovePhone`
-    text-align: center;
-    border-bottom: 0;
-  `}
+const MenuLink = styled.div`
+  a {
+    display: block;
+    font-family: 'Crimson Text';
+    font-size: 20px;
+    line-height: 0.7;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: ${({theme}) => theme.black};
+    /* mobile only */
+    padding: 24px 0;
+    border-bottom: solid ${({theme}) => theme.lightGrey} 1px;
+    ${media.abovePhone`
+      margin: 0 24px;
+      text-align: center;
+      border-bottom: 0;
+      display: ${({mobileOnly}) => (mobileOnly ? 'none' : 'block')};
+      background-image: url('${({outlineImage}) => outlineImage}');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      padding: 0;
+      padding-top: 100px;
+      width: 75px;
+      &:hover {
+        background-image: url('${({colourImage}) => colourImage}');
+      }
+    `}
+  }
 `
 
-const NavImage = styled.div`
-  display: none;
-  ${media.abovePhone`
-    background: url('${({url}) => url}');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    height: 91px;
-    width: 75px;
-    display: block;
-  `}
-`
 const Hamburger = styled(Button)`
-  background: red;
+  background-image: url(${menuIcon});
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 20px;
   height: 20px;
   position: absolute;
@@ -87,26 +101,72 @@ const CloseNavButton = styled(Button)`
   `}
 `
 
+const NavLinks = [
+  {to: '/', text: 'Home', mobileOnly: true},
+  {
+    to: '/books',
+    outlineImage: booksOutline,
+    colourImage: booksColour,
+    text: 'Books',
+  },
+  {
+    to: '/author',
+    outlineImage: authorOutline,
+    colourImage: authorColour,
+    text: 'Author',
+  },
+  {
+    to: '/blog',
+    outlineImage: penOutline,
+    colourImage: penColour,
+    text: 'Blog',
+  },
+  {
+    to: '/events',
+    outlineImage: eventOutline,
+    colourImage: eventColour,
+    text: 'Events',
+  },
+]
 class Nav extends Component {
-  state = {mobileVisible: false}
+  state = {isMobileNavVisible: false}
+
+  // componentDidMount() {
+  //   const isMobileNavVisible =
+  //     this.props.location && this.props.location.state.isMobileNavVisible
+  //   console.log(this.props.location)
+  //   this.setState({
+  //     isMobileNavVisible,
+  //   })
+  // }
 
   render() {
-    const {mobileVisible} = this.state
+    console.log(this.props.location)
+    const {isMobileNavVisible} = this.state
     return (
       <div>
-        <Hamburger onClick={() => this.setState({mobileVisible: true})} />
-        <Menu className={mobileVisible ? 'slideIn' : ''}>
-          <CloseNavButton onClick={() => this.setState({mobileVisible: false})}>
+        <Hamburger onClick={() => this.setState({isMobileNavVisible: true})} />
+        <Menu className={isMobileNavVisible ? 'slideIn' : ''}>
+          <CloseNavButton
+            onClick={() => this.setState({isMobileNavVisible: false})}
+          >
             <Img src={close} />
           </CloseNavButton>
-          <MenuLink to="/">
-            <NavImage url={booksOutline} />
-            Home
-          </MenuLink>
-          <MenuLink to="/books">Books</MenuLink>
-          <MenuLink to="/author">Author</MenuLink>
-          <MenuLink to="/blog">Blog</MenuLink>
-          <MenuLink to="/events">Events</MenuLink>
+          {NavLinks.map(item => (
+            <MenuLink
+              key={item.text}
+              mobileOnly={item.mobileOnly}
+              outlineImage={item.outlineImage}
+              colourImage={item.colourImage}
+            >
+              <Link
+                to={item.to}
+                onClick={() => this.setState({isMobileNavVisible: false})}
+              >
+                {item.text}
+              </Link>
+            </MenuLink>
+          ))}
         </Menu>
       </div>
     )

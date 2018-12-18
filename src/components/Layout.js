@@ -12,7 +12,7 @@ const LayoutGrid = styled.div`
   display: grid;
 `
 
-const TemplateWrapper = ({children}) => (
+const Layout = ({children}) => (
   <>
     <ThemeProvider theme={theme}>
       <>
@@ -29,4 +29,4 @@ const TemplateWrapper = ({children}) => (
   </>
 )
 
-export default TemplateWrapper
+export default Layout

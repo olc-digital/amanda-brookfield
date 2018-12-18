@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import styled from 'styled-components'
 import PrimaryFont from '../atoms/PrimaryFont'
 import SecondaryFont from '../atoms/SecondaryFont'
@@ -7,6 +8,9 @@ import media from '../../styles/mediaQueries'
 const HeaderWrapper = styled.div`
   padding: 16px;
   text-align: center;
+  a {
+    text-decoration: none;
+  }
 `
 
 const MainTitle = styled(PrimaryFont)`
@@ -32,8 +36,10 @@ const SubTitle = styled(SecondaryFont)`
 const Header = () => {
   return (
     <HeaderWrapper>
-      <MainTitle as="h1">Amanda Brookfield</MainTitle>
-      <SubTitle as="h2">Best Selling Novelist</SubTitle>
+      <Link to="/">
+        <MainTitle as="h1">Amanda Brookfield</MainTitle>
+        <SubTitle as="h2">Best Selling Novelist</SubTitle>
+      </Link>
     </HeaderWrapper>
   )
 }

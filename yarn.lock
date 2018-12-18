@@ -6080,6 +6080,13 @@ gatsby-link@^2.0.6:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
+gatsby-plugin-layout@^1.0.10:
+  version "1.0.10"
+  resolved "https://artifactory.ops.babylontech.co.uk/artifactory/api/npm/babylon-virtual-npm/gatsby-plugin-layout/-/gatsby-plugin-layout-1.0.10.tgz#0c4eacc71755b268581f74a6fdda574aa3a97def"
+  integrity sha1-DE6sxxdVsmhYH3Sm/dpXSqOpfe8=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-netlify-cms@^3.0.0:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.7.tgz#d5da2b65611667cae7ca01d49fe8d4df0944a639"

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Layout from '../components/Layout'
 import styled from 'styled-components'
 import Img from '../components/atoms/Img'
 import bannerImage1x from '../img/home-banner.jpg'
@@ -20,7 +19,7 @@ const BannerImage = styled(Img)`
 export default class IndexPage extends React.Component {
   render() {
     return (
-      <Layout>
+      <>
         <div>
           <BannerImage srcSet={[bannerImage1x, bannerImage2x, bannerImage3x]} />
         </div>
@@ -31,7 +30,7 @@ export default class IndexPage extends React.Component {
           Begins.
         </div>
         <LongContent />
-      </Layout>
+      </>
     )
   }
 }
