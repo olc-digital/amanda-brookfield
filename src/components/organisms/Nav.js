@@ -2,19 +2,14 @@ import React, {Component} from 'react'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
 
+import Responsive from '../atoms/Responsive'
 import Button from '../atoms/Button'
 import Img from '../atoms/Img'
+import Sketch from '../atoms/Sketch'
 import media from '../../styles/mediaQueries'
+import H2 from '../atoms/H2'
 
 import close from '../../img/close.svg'
-import booksOutline from '../../img/books-outline.png'
-import booksColour from '../../img/books-colour.png'
-import eventOutline from '../../img/event-outline.png'
-import eventColour from '../../img/event-colour.png'
-import penOutline from '../../img/pen-outline.png'
-import penColour from '../../img/pen-colour.png'
-import authorOutline from '../../img/author-outline.png'
-import authorColour from '../../img/author-colour.png'
 import menuIcon from '../../img/menu-icon.svg'
 
 const menuWidth = '220px'
@@ -45,36 +40,6 @@ const Menu = styled.nav`
     display: flex;
     justify-content: center;
   `}
-`
-const MenuLink = styled.div`
-  a {
-    display: block;
-    font-family: 'Crimson Text';
-    font-size: 20px;
-    line-height: 0.7;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: ${({theme}) => theme.black};
-    /* mobile only */
-    padding: 24px 0;
-    border-bottom: solid ${({theme}) => theme.lightGrey} 1px;
-    ${media.abovePhone`
-      margin: 0 24px;
-      text-align: center;
-      border-bottom: 0;
-      display: ${({mobileOnly}) => (mobileOnly ? 'none' : 'block')};
-      background-image: url('${({outlineImage}) => outlineImage}');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position-y: center;
-      padding: 0;
-      padding-top: 100px;
-      width: 75px;
-      &:hover {
-        background-image: url('${({colourImage}) => colourImage}');
-      }
-    `}
-  }
 `
 
 const Hamburger = styled(Button)`
@@ -109,38 +74,24 @@ const BackdropClickTarget = styled.div`
   left: 0;
 `
 
+const NavLink = styled(Link)`
+  text-decoration: none;
+  ${media.abovePhone`
+    display: ${({mobileonly}) => (mobileonly ? 'none' : 'block')};
+  `}
+`
+
 const NavLinks = [
-  {to: '/', text: 'Home', mobileOnly: true},
-  {
-    to: '/books',
-    outlineImage: booksOutline,
-    colourImage: booksColour,
-    text: 'Books',
-  },
-  {
-    to: '/author',
-    outlineImage: authorOutline,
-    colourImage: authorColour,
-    text: 'Author',
-  },
-  {
-    to: '/blog',
-    outlineImage: penOutline,
-    colourImage: penColour,
-    text: 'Blog',
-  },
-  {
-    to: '/events',
-    outlineImage: eventOutline,
-    colourImage: eventColour,
-    text: 'Events',
-  },
+  {to: '/', text: 'Home', name: 'books', mobileOnly: true},
+  {to: '/books', name: 'books', text: 'Books'},
+  {to: '/author', name: 'author', text: 'Author'},
+  {to: '/blog', name: 'blog', text: 'Blog'},
+  {to: '/events', name: 'events', text: 'Events'},
 ]
 class Nav extends Component {
   state = {isMobileNavVisible: false}
   hideMobileNav = () => this.setState({isMobileNavVisible: false})
   showMobileNav = () => this.setState({isMobileNavVisible: true})
-
   render() {
     const {isMobileNavVisible} = this.state
     return (
@@ -154,16 +105,29 @@ class Nav extends Component {
             <Img src={close} />
           </CloseNavButton>
           {NavLinks.map(item => (
-            <MenuLink
+            <NavLink
               key={item.text}
-              mobileOnly={item.mobileOnly}
-              outlineImage={item.outlineImage}
-              colourImage={item.colourImage}
+              to={item.to}
+              mobileonly={item.mobileOnly}
+              onClick={this.hideMobileNav}
             >
-              <Link to={item.to} onClick={this.hideMobileNav}>
-                {item.text}
-              </Link>
-            </MenuLink>
+              <Responsive.Mobile>
+                {matches =>
+                  matches ? (
+                    <H2
+                      css={`
+                        padding: 24px 0 20px;
+                        border-bottom: solid ${({theme}) => theme.lightGrey} 1px;
+                      `}
+                    >
+                      {item.text}
+                    </H2>
+                  ) : (
+                    <Sketch type={item.name} heading={item.text} />
+                  )
+                }
+              </Responsive.Mobile>
+            </NavLink>
           ))}
         </Menu>
       </div>
