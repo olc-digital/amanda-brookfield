@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
 
-import Responsive from '../atoms/Responsive'
 import Button from '../atoms/Button'
 import Img from '../atoms/Img'
 import Sketch from '../atoms/Sketch'
@@ -81,6 +80,26 @@ const NavLink = styled(Link)`
   `}
 `
 
+const NavLinkText = styled(H2)`
+  /* mobile only */
+  padding: 24px 0 20px;
+  border-bottom: solid ${({theme}) => theme.lightGrey} 1px;
+  ${media.abovePhone`
+    /* reset mobile styles */
+    padding: 0;
+    border-bottom: 0;
+    /* own styles */
+    text-align: center;
+  `}
+`
+
+const NavSketch = styled(Sketch)`
+  display: none;
+  ${media.abovePhone`
+    display: block;
+  `}
+`
+
 const NavLinks = [
   {to: '/', text: 'Home', name: 'books', mobileOnly: true},
   {to: '/books', name: 'books', text: 'Books'},
@@ -111,22 +130,8 @@ class Nav extends Component {
               mobileonly={item.mobileOnly}
               onClick={this.hideMobileNav}
             >
-              <Responsive.Mobile>
-                {matches =>
-                  matches ? (
-                    <H2
-                      css={`
-                        padding: 24px 0 20px;
-                        border-bottom: solid ${({theme}) => theme.lightGrey} 1px;
-                      `}
-                    >
-                      {item.text}
-                    </H2>
-                  ) : (
-                    <Sketch type={item.name} heading={item.text} />
-                  )
-                }
-              </Responsive.Mobile>
+              <NavSketch type={item.name} hoverComponent={NavLink} />
+              <NavLinkText>{item.text}</NavLinkText>
             </NavLink>
           ))}
         </Menu>
