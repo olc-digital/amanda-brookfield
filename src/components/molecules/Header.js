@@ -11,6 +11,9 @@ const HeaderWrapper = styled.div`
   a {
     text-decoration: none;
   }
+  ${media.abovePhone`
+    margin-top: 56px;
+  `}
 `
 
 const MainTitle = styled(PrimaryFont)`

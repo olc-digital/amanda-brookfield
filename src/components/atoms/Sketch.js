@@ -8,6 +8,7 @@ const map = {
   events: 3,
 }
 const Sketch = styled.div`
+  display: inline-block;
   width: 90px;
   height: 90px;
   background-image: url(${sketchSprite});
