@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import PrimaryFont from '../atoms/PrimaryFont'
-import SecondaryFont from '../atoms/SecondaryFont'
+import {KalamFont, CrimsonTextFont} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
 
 const HeaderWrapper = styled.div`
@@ -16,7 +15,8 @@ const HeaderWrapper = styled.div`
   `}
 `
 
-const MainTitle = styled(PrimaryFont)`
+const MainTitle = styled.h1`
+  ${CrimsonTextFont}
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0.5px;
@@ -29,7 +29,8 @@ const MainTitle = styled(PrimaryFont)`
   `}
 `
 
-const SubTitle = styled(SecondaryFont)`
+const SubTitle = styled.h2`
+  ${KalamFont}
   font-size: 12px;
   font-weight: normal;
   letter-spacing: 1px;
@@ -46,8 +47,8 @@ const Header = () => {
         `}
       >
         <Link to="/">
-          <MainTitle as="h1">Amanda Brookfield</MainTitle>
-          <SubTitle as="h2">Best Selling Novelist</SubTitle>
+          <MainTitle>Amanda Brookfield</MainTitle>
+          <SubTitle>Best Selling Novelist</SubTitle>
         </Link>
       </div>
     </HeaderWrapper>

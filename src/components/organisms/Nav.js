@@ -3,7 +3,7 @@ import {Link} from 'gatsby'
 import styled from 'styled-components'
 
 import Responsive from '../atoms/Responsive'
-import Button from '../atoms/Button'
+import ButtonBase from '../atoms/ButtonBase'
 import Img from '../atoms/Img'
 import Sketch from '../atoms/Sketch'
 import media from '../../styles/mediaQueries'
@@ -45,7 +45,7 @@ const Menu = styled.nav`
   `}
 `
 
-const Hamburger = styled(Button)`
+const Hamburger = styled(ButtonBase)`
   background-image: url(${menuIcon});
   background-size: contain;
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@ const Hamburger = styled(Button)`
     display: none;
   `}
 `
-const CloseNavButton = styled(Button)`
+const CloseNavButton = styled(ButtonBase)`
   width: 16px;
   height: 16px;
   margin: 24px 0 20px;
@@ -88,7 +88,7 @@ const NavLink = styled(Link)`
 const NavLinkText = styled(H2)`
   /* mobile only */
   padding: 24px 0 20px;
-  border-bottom: solid ${({theme}) => theme.lightGrey} 1px;
+  border-bottom: solid 1px ${({theme}) => theme.lightGrey};
   ${media.abovePhone`
     /* reset mobile styles */
     padding: 0;
