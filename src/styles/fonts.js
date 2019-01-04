@@ -1,3 +1,5 @@
+import crimsonText400Woff2 from '../fonts/crimson-text-latin-400.woff2'
+import crimsonText400Woff from '../fonts/crimson-text-latin-400.woff'
 import crimsonText700Woff2 from '../fonts/crimson-text-latin-700.woff2'
 import crimsonText700Woff from '../fonts/crimson-text-latin-700.woff'
 import kalam400Woff2 from '../fonts/kalam-latin-400.woff2'
@@ -12,6 +14,8 @@ import roboto700Woff2 from '../fonts/roboto-latin-700.woff2'
 import roboto700Woff from '../fonts/roboto-latin-700.woff'
 
 export default {
+  crimsonText400Woff2,
+  crimsonText400Woff,
   crimsonText700Woff2,
   crimsonText700Woff,
   kalam400Woff2,

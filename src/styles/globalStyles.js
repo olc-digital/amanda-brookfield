@@ -1,6 +1,7 @@
 import {createGlobalStyle} from 'styled-components'
 import styledNormalize from 'styled-normalize'
 import fontFiles from './fonts'
+import theme from './theme'
 
 export default createGlobalStyle`
   ${styledNormalize}
@@ -11,9 +12,19 @@ export default createGlobalStyle`
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 
       'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
       'Helvetica Neue', sans-serif;
+    color: ${theme.black};
+    font-size: 14px;
   }
   h1, h2, h3, h4, h5, p {
     margin: 0;
+  }
+  @font-face {
+    font-family: "Crimson Text";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(${fontFiles.crimsonText400Woff2}) format("woff2"),
+       url(${fontFiles.crimsonText400Woff}) format("woff");
   }
   @font-face {
     font-family: "Crimson Text";
