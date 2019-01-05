@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import SketchButton from '../atoms/SketchButton'
 import Img from '../atoms/Img'
 import H3 from '../atoms/H3'
 
@@ -16,7 +17,7 @@ export default function BookWidget(props) {
     <Wrapper>
       <Cover src={props.coverImage} />
       <H3>Relative Love</H3>
-      <button>Buy Now</button>
+      <SketchButton uppercase={true}>Buy Now</SketchButton>
       <button>Read More</button>
     </Wrapper>
   )
