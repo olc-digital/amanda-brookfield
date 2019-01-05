@@ -5,7 +5,9 @@ import styled from 'styled-components'
 import Responsive from '../components/atoms/Responsive'
 import Img from '../components/atoms/Img'
 import H2 from '../components/atoms/H2'
+import Container from '../components/atoms/Container'
 import BookWidget from '../components/molecules/BookWidget'
+import ForTheLoveOfADogHero from '../components/organisms/ForTheLoveOfADogHero'
 import bannerMobile1x from '../img/home-banner-mobile.jpg'
 import bannerMobile2x from '../img/home-banner-mobile@2x.jpg'
 import bannerMobile3x from '../img/home-banner-mobile@3x.jpg'
@@ -14,20 +16,15 @@ import bannerDesktop2x from '../img/home-banner-desktop@2x.jpg'
 import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
 import {CrimsonTextFont} from '../styles/mixins'
 
+import media from '../styles/mediaQueries'
+
 const BannerImage = styled(Img)`
   width: 100%;
   height: auto;
 `
-
-const Container = styled.div`
-  display: block;
-  width: 100%;
-  max-width: 764px;
-  margin: 0 auto;
-  padding: 0 23px;
-`
 const WelcomeText = styled.div`
-  width: 486px;
+  max-width: 486px;
+  width: 100%;
   margin: 48px auto 0;
   text-align: center;
   line-height: 1.86;
@@ -38,7 +35,9 @@ const FirstLetter = styled.span`
   float: left;
   font-size: 48px;
   line-height: 48px;
-  transform: translateX(8px);
+  ${media.abovePhone`
+    transform: translateX(8px);
+  `}
 `
 
 const HomeH2 = styled(H2)`
@@ -72,6 +71,7 @@ export default class IndexPage extends React.Component {
           <HomeH2>My Best Sellers</HomeH2>
           <BookWidget />
         </Container>
+        <ForTheLoveOfADogHero />
       </>
     )
   }
