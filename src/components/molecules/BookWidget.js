@@ -11,10 +11,10 @@ const Cover = styled(Img)`
   width: 125px;
 `
 
-export default function BookWidget() {
+export default function BookWidget(props) {
   return (
     <Wrapper>
-      <Cover />
+      <Cover src={props.coverImage} />
       <H3>Relative Love</H3>
       <button>Buy Now</button>
       <button>Read More</button>

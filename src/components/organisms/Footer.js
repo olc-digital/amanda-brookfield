@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Sketch from '../atoms/Sketch'
-import PrimaryButton from '../atoms/PrimaryButton'
+import SketchButton from '../atoms/SketchButton'
 import H2 from '../atoms/H2'
 import Img from '../atoms/Img'
 import ExternalLink from '../atoms/ExternalLink'
@@ -28,7 +28,7 @@ export default function Footer() {
     <FooterWrapper>
       <Sketch type="author" />
       <ContactHeading>Contact</ContactHeading>
-      <PrimaryButton>Email Amanda</PrimaryButton>
+      <SketchButton>Email Amanda</SketchButton>
       <SocialMediaLinks>
         <ExternalLink href="https://www.instagram.com/amanda_and_mabel_brookfield/">
           <Img src={instaIcon} />

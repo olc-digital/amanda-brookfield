@@ -15,6 +15,8 @@ import bannerDesktop1x from '../img/home-banner-desktop.jpg'
 import bannerDesktop2x from '../img/home-banner-desktop@2x.jpg'
 import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
 import {CrimsonTextFont} from '../styles/mixins'
+import {books} from '../data'
+import outlineBg from '../img/button-bg-outline.svg'
 
 import media from '../styles/mediaQueries'
 
@@ -44,6 +46,22 @@ const HomeH2 = styled(H2)`
   margin: 72px 0;
 `
 
+const SelectedBooks = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const selectedIds = [
+  'relative-love',
+  'a-family-man',
+  'sisters-and-husbands',
+  'life-begins',
+  'the-lover',
+]
+const selectedBooks = Object.values(books).filter(({id}) =>
+  selectedIds.includes(id),
+)
+
 export default class IndexPage extends React.Component {
   render() {
     return (
@@ -69,9 +87,19 @@ export default class IndexPage extends React.Component {
             Alone, Relative Love and Life Begins.
           </WelcomeText>
           <HomeH2>My Best Sellers</HomeH2>
-          <BookWidget />
+          <SelectedBooks>
+            {selectedBooks.map(book => (
+              <BookWidget key={book.id} {...book} />
+            ))}
+          </SelectedBooks>
         </Container>
         <ForTheLoveOfADogHero />
+        <Img
+          css={`
+            filter: drop-shadow(-5px -5px 5px #000);
+          `}
+          src={outlineBg}
+        />
       </>
     )
   }
