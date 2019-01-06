@@ -13,25 +13,18 @@ const SketchButton = styled(ButtonBase)`
   font-size: ${({wide}) => (wide ? '12px' : '14px')};
   letter-spacing: 2px;
   ${({uppercase}) => uppercase && 'text-transform: uppercase'};
-  /* background: url(${outlineBg});
-  background-size: 100% 48px; */
-  /* color: ${({theme}) => theme.white}; */
-  /* &:hover ${Background} {
+  &:hover ${Background} {
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-  } */
+  }
 `
 const Background = styled.img`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  &:hover {
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-  }
 `
 const Text = styled.div`
   position: relative;
-  pointer-events: none;
 `
 
 export default function SketchButtonTot(props) {
