@@ -54,9 +54,6 @@ const Hamburger = styled(ButtonBase)`
   position: absolute;
   left: 24px;
   top: 24px;
-  ${media.abovePhone`
-    display: none;
-  `}
 `
 const CloseNavButton = styled(ButtonBase)`
   width: 16px;
@@ -64,9 +61,6 @@ const CloseNavButton = styled(ButtonBase)`
   margin: 24px 0 20px;
   padding: 0;
   cursor: pointer;
-  ${media.abovePhone`
-    display: none;
-  `}
 `
 
 const BackdropClickTarget = styled.div`
@@ -84,7 +78,6 @@ const NavLink = styled(Link)`
     color: ${({theme}) => theme.red};
   }
   ${media.abovePhone`
-    display: ${({mobileonly}) => (mobileonly ? 'none' : 'block')};
     margin: 0 20px;
   `}
 `
@@ -117,40 +110,48 @@ class Nav extends Component {
     const {isMobileNavVisible} = this.state
     return (
       <div>
-        <Responsive.Mobile
-          render={() => (
-            <>
-              <Hamburger onClick={this.showMobileNav} />
-              {isMobileNavVisible && (
-                <BackdropClickTarget onClick={this.hideMobileNav} />
-              )}
-            </>
-          )}
-        />
-        <Menu className={isMobileNavVisible ? 'slideIn' : ''}>
-          <Responsive.Mobile
-            render={() => (
-              <CloseNavButton onClick={this.hideMobileNav}>
-                <Img src={close} />
-              </CloseNavButton>
-            )}
-          />
-          {NavLinks.map(item => (
-            <NavLink
-              key={item.text}
-              to={item.to}
-              mobileonly={item.mobileOnly}
-              onClick={this.hideMobileNav}
-            >
-              <Responsive.Default
-                render={() => (
-                  <Sketch type={item.name} hoverComponent={NavLink} />
+        <Responsive.Mobile>
+          {matches =>
+            matches ? (
+              <>
+                <Hamburger onClick={this.showMobileNav} />
+                {isMobileNavVisible && (
+                  <BackdropClickTarget onClick={this.hideMobileNav} />
                 )}
-              />
-              <NavLinkText>{item.text}</NavLinkText>
-            </NavLink>
-          ))}
-        </Menu>
+                <Menu className={isMobileNavVisible ? 'slideIn' : ''}>
+                  <CloseNavButton onClick={this.hideMobileNav}>
+                    <Img src={close} />
+                  </CloseNavButton>
+                  {NavLinks.map(item => (
+                    <NavLink
+                      key={item.text}
+                      to={item.to}
+                      onClick={this.hideMobileNav}
+                    >
+                      <NavLinkText>{item.text}</NavLinkText>
+                    </NavLink>
+                  ))}
+                </Menu>
+              </>
+            ) : (
+              <Menu>
+                {NavLinks.map(
+                  item =>
+                    !item.mobileOnly && (
+                      <NavLink
+                        key={item.text}
+                        to={item.to}
+                        onClick={this.hideMobileNav}
+                      >
+                        <Sketch type={item.name} hoverComponent={NavLink} />
+                        <NavLinkText>{item.text}</NavLinkText>
+                      </NavLink>
+                    ),
+                )}
+              </Menu>
+            )
+          }
+        </Responsive.Mobile>
       </div>
     )
   }

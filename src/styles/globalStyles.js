@@ -14,6 +14,10 @@ export default createGlobalStyle`
       'Helvetica Neue', sans-serif;
     color: ${theme.black};
     font-size: 14px;
+    min-width: 320px;
+  }
+  body {
+    min-width: 320px;
   }
   h1, h2, h3, h4, h5, p {
     margin: 0;

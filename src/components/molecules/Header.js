@@ -42,7 +42,8 @@ const Header = () => {
     <HeaderWrapper>
       <div
         css={`
-          width: 300px;
+          width: 100%;
+          max-width: 280px;
           margin: 0 auto;
         `}
       >
