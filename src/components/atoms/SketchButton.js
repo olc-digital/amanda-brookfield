@@ -6,13 +6,13 @@ import outlineBg from '../../img/button-bg-outline.svg'
 
 const SketchButton = styled(ButtonBase)`
   ${KalamFont}
-  height: 48px;
+  position: relative;
+  height: 52px;
   padding: 0;
   width: ${({wide}) => (wide ? '327px' : '125px')};
   font-size: ${({wide}) => (wide ? '12px' : '14px')};
   letter-spacing: 2px;
-  text-transform: ${({uppercase}) => (uppercase ? 'uppercase' : 'none')};
-  position: relative;
+  ${({uppercase}) => uppercase && 'text-transform: uppercase'};
   /* background: url(${outlineBg});
   background-size: 100% 48px; */
   /* color: ${({theme}) => theme.white}; */
@@ -24,6 +24,7 @@ const Background = styled.img`
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   &:hover {
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
   }

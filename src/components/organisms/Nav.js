@@ -78,7 +78,11 @@ const BackdropClickTarget = styled.div`
 `
 
 const NavLink = styled(Link)`
+  color: ${({theme}) => theme.black};
   text-decoration: none;
+  &:hover {
+    color: ${({theme}) => theme.red};
+  }
   ${media.abovePhone`
     display: ${({mobileonly}) => (mobileonly ? 'none' : 'block')};
     margin: 0 20px;
@@ -112,7 +116,7 @@ class Nav extends Component {
   render() {
     const {isMobileNavVisible} = this.state
     return (
-      <>
+      <div>
         <Responsive.Mobile
           render={() => (
             <>
@@ -147,7 +151,7 @@ class Nav extends Component {
             </NavLink>
           ))}
         </Menu>
-      </>
+      </div>
     )
   }
 }

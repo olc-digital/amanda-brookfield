@@ -4,6 +4,7 @@ const theme = {
   red: '#9c1e14',
   lightGrey: '#eff1f3',
   orange: '#da5a33',
+  containerWidth: '792px',
   gutterSize: '24px',
 }
 

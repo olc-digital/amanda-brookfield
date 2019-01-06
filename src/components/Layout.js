@@ -14,6 +14,9 @@ const LayoutGrid = styled.div`
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   min-height: 100vh;
+  & > * {
+    width: 100vw;
+  }
 `
 
 const Layout = ({children}) => (

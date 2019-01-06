@@ -16,7 +16,7 @@ import bannerDesktop2x from '../img/home-banner-desktop@2x.jpg'
 import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
 import {CrimsonTextFont} from '../styles/mixins'
 import {books} from '../data'
-import outlineBg from '../img/button-bg-outline.svg'
+import FullWidth from '../components/atoms/FullWidth'
 
 import media from '../styles/mediaQueries'
 
@@ -46,9 +46,27 @@ const HomeH2 = styled(H2)`
   margin: 72px 0;
 `
 
+const Scroller = styled(FullWidth)`
+  overflow-x: scroll;
+  margin-bottom: 48px;
+  -webkit-overflow-scrolling: touch;
+`
 const SelectedBooks = styled.div`
   display: flex;
   justify-content: space-between;
+  width: ${({theme}) => theme.containerWidth};
+  padding: 0 ${({theme}) => theme.gutterSize} 24px;
+  & > * {
+    box-sizing: content-box;
+    margin-right: 30px;
+  }
+  & > *:last-child {
+    margin-right: 0;
+    padding-right: ${({theme}) => theme.gutterSize};
+    ${media.abovePhone`
+      padding-right: 0;
+    `}
+  }
 `
 
 const selectedIds = [
@@ -67,19 +85,21 @@ export default class IndexPage extends React.Component {
     return (
       <>
         <Container>
-          <Responsive.Mobile>
-            {matches =>
-              matches ? (
-                <BannerImage
-                  srcSet={[bannerMobile1x, bannerMobile2x, bannerMobile3x]}
-                />
-              ) : (
-                <BannerImage
-                  srcSet={[bannerDesktop1x, bannerDesktop2x, bannerDesktop3x]}
-                />
-              )
-            }
-          </Responsive.Mobile>
+          <FullWidth>
+            <Responsive.Mobile>
+              {matches =>
+                matches ? (
+                  <BannerImage
+                    srcSet={[bannerMobile1x, bannerMobile2x, bannerMobile3x]}
+                  />
+                ) : (
+                  <BannerImage
+                    srcSet={[bannerDesktop1x, bannerDesktop2x, bannerDesktop3x]}
+                  />
+                )
+              }
+            </Responsive.Mobile>
+          </FullWidth>
           <WelcomeText>
             <FirstLetter>W</FirstLetter>elcome to my official website. There’s
             lots to dip into, with sneak-peeks at my inspirations as well as
@@ -87,19 +107,15 @@ export default class IndexPage extends React.Component {
             Alone, Relative Love and Life Begins.
           </WelcomeText>
           <HomeH2>My Best Sellers</HomeH2>
-          <SelectedBooks>
-            {selectedBooks.map(book => (
-              <BookWidget key={book.id} {...book} />
-            ))}
-          </SelectedBooks>
+          <Scroller>
+            <SelectedBooks>
+              {selectedBooks.map(book => (
+                <BookWidget key={book.id} {...book} />
+              ))}
+            </SelectedBooks>
+          </Scroller>
         </Container>
         <ForTheLoveOfADogHero />
-        <Img
-          css={`
-            filter: drop-shadow(-5px -5px 5px #000);
-          `}
-          src={outlineBg}
-        />
       </>
     )
   }
