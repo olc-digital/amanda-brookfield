@@ -30,7 +30,9 @@ export default function BookWidget({coverImage, title}) {
     <Wrapper>
       <Cover src={coverImage} />
       <H3 css={'margin-bottom: 16px;'}>{title}</H3>
-      <SketchButton uppercase={true}>Buy Now</SketchButton>
+      <SketchButton type="outline" uppercase>
+        Buy Now
+      </SketchButton>
       <BlankButton>Read More</BlankButton>
     </Wrapper>
   )

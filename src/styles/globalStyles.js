@@ -15,6 +15,8 @@ export default createGlobalStyle`
     color: ${theme.black};
     font-size: 14px;
     min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   body {
     min-width: 320px;
