@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import Responsive from '../components/atoms/Responsive'
-import Img from '../components/atoms/Img'
 import H2 from '../components/atoms/H2'
 import Container from '../components/atoms/Container'
 import BookWidget from '../components/molecules/BookWidget'
@@ -18,10 +16,11 @@ import {CrimsonTextFont} from '../styles/mixins'
 import {books} from '../data'
 import FullWidth from '../components/atoms/FullWidth'
 import FeaturedBook from '../components/organisms/FeaturedBook'
+import {Source} from '../components/atoms/Responsive'
 
 import media from '../styles/mediaQueries'
 
-const BannerImage = styled(Img)`
+const AmandaImage = styled.img`
   width: 100%;
   height: auto;
 `
@@ -87,19 +86,19 @@ export default class IndexPage extends React.Component {
       <>
         <Container>
           <FullWidth>
-            <Responsive.Mobile>
-              {matches =>
-                matches ? (
-                  <BannerImage
-                    srcSet={[bannerMobile1x, bannerMobile2x, bannerMobile3x]}
-                  />
-                ) : (
-                  <BannerImage
-                    srcSet={[bannerDesktop1x, bannerDesktop2x, bannerDesktop3x]}
-                  />
-                )
-              }
-            </Responsive.Mobile>
+            <picture>
+              <Source
+                mobile
+                srcSet={`${bannerMobile1x} 1x, ${bannerMobile2x} 2x, ${bannerMobile3x} 3x,`}
+              />
+              <Source
+                srcSet={`${bannerDesktop1x} 1x, ${bannerDesktop2x} 2x, ${bannerDesktop3x} 3x,`}
+              />
+              <AmandaImage
+                src={bannerDesktop1x}
+                alt="Amanda Brookfield Portrait"
+              />
+            </picture>
           </FullWidth>
           <WelcomeText>
             <FirstLetter>W</FirstLetter>elcome to my official website. There’s

@@ -57,9 +57,12 @@ const AllCapsTitle = styled.h2`
 const BlurbBody = styled.p`
   font-size: 14px;
   line-height: 1.86;
-  max-width: 256px;
+  padding-right: 150px;
   margin-bottom: 24px;
   position: relative;
+  @media (max-width: 380px) {
+    padding: 0;
+  }
 `
 
 const AmandaImage = styled(Img).attrs({

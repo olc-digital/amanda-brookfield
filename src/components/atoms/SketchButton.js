@@ -11,7 +11,7 @@ const SketchButton = styled(ButtonBase)`
   height: 52px;
   padding: 0;
   width: ${({width}) =>
-    width === 'wide' ? '327px' : width === 'mid' ? '152px' : width};
+    width === 'wide' ? '315px' : width === 'mid' ? '152px' : width};
   font-size: ${({width}) => (width === 'wide' ? '12px' : '14px')};
   letter-spacing: 2px;
   text-transform: ${({uppercase}) => uppercase && 'uppercase'};

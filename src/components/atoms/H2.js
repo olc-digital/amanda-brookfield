@@ -4,7 +4,7 @@ import {CrimsonTextFont} from '../../styles/mixins'
 const H2 = styled.h2`
   ${CrimsonTextFont}
   font-size: 20px;
-  line-height: 0.7;
+  line-height: 1;
   letter-spacing: 1px;
   text-align: center;
 `
