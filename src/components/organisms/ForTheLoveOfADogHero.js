@@ -62,7 +62,10 @@ const BlurbBody = styled.p`
   position: relative;
 `
 
-const AmandaImage = styled(Img).attrs({})`
+const AmandaImage = styled(Img).attrs({
+  alt: 'Amanda walking Mabel',
+  srcSet: [amandaWithMabel, amandaWithMabel2x, amandaWithMabel3x],
+})`
   float: right;
   shape-outside: url(${({srcSet}) => srcSet[0]});
   shape-image-threshold: 0;
@@ -101,10 +104,7 @@ export default function ForTheLoveOfADogHero() {
           <H2 css={'text-align: left; margin-bottom: 16px;'}>
             A memoir, ‘For the Love of a Dog’
           </H2>
-          <AmandaImage
-            alt="Amanda walking Mabel"
-            srcSet={[amandaWithMabel, amandaWithMabel2x, amandaWithMabel3x]}
-          />
+          <AmandaImage />
           <BlurbBody>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
