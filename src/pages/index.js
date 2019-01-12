@@ -17,6 +17,7 @@ import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
 import {CrimsonTextFont} from '../styles/mixins'
 import {books} from '../data'
 import FullWidth from '../components/atoms/FullWidth'
+import FeaturedBook from '../components/organisms/FeaturedBook'
 
 import media from '../styles/mediaQueries'
 
@@ -116,6 +117,35 @@ export default class IndexPage extends React.Component {
           </Scroller>
         </Container>
         <ForTheLoveOfADogHero />
+        <Container>
+          <HomeH2>Latest Releases</HomeH2>
+          <FeaturedBook bookId="for-the-love-of-a-dog">
+            For release in November 2018, For The Love of a Dog is a funny and
+            poignant memoir of emotional meltdown and recovery with the
+            unwitting aid of a golden doodle puppy called Mabel. Following the
+            death of my mother and the end of a post-divorce relationship, my
+            world fell apart and desolation closed in. Talk of getting a puppy
+            was just to cheer myself up. I never thought I would actually go
+            through with it; I was barely capable of looking after myself, let
+            alone a dog…
+          </FeaturedBook>
+          <FeaturedBook bookId="the-love-child">
+            Published in Jan 2013,The Love Child is a touching and heartfelt
+            story about discovering what matters most in your life and having
+            the courage to reach for it - not just once, but again and again.
+            <br />
+            When Janine and Dougie fell in love they thought it would be for
+            ever. Fifteen years later their relationship is well and truly over,
+            their daughter Stevie their one remaining connection...
+          </FeaturedBook>
+          <FeaturedBook bookId="before-i-knew-you">
+            {`Released in March 2011,Before I Knew You tells the unsettling story
+            of what happens when two very different families swap houses across
+            the Atlantic one August. Strangers when they borrow each other's
+            respective homes, their lives then start to intertwine in unexpected
+            ways, throwing them at the mercy of their pasts and each other.`}
+          </FeaturedBook>
+        </Container>
       </>
     )
   }

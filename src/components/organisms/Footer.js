@@ -28,7 +28,7 @@ export default function Footer() {
     <FooterWrapper>
       <Sketch type="author" />
       <ContactHeading>Contact</ContactHeading>
-      <SketchButton>Email Amanda</SketchButton>
+      <SketchButton width="wide">Email Amanda</SketchButton>
       <SocialMediaLinks>
         <ExternalLink href="https://www.instagram.com/amanda_and_mabel_brookfield/">
           <Img src={instaIcon} />

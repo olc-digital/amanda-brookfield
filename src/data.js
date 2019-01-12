@@ -1,19 +1,35 @@
 import ftloadCover from './img/covers/for-the-love-of-a-dog.jpg'
+import ftloadSketch from './img/sketch-covers/for-the-love-of-a-dog-sketch.jpg'
 import tlcCover from './img/covers/the-love-child.jpg'
+import tlcSketch from './img/sketch-covers/the-love-child-sketch.jpg'
 import bikyCover from './img/covers/before-i-knew-you.jpg'
+import bikySketch from './img/sketch-covers/before-i-knew-you-sketch.jpg'
 import lbCover from './img/covers/life-begins.jpg'
+import lbSketch from './img/sketch-covers/life-begins-sketch.jpg'
 import tsrolCover from './img/covers/the-simple-rules-of-love.jpg'
+import tsrolSketch from './img/sketch-covers/the-simple-rules-of-love-sketch.jpg'
 import rlCover from './img/covers/relative-love.jpg'
+import rlSketch from './img/sketch-covers/relative-love-sketch.jpg'
 import sahCover from './img/covers/sisters-&-husbands.jpg'
+import sahSketch from './img/sketch-covers/sisters-&-husbands-sketch.jpg'
 import afmCover from './img/covers/a-family-man.jpg'
+import afmSketch from './img/sketch-covers/a-family-man-sketch.jpg'
 import tlCover from './img/covers/the-lover.png'
+import tlSketch from './img/sketch-covers/the-lover-sketch.jpg'
 import slCover from './img/covers/single-lives.jpg'
+import slSketch from './img/sketch-covers/single-lives-sketch.jpg'
 import mgCover from './img/covers/marriage-games.jpg'
-import tgCover from './img/covers/the-grandmother.jpg'
+import mgSketch from './img/sketch-covers/marriage-games-sketch.jpg'
+import tgCover from './img/covers/the-godmother.jpg'
+import tgSketch from './img/sketch-covers/the-godmother-sketch.jpg'
 import acosCover from './img/covers/a-cast-of-smiles.jpg'
+import acosSketch from './img/sketch-covers/a-cast-of-smiles-sketch.jpg'
 import asaCover from './img/covers/a-summer-affair.jpg'
+import asaSketch from './img/sketch-covers/a-summer-affair-sketch.jpg'
 import wogCover from './img/covers/walls-of-glass.jpg'
+import wogSketch from './img/sketch-covers/walls-of-glass-sketch.jpg'
 import aaCover from './img/covers/alice-alone.jpg'
+import aaSketch from './img/sketch-covers/alice-alone-sketch.jpg'
 
 export const books = {
   'for-the-love-of-a-dog': {
@@ -22,6 +38,7 @@ export const books = {
     link: '/books/for-the-love-of-a-dog',
     color: '#e1482d',
     coverImage: ftloadCover,
+    coverSketch: ftloadSketch,
     options: [
       {type: 'HEAD_OF_ZEUS', url: 'http://headofzeus.com/books/love-dog'},
       {type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/1788542924'},
@@ -34,6 +51,7 @@ export const books = {
     link: '/books/the-love-child',
     color: '#d05d31',
     coverImage: tlcCover,
+    coverSketch: tlcSketch,
     options: [
       {
         type: 'PENGUIN',
@@ -49,6 +67,7 @@ export const books = {
     link: '/books/before-i-knew-you',
     color: '#46556a',
     coverImage: bikyCover,
+    coverSketch: bikySketch,
     options: [
       {
         type: 'PENGUIN',
@@ -64,6 +83,7 @@ export const books = {
     link: '/books/life-begins',
     color: '#c3405f',
     coverImage: lbCover,
+    coverSketch: lbSketch,
     options: [
       {
         type: 'PENGUIN',
@@ -79,6 +99,7 @@ export const books = {
     link: '/books/the-simple-rules-of-love',
     color: '#248dab',
     coverImage: tsrolCover,
+    coverSketch: tsrolSketch,
     options: [
       {
         type: 'PENGUIN',
@@ -94,6 +115,7 @@ export const books = {
     link: '/books/relative-love',
     color: '#df2f55',
     coverImage: rlCover,
+    coverSketch: rlSketch,
     options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00H2GYBVO'}],
   },
 
@@ -103,6 +125,7 @@ export const books = {
     link: '/books/sisters-and-husbands',
     color: '#473a89',
     coverImage: sahCover,
+    coverSketch: sahSketch,
     options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340770120'}],
   },
 
@@ -112,6 +135,7 @@ export const books = {
     link: '/books/a-family-man',
     color: '#33ce4f',
     coverImage: afmCover,
+    coverSketch: afmSketch,
     options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00H2GYBP0'}],
   },
 
@@ -121,6 +145,7 @@ export const books = {
     link: '/books/the-lover',
     color: '#fbbb01',
     coverImage: tlCover,
+    coverSketch: tlSketch,
     options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00Q8NUXI2'}],
   },
 
@@ -130,6 +155,7 @@ export const books = {
     link: '/books/single-lives',
     color: '#e72104',
     coverImage: slCover,
+    coverSketch: slSketch,
     options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/034071266X'}],
   },
 
@@ -139,6 +165,7 @@ export const books = {
     link: '/books/marriage-games',
     color: '#dc8d4b',
     coverImage: mgCover,
+    coverSketch: mgSketch,
     options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340671521'}],
   },
 
@@ -148,6 +175,7 @@ export const books = {
     link: '/books/the-godmother',
     color: '#b5a2fe',
     coverImage: tgCover,
+    coverSketch: tgSketch,
     options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340671505'}],
   },
 
@@ -157,6 +185,7 @@ export const books = {
     link: '/books/a-cast-of-smiles',
     color: '#d69aa2',
     coverImage: acosCover,
+    coverSketch: acosSketch,
     options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340624493'}],
   },
 
@@ -166,6 +195,7 @@ export const books = {
     link: '/books/a-summer-affair',
     color: '#bf2525',
     coverImage: asaCover,
+    coverSketch: asaSketch,
     options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340623411'}],
   },
 
@@ -175,6 +205,7 @@ export const books = {
     link: '/books/walls-of-glass',
     color: '#5f9be4',
     coverImage: wogCover,
+    coverSketch: wogSketch,
     options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340623403'}],
   },
 
@@ -184,6 +215,7 @@ export const books = {
     link: '/books/alice-alone',
     color: '#c6b2ce',
     coverImage: aaCover,
+    coverSketch: aaSketch,
     options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340624485'}],
   },
 }
