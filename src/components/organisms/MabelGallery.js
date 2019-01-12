@@ -39,7 +39,11 @@ const GalleryImage = styled.div`
   flex: 1 0 auto;
 `
 
-const CornerInstaIcon = styled(Icon).attrs({name: 'insta', fill: '#ffffff'})`
+const CornerInstaIcon = styled(Icon).attrs({
+  name: 'insta',
+  fill: '#ffffff',
+  hoverFill: '#ffffff',
+})`
   position: absolute;
   bottom: 0;
   right: 0;
@@ -58,7 +62,9 @@ export default function MabelGallery() {
           </ExternalLink>
         ))}
       </GalleryGrid>
-      <CornerInstaIcon />
+      <ExternalLink href="https://www.instagram.com/amanda_and_mabel_brookfield">
+        <CornerInstaIcon />
+      </ExternalLink>
     </Wrapper>
   )
 }

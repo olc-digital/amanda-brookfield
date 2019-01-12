@@ -5,24 +5,36 @@ import Img from '../atoms/Img'
 import SketchButton from '../atoms/SketchButton'
 import H2 from '../atoms/H2'
 import ExternalLink from '../atoms/ExternalLink'
+import Icon from '../atoms/Icon'
 
 import contactImg from '../../img/contact.gif'
-import instaIcon from '../../img/insta-icon.png'
-import facebookIcon from '../../img/facebook-icon.png'
-import twitterIcon from '../../img/twitter-icon.png'
+
 import emailIcon from '../../img/email-icon.svg'
 
 const FooterWrapper = styled.div`
   background-color: #eff1f3;
   padding: 32px 0;
-  display: grid;
-  grid-gap: 32px;
-  justify-items: center;
+  text-align: center;
 `
 
-const ContactHeading = styled(H2)``
+const ContactHeading = styled(H2)`
+  margin: 32px 0;
+`
 
-const SocialMediaLinks = styled.div``
+const SocialMediaLinks = styled.div`
+  margin: 24px 0;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 44px;
+    margin: 0 8px;
+  }
+`
+
+const Copyright = styled.div`
+  text-align: center;
+  font-size: 12px;
+`
 
 export default function Footer() {
   return (
@@ -35,15 +47,16 @@ export default function Footer() {
       </SketchButton>
       <SocialMediaLinks>
         <ExternalLink href="https://www.instagram.com/amanda_and_mabel_brookfield/">
-          <Img src={instaIcon} />
+          <Icon name="insta" />
         </ExternalLink>
         <ExternalLink href="https://www.facebook.com/amandabrookfield100/">
-          <Img src={facebookIcon} />
+          <Icon name="facebook" />
         </ExternalLink>
         <ExternalLink href="https://twitter.com/ABrookfield1">
-          <Img src={twitterIcon} />
+          <Icon name="twitter" />
         </ExternalLink>
       </SocialMediaLinks>
+      <Copyright>&copy; Amanda Brookfield 2018</Copyright>
     </FooterWrapper>
   )
 }
