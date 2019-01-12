@@ -10,7 +10,7 @@ const HeaderWrapper = styled.div`
   a {
     text-decoration: none;
   }
-  ${media.abovePhone`
+  ${media.aboveMobile`
     margin-top: 56px;
   `}
 `
@@ -22,7 +22,7 @@ const MainTitle = styled.h1`
   letter-spacing: 0.5px;
   color: #26282a;
   text-transform: uppercase;
-  ${media.abovePhone`
+  ${media.aboveMobile`
     line-height: 1.25;
     letter-spacing: 0.8px;
     font-size: 24px;

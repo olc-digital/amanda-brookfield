@@ -30,7 +30,7 @@ const Menu = styled.nav`
   &.slideIn {
     transform: translateX(${shiftDistance});
   }
-  ${media.abovePhone`
+  ${media.aboveMobile`
     /* reset mobile */
     transform: none !important;
     transition: transform 0ms ease-in;
@@ -77,7 +77,7 @@ const NavLink = styled(Link)`
   &:hover {
     color: ${({theme}) => theme.red};
   }
-  ${media.abovePhone`
+  ${media.aboveMobile`
     margin: 0 20px;
   `}
 `
@@ -86,7 +86,7 @@ const NavLinkText = styled(H2)`
   /* mobile only */
   padding: 24px 0 20px;
   border-bottom: solid 1px ${({theme}) => theme.lightGrey};
-  ${media.abovePhone`
+  ${media.aboveMobile`
     /* reset mobile styles */
     padding: 0;
     border-bottom: 0;

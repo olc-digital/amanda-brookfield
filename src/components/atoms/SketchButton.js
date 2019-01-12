@@ -10,8 +10,9 @@ const SketchButton = styled(ButtonBase)`
   position: relative;
   height: 52px;
   padding: 0;
-  width: ${({wide}) => (wide ? '327px' : '125px')};
-  font-size: ${({wide}) => (wide ? '12px' : '14px')};
+  width: ${({width}) =>
+    width === 'wide' ? '327px' : width === 'mid' ? '152px' : width};
+  font-size: ${({width}) => (width === 'wide' ? '12px' : '14px')};
   letter-spacing: 2px;
   text-transform: ${({uppercase}) => uppercase && 'uppercase'};
   &:hover ${ButtonSvg} {
@@ -23,6 +24,7 @@ const ButtonSvg = styled.svg`
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
 `
 const ButtonText = styled.div`
   position: relative;
@@ -50,9 +52,8 @@ export default function SketchButtonComponent(props) {
     <SketchButton {...props}>
       <ButtonSvg
         xmlns="http://www.w3.org/2000/svg"
-        width="127"
-        height="52"
         viewBox="0 0 127 52"
+        preserveAspectRatio="none"
       >
         <path
           fill={fills[props.type]}
@@ -71,4 +72,5 @@ SketchButtonComponent.defaultProps = {
   type: 'primary',
   uppercase: false,
   wide: false,
+  width: '125px',
 }

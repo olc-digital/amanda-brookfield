@@ -1,9 +1,8 @@
 import {css} from 'styled-components'
 
 export const sizes = {
-  aboveDesktop: 992,
-  aboveTablet: 768,
-  abovePhone: 576,
+  aboveContainer: 792,
+  aboveMobile: 576,
 }
 
 // Iterate through the sizes and create a media template

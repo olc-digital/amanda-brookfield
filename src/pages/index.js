@@ -37,7 +37,7 @@ const FirstLetter = styled.span`
   float: left;
   font-size: 48px;
   line-height: 48px;
-  ${media.abovePhone`
+  ${media.aboveMobile`
     transform: translateX(8px);
   `}
 `
@@ -63,7 +63,7 @@ const SelectedBooks = styled.div`
   & > *:last-child {
     margin-right: 0;
     padding-right: ${({theme}) => theme.gutterSize};
-    ${media.abovePhone`
+    ${media.aboveMobile`
       padding-right: 0;
     `}
   }
