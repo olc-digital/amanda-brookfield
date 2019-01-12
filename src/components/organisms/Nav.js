@@ -14,7 +14,7 @@ import menuIcon from '../../img/menu-icon.svg'
 
 const menuWidth = '220px'
 const shiftDistance = '230px'
-const Menu = styled.nav`
+const MobileMenu = styled.nav`
   position: fixed;
   top: 0;
   left: -${shiftDistance};
@@ -31,18 +31,14 @@ const Menu = styled.nav`
     transform: translateX(${shiftDistance});
   }
   ${media.aboveMobile`
-    /* reset mobile */
-    transform: none !important;
-    transition: transform 0ms ease-in;
-    box-shadow: none;
-    position: static;
-    height: auto;
-    width: auto;
-    /* own styles */
-    display: flex;
-    justify-content: center;
-    margin:30px 0 70px;
+    display: none;
   `}
+`
+
+const DesktopMenu = styled.nav`
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 70px;
 `
 
 const Hamburger = styled(ButtonBase)`
@@ -54,6 +50,9 @@ const Hamburger = styled(ButtonBase)`
   position: absolute;
   left: 24px;
   top: 24px;
+  ${media.aboveMobile`
+    display: none;
+  `}
 `
 const CloseNavButton = styled(ButtonBase)`
   width: 16px;
@@ -118,7 +117,7 @@ class Nav extends Component {
                 {isMobileNavVisible && (
                   <BackdropClickTarget onClick={this.hideMobileNav} />
                 )}
-                <Menu className={isMobileNavVisible ? 'slideIn' : ''}>
+                <MobileMenu className={isMobileNavVisible ? 'slideIn' : ''}>
                   <CloseNavButton onClick={this.hideMobileNav}>
                     <Img src={close} />
                   </CloseNavButton>
@@ -131,10 +130,10 @@ class Nav extends Component {
                       <NavLinkText>{item.text}</NavLinkText>
                     </NavLink>
                   ))}
-                </Menu>
+                </MobileMenu>
               </>
             ) : (
-              <Menu>
+              <DesktopMenu>
                 {NavLinks.map(
                   item =>
                     !item.mobileOnly && (
@@ -148,7 +147,7 @@ class Nav extends Component {
                       </NavLink>
                     ),
                 )}
-              </Menu>
+              </DesktopMenu>
             )
           }
         </Responsive.Mobile>
