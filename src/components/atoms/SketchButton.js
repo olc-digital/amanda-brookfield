@@ -29,6 +29,10 @@ const ButtonSvg = styled.svg`
 const ButtonText = styled.div`
   position: relative;
   color: ${({type}) => textColors[type]};
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 `
 
 const strokes = {
