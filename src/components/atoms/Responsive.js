@@ -1,5 +1,5 @@
 import React from 'react'
-import Responsive from 'react-media'
+import Responsive from 'react-responsive'
 
 import {sizes} from '../../styles/mediaQueries'
 
