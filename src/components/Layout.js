@@ -23,7 +23,7 @@ const Layout = ({children}) => (
   <>
     <ThemeProvider theme={theme}>
       <>
-        <Helmet title="Home | Gatsby + Netlify CMS" />
+        <Helmet title="Amanda Brookfield | Best Selling Novelist" />
         <PreloadFonts />
         <LayoutGrid>
           <Header />
