@@ -1,12 +1,43 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
+import BookWidget from '../../components/molecules/BookWidget'
+import {books} from '../../data'
+import H2 from '../../components/atoms/H2'
+import Container from '../../components/atoms/Container'
+import media from '../../styles/mediaQueries'
+
+const booksArray = Object.values(books)
+
+const BooksWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: -30px;
+  & > div {
+    margin-right: 30px;
+    margin-bottom: 24px;
+  }
+  ${media.belowMobile`
+    margin-right: -10px;
+    & > div {
+    margin-right: 10px;
+  }
+  `}
+`
 export default class IndexPage extends React.Component {
   render() {
     return (
       <>
-        <div>Books</div>
-        <div />
+        <Container>
+          <H2>Books</H2>
+          <BooksWrapper>
+            {booksArray.map(book => (
+              <BookWidget key={book.id} {...book} />
+            ))}
+          </BooksWrapper>
+        </Container>
       </>
     )
   }

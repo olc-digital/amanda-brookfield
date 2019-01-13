@@ -11,7 +11,16 @@ const Wrapper = styled.div`
 `
 const Cover = styled(Img)`
   width: 125px;
-  margin-bottom: 16px;
+  height: 192px;
+  margin-bottom: 9px;
+`
+
+const BookTitle = styled(H3)`
+  min-height: 32px;
+  margin-bottom: 7px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 `
 
 const BlankButton = styled(ButtonBase)`
@@ -29,7 +38,7 @@ export default function BookWidget({coverImage, title}) {
   return (
     <Wrapper>
       <Cover src={coverImage} />
-      <H3 css={'margin-bottom: 16px;'}>{title}</H3>
+      <BookTitle>{title}</BookTitle>
       <SketchButton type="outline" uppercase>
         Buy Now
       </SketchButton>
