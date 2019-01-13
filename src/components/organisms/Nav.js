@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
 
-import Responsive from '../atoms/Responsive'
 import ButtonBase from '../atoms/ButtonBase'
 import Img from '../atoms/Img'
 import Sketch from '../atoms/Sketch'
@@ -14,7 +13,7 @@ import menuIcon from '../../img/menu-icon.svg'
 
 const menuWidth = '220px'
 const shiftDistance = '230px'
-const MobileMenu = styled.nav`
+const MobileNav = styled.nav`
   position: fixed;
   top: 0;
   left: -${shiftDistance};
@@ -36,16 +35,7 @@ const MobileMenu = styled.nav`
   `}
 `
 
-const DesktopMenu = styled.nav`
-  display: flex;
-  justify-content: center;
-  margin: 30px 0 70px;
-  ${media.belowMobile`
-    display: none;
-  `}
-`
-
-const Hamburger = styled(ButtonBase)`
+const MobileHamburger = styled(ButtonBase)`
   background-image: url(${menuIcon});
   background-size: contain;
   background-repeat: no-repeat;
@@ -98,6 +88,15 @@ const NavLinkText = styled(H2)`
   `}
 `
 
+const DesktopNav = styled.nav`
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 70px;
+  ${media.belowMobile`
+    display: none;
+  `}
+`
+
 const NavLinks = [
   {to: '/', text: 'Home', name: 'books', mobileOnly: true},
   {to: '/books', name: 'books', text: 'Books'},
@@ -113,48 +112,41 @@ class Nav extends Component {
     const {isMobileNavVisible} = this.state
     return (
       <div>
-        <Responsive.Mobile>
-          {matches =>
-            matches ? (
-              <>
-                <Hamburger onClick={this.showMobileNav} />
-                {isMobileNavVisible && (
-                  <BackdropClickTarget onClick={this.hideMobileNav} />
-                )}
-                <MobileMenu className={isMobileNavVisible ? 'slideIn' : ''}>
-                  <CloseNavButton onClick={this.hideMobileNav}>
-                    <Img src={close} />
-                  </CloseNavButton>
-                  {NavLinks.map(item => (
-                    <NavLink
-                      key={item.text}
-                      to={item.to}
-                      onClick={this.hideMobileNav}
-                    >
-                      <NavLinkText>{item.text}</NavLinkText>
-                    </NavLink>
-                  ))}
-                </MobileMenu>
-              </>
-            ) : (
-              <DesktopMenu>
-                {NavLinks.map(
-                  item =>
-                    !item.mobileOnly && (
-                      <NavLink
-                        key={item.text}
-                        to={item.to}
-                        onClick={this.hideMobileNav}
-                      >
-                        <Sketch type={item.name} hoverComponent={NavLink} />
-                        <NavLinkText>{item.text}</NavLinkText>
-                      </NavLink>
-                    ),
-                )}
-              </DesktopMenu>
-            )
-          }
-        </Responsive.Mobile>
+        <>
+          <MobileHamburger onClick={this.showMobileNav} />
+          {isMobileNavVisible && (
+            <BackdropClickTarget onClick={this.hideMobileNav} />
+          )}
+          <MobileNav className={isMobileNavVisible ? 'slideIn' : ''}>
+            <CloseNavButton onClick={this.hideMobileNav}>
+              <Img src={close} />
+            </CloseNavButton>
+            {NavLinks.map(item => (
+              <NavLink
+                key={item.text}
+                to={item.to}
+                onClick={this.hideMobileNav}
+              >
+                <NavLinkText>{item.text}</NavLinkText>
+              </NavLink>
+            ))}
+          </MobileNav>
+        </>
+        <DesktopNav>
+          {NavLinks.map(
+            item =>
+              !item.mobileOnly && (
+                <NavLink
+                  key={item.text}
+                  to={item.to}
+                  onClick={this.hideMobileNav}
+                >
+                  <Sketch type={item.name} hoverComponent={NavLink} />
+                  <NavLinkText>{item.text}</NavLinkText>
+                </NavLink>
+              ),
+          )}
+        </DesktopNav>
       </div>
     )
   }
