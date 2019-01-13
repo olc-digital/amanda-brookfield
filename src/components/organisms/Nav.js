@@ -27,6 +27,7 @@ const MobileMenu = styled.nav`
   transition: transform 200ms ease-in;
   background: white;
   box-shadow: 2px 0 4px 0 rgba(38, 40, 42, 0.25);
+  z-index: 2;
   &.slideIn {
     transform: translateX(${shiftDistance});
   }
