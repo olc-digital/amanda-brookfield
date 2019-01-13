@@ -64,11 +64,13 @@ const BackdropClickTarget = styled.div`
   left: 0;
 `
 
-const NavLink = styled(Link)`
-  color: ${({theme}) => theme.black};
-  text-decoration: none;
-  &:hover {
-    color: ${({theme}) => theme.red};
+const NavItemWrapper = styled.div`
+  a {
+    color: ${({theme}) => theme.black};
+    text-decoration: none;
+    &:hover {
+      color: ${({theme}) => theme.red};
+    }
   }
   ${media.aboveMobile`
     margin: 0 20px;
@@ -79,19 +81,23 @@ const NavLinkText = styled(H2)`
   /* mobile only */
   padding: 24px 0 20px;
   border-bottom: solid 1px ${({theme}) => theme.lightGrey};
+  .active & {
+    color: ${({theme}) => theme.red};
+  }
   ${media.aboveMobile`
     /* reset mobile styles */
     padding: 0;
     border-bottom: 0;
     /* own styles */
     text-align: center;
+    margin-top: 8px;
   `}
 `
 
 const DesktopNav = styled.nav`
   display: flex;
   justify-content: center;
-  margin: 30px 0 70px;
+  margin: 32px 0 70px;
   ${media.belowMobile`
     display: none;
   `}
@@ -104,6 +110,26 @@ const NavLinks = [
   {to: '/blog', name: 'blog', text: 'Blog'},
   {to: '/events', name: 'events', text: 'Events'},
 ]
+
+const NavItem = ({text, to, name, handleClick = () => null}) => (
+  <NavItemWrapper key={text}>
+    <Link
+      to={to}
+      getProps={({isCurrent}) => (isCurrent ? {className: 'active'} : null)}
+      onClick={handleClick}
+    >
+      <Sketch
+        css={`
+          ${media.belowMobile`display: none;`}
+        `}
+        type={name}
+        hoverComponent={NavItemWrapper}
+      />
+      <NavLinkText>{text}</NavLinkText>
+    </Link>
+  </NavItemWrapper>
+)
+
 class Nav extends Component {
   state = {isMobileNavVisible: false}
   hideMobileNav = () => this.setState({isMobileNavVisible: false})
@@ -122,29 +148,17 @@ class Nav extends Component {
               <Img src={close} />
             </CloseNavButton>
             {NavLinks.map(item => (
-              <NavLink
+              <NavItem
                 key={item.text}
-                to={item.to}
-                onClick={this.hideMobileNav}
-              >
-                <NavLinkText>{item.text}</NavLinkText>
-              </NavLink>
+                {...item}
+                handleClick={this.hideMobileNav}
+              />
             ))}
           </MobileNav>
         </>
         <DesktopNav>
           {NavLinks.map(
-            item =>
-              !item.mobileOnly && (
-                <NavLink
-                  key={item.text}
-                  to={item.to}
-                  onClick={this.hideMobileNav}
-                >
-                  <Sketch type={item.name} hoverComponent={NavLink} />
-                  <NavLinkText>{item.text}</NavLinkText>
-                </NavLink>
-              ),
+            item => !item.mobileOnly && <NavItem key={item.text} {...item} />,
           )}
         </DesktopNav>
       </div>

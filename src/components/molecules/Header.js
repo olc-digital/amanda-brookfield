@@ -5,13 +5,13 @@ import {KalamFont, CrimsonTextFont} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
 
 const HeaderWrapper = styled.div`
-  padding: 16px;
+  padding: 16px 16px 11px 16px;
   text-align: center;
   a {
     text-decoration: none;
   }
   ${media.aboveMobile`
-    margin-top: 56px;
+    padding: 72px 16px 16px 16px;
   `}
 `
 
@@ -22,10 +22,12 @@ const MainTitle = styled.h1`
   letter-spacing: 0.5px;
   color: #26282a;
   text-transform: uppercase;
+  margin-bottom: 2px;
   ${media.aboveMobile`
     line-height: 1.25;
     letter-spacing: 0.8px;
     font-size: 24px;
+    margin: 2px 0 4px;
   `}
 `
 
@@ -42,9 +44,8 @@ const Header = () => {
     <HeaderWrapper>
       <div
         css={`
-          width: 100%;
-          max-width: 280px;
-          margin: 0 auto;
+          display: flex;
+          justify-content: center;
         `}
       >
         <Link to="/">
