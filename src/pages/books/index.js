@@ -20,9 +20,9 @@ const BooksWrapper = styled.div`
     margin-bottom: 24px;
   }
   ${media.belowMobile`
-    margin-right: -10px;
+    margin-right: -15px;
     & > div {
-    margin-right: 10px;
+    margin-right: 15px;
   }
   `}
 `
