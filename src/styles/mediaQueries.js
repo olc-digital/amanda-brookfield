@@ -1,14 +1,20 @@
 import {css} from 'styled-components'
+import upperFirst from 'lodash/upperFirst'
 
 export const sizes = {
-  aboveContainer: 792,
-  aboveMobile: 576,
+  container: 792,
+  mobile: 576,
 }
 
 // Iterate through the sizes and create a media template
 const media = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (min-width: ${sizes[label] / 16}em) {
+  acc[`above${upperFirst(label)}`] = (...args) => css`
+    @media (min-width: ${sizes[label]}px) {
+      ${css(...args)}
+    }
+  `
+  acc[`below${upperFirst(label)}`] = (...args) => css`
+    @media (max-width: ${sizes[label] - 1}px) {
       ${css(...args)}
     }
   `

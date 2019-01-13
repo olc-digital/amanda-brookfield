@@ -39,6 +39,9 @@ const DesktopMenu = styled.nav`
   display: flex;
   justify-content: center;
   margin: 30px 0 70px;
+  ${media.belowMobile`
+    display: none;
+  `}
 `
 
 const Hamburger = styled(ButtonBase)`
