@@ -42,7 +42,7 @@ hadn't quite grasped, was that you cannot write about a dog without writing
 about the dog's owner.  And so my latest book, a memoir and first work of
 non-fiction, was born:
 
-**For The Love of a Dog: a memoir of meltdown, recovery, and a golden doodle**
+**For the Love of a Dog: a memoir of meltdown, recovery, and a golden doodle**
 
 In the process, this is what I discovered:
 

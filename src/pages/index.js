@@ -17,12 +17,22 @@ import {books} from '../data'
 import FullWidth from '../components/atoms/FullWidth'
 import FeaturedBook from '../components/organisms/FeaturedBook'
 import {Source} from '../components/atoms/Responsive'
-
+import Sketch from '../components/atoms/Sketch'
 import media from '../styles/mediaQueries'
 
 const AmandaImage = styled.img`
   width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
+  ${media.aboveMobile`
+  max-width: 764px;
+    object-fit: cover;
+    height: 220px;
+  `}
+  ${media.aboveContainer`
+    border-radius: 5px;
+  `}
 `
 const WelcomeText = styled.div`
   max-width: 486px;
@@ -43,7 +53,10 @@ const FirstLetter = styled.span`
 `
 
 const HomeH2 = styled(H2)`
-  margin: 72px 0;
+  margin: 48px 0;
+  ${media.aboveMobile`
+    margin: 72px 0;
+  `}
 `
 
 const Scroller = styled(FullWidth)`
@@ -67,6 +80,13 @@ const SelectedBooks = styled.div`
       padding-right: 0;
     `}
   }
+`
+
+const MobileOnlySketch = styled(Sketch)`
+  margin: 48px auto;
+  ${media.aboveMobile`
+    display: none;
+  `}
 `
 
 const selectedIds = [
@@ -106,6 +126,7 @@ export default class IndexPage extends React.Component {
             information about all my fifteen best-sellers, including Alice
             Alone, Relative Love and Life Begins.
           </WelcomeText>
+          <MobileOnlySketch type="books" />
           <HomeH2>My Best Sellers</HomeH2>
           <Scroller>
             <SelectedBooks>
@@ -117,28 +138,29 @@ export default class IndexPage extends React.Component {
         </Container>
         <ForTheLoveOfADogHero />
         <Container>
+          <MobileOnlySketch type="newspaper" />
           <HomeH2>Latest Releases</HomeH2>
           <FeaturedBook bookId="for-the-love-of-a-dog">
-            For release in November 2018, For The Love of a Dog is a funny and
+            {`Published in November 2018, 'For the Love of a Dog' is a funny and
             poignant memoir of emotional meltdown and recovery with the
-            unwitting aid of a golden doodle puppy called Mabel. Following the
+            unwitting aid of a Golden Doodle puppy called Mabel. Following the
             death of my mother and the end of a post-divorce relationship, my
             world fell apart and desolation closed in. Talk of getting a puppy
             was just to cheer myself up. I never thought I would actually go
             through with it; I was barely capable of looking after myself, let
-            alone a dog…
+            alone a dog…`}
           </FeaturedBook>
           <FeaturedBook bookId="the-love-child">
-            Published in Jan 2013,The Love Child is a touching and heartfelt
+            {`Published in Jan 2013, 'The Love Child' is a touching and heartfelt
             story about discovering what matters most in your life and having
-            the courage to reach for it - not just once, but again and again.
+            the courage to reach for it - not just once, but again and again.`}
             <br />
-            When Janine and Dougie fell in love they thought it would be for
+            {`When Janine and Dougie fell in love they thought it would be for
             ever. Fifteen years later their relationship is well and truly over,
-            their daughter Stevie their one remaining connection...
+            their daughter Stevie their one remaining connection...`}
           </FeaturedBook>
           <FeaturedBook bookId="before-i-knew-you">
-            {`Released in March 2011,Before I Knew You tells the unsettling story
+            {`Released in March 2011, 'Before I Knew You' tells the unsettling story
             of what happens when two very different families swap houses across
             the Atlantic one August. Strangers when they borrow each other's
             respective homes, their lives then start to intertwine in unexpected

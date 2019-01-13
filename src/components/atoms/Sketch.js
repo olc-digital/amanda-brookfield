@@ -6,16 +6,17 @@ const map = {
   author: 1,
   blog: 2,
   events: 3,
+  newspaper: 4,
 }
 const Sketch = styled.div`
-  display: inline-block;
   width: 90px;
   height: 90px;
   background-image: url(${sketchSprite});
   background-size: 200% auto;
   background-repeat: no-repeat;
   background-position-y: -${({type}) => map[type] * 90}px;
-  ${({hoverComponent: hc}) =>
+  ${({enableHover, hoverComponent: hc}) =>
+    (enableHover || hc) &&
     `${hc ? `${hc}:hover &` : `&:hover`} {background-position-x: right;}`}
 `
 

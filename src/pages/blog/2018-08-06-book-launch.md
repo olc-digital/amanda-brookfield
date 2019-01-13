@@ -3,10 +3,10 @@ templateKey: blog-post
 title: BOOK LAUNCH
 date: '2018-08-06T10:51:08+01:00'
 tags:
-  - "'For The Love of a Dog'"
+  - "'For the Love of a Dog'"
 ---
 
-On November 1st my new book, _For The Love of a Dog_, will be officially
+On November 1st my new book, _For the Love of a Dog_, will be officially
 launched into the world. I shall have a party, open some fizz, say a few words.
 Milestones must me marked or they slip through our fingers like time.
 
