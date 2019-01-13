@@ -8,10 +8,11 @@ tags:
 ---
 
 My summer reading bonanza produced two stand-out favourites: Elizabeth Strout's
-* The Burgess Boys *and Colum McCann's * Transatlantic. * (I am glancing at them
-now, sitting in the books-I-have-loved bit of my bookshelf, looking worn and
-warm, old friends, begging to be revisited.  Do I need to offer any other reason
-why, for me, a Kindle still holds no appeal?!)
+
+- _The Burgess Boys_ and Colum McCann's _Transatlantic_. (I am glancing at them
+  now, sitting in the books-I-have-loved bit of my bookshelf, looking worn and
+  warm, old friends, begging to be revisited.  Do I need to offer any other
+  reason why, for me, a Kindle still holds no appeal?!)
 
 But now it is September and the days are shorter and cooler and I have started
 on Claire Tomalin's biography of Dickens, which has been gathering dust in the

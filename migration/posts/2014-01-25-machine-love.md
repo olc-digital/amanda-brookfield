@@ -16,10 +16,9 @@ have been trying to analyse the reasons why:
    engine that someone had inserted for a laugh) which I bought with my Life
    Savings aged 18, and which lasted for a princely 5 months before being towed
    off for scrap (mistakenly, but then I thought, yeah, good idea), this new
-   Love of my Life is the FIRST CAR I HAVE EVER PURCHASED ENTIRELY ON MY OWN.  
-                                                                                
-                             Conclusion: A late-bloom exultation in the power to
-   choose.
+   Love of my Life is the FIRST CAR I HAVE EVER PURCHASED ENTIRELY ON MY OWN.
+
+   Conclusion: A late-bloom exultation in the power to choose.
 
 2. My new love is very beautiful - shiny sleek charcoal with a silver trim.  It
    doesn't have many miles on the clock and is only ONE AND A HALF YEARS OLD!  
@@ -38,9 +37,7 @@ have been trying to analyse the reasons why:
    off, I could write a novel entitled 'Car Disasters'.  The real sadness of the
    tale being that even the smoothly functioning periods were never enjoyable
    because I knew they wouldn't last.  Because, in other words, I had no * faith
-   *in the vehicles.                                                            
-                                                                          
-    Conclusion: I love this car because I have faith in it.
+   *in the vehicles. Conclusion: I love this car because I have faith in it.
 
 In summary then: Surprise. Exultation. Physical attraction. Blindness.  Faith.
 
