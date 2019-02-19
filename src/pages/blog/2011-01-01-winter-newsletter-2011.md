@@ -24,12 +24,12 @@ Christmas is only ONE DAY after all, as a wise friend counselled me recently,
 when I was fretting, about Work and Life and how to fit it all in. After it, God
 willing, there will be January. And February. The 'organising' part of me has
 made some preparation for these too, in the form of the acquisition of a
-super-lightweight snow shovel off Amazon (an American one…they know a thing or
-two over there about clearing their drives…on the East coast anyway) as well as
-a set of 'snow-gripper' thingamies to attach to my shoes/boots. This is not
-because I am totally decrepid. Not yet. I am relatively advanced in years, but
-also relatively fit. No, the problem is that we live in a 'dip' – surrounded on
-all sides by steep hills. During the last two snowy winters I discovered that
+super-lightweight snow shovel off Amazon (an American one... they know a thing
+or two over there about clearing their drives... on the East coast anyway) as
+well as a set of 'snow-gripper' thingamies to attach to my shoes/boots. This is
+not because I am totally decrepid. Not yet. I am relatively advanced in years,
+but also relatively fit. No, the problem is that we live in a 'dip' – surrounded
+on all sides by steep hills. During the last two snowy winters I discovered that
 this could mean even walking to the local shops was impossible, or at least
 mildly dangerous – the challenge of getting to the shops only surpassed by the
 far greater difficulty of slithering safely home again, overladen bags banging

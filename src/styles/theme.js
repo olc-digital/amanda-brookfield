@@ -8,7 +8,9 @@ const theme = {
   orange: '#da5a33',
   mobileBreakpoint: `${sizes.mobile}px`,
   containerWidth: `${sizes.container}px`,
+  narrowContainerWidth: '664px',
   gutterSize: '24px',
+  lineHeight: 1.86,
 }
 
 export default theme

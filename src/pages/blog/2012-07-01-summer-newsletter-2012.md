@@ -24,7 +24,7 @@ along something that had been put in place TWO THOUSAND YEARS AGO.
 
 Here are some interesting facts before I forget them:
 
-    1. Hadrian built the wall to keep out the 'Barbarians'…who turned into the Scottish nation we know and love today!
+    1. Hadrian built the wall to keep out the 'Barbarians'... who turned into the Scottish nation we know and love today!
     2. Hadrian was gay and loved a beautiful young man with whom he was unable to share his life on account of a harridan wife who happened to be the daughter of someone very very important whom he did not want to piss off. (See? Already some of the more solid aspects of my new erudition – like names - are slipping away.)
     3. Hadrian spent years simply travelling round the boundaries of his massive global Roman Empire trying to keep it strong. No wonder his marriage to the harridan felt the strain.
     4. The Romans occupied Britain for almost THREE HUNDRED AND FIFTY years. ie the equivalent to us, now, of having been ruled by strangers since the end of the Seventeenth Century. That is a long time.

@@ -9,6 +9,7 @@ import Container from '../../components/atoms/Container'
 import media from '../../styles/mediaQueries'
 import {MobileOnly} from '../../components/atoms/Responsive'
 import Sketch from '../../components/atoms/Sketch'
+import Page from '../../components/atoms/Page'
 
 const booksArray = Object.values(books)
 
@@ -31,7 +32,7 @@ const BooksWrapper = styled.div`
 export default class IndexPage extends React.Component {
   render() {
     return (
-      <>
+      <Page>
         <Container>
           <MobileOnly>
             <Sketch style={{marginTop: 48}} center type="books" />
@@ -43,7 +44,7 @@ export default class IndexPage extends React.Component {
             ))}
           </BooksWrapper>
         </Container>
-      </>
+      </Page>
     )
   }
 }

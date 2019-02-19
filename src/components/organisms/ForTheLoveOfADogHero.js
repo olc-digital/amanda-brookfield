@@ -4,6 +4,7 @@ import {Link} from 'gatsby'
 
 import Container from '../atoms/Container'
 import H2 from '../atoms/H2'
+import P from '../atoms/P'
 import Img from '../atoms/Img'
 import SketchButton from '../atoms/SketchButton'
 import media from '../../styles/mediaQueries'
@@ -54,9 +55,8 @@ const AllCapsTitle = styled.h2`
   margin-bottom: 16px;
 `
 
-const BlurbBody = styled.p`
+const BlurbBody = styled(P)`
   font-size: 14px;
-  line-height: 1.86;
   padding-right: 150px;
   margin-bottom: 24px;
   position: relative;

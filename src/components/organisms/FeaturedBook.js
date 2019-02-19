@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Img from '../atoms/Img'
 import H3 from '../atoms/H3'
+import P from '../atoms/P'
 import media from '../../styles/mediaQueries'
 import SketchButton from '../atoms/SketchButton'
 
@@ -33,7 +34,6 @@ const Description = styled.div`
   grid-area: desc;
   p {
     margin: 8px 0 16px;
-    line-height: 1.86;
   }
 `
 const Actions = styled.div`
@@ -60,7 +60,7 @@ export default function FeaturedBook(props) {
       </SketchCover>
       <Description>
         <H3 center={false}>{books[props.bookId].title}</H3>
-        <p>{props.children || books[props.bookId].blurb}</p>
+        <P>{props.children || books[props.bookId].blurb}</P>
       </Description>
       <Actions>
         <SketchButton uppercase>Buy Now</SketchButton>

@@ -8,12 +8,9 @@ const H2 = styled.h2`
   line-height: 1;
   letter-spacing: 1px;
   text-align: center;
-  ${props =>
-    props.margin &&
-    `margin: 48px 0;
-    ${media.aboveMobile`
-      margin: 72px 0;
-    `}
+  ${props => props.margin && 'margin: 48px 0;'}
+  ${media.aboveMobile`
+    ${props => props.margin && 'margin: 72px 0;'}
   `}
 `
 

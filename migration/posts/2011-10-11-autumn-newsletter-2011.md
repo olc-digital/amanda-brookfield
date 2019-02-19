@@ -50,4 +50,4 @@ the book is so beautifully subtle I expect the judges got scared that it would
 not appeal to a mass audience.  It should appeal to a mass audience.  It is a
 stunning achievement, each sentence breathtakingly honed and perfectly poised. 
 I loved every moment.  Embroiled in my own, much more mediocre labours, I do my
-best to it from my mind…labours, to which of course I must now return.
+best to it from my mind... labours, to which of course I must now return.

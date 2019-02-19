@@ -18,6 +18,7 @@ import FullWidth from '../components/atoms/FullWidth'
 import FeaturedBook from '../components/organisms/FeaturedBook'
 import {Source} from '../components/atoms/Responsive'
 import Sketch from '../components/atoms/Sketch'
+import Page from '../components/atoms/Page'
 import media from '../styles/mediaQueries'
 
 const AmandaImage = styled.img`
@@ -39,7 +40,7 @@ const WelcomeText = styled.div`
   width: 100%;
   margin: 48px auto 0;
   text-align: center;
-  line-height: 1.86;
+  line-height: ${({theme}) => theme.lineHeight};
 `
 const FirstLetter = styled.span`
   ${CrimsonTextFont}
@@ -96,7 +97,7 @@ const selectedBooks = Object.values(books).filter(({id}) =>
 export default class IndexPage extends React.Component {
   render() {
     return (
-      <>
+      <Page>
         <Container>
           <FullWidth>
             <picture>
@@ -160,7 +161,7 @@ export default class IndexPage extends React.Component {
             ways, throwing them at the mercy of their pasts and each other.`}
           </FeaturedBook>
         </Container>
-      </>
+      </Page>
     )
   }
 }
