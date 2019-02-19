@@ -15,9 +15,12 @@ const Sketch = styled.div`
   background-size: 200% auto;
   background-repeat: no-repeat;
   background-position-y: -${({type}) => map[type] * 92}px;
+  ${props => props.center && 'margin: 0 auto;'}
   ${({enableHover, hoverComponent: hc}) =>
     (enableHover || hc) &&
-    `${hc ? `${hc}:hover &` : `&:hover`} {background-position-x: right;}`}
+    `${
+      hc ? `${hc}:hover &` : `&:hover`
+    } {background-position-x: right;}`}
   .active & {
     background-position-x: right;
   }

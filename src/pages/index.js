@@ -52,13 +52,6 @@ const FirstLetter = styled.span`
   `}
 `
 
-const HomeH2 = styled(H2)`
-  margin: 48px 0;
-  ${media.aboveMobile`
-    margin: 72px 0;
-  `}
-`
-
 const Scroller = styled(FullWidth)`
   overflow-x: scroll;
   margin-bottom: 48px;
@@ -127,7 +120,7 @@ export default class IndexPage extends React.Component {
             Alone, Relative Love and Life Begins.
           </WelcomeText>
           <MobileOnlySketch type="books" />
-          <HomeH2>My Best Sellers</HomeH2>
+          <H2 margin>My Best Sellers</H2>
           <Scroller>
             <SelectedBooks>
               {selectedBooks.map(book => (
@@ -139,7 +132,7 @@ export default class IndexPage extends React.Component {
         <ForTheLoveOfADogHero />
         <Container>
           <MobileOnlySketch type="newspaper" />
-          <HomeH2>Latest Releases</HomeH2>
+          <H2 margin>Latest Releases</H2>
           <FeaturedBook bookId="for-the-love-of-a-dog">
             {`Published in November 2018, 'For the Love of a Dog' is a funny and
             poignant memoir of emotional meltdown and recovery with the
