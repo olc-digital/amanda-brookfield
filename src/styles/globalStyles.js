@@ -5,25 +5,6 @@ import theme from './theme'
 
 export default createGlobalStyle`
   ${styledNormalize}
-  * {
-    box-sizing: border-box;
-  }
-  html {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 
-      'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
-      'Helvetica Neue', sans-serif;
-    color: ${theme.black};
-    font-size: 14px;
-    min-width: 320px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  body {
-    min-width: 320px;
-  }
-  h1, h2, h3, h4, h5, p {
-    margin: 0;
-  }
   @font-face {
     font-family: "Crimson Text";
     font-style: normal;
@@ -78,5 +59,28 @@ export default createGlobalStyle`
     font-display: swap;
     src: url(${fontFiles.roboto700Woff2}) format("woff2"),
        url(${fontFiles.roboto700Woff}) format("woff");
+  }
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 
+      'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+      'Helvetica Neue', sans-serif;
+    color: ${theme.black};
+    font-size: 14px;
+    min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    min-width: 320px;
+  }
+  h1, h2, h3, h4, h5, p {
+    margin: 0;
+  }
+  p {
+    line-height: ${theme.lineHeight};
+    margin-bottom: 24px;
   }
 `

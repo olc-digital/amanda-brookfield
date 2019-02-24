@@ -114,7 +114,7 @@ export default function ForTheLoveOfADogHero() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </BlurbBody>
-          <SketchButton type="orange" uppercase width="mid">
+          <SketchButton type="orange" uppercase size="md">
             Buy Now
           </SketchButton>
           <ReadMoreLink>Read Amanda & Mabel’s Story</ReadMoreLink>

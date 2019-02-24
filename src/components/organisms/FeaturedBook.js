@@ -63,8 +63,12 @@ export default function FeaturedBook(props) {
         <P>{props.children || books[props.bookId].blurb}</P>
       </Description>
       <Actions>
-        <SketchButton uppercase>Buy Now</SketchButton>
-        <SketchButton type="outline">Read More</SketchButton>
+        <SketchButton size="md" uppercase>
+          Buy Now
+        </SketchButton>
+        <SketchButton size="md" type="outline">
+          Read More
+        </SketchButton>
       </Actions>
     </Wrapper>
   )

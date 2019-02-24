@@ -41,7 +41,7 @@ export default function Footer() {
     <FooterWrapper>
       <Img css={'width: 75px;'} src={contactImg} />
       <ContactHeading>Contact</ContactHeading>
-      <SketchButton width="wide" uppercase>
+      <SketchButton size="xl" uppercase>
         <Img src={emailIcon} css={'margin-right: 10px;'} />
         Email Amanda
       </SketchButton>

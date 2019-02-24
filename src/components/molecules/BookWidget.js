@@ -39,7 +39,7 @@ export default function BookWidget({coverImage, title}) {
     <Wrapper>
       <Cover src={coverImage} />
       <BookTitle>{title}</BookTitle>
-      <SketchButton type="outline" uppercase>
+      <SketchButton size="sm" type="outline" uppercase>
         Buy Now
       </SketchButton>
       <BlankButton>Read More</BlankButton>
