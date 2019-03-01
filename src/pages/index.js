@@ -39,8 +39,8 @@ export default class IndexPage extends Component {
                 <div>
                   <strong>
                     THE BIG NEWS: my latest book&nbsp;
-                    <em>For The Love of a Dog</em> will be published by Head of
-                    Zeus this autumn. It is available now to buy, both in
+                    <em>For The Love of a Dog</em> will be published in paperback by Head of
+                    Zeus in May 2019. It is available now to buy, both in
                     hardback and Kindle e-book.
                   </strong>
                 </div>
