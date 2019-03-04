@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Link from '../atoms/Link'
 import Img from '../atoms/Img'
 import H3 from '../atoms/H3'
 import P from '../atoms/P'
@@ -66,7 +67,12 @@ export default function FeaturedBook(props) {
         <SketchButton size="md" uppercase>
           Buy Now
         </SketchButton>
-        <SketchButton size="md" type="outline">
+        <SketchButton
+          as={Link}
+          to={`/books/${props.bookId}`}
+          size="md"
+          styleType="outline"
+        >
           Read More
         </SketchButton>
       </Actions>

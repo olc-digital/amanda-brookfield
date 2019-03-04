@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import ButtonBase from './ButtonBase'
@@ -28,7 +29,7 @@ const ButtonSvg = styled.svg`
 `
 const ButtonText = styled.div`
   position: relative;
-  color: ${({type}) => textColors[type]};
+  color: ${({styleType}) => textColors[styleType]};
   display: flex;
   justify-content: center;
   align-content: center;
@@ -77,20 +78,25 @@ export default function SketchButtonComponent(props) {
         preserveAspectRatio="none"
       >
         <path
-          fill={fills[props.type]}
+          fill={fills[props.styleType]}
           fillRule="nonzero"
-          stroke={strokes[props.type]}
+          stroke={strokes[props.styleType]}
           strokeWidth="2"
           d={paths[props.size]}
         />
       </ButtonSvg>
-      <ButtonText type={props.type}>{props.children}</ButtonText>
+      <ButtonText styleType={props.styleType}>{props.children}</ButtonText>
     </SketchButton>
   )
 }
 
 SketchButtonComponent.defaultProps = {
-  type: 'primary',
+  styleType: 'primary',
   uppercase: false,
   size: 'md',
+}
+SketchButtonComponent.propTypes = {
+  styleType: PropTypes.oneOf(['primary', 'outline', 'orange']),
+  size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
+  uppercase: PropTypes.bool,
 }

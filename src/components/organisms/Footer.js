@@ -14,7 +14,9 @@ import emailIcon from '../../img/email-icon.svg'
 const FooterWrapper = styled.div`
   background-color: #eff1f3;
   padding: 32px 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const ContactHeading = styled(H2)`
@@ -32,7 +34,6 @@ const SocialMediaLinks = styled.div`
 `
 
 const Copyright = styled.div`
-  text-align: center;
   font-size: 12px;
 `
 

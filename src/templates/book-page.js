@@ -26,7 +26,7 @@ export const BookPageTemplate = ({
       />
       <H2 margin>{title}</H2>
       <PageContent content={content} />
-      <SketchButton uppercase center size="lg" type="outline">
+      <SketchButton uppercase center size="lg" styleType="outline">
         Buy Now
       </SketchButton>
       {reviews.map(review => (

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Link} from 'gatsby'
 
+import Link from '../atoms/Link'
 import Container from '../atoms/Container'
 import H2 from '../atoms/H2'
 import P from '../atoms/P'
@@ -94,6 +94,7 @@ const ReadMoreLink = styled(Link)`
     margin-bottom: 0;
   `}
   &:hover {
+    color: inherit;
     text-decoration: underline;
   }
 `
@@ -114,10 +115,12 @@ export default function ForTheLoveOfADogHero() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </BlurbBody>
-          <SketchButton type="orange" uppercase size="md">
+          <SketchButton styleType="orange" uppercase size="md">
             Buy Now
           </SketchButton>
-          <ReadMoreLink>Read Amanda & Mabel’s Story</ReadMoreLink>
+          <ReadMoreLink to={'/books/for-the-love-of-a-dog'}>
+            Read Amanda & Mabel’s Story
+          </ReadMoreLink>
         </MainSection>
         <GallerySection>
           <MabelGallery />

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Link from '../atoms/Link'
 import SketchButton from '../atoms/SketchButton'
 import Img from '../atoms/Img'
 import H3 from '../atoms/H3'
@@ -34,15 +35,26 @@ const BlankButton = styled(ButtonBase)`
   }
 `
 
-export default function BookWidget({coverImage, title}) {
+export default function BookWidget({coverImage, title, id}) {
   return (
     <Wrapper>
-      <Cover src={coverImage} />
-      <BookTitle>{title}</BookTitle>
-      <SketchButton size="sm" type="outline" uppercase>
+      <Link to={`/books/${id}`}>
+        <Cover src={coverImage} />
+        <BookTitle>{title}</BookTitle>
+      </Link>
+      <SketchButton
+        as="a"
+        href="http://www.google.com"
+        target="_blank"
+        size="sm"
+        styleType="outline"
+        uppercase
+      >
         Buy Now
       </SketchButton>
-      <BlankButton>Read More</BlankButton>
+      <BlankButton as={Link} to={`/books/${id}`}>
+        Read More
+      </BlankButton>
     </Wrapper>
   )
 }

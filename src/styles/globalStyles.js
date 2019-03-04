@@ -83,4 +83,11 @@ export default createGlobalStyle`
     line-height: ${theme.lineHeight};
     margin-bottom: 24px;
   }
+  a {
+    color: ${theme.black};
+    text-decoration: none;
+    &:hover {
+      color: ${theme.red}
+    }
+  }
 `
