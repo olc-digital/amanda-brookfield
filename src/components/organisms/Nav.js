@@ -115,7 +115,9 @@ const NavItem = ({text, to, name, handleClick = () => null}) => (
   <NavItemWrapper key={text}>
     <Link
       to={to}
-      getProps={({isCurrent}) => (isCurrent ? {className: 'active'} : null)}
+      getProps={({isPartiallyCurrent}) =>
+        isPartiallyCurrent ? {className: 'active'} : null
+      }
       onClick={handleClick}
     >
       <Sketch

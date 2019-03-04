@@ -7,7 +7,11 @@ reviews:
   - reviewer: Chris Manby
     text: >
       By turnsx terrifically moving and tea-snortingly funny, ‘For the Love of a
-      Dog’ is my life-affirming must-read of the year.
+      Dog’ is my life-affirming must-read of thee year.
+  - reviewer: Chris Manby
+    text: >
+      By turnsx terrifically moving and tea-snortingly funny, ‘For the Love of a
+      Dog’ is my life-affirming must-read of thee year.
 ---
 
 After the death of her mother and the end of a new relationship leave her
