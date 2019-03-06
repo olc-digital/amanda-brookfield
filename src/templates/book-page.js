@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
-// import {Router, Link, Location} from '@reach/router'
 
 import media from '../styles/mediaQueries'
 import Content, {HTMLContent} from '../components/Content'
@@ -31,55 +30,69 @@ const BookBuyNowButton = props => (
     Buy Now
   </SketchButton>
 )
+class BookPageTemplate extends React.Component {
+  state = {
+    mobileReviewsVisible: false,
+  }
 
-export const BookPageTemplate = ({
-  title,
-  bookId,
-  content,
-  reviews,
-  contentComponent,
-}) => {
-  const PageContent = contentComponent || Content
+  render() {
+    const {title, bookId, content, reviews, contentComponent} = this.props
 
-  return (
-    <Container narrow>
-      <BackButton onClick={() => window.history.back()}>{'< Back'}</BackButton>
-      <Img
-        css={'width: 150px; padding: 4px; display: block; margin: 0 auto;'}
-        src={books[bookId].coverSketch}
-      />
-      <H2 margin css={'margin: 48px 0;'}>
-        {title}
-      </H2>
-      {/* <Router>
-         try https://github.com/gatsbyjs/gatsby/blob/master/examples/client-only-paths/gatsby-node.js 
-        <div path="/2">1</div>
-        <div path="/1">2</div>
-        <div path="1">3</div>
-        <div path="2">4</div>
-      </Router> */}
-      <PageContent content={content} />
-      <BookBuyNowButton
-        size="lg"
-        css={`
-          ${media.belowMobile`
-            display: none;
+    const PageContent = contentComponent || Content
+
+    return (
+      <Container narrow>
+        <BackButton onClick={() => window.history.back()}>
+          {'< Back'}
+        </BackButton>
+        <Img
+          css={'width: 150px; padding: 4px; display: block; margin: 0 auto;'}
+          src={books[bookId].coverSketch}
+        />
+        <H2 margin css={'margin: 48px 0;'}>
+          {title}
+        </H2>
+        <div onClick={() => this.setState({mobileReviewsVisible: false})}>
+          desc
+        </div>
+        <div onClick={() => this.setState({mobileReviewsVisible: true})}>
+          reviews
+        </div>
+        <div
+          css={`
+            ${this.state.mobileReviewsVisible &&
+              media.belowMobile`display: none;`}
           `}
+        >
+          <PageContent content={content} />
+        </div>
+        <BookBuyNowButton
+          size="lg"
+          css={`
+            ${media.belowMobile`
+          display: none;
         `}
-      />
-      <ReviewItemsWrapper>
-        {reviews.map(review => (
-          <ReviewItem key={review.text} {...review} />
-        ))}
-      </ReviewItemsWrapper>
-      <BookBuyNowButton
-        size="xl"
-        css={`
-          ${media.aboveMobile`display: none;`}
-        `}
-      />
-    </Container>
-  )
+          `}
+        />
+        <ReviewItemsWrapper
+          css={`
+            ${!this.state.mobileReviewsVisible &&
+              media.belowMobile`display: none;`}
+          `}
+        >
+          {reviews.map(review => (
+            <ReviewItem key={review.text} {...review} />
+          ))}
+        </ReviewItemsWrapper>
+        <BookBuyNowButton
+          size="xl"
+          css={`
+            ${media.aboveMobile`display: none;`}
+          `}
+        />
+      </Container>
+    )
+  }
 }
 
 BookPageTemplate.propTypes = {
