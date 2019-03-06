@@ -12,13 +12,13 @@ import Container from '../components/atoms/Container'
 import {books} from '../data'
 import SketchButton from '../components/atoms/SketchButton'
 import ReviewItem from '../components/molecules/ReviewItem'
-import {KalamFont} from '../styles/mixins'
+import {kalamFont} from '../styles/mixins'
 
 const ReviewItemsWrapper = styled.div`
   margin: 48px 0 72px;
 `
 const BackButton = styled(Button)`
-  ${KalamFont}
+  ${kalamFont}
   letter-spacing: 2px;
   margin: 21px auto;
   font-size: 14px;

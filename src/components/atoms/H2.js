@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import {CrimsonTextFont} from '../../styles/mixins'
+import {crimsonTextFont} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
 
 const H2 = styled.h2`
-  ${CrimsonTextFont}
+  ${crimsonTextFont}
   font-size: 20px;
   line-height: 1;
   letter-spacing: 1px;

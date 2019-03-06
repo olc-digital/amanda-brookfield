@@ -6,11 +6,11 @@ import outlineImg from '../../img/review-outline.svg'
 import outlineWideImg from '../../img/review-outline-wide.svg'
 import quoteStartImg from '../../img/quote-mark-start.svg'
 import quoteEndImg from '../../img/quote-mark-end.svg'
-import {KalamFont} from '../../styles/mixins'
+import {kalamFont} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
 
 const Wrapper = styled.div`
-  ${KalamFont}
+  ${kalamFont}
   color: ${({theme}) => theme.black};
   padding: 24px;
   position: relative;

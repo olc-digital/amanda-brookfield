@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import {KalamFont, CrimsonTextFont} from '../../styles/mixins'
+import {kalamFont, crimsonTextFont} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
 
 const HeaderWrapper = styled.div`
@@ -16,7 +16,7 @@ const HeaderWrapper = styled.div`
 `
 
 const MainTitle = styled.h1`
-  ${CrimsonTextFont}
+  ${crimsonTextFont}
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0.5px;
@@ -32,7 +32,7 @@ const MainTitle = styled.h1`
 `
 
 const SubTitle = styled.h2`
-  ${KalamFont}
+  ${kalamFont}
   font-size: 12px;
   font-weight: normal;
   letter-spacing: 1px;

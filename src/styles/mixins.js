@@ -1,6 +1,6 @@
 import theme from './theme'
 
-export const KalamFont = `
+export const kalamFont = `
   font-family: Kalam, cursive;
   font-weight: bold;
   text-rendering: geometricPrecision;
@@ -8,9 +8,11 @@ export const KalamFont = `
   color: ${theme.red};
 `
 
-export const CrimsonTextFont = `
+export const crimsonTextFont = `
   font-family: 'Crimson Text', serif;
   font-weight: bold;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
 `
+
+export const hideOnMobile = ``

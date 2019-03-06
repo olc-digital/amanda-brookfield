@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import ButtonBase from './ButtonBase'
-import {KalamFont} from '../../styles/mixins'
+import {kalamFont} from '../../styles/mixins'
 import theme from '../../styles/theme'
 
 const SketchButton = styled(ButtonBase)`
-  ${KalamFont}
+  ${kalamFont}
   position: relative;
   height: 52px;
   padding: 0;

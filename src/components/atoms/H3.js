@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import {CrimsonTextFont} from '../../styles/mixins'
+import {crimsonTextFont} from '../../styles/mixins'
 
 const H3 = styled.h3`
-  ${CrimsonTextFont}
+  ${crimsonTextFont}
   font-size: 16px;
   line-height: 1;
   letter-spacing: -0.5px;

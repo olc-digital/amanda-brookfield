@@ -12,7 +12,7 @@ import bannerMobile3x from '../img/home-banner-mobile@3x.jpg'
 import bannerDesktop1x from '../img/home-banner-desktop.jpg'
 import bannerDesktop2x from '../img/home-banner-desktop@2x.jpg'
 import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
-import {CrimsonTextFont} from '../styles/mixins'
+import {crimsonTextFont} from '../styles/mixins'
 import {books} from '../data'
 import FullWidth from '../components/atoms/FullWidth'
 import FeaturedBook from '../components/organisms/FeaturedBook'
@@ -43,7 +43,7 @@ const WelcomeText = styled.div`
   line-height: ${({theme}) => theme.lineHeight};
 `
 const FirstLetter = styled.span`
-  ${CrimsonTextFont}
+  ${crimsonTextFont}
   font-weight: normal;
   float: left;
   font-size: 48px;
