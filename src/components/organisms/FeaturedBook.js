@@ -64,13 +64,13 @@ export default function FeaturedBook(props) {
         <P>{props.children || books[props.bookId].blurb}</P>
       </Description>
       <Actions>
-        <SketchButton size="md" uppercase>
+        <SketchButton size="sm" uppercase>
           Buy Now
         </SketchButton>
         <SketchButton
           as={Link}
           to={`/books/${props.bookId}`}
-          size="md"
+          size="sm"
           styleType="outline"
         >
           Read More

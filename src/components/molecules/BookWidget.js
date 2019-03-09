@@ -39,6 +39,7 @@ const BlankButton = styled(ButtonBase)`
   margin-top: 8px;
   &:hover {
     color: ${({theme}) => theme.red};
+    text-decoration: underline;
   }
 `
 
