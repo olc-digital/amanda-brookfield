@@ -83,4 +83,14 @@ export default createGlobalStyle`
     line-height: ${theme.lineHeight};
     margin-bottom: 24px;
   }
+  a {
+    color: ${theme.red};
+    &:visited{
+      color: #61130d;
+    }
+    &:hover{
+      color: #cc271a;
+    }
+  }
+
 `

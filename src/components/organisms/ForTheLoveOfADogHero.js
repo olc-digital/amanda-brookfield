@@ -85,7 +85,7 @@ const ReadMoreLink = styled(Link)`
   line-height: 1;
   letter-spacing: 2px;
   text-align: center;
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   width: 152px;
   padding: 10px 5px;

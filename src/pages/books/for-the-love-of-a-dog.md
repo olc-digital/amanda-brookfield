@@ -32,12 +32,9 @@ daily challenges that ensue, the constant ups and downs, Amanda realises she is
 starting to come to terms with her bereavement and the prospect of facing the
 rest of her life alone.
 
-<em>For The Love of a Dog</em> charts the bigger, more poignant story about the
-labour of emotional recovery after the trauma of loss. Mabel shines like a light
+_For The Love of a Dog_ charts the bigger, more poignant story about the labour
+of emotional recovery after the trauma of loss. Mabel shines like a light
 throughout, the innocent architect of rebuilding her owner’s shattered
 self-belief. Mabel’s own journey is equally captivating, as she blossoms into a
 mischievous, endearing head-turner of a companion – as affectionate as she is
 glorious.
-
-<a href="https://www.instagram.com/amanda_and_mabel_brookfield/" target="_blank" rel="noopener noreferrer" >
-Follow Amanda and Mabel on Instagram </a>
