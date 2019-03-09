@@ -25,6 +25,28 @@ collections:
       # - {label: "Description", name: "description", widget: "text"}
       - {label: 'Body', name: 'body', widget: 'markdown'}
       - {label: 'Tags', name: 'tags', widget: 'list', required: false}
+  - name: 'books'
+    label: 'Books'
+    folder: 'src/pages/books'
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'book-page',
+        }
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - {
+          label: Reviews,
+          name: reviews,
+          widget: list,
+          fields:
+            [
+              {label: Text, name: text, widget: string},
+              {label: Reviewer, name: reviewer, widget: string},
+            ],
+        }
+      - {label: 'Body', name: 'body', widget: 'markdown'}
   # - name: "pages"
   #   label: "Pages"
   #   files:
