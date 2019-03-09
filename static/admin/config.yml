@@ -8,45 +8,45 @@ public_folder: /img
 display_url: https://www.amandabrookfield.co.uk
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'src/pages/blog'
+  - name: blog
+    label: Blog
+    folder: src/pages/blog
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'blog-post',
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: blog-post,
         }
-      - {label: 'Title', name: 'title', widget: 'string'}
-      - {label: 'Publish Date', name: 'date', widget: 'datetime'}
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: datetime}
       # - {label: "Description", name: "description", widget: "text"}
-      - {label: 'Body', name: 'body', widget: 'markdown'}
-      - {label: 'Tags', name: 'tags', widget: 'list', required: false}
-  - name: 'books'
-    label: 'Books'
-    folder: 'src/pages/books'
+      - {label: Body, name: body, widget: markdown}
+      - {label: Tags, name: tags, widget: list, required: false}
+  - name: books
+    label: Books
+    folder: src/pages/books
     fields:
       - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'book-page',
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: book-page,
         }
-      - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: Title, name: title, widget: string}
+      - {label: Body, name: body, widget: markdown}
       - {
           label: Reviews,
           name: reviews,
           widget: list,
           fields:
             [
-              {label: Text, name: text, widget: string},
+              {label: Text, name: text, widget: markdown},
               {label: Reviewer, name: reviewer, widget: string},
             ],
         }
-      - {label: 'Body', name: 'body', widget: 'markdown'}
   # - name: "pages"
   #   label: "Pages"
   #   files:
