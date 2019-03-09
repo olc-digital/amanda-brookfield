@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
 
 import media from '../styles/mediaQueries'
+import {hideBelowMobile, hideAboveMobile} from '../styles/mixins'
 import Content, {HTMLContent} from '../components/Content'
 import H2 from '../components/atoms/H2'
 import Button from '../components/atoms/ButtonBase'
@@ -14,15 +15,36 @@ import SketchButton from '../components/atoms/SketchButton'
 import ReviewItem from '../components/molecules/ReviewItem'
 import {kalamFont} from '../styles/mixins'
 
-const ReviewItemsWrapper = styled.div`
-  margin: 48px 0 72px;
+const BookTitle = styled(H2)`
+  margin: 48px 0 21px;
+  ${media.aboveMobile`
+    margin: 48px 0;
+  `}
 `
-const BackButton = styled(Button)`
+
+const BookPageButton = styled(Button)`
   ${kalamFont}
   letter-spacing: 2px;
-  margin: 21px auto;
   font-size: 14px;
   height: 22px;
+`
+const SwitchButton = styled(BookPageButton)`
+  margin: 0 5px;
+  ${({active, theme}) =>
+    active ? 'text-decoration: underline;' : `color: ${theme.black};`}
+`
+
+const SwitchButtonsWrapper = styled.div`
+  ${hideAboveMobile}
+  display: flex;
+  justify-content: center;
+  margin-bottom: 21px;
+`
+const ReviewItemsWrapper = styled.div`
+  margin: 0;
+  ${media.aboveMobile`
+    margin: 48px 0 72px;
+  `}
 `
 
 const BookBuyNowButton = props => (
@@ -30,69 +52,66 @@ const BookBuyNowButton = props => (
     Buy Now
   </SketchButton>
 )
-class BookPageTemplate extends React.Component {
-  state = {
-    mobileReviewsVisible: false,
-  }
 
-  render() {
-    const {title, bookId, content, reviews, contentComponent} = this.props
+const BookPageTemplate = ({
+  title,
+  bookId,
+  content,
+  reviews,
+  contentComponent,
+}) => {
+  const [mobileReviewsVisible, setMobileReviewsVisible] = useState(false)
 
-    const PageContent = contentComponent || Content
+  const PageContent = contentComponent || Content
 
-    return (
-      <Container narrow>
-        <BackButton onClick={() => window.history.back()}>
-          {'< Back'}
-        </BackButton>
-        <Img
-          css={'width: 150px; padding: 4px; display: block; margin: 0 auto;'}
-          src={books[bookId].coverSketch}
-        />
-        <H2 margin css={'margin: 48px 0;'}>
-          {title}
-        </H2>
-        <div onClick={() => this.setState({mobileReviewsVisible: false})}>
-          desc
-        </div>
-        <div onClick={() => this.setState({mobileReviewsVisible: true})}>
-          reviews
-        </div>
-        <div
-          css={`
-            ${this.state.mobileReviewsVisible &&
-              media.belowMobile`display: none;`}
-          `}
-        >
-          <PageContent content={content} />
-        </div>
-        <BookBuyNowButton
-          size="lg"
-          css={`
-            ${media.belowMobile`
-          display: none;
+  return (
+    <Container narrow>
+      <BookPageButton
+        css={`
+          ${hideAboveMobile}
+          margin: 21px auto;
         `}
-          `}
-        />
-        <ReviewItemsWrapper
-          css={`
-            ${!this.state.mobileReviewsVisible &&
-              media.belowMobile`display: none;`}
-          `}
+        onClick={() => window.history.back()}
+      >
+        {'< Back'}
+      </BookPageButton>
+      <Img
+        css={'width: 150px; padding: 4px; display: block; margin: 0 auto;'}
+        src={books[bookId].coverSketch}
+      />
+      <BookTitle>{title}</BookTitle>
+      <SwitchButtonsWrapper>
+        <SwitchButton
+          active={!mobileReviewsVisible}
+          onClick={() => setMobileReviewsVisible(false)}
         >
-          {reviews.map(review => (
-            <ReviewItem key={review.text} {...review} />
-          ))}
-        </ReviewItemsWrapper>
-        <BookBuyNowButton
-          size="xl"
-          css={`
-            ${media.aboveMobile`display: none;`}
-          `}
-        />
-      </Container>
-    )
-  }
+          About
+        </SwitchButton>
+        <SwitchButton
+          active={mobileReviewsVisible}
+          onClick={() => setMobileReviewsVisible(true)}
+        >
+          Reviews
+        </SwitchButton>
+      </SwitchButtonsWrapper>
+      <div css={mobileReviewsVisible && hideBelowMobile}>
+        <PageContent content={content} />
+      </div>
+      <BookBuyNowButton size="lg" css={hideBelowMobile} />
+      <ReviewItemsWrapper css={!mobileReviewsVisible && hideBelowMobile}>
+        {reviews.map(review => (
+          <ReviewItem key={review.text} {...review} />
+        ))}
+      </ReviewItemsWrapper>
+      <BookBuyNowButton
+        size="xl"
+        css={`
+          ${hideAboveMobile}
+          margin: 48px auto;
+        `}
+      />
+    </Container>
+  )
 }
 
 BookPageTemplate.propTypes = {

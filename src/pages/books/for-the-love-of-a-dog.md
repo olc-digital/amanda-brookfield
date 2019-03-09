@@ -8,10 +8,15 @@ reviews:
     text: >
       By turnsx terrifically moving and teas-snortingly funny, ‘For the Love of
       a Dog’ is my life-affirming must-read of thee year.
-  - reviewer: Chris Manby
+  - reviewer: Fiona Walker
     text: >
-      By turnsx terrifically moving and tea-snortingly funny, ‘For the Love of a
-      Dog’ is my life-affirming must-read of thee year.
+      Sharing Amanda and Mabel’s blossoming mutual devotion is a privilege,
+      terribly addictive to read, as laughter-filled as it is honest.
+  - reviewer: Henry Sutton
+    text: >
+      With great artistry and wisdom, Amanda Brookfield has illuminated what it
+      means to get your life on track. This is a book that’ll teach you to sit,
+      be still, and listen to yourself.
 ---
 
 After the death of her mother and the end of a new relationship leave her

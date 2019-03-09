@@ -1,4 +1,5 @@
 import theme from './theme'
+import media from './mediaQueries'
 
 export const kalamFont = `
   font-family: Kalam, cursive;
@@ -15,4 +16,5 @@ export const crimsonTextFont = `
   -webkit-font-smoothing: antialiased;
 `
 
-export const hideOnMobile = ``
+export const hideBelowMobile = media.belowMobile`display: none;`
+export const hideAboveMobile = media.aboveMobile`display: none;`
