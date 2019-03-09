@@ -97,7 +97,12 @@ const BookPageTemplate = ({
       <div css={mobileReviewsVisible && hideBelowMobile}>
         <PageContent content={content} />
       </div>
-      <BookBuyNowButton size="lg" css={hideBelowMobile} />
+      <BookBuyNowButton
+        size="lg"
+        css={`
+          ${hideBelowMobile} margin-top: 48px
+        `}
+      />
       <ReviewItemsWrapper css={!mobileReviewsVisible && hideBelowMobile}>
         {reviews.map(review => (
           <ReviewItem key={review.text} {...review} />

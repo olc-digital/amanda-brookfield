@@ -47,7 +47,7 @@ const ReviewItem = ({text, reviewer}) => (
   <Wrapper>
     <Img alt="start quote" src={quoteStartImg} />
     <ReviewBlockquote>
-      {text}
+      <span css={'flex: 1;'}>{text}</span>
       <TrailingQuotemark alt="end quote" src={quoteEndImg} />
     </ReviewBlockquote>
     <ReviewerName>{reviewer}</ReviewerName>

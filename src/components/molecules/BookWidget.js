@@ -9,6 +9,13 @@ import ButtonBase from '../atoms/ButtonBase'
 
 const Wrapper = styled.div`
   width: 125px;
+  a {
+    color: ${({theme}) => theme.black};
+    text-decoration: none;
+    &:hover {
+      color: ${({theme}) => theme.red};
+    }
+  }
 `
 const Cover = styled(Img)`
   width: 125px;
