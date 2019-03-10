@@ -45,13 +45,13 @@ const WrapperLink = styled(Link)`
   }
 `
 
-const BlogListItem = ({id, to, title, excerpt, date}) => (
+const BlogListItem = ({id, to, title, excerpt, date, readMoreText}) => (
   <WrapperLink key={id} to={to}>
     <H3 css={'margin-bottom: 4px;'}>{title}</H3>
     <P css={'margin-bottom: 20px;'}>{excerpt}</P>
     <BottomRow>
-      <BlogItemMeta>{date}</BlogItemMeta>
-      <CursiveButton>{'Read full blog post >'}</CursiveButton>
+      <BlogItemMeta>{date && date}</BlogItemMeta>
+      <CursiveButton>{readMoreText || 'Read full blog post >'}</CursiveButton>
     </BottomRow>
   </WrapperLink>
 )

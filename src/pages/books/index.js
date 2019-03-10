@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import {graphql} from 'gatsby'
 
 import BookWidget from '../../components/molecules/BookWidget'
 import {books} from '../../data'
@@ -31,7 +32,7 @@ const BooksWrapper = styled.section`
 `
 
 const ArticleSection = styled.section`
-  margin-top: 48px;
+  margin: 48px -12px 0;
   display: flex;
   flex-direction: column;
   ${media.aboveMobile`
@@ -40,18 +41,38 @@ const ArticleSection = styled.section`
   `}
 `
 
-const ArticleList = ({title, items}) => (
-  <div css={'flex: 1 0 auto;'}>
-    <H2>{title}</H2>
+const ArticleList = ({title, items, displayType}) => (
+  <div css={'flex: 1; margin: 0 12px;'}>
+    <H2
+      css={`
+        margin-bottom: 72px;
+      `}
+    >
+      {title}
+    </H2>
     <div>
-      {items.map(item => (
-        <BlogListItem key={item.id} {...item} />
-      ))}
+      {items
+        .filter(({node}) => node.frontmatter.articleType === displayType)
+        .map(({node}) => (
+          <BlogListItem
+            key={node.id}
+            title={node.frontmatter.title}
+            to={node.fields.slug}
+            excerpt={node.excerpt}
+            readMoreText="Read full article >"
+          />
+        ))}
     </div>
   </div>
 )
-export default class IndexPage extends React.Component {
+export default class BooksPageQuery extends React.Component {
   render() {
+    const {
+      data: {
+        allMarkdownRemark: {edges: articles},
+      },
+    } = this.props
+    console.log(this.props.data.allMarkdownRemark)
     return (
       <Page>
         <Container>
@@ -62,8 +83,16 @@ export default class IndexPage extends React.Component {
             ))}
           </BooksWrapper>
           <ArticleSection>
-            <ArticleList title="Articles" items={[{id: '1', to: 'x'}]} />
-            <ArticleList title="Short Stories" items={[{id: '1', to: 'x'}]} />
+            <ArticleList
+              title="Articles"
+              displayType="article"
+              items={articles}
+            />
+            <ArticleList
+              title="Short Stories"
+              displayType="short-story"
+              items={articles}
+            />
           </ArticleSection>
         </Container>
       </Page>
@@ -71,6 +100,30 @@ export default class IndexPage extends React.Component {
   }
 }
 
-IndexPage.propTypes = {
+BooksPageQuery.propTypes = {
   data: PropTypes.shape({}),
 }
+
+export const pageQuery = graphql`
+  query BooksPageQuery {
+    allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___date]}
+      filter: {frontmatter: {templateKey: {in: ["article-page", "book-page"]}}}
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 200)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            templateKey
+            articleType
+          }
+        }
+      }
+    }
+  }
+`

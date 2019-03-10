@@ -115,8 +115,12 @@ const NavItem = ({text, to, name, handleClick = () => null}) => (
   <NavItemWrapper key={text}>
     <Link
       to={to}
-      getProps={({isCurrent, isPartiallyCurrent, href}) => {
-        return isCurrent || (href !== '/' && isPartiallyCurrent)
+      getProps={props => {
+        const {isCurrent, isPartiallyCurrent, href, location} = props
+        return isCurrent ||
+          (href !== '/' && isPartiallyCurrent) ||
+          (href === '/books' && location.pathname.startsWith('/articles')) ||
+          (href === '/books' && location.pathname.startsWith('/short-stories'))
           ? {className: 'active'}
           : null
       }}

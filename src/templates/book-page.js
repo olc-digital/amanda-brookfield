@@ -8,6 +8,7 @@ import {hideBelowMobile, hideAboveMobile} from '../styles/mixins'
 import Content, {HTMLContent} from '../components/Content'
 import H2 from '../components/atoms/H2'
 import CursiveButton from '../components/atoms/CursiveButton'
+import BackButton from '../components/atoms/BackButton'
 import Img from '../components/atoms/Img'
 import Container from '../components/atoms/Container'
 import {books} from '../data'
@@ -53,15 +54,8 @@ const BookPageTemplate = ({
 
   return (
     <Container narrow>
-      <CursiveButton
-        css={`
-          ${hideAboveMobile}
-          margin: 21px auto;
-        `}
-        onClick={() => window.history.back()}
-      >
-        {'< Back'}
-      </CursiveButton>
+      <BackButton />
+
       <Img
         css={'width: 150px; padding: 4px; display: block; margin: 0 auto;'}
         src={books[bookId].coverSketch}

@@ -25,6 +25,20 @@ collections:
       # - {label: "Description", name: "description", widget: "text"}
       - {label: Body, name: body, widget: markdown}
       - {label: Tags, name: tags, widget: list, required: false}
+  - name: articles
+    label: Articles
+    folder: src/pages/articles
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: article-page,
+        }
+      - {label: Title, name: title, widget: string}
+      - {label: Body, name: body, widget: markdown}
   - name: books
     label: Books
     folder: src/pages/books
