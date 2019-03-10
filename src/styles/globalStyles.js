@@ -85,9 +85,6 @@ export default createGlobalStyle`
   }
   a {
     color: ${theme.red};
-    &:visited{
-      color: #61130d;
-    }
     &:hover{
       color: #cc271a;
     }

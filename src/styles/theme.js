@@ -5,6 +5,7 @@ const theme = {
   white: '#ffffff',
   red: '#9c1e14',
   lightGrey: '#eff1f3',
+  grey: '#5a5d60',
   orange: '#da5a33',
   mobileBreakpoint: `${sizes.mobile}px`,
   containerWidth: `${sizes.container}px`,

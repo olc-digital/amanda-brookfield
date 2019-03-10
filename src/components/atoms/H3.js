@@ -10,8 +10,4 @@ const H3 = styled.h3`
   ${({margin}) => margin && 'margin: 48px 0 24px;'}
 `
 
-H3.defaultProps = {
-  center: true,
-}
-
 export default H3

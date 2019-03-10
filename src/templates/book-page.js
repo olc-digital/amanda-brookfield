@@ -7,13 +7,12 @@ import media from '../styles/mediaQueries'
 import {hideBelowMobile, hideAboveMobile} from '../styles/mixins'
 import Content, {HTMLContent} from '../components/Content'
 import H2 from '../components/atoms/H2'
-import Button from '../components/atoms/ButtonBase'
+import CursiveButton from '../components/atoms/CursiveButton'
 import Img from '../components/atoms/Img'
 import Container from '../components/atoms/Container'
 import {books} from '../data'
 import SketchButton from '../components/atoms/SketchButton'
 import ReviewItem from '../components/molecules/ReviewItem'
-import {kalamFont} from '../styles/mixins'
 
 const BookTitle = styled(H2)`
   margin: 48px 0 21px;
@@ -22,13 +21,7 @@ const BookTitle = styled(H2)`
   `}
 `
 
-const BookPageButton = styled(Button)`
-  ${kalamFont}
-  letter-spacing: 2px;
-  font-size: 14px;
-  height: 22px;
-`
-const SwitchButton = styled(BookPageButton)`
+const SwitchButton = styled(CursiveButton)`
   margin: 0 5px;
   ${({active, theme}) =>
     active ? 'text-decoration: underline;' : `color: ${theme.black};`}
@@ -66,7 +59,7 @@ const BookPageTemplate = ({
 
   return (
     <Container narrow>
-      <BookPageButton
+      <CursiveButton
         css={`
           ${hideAboveMobile}
           margin: 21px auto;
@@ -74,7 +67,7 @@ const BookPageTemplate = ({
         onClick={() => window.history.back()}
       >
         {'< Back'}
-      </BookPageButton>
+      </CursiveButton>
       <Img
         css={'width: 150px; padding: 4px; display: block; margin: 0 auto;'}
         src={books[bookId].coverSketch}

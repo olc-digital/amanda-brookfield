@@ -1,45 +1,59 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Link, graphql} from 'gatsby'
+import styled from 'styled-components'
+
+import Container from '../../components/atoms/Container'
+import BlogSidebar from '../../components/organisms/BlogSidebar'
+import H3 from '../../components/atoms/H3'
+import P from '../../components/atoms/P'
+import CursiveButton from '../../components/atoms/CursiveButton'
+
+const BlogLayout = styled.div`
+  display: flex;
+`
+
+const BlogListItem = styled(Link)`
+  display: block;
+  margin-bottom: 48px;
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: ${({theme}) => theme.grey};
+    ${CursiveButton} {
+      text-decoration: underline;
+    }
+  }
+`
+
+const BlogItemMeta = styled.div`
+  font-style: italic;
+  color: ${({theme}) => theme.grey};
+`
 
 export default class IndexPage extends React.Component {
   render() {
     const {data} = this.props
-    const {edges: posts} = data.allMarkdownRemark
+    const {edges: posts, group: years} = data.allMarkdownRemark
 
     return (
-      <>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
+      <Container narrow>
+        <BlogLayout>
+          <BlogSidebar posts={posts} years={years} />
+          <div>
             {posts.map(({node: post}) => (
-              <div
-                className="content"
-                style={{border: '1px solid #eaecee', padding: '2em 4em'}}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
+              <BlogListItem key={post.id} to={post.fields.slug}>
+                <H3 css={'margin-bottom: 4px;'}>{post.frontmatter.title}</H3>
+                <P css={'margin-bottom: 20px;'}>{post.excerpt}</P>
+                <div css={'display: flex; justify-content: space-between;'}>
+                  <BlogItemMeta>{post.frontmatter.date}</BlogItemMeta>
+                  <CursiveButton>{'Read full blog post >'}</CursiveButton>
+                </div>
+              </BlogListItem>
             ))}
           </div>
-        </section>
-      </>
+        </BlogLayout>
+      </Container>
     )
   }
 }
@@ -58,9 +72,13 @@ export const pageQuery = graphql`
       sort: {order: DESC, fields: [frontmatter___date]}
       filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
     ) {
+      group(field: fields___year) {
+        fieldValue
+        totalCount
+      }
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 200)
           id
           fields {
             slug
@@ -68,7 +86,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "ddd Do MMM, YYYY")
           }
         }
       }

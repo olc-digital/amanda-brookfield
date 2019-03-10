@@ -18,3 +18,9 @@ export const crimsonTextFont = `
 
 export const hideBelowMobile = media.belowMobile`display: none;`
 export const hideAboveMobile = media.aboveMobile`display: none;`
+
+export const resetList = `
+  padding: 0;
+  margin: 0;
+  list-style: none;
+`
