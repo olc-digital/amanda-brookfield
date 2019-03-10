@@ -6,13 +6,16 @@ import Container from '../atoms/Container'
 import H2 from '../atoms/H2'
 import P from '../atoms/P'
 import Img from '../atoms/Img'
-import SketchButton from '../atoms/SketchButton'
+import BuyNowButton from '../atoms/BuyNowButton'
 import media from '../../styles/mediaQueries'
+import {books} from '../../data'
 
 import amandaWithMabel from '../../img/amanda-with-mabel.png'
 import amandaWithMabel2x from '../../img/amanda-with-mabel@2x.png'
 import amandaWithMabel3x from '../../img/amanda-with-mabel@3x.png'
 import MabelGallery from './MabelGallery'
+
+const ftloadData = books['for-the-love-of-a-dog']
 
 const HeroSection = styled.section`
   background: ${({theme}) => theme.orange};
@@ -115,10 +118,12 @@ export default function ForTheLoveOfADogHero() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </BlurbBody>
-          <SketchButton styleType="orange" uppercase size="md">
-            Buy Now
-          </SketchButton>
-          <ReadMoreLink to={'/books/for-the-love-of-a-dog'}>
+          <BuyNowButton
+            styleType="orange"
+            bookId="for-the-love-of-a-dog"
+            size="md"
+          />
+          <ReadMoreLink to={ftloadData.link}>
             Read Amanda & Mabel’s Story
           </ReadMoreLink>
         </MainSection>

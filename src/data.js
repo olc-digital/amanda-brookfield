@@ -39,10 +39,10 @@ export const books = {
     color: '#e1482d',
     coverImage: ftloadCover,
     coverSketch: ftloadSketch,
-    options: [
-      {type: 'HEAD_OF_ZEUS', url: 'http://headofzeus.com/books/love-dog'},
-      {type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/1788542924'},
-    ],
+    buyOptions: {
+      amazon: 'http://www.amazon.co.uk/dp/1788542924',
+      headOfZeus: 'http://headofzeus.com/books/love-dog',
+    },
   },
 
   'the-love-child': {
@@ -52,13 +52,10 @@ export const books = {
     color: '#d05d31',
     coverImage: tlcCover,
     coverSketch: tlcSketch,
-    options: [
-      {
-        type: 'PENGUIN',
-        url: 'https://www.penguin.co.uk/books/179105/the-love-child/',
-      },
-      {type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0718192346'},
-    ],
+    buyOptions: {
+      amazon: 'http://www.amazon.co.uk/dp/0718192346',
+      penguin: 'https://www.penguin.co.uk/books/179105/the-love-child/',
+    },
   },
 
   'before-i-knew-you': {
@@ -68,13 +65,10 @@ export const books = {
     color: '#46556a',
     coverImage: bikyCover,
     coverSketch: bikySketch,
-    options: [
-      {
-        type: 'PENGUIN',
-        url: 'https://www.penguin.co.uk/books/56780/before-i-knew-you/',
-      },
-      {type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0141039949'},
-    ],
+    buyOptions: {
+      amazon: 'http://www.amazon.co.uk/dp/0141039949',
+      penguin: 'https://www.penguin.co.uk/books/56780/before-i-knew-you/',
+    },
   },
 
   'life-begins': {
@@ -84,13 +78,10 @@ export const books = {
     color: '#c3405f',
     coverImage: lbCover,
     coverSketch: lbSketch,
-    options: [
-      {
-        type: 'PENGUIN',
-        url: 'https://www.penguin.co.uk/books/55361/life-begins/',
-      },
-      {type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0141021837'},
-    ],
+    buyOptions: {
+      amazon: 'http://www.amazon.co.uk/dp/0141021837',
+      penguin: 'https://www.penguin.co.uk/books/55361/life-begins/',
+    },
   },
 
   'the-simple-rules-of-love': {
@@ -100,13 +91,11 @@ export const books = {
     color: '#248dab',
     coverImage: tsrolCover,
     coverSketch: tsrolSketch,
-    options: [
-      {
-        type: 'PENGUIN',
-        url: 'https://www.penguin.co.uk/books/55360/the-simple-rules-of-love/',
-      },
-      {type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0141021829'},
-    ],
+    buyOptions: {
+      amazon: 'http://www.amazon.co.uk/dp/0141021829',
+      penguin:
+        'https://www.penguin.co.uk/books/55360/the-simple-rules-of-love/',
+    },
   },
 
   'relative-love': {
@@ -116,7 +105,7 @@ export const books = {
     color: '#df2f55',
     coverImage: rlCover,
     coverSketch: rlSketch,
-    options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00H2GYBVO'}],
+    buyOptions: {amazon: 'http://www.amazon.co.uk/dp/B00H2GYBVO'},
   },
 
   'sisters-and-husbands': {
@@ -126,7 +115,7 @@ export const books = {
     color: '#473a89',
     coverImage: sahCover,
     coverSketch: sahSketch,
-    options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340770120'}],
+    buyOptions: {amazon: 'http://www.amazon.co.uk/dp/0340770120'},
   },
 
   'a-family-man': {
@@ -136,7 +125,7 @@ export const books = {
     color: '#33ce4f',
     coverImage: afmCover,
     coverSketch: afmSketch,
-    options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00H2GYBP0'}],
+    buyOptions: {amazon: 'http://www.amazon.co.uk/dp/B00H2GYBP0'},
   },
 
   'the-lover': {
@@ -146,7 +135,7 @@ export const books = {
     color: '#fbbb01',
     coverImage: tlCover,
     coverSketch: tlSketch,
-    options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/B00Q8NUXI2'}],
+    buyOptions: {amazon: 'http://www.amazon.co.uk/dp/B00Q8NUXI2'},
   },
 
   'single-lives': {
@@ -156,7 +145,7 @@ export const books = {
     color: '#e72104',
     coverImage: slCover,
     coverSketch: slSketch,
-    options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/034071266X'}],
+    buyOptions: {amazon: 'http://www.amazon.co.uk/dp/034071266X'},
   },
 
   'marriage-games': {
@@ -166,7 +155,7 @@ export const books = {
     color: '#dc8d4b',
     coverImage: mgCover,
     coverSketch: mgSketch,
-    options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340671521'}],
+    buyOptions: {amazon: 'http://www.amazon.co.uk/dp/0340671521'},
   },
 
   'the-godmother': {
@@ -176,7 +165,7 @@ export const books = {
     color: '#b5a2fe',
     coverImage: tgCover,
     coverSketch: tgSketch,
-    options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340671505'}],
+    buyOptions: {amazon: 'http://www.amazon.co.uk/dp/0340671505'},
   },
 
   'a-cast-of-smiles': {
@@ -186,7 +175,7 @@ export const books = {
     color: '#d69aa2',
     coverImage: acosCover,
     coverSketch: acosSketch,
-    options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340624493'}],
+    buyOptions: {amazon: 'http://www.amazon.co.uk/dp/0340624493'},
   },
 
   'a-summer-affair': {
@@ -196,7 +185,7 @@ export const books = {
     color: '#bf2525',
     coverImage: asaCover,
     coverSketch: asaSketch,
-    options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340623411'}],
+    buyOptions: {amazon: 'http://www.amazon.co.uk/dp/0340623411'},
   },
 
   'walls-of-glass': {
@@ -206,7 +195,7 @@ export const books = {
     color: '#5f9be4',
     coverImage: wogCover,
     coverSketch: wogSketch,
-    options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340623403'}],
+    buyOptions: {amazon: 'http://www.amazon.co.uk/dp/0340623403'},
   },
 
   'alice-alone': {
@@ -216,7 +205,7 @@ export const books = {
     color: '#c6b2ce',
     coverImage: aaCover,
     coverSketch: aaSketch,
-    options: [{type: 'AMAZON', url: 'http://www.amazon.co.uk/dp/0340624485'}],
+    buyOptions: {amazon: 'http://www.amazon.co.uk/dp/0340624485'},
   },
 }
 

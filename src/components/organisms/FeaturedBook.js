@@ -7,6 +7,7 @@ import H3 from '../atoms/H3'
 import P from '../atoms/P'
 import media from '../../styles/mediaQueries'
 import SketchButton from '../atoms/SketchButton'
+import BuyNowButton from '../atoms/BuyNowButton'
 
 import {books} from '../../data'
 
@@ -50,26 +51,24 @@ const Actions = styled.div`
   `}
 `
 
-export default function FeaturedBook(props) {
+export default function FeaturedBook({children, bookId}) {
   return (
     <Wrapper>
       <SketchCover>
         <Img
           css={'width: 125px; padding: 4px;'}
-          src={books[props.bookId].coverSketch}
+          src={books[bookId].coverSketch}
         />
       </SketchCover>
       <Description>
-        <H3 center={false}>{books[props.bookId].title}</H3>
-        <P>{props.children || books[props.bookId].blurb}</P>
+        <H3 center={false}>{books[bookId].title}</H3>
+        <P>{children || books[bookId].blurb}</P>
       </Description>
       <Actions>
-        <SketchButton size="sm" uppercase>
-          Buy Now
-        </SketchButton>
+        <BuyNowButton styleType="primary" bookId={bookId} />
         <SketchButton
           as={Link}
-          to={`/books/${props.bookId}`}
+          to={`/books/${bookId}`}
           size="sm"
           styleType="outline"
         >

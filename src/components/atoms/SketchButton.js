@@ -34,6 +34,7 @@ const ButtonText = styled.div`
   justify-content: center;
   align-content: center;
   align-items: center;
+  height: 100%;
 `
 
 const strokes = {

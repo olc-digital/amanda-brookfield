@@ -11,7 +11,7 @@ import CursiveButton from '../components/atoms/CursiveButton'
 import Img from '../components/atoms/Img'
 import Container from '../components/atoms/Container'
 import {books} from '../data'
-import SketchButton from '../components/atoms/SketchButton'
+import BuyNowButton from '../components/atoms/BuyNowButton'
 import ReviewItem from '../components/molecules/ReviewItem'
 
 const BookTitle = styled(H2)`
@@ -39,12 +39,6 @@ const ReviewItemsWrapper = styled.div`
     margin: 48px 0 72px;
   `}
 `
-
-const BookBuyNowButton = props => (
-  <SketchButton uppercase center styleType="outline" size="lg" {...props}>
-    Buy Now
-  </SketchButton>
-)
 
 const BookPageTemplate = ({
   title,
@@ -90,8 +84,10 @@ const BookPageTemplate = ({
       <div css={mobileReviewsVisible && hideBelowMobile}>
         <PageContent content={content} />
       </div>
-      <BookBuyNowButton
+      <BuyNowButton
         size="lg"
+        bookId={bookId}
+        center
         css={`
           ${hideBelowMobile} margin-top: 48px
         `}
@@ -101,8 +97,10 @@ const BookPageTemplate = ({
           <ReviewItem key={review.text} {...review} />
         ))}
       </ReviewItemsWrapper>
-      <BookBuyNowButton
+      <BuyNowButton
         size="xl"
+        bookId={bookId}
+        center
         css={`
           ${hideAboveMobile}
           margin: 48px auto;

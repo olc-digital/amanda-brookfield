@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Link from '../atoms/Link'
-import SketchButton from '../atoms/SketchButton'
+import BuyNowButton from '../atoms/BuyNowButton'
 import Img from '../atoms/Img'
 import H3 from '../atoms/H3'
 import ButtonBase from '../atoms/ButtonBase'
@@ -29,6 +29,7 @@ const BookTitle = styled(H3)`
   align-items: center;
   display: flex;
   justify-content: center;
+  text-align: center;
 `
 
 const BlankButton = styled(ButtonBase)`
@@ -50,16 +51,7 @@ export default function BookWidget({coverImage, title, id}) {
         <Cover src={coverImage} />
         <BookTitle>{title}</BookTitle>
       </Link>
-      <SketchButton
-        as="a"
-        href="http://www.google.com"
-        target="_blank"
-        size="sm"
-        styleType="outline"
-        uppercase
-      >
-        Buy Now
-      </SketchButton>
+      <BuyNowButton bookId={id} />
       <BlankButton as={Link} to={`/books/${id}`}>
         Read More
       </BlankButton>

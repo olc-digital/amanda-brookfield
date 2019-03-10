@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
 
+import Page from '../components/atoms/Page'
 import H3 from '../components/atoms/H3'
 import P from '../components/atoms/P'
 import Container from '../components/atoms/Container'
@@ -23,16 +24,18 @@ const EventDate = styled.div`
 
 const EventsPageTemplate = ({events}) => {
   return (
-    <Container padBottom narrow>
-      <MobileSketchHeading title="Events" sketchType="events" />
-      {events.map(event => (
-        <Event key={event.title}>
-          <H3>{event.title}</H3>
-          <EventDate>{event.date}</EventDate>
-          <P css={'margin:0;'}>{event.description}</P>
-        </Event>
-      ))}
-    </Container>
+    <Page>
+      <Container narrow>
+        <MobileSketchHeading title="Events" sketchType="events" />
+        {events.map(event => (
+          <Event key={event.title}>
+            <H3>{event.title}</H3>
+            <EventDate>{event.date}</EventDate>
+            <P css={'margin:0;'}>{event.description}</P>
+          </Event>
+        ))}
+      </Container>
+    </Page>
   )
 }
 
