@@ -31,7 +31,6 @@ const scroll = ref => {
 const Background = styled.div`
   flex: 1 0 auto;
   border-radius: 5px;
-  background: red;
   height: 150px;
   cursor: pointer;
   margin: 12px;
