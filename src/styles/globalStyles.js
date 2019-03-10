@@ -100,7 +100,7 @@ export default createGlobalStyle`
   }
   li {
     line-height: ${theme.lineHeight};
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
 `

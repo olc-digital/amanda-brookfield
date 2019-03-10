@@ -9,6 +9,9 @@ const Aside = styled.aside`
   width: 168px;
   flex: 1 0 auto;
   margin-right: 24px;
+  li {
+    line-height: 1.2;
+  }
 `
 const List = styled.ul`
   ${resetList}
