@@ -6,9 +6,6 @@ import H2 from '../components/atoms/H2'
 import Container from '../components/atoms/Container'
 import BookWidget from '../components/molecules/BookWidget'
 import ForTheLoveOfADogHero from '../components/organisms/ForTheLoveOfADogHero'
-import bannerMobile1x from '../img/home-banner-mobile.jpg'
-import bannerMobile2x from '../img/home-banner-mobile@2x.jpg'
-import bannerMobile3x from '../img/home-banner-mobile@3x.jpg'
 import bannerDesktop1x from '../img/home-banner-desktop.jpg'
 import bannerDesktop2x from '../img/home-banner-desktop@2x.jpg'
 import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
@@ -16,7 +13,6 @@ import {crimsonTextFont} from '../styles/mixins'
 import {books} from '../data'
 import FullWidth from '../components/atoms/FullWidth'
 import FeaturedBook from '../components/organisms/FeaturedBook'
-import {Source} from '../components/atoms/Responsive'
 import Sketch from '../components/atoms/Sketch'
 import Page from '../components/atoms/Page'
 import media from '../styles/mediaQueries'
@@ -26,9 +22,10 @@ const AmandaImage = styled.img`
   height: auto;
   display: block;
   margin: 0 auto;
-  ${media.aboveMobile`
+  height: 280px;
   max-width: 764px;
-    object-fit: cover;
+  object-fit: cover;
+  ${media.aboveMobile`
     height: 220px;
   `}
   ${media.aboveContainer`
@@ -101,11 +98,7 @@ export default class IndexPage extends React.Component {
         <Container>
           <FullWidth>
             <picture>
-              <Source
-                mobile
-                srcSet={`${bannerMobile1x} 1x, ${bannerMobile2x} 2x, ${bannerMobile3x} 3x,`}
-              />
-              <Source
+              <source
                 srcSet={`${bannerDesktop1x} 1x, ${bannerDesktop2x} 2x, ${bannerDesktop3x} 3x,`}
               />
               <AmandaImage
