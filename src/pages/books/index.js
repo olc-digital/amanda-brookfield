@@ -74,7 +74,6 @@ export default class BooksPageQuery extends React.Component {
         allMarkdownRemark: {edges: articles},
       },
     } = this.props
-    console.log(this.props.data.allMarkdownRemark)
     return (
       <Page>
         <Container>
