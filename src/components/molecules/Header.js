@@ -5,7 +5,7 @@ import {kalamFont, crimsonTextFont} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
 
 const HeaderWrapper = styled.div`
-  padding: 16px 16px 11px 16px;
+  padding: 16px 16px 12px 16px;
   text-align: center;
   a {
     text-decoration: none;
@@ -22,7 +22,7 @@ const MainTitle = styled.h1`
   letter-spacing: 0.5px;
   color: #26282a;
   text-transform: uppercase;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
   ${media.aboveMobile`
     line-height: 1.25;
     letter-spacing: 0.8px;
