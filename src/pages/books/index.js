@@ -32,12 +32,11 @@ const BooksWrapper = styled.section`
 `
 
 const ArticleSection = styled.section`
-  margin: 48px -12px 0;
+  margin: 0 -12px;
   display: flex;
   flex-direction: column;
   ${media.aboveMobile`
     flex-direction: row;
-    margin-top: 72px;
   `}
 `
 
@@ -45,7 +44,10 @@ const ArticleList = ({title, items, displayType, readMoreText}) => (
   <div css={'flex: 1; margin: 0 12px;'}>
     <H2
       css={`
-        margin-bottom: 72px;
+        margin: 72px 0 48px;
+        ${media.aboveMobile`
+          margin-bottom: 72px;
+        `}
       `}
     >
       {title}

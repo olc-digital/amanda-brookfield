@@ -23,7 +23,7 @@ const Layout = ({children}) => (
   <>
     <ThemeProvider theme={theme}>
       <>
-        <Helmet title="Amanda Brookfield | Best Selling Novelist" />
+        <Helmet title="Amanda Brookfield | Best-Selling Novelist" />
         <PreloadFonts />
         <LayoutGrid>
           <Header />

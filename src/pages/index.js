@@ -108,13 +108,14 @@ export default class IndexPage extends React.Component {
             </picture>
           </FullWidth>
           <WelcomeText>
-            <FirstLetter>W</FirstLetter>elcome to my official website. There’s
+            <FirstLetter>W</FirstLetter>
+            {`elcome to my official website. There’s
             lots to dip into, with sneak-peeks at my inspirations as well as
-            information about all my fifteen best-sellers, including Alice
-            Alone, Relative Love and Life Begins.
+            information about all my fifteen best-sellers, including 'Alice
+            Alone', 'Relative Love' and 'Life Begins'.`}
           </WelcomeText>
           <MobileOnlySketch type="books" />
-          <H2 margin>My Best Sellers</H2>
+          <H2 margin>My Best-Sellers</H2>
           <Scroller>
             <SelectedBooks>
               {selectedBooks.map(book => (

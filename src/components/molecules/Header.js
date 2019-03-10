@@ -50,7 +50,7 @@ const Header = () => {
       >
         <Link to="/">
           <MainTitle>Amanda Brookfield</MainTitle>
-          <SubTitle>Best Selling Novelist</SubTitle>
+          <SubTitle>Best-Selling Novelist</SubTitle>
         </Link>
       </div>
     </HeaderWrapper>

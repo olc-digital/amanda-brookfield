@@ -26,13 +26,13 @@ optimistic spirit.
 
 Aware that her lifestyle will not suit becoming a dog-ownerand warned by friends
 not to give up her freedom, Amanda nonetheless cannot resist Mabel, an eight
-week old golden doodle. Arming herself with an arsenal of equipment, she soon
+week old Golden Doodle. Arming herself with an arsenal of equipment, she soon
 learns that there are no short-cuts to training and caring for a dog. In the
 daily challenges that ensue, the constant ups and downs, Amanda realises she is
 starting to come to terms with her bereavement and the prospect of facing the
 rest of her life alone.
 
-<em>For The Love of a Dog</em> charts the bigger, more poignant story about the
+<em>For the Love of a Dog</em> charts the bigger, more poignant story about the
 labour of emotional recovery after the trauma of loss. Mabel shines like a light
 throughout, the innocent architect of rebuilding her owner’s shattered
 self-belief. Mabel’s own journey is equally captivating, as she blossoms into a
