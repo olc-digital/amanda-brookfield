@@ -18,7 +18,6 @@ const BottomRow = styled.div`
   ${CursiveButton} {
     padding: 0;
     ${media.belowMobile`
-      margin: 16px 0 0 0;
       align-self: flex-start;
     `}
   }
@@ -50,7 +49,7 @@ const BlogListItem = ({id, to, title, excerpt, date, readMoreText}) => (
     <H3 css={'margin-bottom: 4px;'}>{title}</H3>
     <P css={'margin-bottom: 20px;'}>{excerpt}</P>
     <BottomRow>
-      <BlogItemMeta>{date && date}</BlogItemMeta>
+      <BlogItemMeta css={date && 'margin-bottom: 16px'}>{date}</BlogItemMeta>
       <CursiveButton>{readMoreText || 'Read full blog post >'}</CursiveButton>
     </BottomRow>
   </WrapperLink>
