@@ -37,7 +37,11 @@ const BlogSidebarBlock = ({title, items}) => (
     </List>
   </div>
 )
-const BlogSidebar = ({posts, years, className}) => {
+const BlogSidebar = ({
+  posts,
+  //years,
+  className,
+}) => {
   return (
     <Aside className={className}>
       <BlogSidebarBlock
@@ -48,7 +52,7 @@ const BlogSidebar = ({posts, years, className}) => {
           title: post.frontmatter.title,
         }))}
       />
-      <BlogSidebarBlock
+      {/* <BlogSidebarBlock
         title="Archive"
         items={years
           .map(({fieldValue: year, totalCount}, i) => ({
@@ -57,7 +61,7 @@ const BlogSidebar = ({posts, years, className}) => {
             id: i,
           }))
           .reverse()}
-      />
+      /> */}
     </Aside>
   )
 }
