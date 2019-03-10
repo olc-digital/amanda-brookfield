@@ -42,7 +42,12 @@ export default function Footer() {
     <FooterWrapper>
       <Img css={'width: 75px;'} src={contactImg} />
       <ContactHeading>Contact</ContactHeading>
-      <SketchButton size="xl" uppercase>
+      <SketchButton
+        as="a"
+        href="mailto:contact@amandabrookfield.co.uk"
+        size="xl"
+        uppercase
+      >
         <Img src={emailIcon} css={'margin-right: 10px;'} />
         Email Amanda
       </SketchButton>
