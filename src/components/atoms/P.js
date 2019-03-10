@@ -1,7 +1,4 @@
 import styled from 'styled-components'
 
-const P = styled.p`
-  line-height: ${({theme}) => theme.lineHeight};
-  margin-bottom: 24px;
-`
+const P = styled.p``
 export default P

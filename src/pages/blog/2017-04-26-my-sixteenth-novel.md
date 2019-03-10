@@ -53,8 +53,8 @@ to publish my sixteenth novel:
    a manuscript rather than the other way round.  (This is why a lot of poor
    books make it onto the shelves).
 
-2. 'Good Girls' will not be a Global Bestseller and make them squillions.  (No,
-   it won't).
+2. 'Good Girls' will not be a Global Bestseller and make them squillions.
+    (No,it won't).
 
 3. Each publisher probably thinks that because 'Good Girls' is a strong,
    well-written story, "somewhere else" is bound to accept it for publication.

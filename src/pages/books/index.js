@@ -41,7 +41,7 @@ const ArticleSection = styled.section`
   `}
 `
 
-const ArticleList = ({title, items, displayType}) => (
+const ArticleList = ({title, items, displayType, readMoreText}) => (
   <div css={'flex: 1; margin: 0 12px;'}>
     <H2
       css={`
@@ -59,7 +59,7 @@ const ArticleList = ({title, items, displayType}) => (
             title={node.frontmatter.title}
             to={node.fields.slug}
             excerpt={node.excerpt}
-            readMoreText="Read full article >"
+            readMoreText={readMoreText}
           />
         ))}
     </div>
@@ -86,11 +86,13 @@ export default class BooksPageQuery extends React.Component {
             <ArticleList
               title="Articles"
               displayType="article"
+              readMoreText="Read full article >"
               items={articles}
             />
             <ArticleList
               title="Short Stories"
               displayType="short-story"
+              readMoreText="Read full short story >"
               items={articles}
             />
           </ArticleSection>

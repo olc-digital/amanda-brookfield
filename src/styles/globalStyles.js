@@ -89,5 +89,18 @@ export default createGlobalStyle`
       color: #cc271a;
     }
   }
+  blockquote {
+    margin: 24px 0 24px 24px;
+    font-style: italic;
+    line-height: ${theme.lineHeight};
+  }
+  ul {
+    margin: 24px 0;
+    padding-left: 24px;
+  }
+  li {
+    line-height: ${theme.lineHeight};
+    margin-bottom: 24px;
+  }
 
 `

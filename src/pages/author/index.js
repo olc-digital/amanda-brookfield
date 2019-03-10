@@ -5,12 +5,10 @@ import styled from 'styled-components'
 
 import media from '../../styles/mediaQueries'
 import BlockQuote from '../../components/atoms/BlockQuote'
-import P from '../../components/atoms/P'
 import B from '../../components/atoms/B'
 import H2 from '../../components/atoms/H2'
 import H3 from '../../components/atoms/H3'
 import Container from '../../components/atoms/Container'
-import {Ul, Li} from '../../components/atoms/List'
 import Page from '../../components/atoms/Page'
 import {books} from '../../data'
 import MobileSketchHeading from '../../components/molecules/MobileSketchHeading'
@@ -106,85 +104,85 @@ const AuthorPage = () => {
           Where Do I Get My Ideas From?
         </H3>
         <div>
-          <P>
+          <p>
             Inspiration is a tricky, hard-to-pin-down business. It is also, by
             definition, deeply private and - at times - extraordinarily
             mysterious.
-          </P>
-          <P>
+          </p>
+          <p>
             But with twenty years of writing and thirteen novels under my belt,
             I am prepared to reveal the following:
-          </P>
-          <Ul>
-            <Li>
+          </p>
+          <ul>
+            <li>
               Nothing makes inspiration disappear faster than the sense that it
               is being actively ‘hunted down’. This is, I am sure, why it always
               strikes me at the most inopportune moments, like when I’m stuck in
               a traffic jam, or pinned to the dentist’s chair, or in the small
               hours too nearly asleep to be bothered to stumble in search of a
               pen and pad...
-            </Li>
-            <Li>
+            </li>
+            <li>
               For no matter how fantastic the idea, I have learned that I need
               to WRITE IT DOWN, or it will be lost under the jumble of shopping
               lists, decisions about what to eat/wear, latest hot gossip, what
               to watch on telly and all the other vital things that constitute
               my action-packed, non-inspirational life.
-            </Li>
-            <Li>
+            </li>
+            <li>
               Curiosity/Observation about the world…nosiness…?! Whatever you
               want to call it, I find that the tiniest physical detail –
               buck-teeth, a head of lustrous hair, bitten nails, a fallen tree,
               the shape of a cloud – can set in motion the idea for an entire
               character or scene. It’s like reality is the trigger, but then my
               imagination barges it out of the way and takes over.
-            </Li>
-          </Ul>
+            </li>
+          </ul>
           <H3 margin center={false}>
             What if
           </H3>
-          <P>
+          <p>
             This is a game I play all the time in order to get under the skin of
             my characters.
-          </P>
-          <P>
+          </p>
+          <p>
             For example, in writing my novel{' '}
             <Link to={books['the-godmother'].link}>The Godmother</Link>, I asked
             myself:
-          </P>
+          </p>
           <BlockQuote>
             What if I had pursued a career in business and hadn’t had children,
             or got married? What would I do if I decided that, although single,
             becoming a mother was important after all?
           </BlockQuote>
-          <P>
+          <p>
             Or, in writing{' '}
             <Link to={books['a-family-man'].link}>A Family Man</Link>:
-          </P>
+          </p>
           <BlockQuote>
             What if a decent, hard-working thirtysomething Dad came home one
             evening to find that his wife had simply disappeared, leaving behind
             their four year old son?
           </BlockQuote>
-          <P>
+          <p>
             Or, in writing{' '}
             <Link to={books['relative-love'].link}>Relative Love</Link>:
-          </P>
+          </p>
           <BlockQuote>
             What if the worst, most unforeseeable tragedy befell a close family?
           </BlockQuote>
-          <P>
+          <p>
             Or, in writing{' '}
             <Link to={books['life-begins'].link}>Life Begins</Link>:
-          </P>
+          </p>
           <BlockQuote>
             What if the direction of an entire life was based on a single,
             seismic childhood event?
           </BlockQuote>
-          <P>
+          <p>
             Or, in writing{' '}
             <Link to={books['the-love-child'].link}>The Love Child</Link>:
-          </P>
+          </p>
           <BlockQuote>
             {`What if a 40 year old had sex with his best friend's just-sixteen
               year old daughter? Could that ever be deemed 'right' or truly
@@ -193,29 +191,29 @@ const AuthorPage = () => {
           <H3 margin center={false}>
             More Personal Stuff
           </H3>
-          <P>
+          <p>
             My inspiration also appears to be propelled by a combination of the
             following:
-          </P>
-          <Ul>
-            <Li>
+          </p>
+          <ul>
+            <li>
               <B>Terror</B> (of failure, of missing a deadline, of an empty day,
               of losing my touch... of pretty much anything, in fact).
-            </Li>
-            <Li>
+            </li>
+            <li>
               The <B>right coffee mug</B>, the right pen... superstition rules.
-            </Li>
-            <Li>
+            </li>
+            <li>
               The weird, wonderful,{' '}
               <B>occasional sense of the story pre-existing</B>, of it needing,
               simply, to be told, with me in the happy position of being the one
               to tell it.
-            </Li>
-          </Ul>
+            </li>
+          </ul>
         </div>
         <div ref={bioRef}>
           <H2 margin>Biography</H2>
-          <P>
+          <p>
             My twin brother and I were born in 1960 to Foreign Office parents
             having a spell in England between postings. I would have liked a
             more exotic place of birth, (like my two elder sisters, born in
@@ -232,8 +230,8 @@ const AuthorPage = () => {
             diplomats. I can remember still the sea of faces that would press up
             against the car as our driver edged through the crowded streets, the
             bafflement of being stared at.
-          </P>
-          <P>
+          </p>
+          <p>
             I was six when we left Shanghai, rushed out – as I learnt later -
             because of the Cultural Revolution, which was just starting and
             which saw many dear friends of my parents tortured or imprisoned.
@@ -250,8 +248,8 @@ const AuthorPage = () => {
             quickly and happily, secure in the knowledge that I was making
             friends to whom I wouldn’t have to say an eventual goodbye. The
             relief remains vivid – several of them are close to me still.
-          </P>
-          <P>
+          </p>
+          <p>
             I would recommend Stockholm to any teenager interested in parties,
             skiing, boating and ice hockey…every holiday was an adventure and
             left me and my siblings with a bond that remains to this day.
@@ -265,8 +263,8 @@ const AuthorPage = () => {
             it was a long while after my finals before I even considered picking
             up a novel for relaxation ie simply to enjoy the story rather than
             trying to think of something clever to say about it.
-          </P>
-          <P>
+          </p>
+          <p>
             After such a peripatetic childhood, I had no intention of working
             anywhere but England. I joined a London advertising agency as an
             account manager, where I spent a lot of time envying the ‘creatives’
@@ -279,8 +277,8 @@ const AuthorPage = () => {
             as a freelance journalist and wrote (with rather more success) my
             first two novels. Oh yes, and that’s where I had the first of my two
             wonderful sons.
-          </P>
-          <P>
+          </p>
+          <p>
             A career path, like a life, is a zigzagging, mercurial thing, much
             easier to make sense of in retrospect than at the time. Mine has had
             so many ups and downs it would take a memoirs to do justice to them.
@@ -289,8 +287,8 @@ const AuthorPage = () => {
             in those days diplomatic wives abroad were still not allowed
             official jobs. Being a novelist dove-tailed well with being a
             mother, that was another plus.
-          </P>
-          <P>
+          </p>
+          <p>
             But the main thing was that I got totally hooked on the power of
             telling a story, of creating characters and letting them wend their
             way in and out of the dramas and crises that constitute the business
@@ -299,7 +297,7 @@ const AuthorPage = () => {
             and bad. Life whizzes so, don’t you find? Writing gives me the
             illusion that I’m catching some of it – for me, and for you too, I
             hope.
-          </P>
+          </p>
         </div>
       </Container>
     </Page>

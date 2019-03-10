@@ -5,7 +5,6 @@ import styled from 'styled-components'
 
 import Page from '../components/atoms/Page'
 import H3 from '../components/atoms/H3'
-import P from '../components/atoms/P'
 import Container from '../components/atoms/Container'
 import MobileSketchHeading from '../components/molecules/MobileSketchHeading'
 
@@ -31,7 +30,7 @@ const EventsPageTemplate = ({events}) => {
           <Event key={event.title}>
             <H3>{event.title}</H3>
             <EventDate>{event.date}</EventDate>
-            <P css={'margin:0;'}>{event.description}</P>
+            <div>{event.description}</div>
           </Event>
         ))}
       </Container>
