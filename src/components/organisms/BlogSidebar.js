@@ -37,9 +37,9 @@ const BlogSidebarBlock = ({title, items}) => (
     </List>
   </div>
 )
-const BlogSidebar = ({posts, years}) => {
+const BlogSidebar = ({posts, years, className}) => {
   return (
-    <Aside>
+    <Aside className={className}>
       <BlogSidebarBlock
         title="Recent Posts"
         items={posts.slice(0, 5).map(({node: post}) => ({

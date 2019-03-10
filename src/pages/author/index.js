@@ -9,19 +9,16 @@ import H2 from '../../components/atoms/H2'
 import H3 from '../../components/atoms/H3'
 import Container from '../../components/atoms/Container'
 import {Ul, Li} from '../../components/atoms/List'
-import {MobileOnly} from '../../components/atoms/Responsive'
-import Sketch from '../../components/atoms/Sketch'
 import Page from '../../components/atoms/Page'
 import {books} from '../../data'
+import MobileSketchHeading from '../../components/molecules/MobileSketchHeading'
 
 export default class IndexPage extends React.Component {
   render() {
     return (
       <Page>
         <Container narrow>
-          <MobileOnly>
-            <Sketch style={{marginTop: 48}} center type="books" />
-          </MobileOnly>
+          <MobileSketchHeading title="Author" sketchType="author" />
           <H2 margin>Inspiration</H2>
           <H3 margin center={false}>
             Where Do I Get My Ideas From?

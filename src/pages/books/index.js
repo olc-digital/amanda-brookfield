@@ -4,11 +4,9 @@ import styled from 'styled-components'
 
 import BookWidget from '../../components/molecules/BookWidget'
 import {books} from '../../data'
-import H2 from '../../components/atoms/H2'
+import MobileSketchHeading from '../../components/molecules/MobileSketchHeading'
 import Container from '../../components/atoms/Container'
 import media from '../../styles/mediaQueries'
-import {MobileOnly} from '../../components/atoms/Responsive'
-import Sketch from '../../components/atoms/Sketch'
 import Page from '../../components/atoms/Page'
 
 const booksArray = Object.values(books)
@@ -34,10 +32,7 @@ export default class IndexPage extends React.Component {
     return (
       <Page>
         <Container>
-          <MobileOnly>
-            <Sketch style={{marginTop: 48}} center type="books" />
-            <H2 margin>Books</H2>
-          </MobileOnly>
+          <MobileSketchHeading title="Books" sketchType="books" />
           <BooksWrapper>
             {booksArray.map(book => (
               <BookWidget key={book.id} {...book} />
