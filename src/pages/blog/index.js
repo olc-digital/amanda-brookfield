@@ -41,11 +41,12 @@ const BottomRow = styled.div`
   ${CursiveButton} {
     padding: 0;
     ${media.belowMobile`
-    margin: 16px 0 0 0;
-  `}
+      margin: 16px 0 0 0;
+      align-self: flex-start;
+    `}
   }
   ${media.aboveMobile`
-  flex-direction: row;
+    flex-direction: row;
     justify-content: space-between;
     margin: 0;
   `}

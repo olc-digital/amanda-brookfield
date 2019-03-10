@@ -139,7 +139,7 @@ BookPage.propTypes = {
 export default BookPage
 
 export const bookPageQuery = graphql`
-  query BookPage2($id: String!) {
+  query BookPage($id: String!) {
     markdownRemark(id: {eq: $id}) {
       html
       frontmatter {
