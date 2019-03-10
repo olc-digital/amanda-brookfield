@@ -8,10 +8,12 @@ import MobileSketchHeading from '../../components/molecules/MobileSketchHeading'
 import Container from '../../components/atoms/Container'
 import media from '../../styles/mediaQueries'
 import Page from '../../components/atoms/Page'
+import H2 from '../../components/atoms/H2'
+import BlogListItem from '../../components/molecules/BlogListItem'
 
 const booksArray = Object.values(books)
 
-const BooksWrapper = styled.div`
+const BooksWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -27,6 +29,27 @@ const BooksWrapper = styled.div`
   }
   `}
 `
+
+const ArticleSection = styled.section`
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  ${media.aboveMobile`
+    flex-direction: row;
+    margin-top: 72px;
+  `}
+`
+
+const ArticleList = ({title, items}) => (
+  <div css={'flex: 1 0 auto;'}>
+    <H2>{title}</H2>
+    <div>
+      {items.map(item => (
+        <BlogListItem key={item.id} {...item} />
+      ))}
+    </div>
+  </div>
+)
 export default class IndexPage extends React.Component {
   render() {
     return (
@@ -38,6 +61,10 @@ export default class IndexPage extends React.Component {
               <BookWidget key={book.id} {...book} />
             ))}
           </BooksWrapper>
+          <ArticleSection>
+            <ArticleList title="Articles" items={[{id: '1', to: 'x'}]} />
+            <ArticleList title="Short Stories" items={[{id: '1', to: 'x'}]} />
+          </ArticleSection>
         </Container>
       </Page>
     )
