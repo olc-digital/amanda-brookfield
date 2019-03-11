@@ -14,6 +14,7 @@ import Container from '../components/atoms/Container'
 import {books} from '../data'
 import BuyNowButton from '../components/atoms/BuyNowButton'
 import ReviewItem from '../components/molecules/ReviewItem'
+import HelmetHelper from '../components/molecules/HelmetHelper'
 
 const BookTitle = styled(H2)`
   margin: 48px 0 21px;
@@ -55,7 +56,10 @@ const BookPageTemplate = ({
   return (
     <Container narrow>
       <BackButton />
-
+      <HelmetHelper
+        title={title}
+        description="My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives."
+      />
       <Img
         css={'width: 150px; padding: 4px; display: block; margin: 0 auto;'}
         src={books[bookId].coverSketch}

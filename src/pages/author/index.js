@@ -13,7 +13,7 @@ import Page from '../../components/atoms/Page'
 import {books} from '../../data'
 import MobileSketchHeading from '../../components/molecules/MobileSketchHeading'
 import {kalamFont} from '../../styles/mixins'
-import HelmetDescription from '../../components/molecules/HelmetDescription'
+import HelmetHelper from '../../components/molecules/HelmetHelper'
 
 import bioImg2x from '../../img/bio-desktop@2x.jpg'
 import inspImg2x from '../../img/inspiration-desktop@2x.jpg'
@@ -84,7 +84,10 @@ const AuthorPage = () => {
   const bioRef = useRef(null)
   return (
     <Page>
-      <HelmetDescription content="Read about my personal life-story and how I became a bestselling Penguin novelist. Discover the truth behind my literary inspirations and my private fears. Learn some secret writing tips." />
+      <HelmetHelper
+        title="Author"
+        content="Read about my personal life-story and how I became a bestselling Penguin novelist. Discover the truth behind my literary inspirations and my private fears. Learn some secret writing tips."
+      />
       <Container narrow>
         <MobileSketchHeading title="Author" sketchType="author" />
         <div css={'display: flex; margin: 0 -12px;'}>

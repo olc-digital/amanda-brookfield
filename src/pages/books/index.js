@@ -11,7 +11,7 @@ import media from '../../styles/mediaQueries'
 import Page from '../../components/atoms/Page'
 import H2 from '../../components/atoms/H2'
 import BlogListItem from '../../components/molecules/BlogListItem'
-import HelmetDescription from '../../components/molecules/HelmetDescription'
+import HelmetHelper from '../../components/molecules/HelmetHelper'
 
 const booksArray = Object.values(books)
 
@@ -77,7 +77,10 @@ export default class BooksPageQuery extends React.Component {
     } = this.props
     return (
       <Page>
-        <HelmetDescription content="My gallery of bestselling women’s fiction gives plot out-lines that will satisfy readers looking for romantic, realistic, heart-rending stories about love, loss, family secrets and hope." />
+        <HelmetHelper
+          title="Books"
+          description="My gallery of bestselling women’s fiction gives plot out-lines that will satisfy readers looking for romantic, realistic, heart-rending stories about love, loss, family secrets and hope."
+        />
         <Container>
           <MobileSketchHeading title="Books" sketchType="books" />
           <BooksWrapper>

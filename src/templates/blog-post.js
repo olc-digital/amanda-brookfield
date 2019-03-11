@@ -1,18 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+
 import {graphql} from 'gatsby'
 import Content, {HTMLContent} from '../components/Content'
 import H2 from '../components/atoms/H2'
 import Container from '../components/atoms/Container'
 import Page from '../components/atoms/Page'
 import BackButton from '../components/atoms/BackButton'
+import HelmetHelper from '../components/molecules/HelmetHelper'
 
-export const BlogPostTemplate = ({title, content, contentComponent}) => {
+export const BlogPostTemplate = ({
+  title,
+  content,
+  contentComponent,
+  helmet,
+}) => {
   const PostContent = contentComponent || Content
 
   return (
     <Page>
+      {helmet}
       <Container narrow>
         <BackButton />
         <H2 css={'margin: 20px 0 48px;'}>{title}</H2>
@@ -39,13 +46,10 @@ const BlogPost = ({data}) => {
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
       helmet={
-        <Helmet titleTemplate="%s | Blog">
-          <title>{`${post.frontmatter.title}`}</title>
-          <meta
-            name="description"
-            content={`${post.frontmatter.description}`}
-          />
-        </Helmet>
+        <HelmetHelper
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+        />
       }
       title={post.frontmatter.title}
     />

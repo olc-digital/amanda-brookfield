@@ -7,7 +7,7 @@ import Page from '../components/atoms/Page'
 import H3 from '../components/atoms/H3'
 import Container from '../components/atoms/Container'
 import MobileSketchHeading from '../components/molecules/MobileSketchHeading'
-import HelmetDescription from '../components/molecules/HelmetDescription'
+import HelmetHelper from '../components/molecules/HelmetHelper'
 
 const Event = styled.div`
   margin-bottom: 24px;
@@ -25,7 +25,10 @@ const EventDate = styled.div`
 const EventsPageTemplate = ({events}) => {
   return (
     <Page>
-      <HelmetDescription content="Get up-to-date news of my latest book events and public appearances. Come and meet me and my amazing dog, Mabel, for signings of my new memoir bestseller ‘For the Love of a Dog.’" />
+      <HelmetHelper
+        title="Events"
+        content="Get up-to-date news of my latest book events and public appearances. Come and meet me and my amazing dog, Mabel, for signings of my new memoir bestseller ‘For the Love of a Dog.’"
+      />
       <Container narrow>
         <MobileSketchHeading title="Events" sketchType="events" />
         {events.map(event => (
