@@ -15,6 +15,7 @@ import FullWidth from '../components/atoms/FullWidth'
 import FeaturedBook from '../components/organisms/FeaturedBook'
 import Sketch from '../components/atoms/Sketch'
 import Page from '../components/atoms/Page'
+import HelmetDescription from '../components/molecules/HelmetDescription'
 import media from '../styles/mediaQueries'
 
 const AmandaImage = styled.img`
@@ -95,6 +96,7 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <Page>
+        <HelmetDescription content="Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1" />
         <Container>
           <FullWidth>
             <picture>

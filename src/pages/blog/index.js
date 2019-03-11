@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
 
+import HelmetDescription from '../../components/molecules/HelmetDescription'
 import MobileSketchHeading from '../../components/molecules/MobileSketchHeading'
 import Page from '../../components/atoms/Page'
 import Container from '../../components/atoms/Container'
@@ -21,6 +22,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <Page>
+        <HelmetDescription content="My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives." />
         <Container narrow>
           <MobileSketchHeading title="Blog" sketchType="blog" />
           <BlogLayout>
