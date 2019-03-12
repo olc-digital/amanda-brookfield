@@ -15,47 +15,50 @@ const BlogLayout = styled.div`
   display: flex;
 `
 
-export default class IndexPage extends React.Component {
-  render() {
-    const {data} = this.props
-    const {edges: posts, group: years} = data.allMarkdownRemark
+const BlogIndexPage = ({data, selectedYear}) => {
+  const {edges: posts, group: years} = data.allMarkdownRemark
 
-    return (
-      <Page>
-        <HelmetHelper
-          title="Blog"
-          description="My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives."
-        />
-        <Container narrow>
-          <MobileSketchHeading title="Blog" sketchType="blog" />
-          <BlogLayout>
-            <BlogSidebar css={hideBelowMobile} posts={posts} years={years} />
-            <div>
-              {posts.map(({node: post}) => (
-                <BlogListItem
-                  key={post.id}
-                  id={post.id}
-                  to={post.fields.slug}
-                  title={post.frontmatter.title}
-                  excerpt={post.excerpt}
-                  date={post.frontmatter.date}
-                />
-              ))}
-            </div>
-          </BlogLayout>
-        </Container>
-      </Page>
-    )
-  }
+  return (
+    <Page>
+      <HelmetHelper
+        title="Blog"
+        description="My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives."
+      />
+      <Container narrow>
+        <MobileSketchHeading title="Blog" sketchType="blog" />
+        <BlogLayout>
+          <BlogSidebar
+            css={hideBelowMobile}
+            posts={posts}
+            years={years}
+            selectedYear={selectedYear}
+          />
+          <div>
+            {posts.map(({node: post}) => (
+              <BlogListItem
+                key={post.id}
+                id={post.id}
+                to={post.fields.slug}
+                title={post.frontmatter.title}
+                excerpt={post.excerpt}
+                date={post.frontmatter.date}
+              />
+            ))}
+          </div>
+        </BlogLayout>
+      </Container>
+    </Page>
+  )
 }
 
-IndexPage.propTypes = {
+BlogIndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
     }),
   }),
 }
+export default BlogIndexPage
 
 export const pageQuery = graphql`
   query IndexQuery {

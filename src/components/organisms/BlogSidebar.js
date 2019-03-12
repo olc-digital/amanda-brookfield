@@ -40,31 +40,31 @@ const BlogSidebarBlock = ({title, items}) => (
     </List>
   </div>
 )
-const BlogSidebar = ({
-  posts,
-  //years,
-  className,
-}) => {
+const BlogSidebar = ({posts, years, className, selectedYear}) => {
   return (
     <Aside className={className}>
       <BlogSidebarBlock
-        title="Recent Posts"
-        items={posts.slice(0, 5).map(({node: post}) => ({
-          id: post.id,
-          to: post.fields.slug,
-          title: post.frontmatter.title,
-        }))}
+        title={selectedYear ? `Posts from ${selectedYear}` : 'Recent Posts'}
+        items={(selectedYear ? posts : posts.slice(0, 5)).map(
+          ({node: post}) => ({
+            id: post.id,
+            to: post.fields.slug,
+            title: post.frontmatter.title,
+          }),
+        )}
       />
-      {/* <BlogSidebarBlock
-        title="Archive"
-        items={years
-          .map(({fieldValue: year, totalCount}, i) => ({
-            title: `${year} (${totalCount})`,
-            to: `/blog/years/${year}/`,
-            id: i,
-          }))
-          .reverse()}
-      /> */}
+      {!selectedYear && (
+        <BlogSidebarBlock
+          title="Archive"
+          items={years
+            .map(({fieldValue: year, totalCount}, i) => ({
+              title: `${year} (${totalCount})`,
+              to: `/blog/years/${year}/`,
+              id: i,
+            }))
+            .reverse()}
+        />
+      )}
     </Aside>
   )
 }

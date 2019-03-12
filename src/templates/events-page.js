@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
 
+import SubTitle from '../components/atoms/SubTitle'
 import Page from '../components/atoms/Page'
 import H3 from '../components/atoms/H3'
 import Container from '../components/atoms/Container'
@@ -14,12 +15,6 @@ const Event = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
-`
-
-const EventDate = styled.div`
-  color: ${({theme}) => theme.red};
-  font-style: italic;
-  margin: 8px 0 8px;
 `
 
 const EventsPageTemplate = ({events}) => {
@@ -34,7 +29,7 @@ const EventsPageTemplate = ({events}) => {
         {events.map(event => (
           <Event key={event.title}>
             <H3>{event.title}</H3>
-            <EventDate>{event.date}</EventDate>
+            <SubTitle css={'margin: 8px 0;'}>{event.date}</SubTitle>
             <div>{event.description}</div>
           </Event>
         ))}

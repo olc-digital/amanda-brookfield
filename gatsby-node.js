@@ -76,17 +76,17 @@ exports.createPages = ({actions, graphql}) => {
       })
     })
 
-    // years.forEach(year => {
-    //   const yearPath = `/blog/years/${year}/`
-    //   createPage({
-    //     path: yearPath,
-    //     component: path.resolve(`src/templates/years.js`),
-    //     context: {
-    //       year,
-    //       yearGlob: `${year}*`,
-    //     },
-    //   })
-    // })
+    years.forEach(year => {
+      const yearPath = `/blog/years/${year}/`
+      createPage({
+        path: yearPath,
+        component: path.resolve(`src/templates/years-page.js`),
+        context: {
+          year,
+          yearGlob: `${year}*`,
+        },
+      })
+    })
   })
 }
 
