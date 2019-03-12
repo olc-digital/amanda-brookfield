@@ -19,9 +19,8 @@ import bioImg2x from '../../img/bio-desktop@2x.jpg'
 import inspImg2x from '../../img/inspiration-desktop@2x.jpg'
 
 const scroll = ref => {
-  const bioTop = ref.current.getBoundingClientRect().top
   window.scrollTo({
-    top: bioTop - 48,
+    top: ref.current.offsetTop - 48,
     left: 0,
     behavior: 'smooth',
   })
