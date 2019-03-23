@@ -21,7 +21,7 @@ reviews:
 
 After the death of her mother and the end of a new relationship leave her
 heartbroken, novelist Amanda Brookfield finds her oncesecure world imploding. As
-despair deepens, she latches onto theidea of getting a puppy just to revive her
+despair deepens, she latches onto the idea of getting a puppy just to revive her
 optimistic spirit.
 
 Aware that her lifestyle will not suit becoming a dog-ownerand warned by friends

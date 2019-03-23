@@ -113,10 +113,7 @@ export default function ForTheLoveOfADogHero() {
           </H2>
           <AmandaImage />
           <BlurbBody>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            {`For the Love of a Dog is a poignant and often hilarious examination of how a zest for life can re-emerge from the rubble of loss.  Amanda teases out the truths at the heart of life's pitfalls, throwing light on the big issues that face us all.`}
           </BlurbBody>
           <BuyNowButton
             styleType="orange"
