@@ -100,7 +100,7 @@ export default class IndexPage extends React.Component {
           title="Homepage"
           content="Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1"
         />
-        <Container css={'margin-bottom: 50px;'}>
+        <Container>
           <FullWidth>
             <picture>
               <source
@@ -119,18 +119,18 @@ export default class IndexPage extends React.Component {
             information about all my fifteen best-sellers, including 'Alice
             Alone', 'Relative Love' and 'Life Begins'.`}
           </WelcomeText>
-        </Container>
-        <ForTheLoveOfADogHero />
-        <Container>
           <MobileOnlySketch type="books" />
           <H2 margin>My Best-Sellers</H2>
-          <Scroller css={'margin-bottom: 0;'}>
+          <Scroller>
             <SelectedBooks>
               {selectedBooks.map(book => (
                 <BookWidget key={book.id} {...book} />
               ))}
             </SelectedBooks>
           </Scroller>
+        </Container>
+        <ForTheLoveOfADogHero />
+        <Container>
           <MobileOnlySketch type="newspaper" />
           <H2 margin>Latest Releases</H2>
           <FeaturedBook bookId="for-the-love-of-a-dog">
