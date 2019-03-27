@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 import Img from '../atoms/Img'
 import SketchButton from '../atoms/SketchButton'
@@ -23,13 +24,19 @@ const ContactHeading = styled(H2)`
   margin: 32px 0;
 `
 
-const SocialMediaLinks = styled.div`
+const SocialMediaLinks = styled(ExternalLink)`
   margin: 24px 0;
   display: flex;
   justify-content: center;
-  img {
+  font-size: 20px;
+
+  svg {
+    color: ${({theme}) => theme.black};
+    &:hover {
+      color: ${({theme}) => theme.red};
+    }
     width: 44px;
-    margin: 0 8px;
+    margin: 16px;
   }
 `
 
@@ -53,13 +60,13 @@ export default function Footer() {
       </SketchButton>
       <SocialMediaLinks>
         <ExternalLink href="https://www.instagram.com/amanda_and_mabel_brookfield/">
-          <Icon name="insta" />
+          <FontAwesomeIcon icon={['fab', 'instagram']} />
         </ExternalLink>
         <ExternalLink href="https://www.facebook.com/amandabrookfield100/">
-          <Icon name="facebook" />
+          <FontAwesomeIcon icon={['fab', 'facebook-f']} />
         </ExternalLink>
         <ExternalLink href="https://twitter.com/ABrookfield1">
-          <Icon name="twitter" />
+          <FontAwesomeIcon icon={['fab', 'twitter']} />
         </ExternalLink>
       </SocialMediaLinks>
       <Copyright>&copy; Amanda Brookfield 2018</Copyright>

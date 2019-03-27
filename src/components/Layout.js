@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import styled, {ThemeProvider} from 'styled-components'
 
+import '../fontAwesome'
 import GlobalStyles from '../styles/globalStyles'
 import theme from '../styles/theme.js'
 
