@@ -27,10 +27,10 @@ export default class IndexPage extends Component {
               <img src={portrait} className="amanda-portrait" />
 
               <div className="hometext">
-                <span className="homeheading homeheading--inline">Welcome</span>&nbsp;to
-                my official website. There’s lots to dip into, with sneak-peeks
-                at my inspirations as well as information about all my fifteen
-                best-sellers, including&nbsp;
+                <span className="homeheading homeheading--inline">Welcome</span>
+                &nbsp;to my official website. There’s lots to dip into, with
+                sneak-peeks at my inspirations as well as information about all
+                my fifteen best-sellers, including&nbsp;
                 <em>Alice Alone</em>,&nbsp;
                 <em>Relative Love</em> and&nbsp;
                 <em>Life Begins</em>.
@@ -38,9 +38,9 @@ export default class IndexPage extends Component {
                 <br />
                 <div>
                   <strong>
-                    THE BIG NEWS: my latest book&nbsp;
-                    <em>For The Love of a Dog</em> will be published in paperback by Head of
-                    Zeus in May 2019. It is available now to buy, both in
+                    THE BIG NEWS: On Thursday 2nd May 2019 my latest book,&nbsp;
+                    <em>For The Love of a Dog</em>, will be published in
+                    paperback by Head of Zeus. It is currently available in
                     hardback and Kindle e-book.
                   </strong>
                 </div>
