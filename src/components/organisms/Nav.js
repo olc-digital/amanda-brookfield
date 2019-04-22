@@ -8,7 +8,7 @@ import Sketch from '../atoms/Sketch'
 import media from '../../styles/mediaQueries'
 import H2 from '../atoms/H2'
 
-import close from '../../img/close.svg'
+import close from '../../img/cursive-close.svg'
 import menuIcon from '../../img/menu-icon.svg'
 
 const menuWidth = '220px'

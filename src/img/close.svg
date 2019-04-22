@@ -1,3 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16">
-    <path fill="#9C1E14" fill-rule="evenodd" d="M14.443 12.54c-1.464-1.46-3.487-3.458-5.424-5.262 1.554-1.832 3.342-3.46 5.083-5.205C15.287.882 13.626-.781 12.44.41c-1.764 1.774-3.405 3.603-4.987 5.46a81.286 81.286 0 0 0-5.198-4.29C1.01.644-.838 2.483.42 3.43a82.487 82.487 0 0 1 5.411 4.486 55.759 55.759 0 0 0-4.296 6.247c-.847 1.441 1.31 2.625 2.16 1.179 1.2-2.041 2.249-4.221 3.673-6.043a222.837 222.837 0 0 1 5.233 5.084c.73.73 2.571-1.112 1.84-1.842z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>ic/close</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="12.6666667 4.27333333 11.7266667 3.33333333 8 7.06 4.27333333 3.33333333 3.33333333 4.27333333 7.06 8 3.33333333 11.7266667 4.27333333 12.6666667 8 8.94 11.7266667 12.6666667 12.6666667 11.7266667 8.94 8"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile_CallOut" transform="translate(-348.000000, -533.000000)">
+            <g id="ic/close" transform="translate(345.000000, 530.000000)">
+                <g id="close">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Path" fill-rule="nonzero"></g>
+                    <g id="c/grey/0" mask="url(#mask-2)" fill="#FFFFFF">
+                        <rect id="Shape" x="0" y="0" width="16" height="16"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>
