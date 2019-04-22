@@ -72,8 +72,9 @@ collections:
           widget: hidden,
           default: book-page,
         }
+      - {label: Book Id, name: bookId, widget: hidden}
+      - {label: Path, name: path, widget: hidden}
       - {label: Title, name: title, widget: string}
-      - {label: Body, name: body, widget: markdown}
       - {
           label: Reviews,
           name: reviews,
@@ -84,6 +85,7 @@ collections:
               {label: Reviewer, name: reviewer, widget: string},
             ],
         }
+      - {label: Body, name: body, widget: markdown}
   - name: pages
     label: Pages
     files:
