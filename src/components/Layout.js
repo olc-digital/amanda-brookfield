@@ -10,6 +10,7 @@ import PreloadFonts from './PreloadFonts'
 import Nav from './organisms/Nav'
 import Header from './molecules/Header'
 import Footer from './organisms/Footer'
+import Announcement from './molecules/Announcement'
 
 const LayoutGrid = styled.div`
   display: grid;
@@ -33,6 +34,7 @@ const Layout = ({children}) => (
           <Footer />
         </LayoutGrid>
         <GlobalStyles />
+        <Announcement />
       </>
     </ThemeProvider>
   </>

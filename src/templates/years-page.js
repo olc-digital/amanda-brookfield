@@ -1,5 +1,6 @@
 import React from 'react'
 import BlogIndexPage from '../pages/blog'
+import {graphql} from 'gatsby'
 
 const YearRoute = ({data}) => {
   let year

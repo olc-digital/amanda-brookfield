@@ -6,7 +6,6 @@ import Img from '../atoms/Img'
 import SketchButton from '../atoms/SketchButton'
 import H2 from '../atoms/H2'
 import ExternalLink from '../atoms/ExternalLink'
-import Icon from '../atoms/Icon'
 
 import contactImg from '../../img/contact.gif'
 
@@ -24,7 +23,7 @@ const ContactHeading = styled(H2)`
   margin: 32px 0;
 `
 
-const SocialMediaLinks = styled(ExternalLink)`
+const SocialMediaLinks = styled.div`
   margin: 24px 0;
   display: flex;
   justify-content: center;

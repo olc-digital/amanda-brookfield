@@ -10,6 +10,15 @@ public_folder: /img
 display_url: https://www.amandabrookfield.co.uk
 
 collections:
+  - name: other-content
+    label: Other Content
+    folder: src/other-content
+    create: false
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Link, name: link, widget: string}
   - name: blog
     label: Blog
     folder: src/pages/blog
