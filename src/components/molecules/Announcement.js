@@ -7,7 +7,7 @@ const Announcement = () => {
       query Announcement {
         allMarkdownRemark(
           limit: 1
-          filter: {frontmatter: {templateKey: {eq: "announcement"}}}
+          filter: {fileAbsolutePath: {regex: "/(announcement)/"}}
           sort: {order: DESC, fields: [frontmatter___date]}
         ) {
           edges {
@@ -23,7 +23,6 @@ const Announcement = () => {
       }
     `,
   )
-  console.log(allMarkdownRemark)
 
   return <>{allMarkdownRemark.edges[0].node.html}</>
 }
