@@ -75,7 +75,6 @@ const SelectedBooks = styled.div`
     `}
   }
 `
-
 const MobileOnlySketch = styled(Sketch)`
   margin: 48px auto;
   ${media.aboveMobile`
