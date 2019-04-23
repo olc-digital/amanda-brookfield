@@ -1,209 +1,195 @@
-import React, {Component} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
-import {metaDescriptions} from '../data'
-import {OutboundLink} from 'gatsby-plugin-google-analytics'
+import styled from 'styled-components'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-import Sidebar from '../components/Sidebar'
+import H2 from '../components/atoms/H2'
+import H3 from '../components/atoms/H3'
+import Container from '../components/atoms/Container'
+import BookWidget from '../components/molecules/BookWidget'
+import ForTheLoveOfADogHero from '../components/organisms/ForTheLoveOfADogHero'
+import bannerDesktop1x from '../img/home-banner-desktop.jpg'
+import bannerDesktop2x from '../img/home-banner-desktop@2x.jpg'
+import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
+import {crimsonTextFont, kalamFont} from '../styles/mixins'
+import {books} from '../data'
+import FullWidth from '../components/atoms/FullWidth'
+import FeaturedBook from '../components/organisms/FeaturedBook'
+import Sketch from '../components/atoms/Sketch'
+import Page from '../components/atoms/Page'
+import HelmetHelper from '../components/molecules/HelmetHelper'
+import media from '../styles/mediaQueries'
 
-import portrait from '../assets/amanda-portrait.jpg'
-import contentLine from '../assets/contentline.jpg'
-import ftloadcover from '../assets/ftloadcover.jpg'
-import tlccover from '../assets/tlccover.jpg'
-import bikycover from '../assets/bikycover.jpg'
+const AmandaImage = styled.img`
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  height: 280px;
+  max-width: 764px;
+  object-fit: cover;
+  ${media.aboveMobile`
+    height: 220px;
+  `}
+  ${media.aboveContainer`
+    border-radius: 5px;
+  `}
+`
+const WelcomeText = styled.div`
+  max-width: 486px;
+  width: 100%;
+  margin: 48px auto 0;
+  text-align: center;
+  line-height: ${({theme}) => theme.lineHeight};
+`
+const FirstLetter = styled.span`
+  ${crimsonTextFont}
+  font-weight: normal;
+  float: left;
+  font-size: 48px;
+  line-height: 48px;
+  ${media.aboveMobile`
+    transform: translateX(8px);
+  `}
+`
 
-export default class IndexPage extends Component {
+const Scroller = styled(FullWidth)`
+  overflow-x: scroll;
+  margin-bottom: 48px;
+  -webkit-overflow-scrolling: touch;
+`
+const SelectedBooks = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: ${({theme}) => theme.containerWidth};
+  padding: 0 ${({theme}) => theme.gutterSize} 24px;
+  & > * {
+    box-sizing: content-box;
+    margin-right: 30px;
+  }
+  & > *:last-child {
+    margin-right: 0;
+    padding-right: ${({theme}) => theme.gutterSize};
+    ${media.aboveMobile`
+      padding-right: 0;
+    `}
+  }
+`
+const MobileOnlySketch = styled(Sketch)`
+  margin: 48px auto;
+  ${media.aboveMobile`
+    display: none;
+  `}
+`
+
+const AnnouncementTitle = styled.span`
+  ${kalamFont}
+`
+
+const selectedIds = [
+  'relative-love',
+  'a-family-man',
+  'sisters-and-husbands',
+  'life-begins',
+  'the-lover',
+]
+const selectedBooks = Object.values(books).filter(({id}) =>
+  selectedIds.includes(id),
+)
+
+export default class IndexPage extends React.Component {
   render() {
     return (
-      <section className="section">
-        <Helmet>
-          <meta name="description" content={metaDescriptions.home} />
-        </Helmet>
-        <Sidebar openModal={this.props.openModal} />
-        <div className="homecontent">
-          <div className="paddedcontent">
-            <div id="welcomehome">
-              <img src={portrait} className="amanda-portrait" />
-
-              <div className="hometext">
-                <span className="homeheading homeheading--inline">Welcome</span>
-                &nbsp;to my official website. There’s lots to dip into, with
-                sneak-peeks at my inspirations as well as information about all
-                my fifteen best-sellers, including&nbsp;
-                <em>Alice Alone</em>,&nbsp;
-                <em>Relative Love</em> and&nbsp;
-                <em>Life Begins</em>.
-                <br />
-                <br />
-                <div>
-                  <strong>
-                    THE BIG NEWS: On Thursday 2nd May 2019 my latest book,&nbsp;
-                    <em>For The Love of a Dog</em>, will be published in
-                    paperback by Head of Zeus. It is currently available in
-                    hardback and Kindle e-book.
-                  </strong>
-                </div>
-              </div>
+      <Page>
+        <HelmetHelper
+          title="Homepage"
+          content="Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1"
+        />
+        <Container>
+          <FullWidth>
+            <picture>
+              <source
+                srcSet={`${bannerDesktop1x} 1x, ${bannerDesktop2x} 2x, ${bannerDesktop3x} 3x,`}
+              />
+              <AmandaImage
+                src={bannerDesktop1x}
+                alt="Amanda Brookfield Portrait"
+              />
+            </picture>
+          </FullWidth>
+          <WelcomeText>
+            <FirstLetter>W</FirstLetter>
+            {`elcome to my official website. There’s
+            lots to dip into, with sneak-peeks at my inspirations as well as
+            information about all my sixteen best-sellers, including 'Alice
+            Alone', 'Relative Love' and 'Life Begins'.
+            `}
+            {/* <div>I also share my thoughts and a few photos on social media</div>
+            hi
+            <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+            <FontAwesomeIcon icon={['fab', 'twitter']} />
+            <FontAwesomeIcon icon={['fab', 'instagram']} />
+            <H3>The Big News</H3>
+            <div>
+              My latest book For The Love of a Dog will be published in
+              paperback by Head of Zeus in May 2019. It is available now to buy,
+              both in hardback and Kindle e-book.
+            </div> */}
+          </WelcomeText>
+          {/* <div>
+            <AnnouncementTitle>The Big News</AnnouncementTitle>
+            <div>
+              My latest book For The Love of a Dog will be published in
+              paperback by Head of Zeus in May 2019. It is available now to buy,
+              both in hardback and Kindle e-book.
             </div>
-            <div className="contentlines" style={{paddingTop: '35px'}}>
-              <img src={contentLine} />
-            </div>
-            <div id="tlchome" className="homeShowcase">
-              <div>
-                <img
-                  src={ftloadcover}
-                  alt="For the Love of a Dog cover"
-                  style={{paddingRight: '15px'}}
-                />
-                <div
-                  style={{fontSize: 13, width: '200px', margin: '20px auto'}}
-                >
-                  {[
-                    {
-                      copy: 'Addictive...as laughter filled as it is honest.',
-                      saidBy: 'Fiona Walker',
-                    },
-                    {
-                      copy: 'Great artistry and wisdom.',
-                      saidBy: 'Henry Sutton',
-                    },
-                  ].map(({copy, saidBy}) => (
-                    <div key={copy}>
-                      <div className="reviewtext">{copy}</div>
-                      <div className="reviewref">{saidBy}</div>
-                    </div>
-                  ))}
-                </div>
-
-                <div />
-              </div>
-              <div className="hometext">
-                <span className="homeheading">For the Love of a Dog</span>
-                <br />
-                Published in November 2018, <em>For The Love of a Dog</em> is a
-                funny and poignant memoir of emotional meltdown and recovery
-                with the unwitting aid of a golden doodle puppy called Mabel.
-                Following the death of my mother and the end of a post-divorce
-                relationship, my world fell apart and desolation closed in. Talk
-                of getting a puppy was just to cheer myself up. I never thought
-                I would actually go through with it; I was barely capable of
-                looking after myself, let alone a dog…
-                <br />
-                <br />
-                <OutboundLink
-                  href="https://www.instagram.com/amanda_and_mabel_brookfield/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Follow Amanda and Mabel on Instagram
-                </OutboundLink>
-                <div style={{textAlign: 'center', padding: '15px 0 0 0'}}>
-                  <Link
-                    to="/books/for-the-love-of-a-dog"
-                    className="readmore button"
-                  >
-                    Read More
-                  </Link>
-                  <a
-                    href="#"
-                    className="readmore button"
-                    onClick={e => {
-                      this.props.openModal(e, 'ftload')
-                    }}
-                  >
-                    Buy
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="contentlines">
-              <img src={contentLine} />
-            </div>
-            <div id="tlchome" className="homeShowcase">
-              <div>
-                <img
-                  src={tlccover}
-                  alt="The Love Child cover"
-                  style={{paddingRight: '15px'}}
-                />
-              </div>
-              <div className="hometext">
-                <span className="homeheading">The Love Child</span>
-                <br /> Published in Jan 2013,
-                <em>The Love Child</em>&nbsp;is a touching and heartfelt story
-                about discovering what matters most in your life and having the
-                courage to reach for it - not just once, but again and again.
-                <br /> When Janine and Dougie fell in love they thought it would
-                be for ever. Fifteen years later their relationship is well and
-                truly over, their daughter Stevie their one remaining
-                connection...
-                <div style={{textAlign: 'center', padding: '15px 0 0 0'}}>
-                  <Link to="/books/the-love-child" className="readmore button">
-                    Read More
-                  </Link>
-                  <a
-                    href="#"
-                    className="buybutton button"
-                    onClick={e => {
-                      this.props.openModal(e, 'tlc')
-                    }}
-                  >
-                    Buy
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="contentlines">
-              <img src={contentLine} />
-            </div>
-            <div id="bikyhome" className="homeShowcase">
-              <div>
-                <img
-                  src={bikycover}
-                  alt="Before I Knew You cover"
-                  style={{paddingRight: '15px'}}
-                />
-              </div>
-              <div className="hometext">
-                <span className="homeheading">Before I Knew You</span>
-                <br /> Released in March 2011,
-                <em>Before I Knew You</em> tells the unsettling story of what
-                happens when two very different families swap houses across the
-                Atlantic one August. Strangers when they borrow each other's
-                respective homes, their lives then start to intertwine in
-                unexpected ways, throwing them at the mercy of their pasts and
-                each other.
-                <div style={{textAlign: 'center', padding: '15px 0 0 0'}}>
-                  <Link
-                    to="/books/before-i-knew-you"
-                    className="readmore button"
-                  >
-                    Read More
-                  </Link>
-                  <a
-                    href="#"
-                    className="buybutton button"
-                    onClick={e => {
-                      this.props.openModal(e, 'biky')
-                    }}
-                  >
-                    Buy
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          </div> */}
+          <MobileOnlySketch type="books" />
+          <H2 margin>My Best-Sellers</H2>
+          <Scroller>
+            <SelectedBooks>
+              {selectedBooks.map(book => (
+                <BookWidget key={book.id} {...book} />
+              ))}
+            </SelectedBooks>
+          </Scroller>
+        </Container>
+        <ForTheLoveOfADogHero />
+        <Container>
+          <MobileOnlySketch type="newspaper" />
+          <H2 margin>Latest Releases</H2>
+          <FeaturedBook bookId="for-the-love-of-a-dog">
+            {`Published in November 2018, 'For the Love of a Dog' is a funny and
+            poignant memoir of emotional meltdown and recovery with the
+            unwitting aid of a Golden Doodle puppy called Mabel. Following the
+            death of my mother and the end of a post-divorce relationship, my
+            world fell apart and desolation closed in. Talk of getting a puppy
+            was just to cheer myself up. I never thought I would actually go
+            through with it; I was barely capable of looking after myself, let
+            alone a dog…`}
+          </FeaturedBook>
+          <FeaturedBook bookId="the-love-child">
+            {`Published in Jan 2013, 'The Love Child' is a touching and heartfelt
+            story about discovering what matters most in your life and having
+            the courage to reach for it - not just once, but again and again.`}
+            <br />
+            {`When Janine and Dougie fell in love they thought it would be for
+            ever. Fifteen years later their relationship is well and truly over,
+            their daughter Stevie their one remaining connection...`}
+          </FeaturedBook>
+          <FeaturedBook bookId="before-i-knew-you">
+            {`Released in March 2011, 'Before I Knew You' tells the unsettling story
+            of what happens when two very different families swap houses across
+            the Atlantic one August. Strangers when they borrow each other's
+            respective homes, their lives then start to intertwine in unexpected
+            ways, throwing them at the mercy of their pasts and each other.`}
+          </FeaturedBook>
+        </Container>
+      </Page>
     )
   }
 }
 
 IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
+  data: PropTypes.shape({}),
 }

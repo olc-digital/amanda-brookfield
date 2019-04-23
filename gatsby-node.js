@@ -1,13 +1,17 @@
 const _ = require('lodash')
 const path = require('path')
 const {createFilePath} = require('gatsby-source-filesystem')
+const {fmImagesToRelative} = require('gatsby-remark-relative-images')
 
-exports.createPages = ({boundActionCreators, graphql}) => {
-  const {createPage} = boundActionCreators
+exports.createPages = ({actions, graphql}) => {
+  const {createPage} = actions
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        limit: 1000
+        filter: {fileAbsolutePath: {regex: "/(pages)/"}}
+      ) {
         edges {
           node {
             id
@@ -37,7 +41,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`,
         ),
         // additional data can be passed via context
         context: {
@@ -63,22 +67,23 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     years = _.uniq(years)
 
     // Make tag pages
-    // tags.forEach(tag => {
-    //   const tagPath = `/blog/tags/${_.kebabCase(tag)}/`
+    tags.forEach(tag => {
+      const tagPath = `/blog/tags/${_.kebabCase(tag)}/`
 
-    //   createPage({
-    //     path: tagPath,
-    //     component: path.resolve(`src/templates/tags.js`),
-    //     context: {
-    //       tag,
-    //     },
-    //   })
-    // })
+      createPage({
+        path: tagPath,
+        component: path.resolve(`src/templates/tags.js`),
+        context: {
+          tag,
+        },
+      })
+    })
+
     years.forEach(year => {
       const yearPath = `/blog/years/${year}/`
       createPage({
         path: yearPath,
-        component: path.resolve(`src/templates/years.js`),
+        component: path.resolve(`src/templates/years-page.js`),
         context: {
           year,
           yearGlob: `${year}*`,
@@ -88,8 +93,9 @@ exports.createPages = ({boundActionCreators, graphql}) => {
   })
 }
 
-exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
-  const {createNodeField} = boundActionCreators
+exports.onCreateNode = ({node, actions, getNode}) => {
+  const {createNodeField} = actions
+  fmImagesToRelative(node) // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({node, getNode})

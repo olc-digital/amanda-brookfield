@@ -1,60 +1,64 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
-import BlogPostPreview from '../../components/BlogPostPreview'
-import {metaDescriptions} from '../../data'
+import {graphql} from 'gatsby'
+import styled from 'styled-components'
 
-export default class IndexPage extends React.Component {
-  render() {
-    const {data} = this.props
-    const {edges: posts, group: years} = data.allMarkdownRemark
-    return (
-      <section className="blog-container">
-        <Helmet>
-          <meta name="description" content={metaDescriptions.blog} />
-        </Helmet>
-        <aside className="blog-sidebar">
-          <h2>Recent Posts</h2>
-          <ul>
-            {posts.slice(0, 5).map(({node: post}) => (
-              <li key={post.id}>
-                <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-              </li>
+import HelmetHelper from '../../components/molecules/HelmetHelper'
+import MobileSketchHeading from '../../components/molecules/MobileSketchHeading'
+import Page from '../../components/atoms/Page'
+import Container from '../../components/atoms/Container'
+import BlogSidebar from '../../components/organisms/BlogSidebar'
+import BlogListItem from '../../components/molecules/BlogListItem'
+import {hideBelowMobile} from '../../styles/mixins'
+
+const BlogLayout = styled.div`
+  display: flex;
+`
+
+const BlogIndexPage = ({data, selectedYear}) => {
+  const {edges: posts, group: years} = data.allMarkdownRemark
+
+  return (
+    <Page>
+      <HelmetHelper
+        title="Blog"
+        description="My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives."
+      />
+      <Container narrow>
+        <MobileSketchHeading title="Blog" sketchType="blog" />
+        <BlogLayout>
+          <BlogSidebar
+            css={hideBelowMobile}
+            posts={posts}
+            years={years}
+            selectedYear={selectedYear}
+          />
+          <div>
+            {posts.map(({node: post}) => (
+              <BlogListItem
+                key={post.id}
+                id={post.id}
+                to={post.fields.slug}
+                title={post.frontmatter.title}
+                excerpt={post.excerpt}
+                date={post.frontmatter.date}
+              />
             ))}
-          </ul>
-          <h2>Archive</h2>
-          <ul>
-            {years
-              .map(({fieldValue: year, totalCount}, i) => {
-                return (
-                  <li key={i}>
-                    <Link to={`/blog/years/${year}/`}>
-                      {year} ({totalCount})
-                    </Link>
-                  </li>
-                )
-              })
-              .reverse()}
-          </ul>
-        </aside>
-        <div>
-          {posts.map(({node: post}) => (
-            <BlogPostPreview key={post.id} {...post} />
-          ))}
-        </div>
-      </section>
-    )
-  }
+          </div>
+        </BlogLayout>
+      </Container>
+    </Page>
+  )
 }
 
-IndexPage.propTypes = {
+BlogIndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
     }),
   }),
 }
+export default BlogIndexPage
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -68,7 +72,7 @@ export const pageQuery = graphql`
       }
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 200)
           id
           fields {
             slug
@@ -76,7 +80,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "dddd Do MMMM, YYYY")
+            date(formatString: "ddd Do MMM, YYYY")
           }
         }
       }

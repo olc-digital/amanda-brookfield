@@ -1,11 +1,12 @@
 {
-  "eslintIntegration": true,
+  "arrowParens": "avoid",
   "bracketSpacing": false,
+  "jsxBracketSameLine": false,
   "printWidth": 80,
+  "proseWrap": "always",
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
-  "trailingComma": "es5",
-  "useTabs": false,
-  "previewAutoUpdate": false
+  "trailingComma": "all",
+  "useTabs": false
 }

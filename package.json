@@ -1,35 +1,39 @@
 {
   "name": "amanda-brookfield",
   "description": "Website of the author Amanda Brookfield",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "author": "Christian Allen",
   "dependencies": {
-    "dotenv": "^6.0.0",
-    "emotion": "^9.2.6",
-    "emotion-server": "^9.2.6",
-    "gatsby": "^1.9.213",
-    "gatsby-link": "^1.6.37",
-    "gatsby-plugin-emotion": "^1.1.17",
-    "gatsby-plugin-google-analytics": "^1.0.31",
-    "gatsby-plugin-netlify": "^1.0.19",
-    "gatsby-plugin-netlify-cms": "^1.0.9",
-    "gatsby-plugin-react-helmet": "^2.0.5",
-    "gatsby-plugin-react-next": "^1.0.11",
-    "gatsby-plugin-sharp": "^1.6.34",
-    "gatsby-remark-images": "^1.5.50",
-    "gatsby-source-filesystem": "^1.5.23",
-    "gatsby-transformer-remark": "^1.7.33",
-    "gatsby-transformer-sharp": "^1.6.21",
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "babel-plugin-styled-components": "^1.8.0",
+    "gatsby": "^2.0.0",
+    "gatsby-image": "^2.0.10",
+    "gatsby-plugin-layout": "^1.0.10",
+    "gatsby-plugin-netlify": "^2.0.0",
+    "gatsby-plugin-netlify-cms": "^3.0.0",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.0.5",
+    "gatsby-plugin-styled-components": "^3.0.3",
+    "gatsby-remark-images": "^2.0.1",
+    "gatsby-remark-relative-images": "^0.2.0",
+    "gatsby-source-filesystem": "^2.0.1",
+    "gatsby-transformer-remark": "^2.1.1",
+    "gatsby-transformer-sharp": "^2.1.1",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
-    "netlify-cms": "^1.7.0",
-    "netlify-lambda": "^0.4.0",
+    "netlify-cms": "^2.1.1",
+    "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
-    "react": "^16.4.0",
-    "react-emotion": "^9.2.6",
-    "react-facebook": "^5.0.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
-    "react-twitter-widgets": "^1.7.1",
+    "reading-time": "^1.1.3",
+    "styled-components": "^4.1.1",
+    "styled-normalize": "^8.0.4",
+    "titlecase": "^1.1.2",
     "twitter": "^1.7.1",
     "uuid": "^3.2.1"
   },
@@ -40,19 +44,40 @@
   "main": "n/a",
   "scripts": {
     "start": "npm run develop",
-    "build": "gatsby build",
+    "clean": "rimraf .cache public",
+    "build": "npm run clean && gatsby build",
     "build-functions": "netlify-lambda build ./src/functions",
-    "develop": "gatsby develop",
+    "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "serve-functions": "netlify-lambda serve functions-src",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "lint": "eslint src",
+    "format": "npm run prettier -- --write",
+    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
+    "validate": "npm run lint && npm run prettier -- --list-different",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ],
+    "*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "devDependencies": {
-    "@cherihung/eslint-config-gatsby": "^1.0.7",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
+    "eslint": "^5.5.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-react": "^7.8.2",
-    "prettier": "^1.7.4"
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.7.4",
+    "rimraf": "^2.6.2"
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import {Link, graphql} from 'gatsby'
 
 class TagRoute extends React.Component {
   render() {
@@ -12,8 +12,7 @@ class TagRoute extends React.Component {
         </Link>
       </li>
     ))
-    const tag = this.props.pathContext.tag
-    console.log(this.props.pathContext)
+    const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount} post${
@@ -44,29 +43,29 @@ class TagRoute extends React.Component {
 
 export default TagRoute
 
-// export const tagPageQuery = graphql`
-//   query TagPage($tag: String) {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     allMarkdownRemark(
-//       limit: 1000
-//       sort: {fields: [frontmatter___date], order: DESC}
-//       filter: {frontmatter: {tags: {in: [$tag]}}}
-//     ) {
-//       totalCount
-//       edges {
-//         node {
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const tagPageQuery = graphql`
+  query TagPage($tag: String) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(
+      limit: 1000
+      sort: {fields: [frontmatter___date], order: DESC}
+      filter: {frontmatter: {tags: {in: [$tag]}}}
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`

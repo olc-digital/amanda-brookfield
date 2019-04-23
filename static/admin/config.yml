@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: v2
 
-#publish_mode: editorial_workflow  #use for adding full preview
+publish_mode: editorial_workflow
 
 media_folder: static/img
 public_folder: /img
@@ -10,23 +10,110 @@ public_folder: /img
 display_url: https://www.amandabrookfield.co.uk
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'src/pages/blog'
+  - name: announcement
+    label: Announcement
+    folder: src/announcement
+    create: false
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Display Announcement?, name: isEnabled, widget: boolean}
+      - {
+          label: Button Text (optional),
+          name: buttonText,
+          widget: string,
+          required: false,
+        }
+      - {
+          label: Button Link (optional),
+          name: buttonLink,
+          widget: string,
+          required: false,
+        }
+  - name: blog
+    label: Blog
+    folder: src/pages/blog
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'blog-post',
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: blog-post,
         }
-      - {label: 'Title', name: 'title', widget: 'string'}
-      - {label: 'Publish Date', name: 'date', widget: 'datetime'}
-      # - {label: "Description", name: "description", widget: "text"}
-      - {label: 'Body', name: 'body', widget: 'markdown'}
-      - {label: 'Tags', name: 'tags', widget: 'list', required: false}
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Tags, name: tags, widget: list, required: false}
+  - name: articles
+    label: Articles
+    folder: src/pages/articles
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: article-page,
+        }
+      - {label: Title, name: title, widget: string}
+      - {label: Body, name: body, widget: markdown}
+  - name: books
+    label: Books
+    folder: src/pages/books
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: book-page,
+        }
+      - {label: Book Id, name: bookId, widget: hidden}
+      - {label: Path, name: path, widget: hidden}
+      - {label: Title, name: title, widget: string}
+      - {label: Body, name: body, widget: markdown}
+      - {
+          label: Reviews,
+          name: reviews,
+          widget: list,
+          fields:
+            [
+              {label: Text, name: text, widget: markdown},
+              {label: Reviewer, name: reviewer, widget: string},
+            ],
+        }
+  - name: pages
+    label: Pages
+    files:
+      - file: src/pages/events/index.md
+        label: Events
+        name: events
+        fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: events-page,
+            }
+          - {
+              label: Events,
+              name: events,
+              widget: list,
+              fields:
+                [
+                  {label: Title, name: title, widget: string},
+                  {label: Date, name: date, widget: datetime},
+                  {
+                    label: Description,
+                    name: description,
+                    widget: text,
+                    required: false,
+                  },
+                ],
+            }
   # - name: "pages"
   #   label: "Pages"
   #   files:
@@ -51,4 +138,3 @@ collections:
   #         - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
   #         - {label: Full_image, name: full_image, widget: image}
   #         - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
-

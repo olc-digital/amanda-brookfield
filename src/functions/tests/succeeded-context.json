@@ -1,21 +1,17 @@
 {
   "callbackWaitsForEmptyEventLoop": true,
-  "logGroupName":
-    "/aws/lambda/d48b3508c63bd95546340339eac8ae4fd528b54536a3b6f8a71bb4b0a3402f49",
+  "logGroupName": "/aws/lambda/d48b3508c63bd95546340339eac8ae4fd528b54536a3b6f8a71bb4b0a3402f49",
   "logStreamName": "2018/10/04/[$LATEST]f9a9f032142c40ecb2696f451cc8403a",
-  "functionName":
-    "d48b3508c63bd95546340339eac8ae4fd528b54536a3b6f8a71bb4b0a3402f49",
+  "functionName": "d48b3508c63bd95546340339eac8ae4fd528b54536a3b6f8a71bb4b0a3402f49",
   "memoryLimitInMB": "128",
   "functionVersion": "$LATEST",
   "clientContext": {
     "identity": {
       "url": "https://develop--amandabrookfield.netlify.com/.netlify/identity",
-      "token":
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mzg2NjgzNTAsInN1YiI6IjAifQ.Mtnq4pjTZ9tlpbLYDPPdMSpbac1dEI9p_SCiCR3mVjM"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mzg2NjgzNTAsInN1YiI6IjAifQ.Mtnq4pjTZ9tlpbLYDPPdMSpbac1dEI9p_SCiCR3mVjM"
     }
   },
   "invokeid": "5c7ccfdc-c7ed-11e8-b21a-717390b97b29",
   "awsRequestId": "5c7ccfdc-c7ed-11e8-b21a-717390b97b29",
-  "invokedFunctionArn":
-    "arn:aws:lambda:us-east-1:812122390002:function:d48b3508c63bd95546340339eac8ae4fd528b54536a3b6f8a71bb4b0a3402f49"
+  "invokedFunctionArn": "arn:aws:lambda:us-east-1:812122390002:function:d48b3508c63bd95546340339eac8ae4fd528b54536a3b6f8a71bb4b0a3402f49"
 }
