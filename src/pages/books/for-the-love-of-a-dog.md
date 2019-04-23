@@ -1,5 +1,5 @@
 ---
-templateKey: 'book-page'
+templateKey: book-page
 bookId: for-the-love-of-a-dog
 path: /books/for-the-love-of-a-dog
 title: For the Love of a Dog
@@ -18,13 +18,12 @@ reviews:
       means to get your life on track.This is a book that’ll teach you to sit,
       be still, and listen to yourself.
 ---
-
 After the death of her mother and the end of a new relationship leave her
-heartbroken, novelist Amanda Brookfield finds her oncesecure world imploding. As
+heartbroken, novelist Amanda Brookfield finds her once secure world imploding. As
 despair deepens, she latches onto the idea of getting a puppy just to revive her
 optimistic spirit.
 
-Aware that her lifestyle will not suit becoming a dog-ownerand warned by friends
+Aware that her lifestyle will not suit becoming a dog-owner and warned by friends
 not to give up her freedom, Amanda nonetheless cannot resist Mabel, an eight
 week old Golden Doodle. Arming herself with an arsenal of equipment, she soon
 learns that there are no short-cuts to training and caring for a dog. In the
@@ -38,3 +37,5 @@ throughout, the innocent architect of rebuilding her owner’s shattered
 self-belief. Mabel’s own journey is equally captivating, as she blossoms into a
 mischievous, endearing head-turner of a companion – as affectionate as she is
 glorious.
+
+![For the Love of a Dog - paperback](/img/screenshot-2019-04-23-at-08.23.16.png "For the Love of a Dog - paperback")
