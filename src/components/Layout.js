@@ -11,6 +11,9 @@ import Nav from './organisms/Nav'
 import Header from './molecules/Header'
 import Footer from './organisms/Footer'
 import Announcement from './molecules/Announcement'
+import favicon16 from '../img/favicons/favicon-16x16.png'
+import favicon32 from '../img/favicons/favicon-32x32.png'
+import favicon64 from '../img/favicons/favicon-64x64.png'
 
 const LayoutGrid = styled.div`
   display: grid;
@@ -20,12 +23,16 @@ const LayoutGrid = styled.div`
     width: 100vw;
   }
 `
-
 const Layout = ({children}) => (
   <>
     <ThemeProvider theme={theme}>
       <>
-        <Helmet title="Amanda Brookfield | Best-Selling Novelist" />
+        <Helmet>
+          <title>Amanda Brookfield | Best-Selling Novelist</title>
+          <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
+          <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+          <link rel="shortcut icon" type="image/png" href={favicon64} />
+        </Helmet>
         <PreloadFonts />
         <LayoutGrid>
           <Header />
