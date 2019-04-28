@@ -8,7 +8,6 @@ const map = {
   author: 1,
   blog: 2,
   events: 3,
-  newspaper: 4,
 }
 const Sketch = styled.div`
   width: 92px;

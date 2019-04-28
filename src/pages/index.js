@@ -1,17 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 import H2 from '../components/atoms/H2'
-import H3 from '../components/atoms/H3'
+import SocialMediaLinks from '../components/molecules/SocialMediaLinks'
 import Container from '../components/atoms/Container'
 import BookWidget from '../components/molecules/BookWidget'
 import ForTheLoveOfADogHero from '../components/organisms/ForTheLoveOfADogHero'
 import bannerDesktop1x from '../img/home-banner-desktop.jpg'
 import bannerDesktop2x from '../img/home-banner-desktop@2x.jpg'
 import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
-import {crimsonTextFont, kalamFont} from '../styles/mixins'
+import {crimsonTextFont} from '../styles/mixins'
 import {books} from '../data'
 import FullWidth from '../components/atoms/FullWidth'
 import FeaturedBook from '../components/organisms/FeaturedBook'
@@ -38,7 +37,7 @@ const AmandaImage = styled.img`
 const WelcomeText = styled.div`
   max-width: 486px;
   width: 100%;
-  margin: 48px auto 0;
+  margin: 48px auto;
   text-align: center;
   line-height: ${({theme}) => theme.lineHeight};
 `
@@ -82,10 +81,6 @@ const MobileOnlySketch = styled(Sketch)`
   `}
 `
 
-const AnnouncementTitle = styled.span`
-  ${kalamFont}
-`
-
 const selectedIds = [
   'relative-love',
   'a-family-man',
@@ -124,26 +119,8 @@ export default class IndexPage extends React.Component {
             information about all my sixteen best-sellers, including 'Alice
             Alone', 'Relative Love' and 'Life Begins'.
             `}
-            {/* <div>I also share my thoughts and a few photos on social media</div>
-            hi
-            <FontAwesomeIcon icon={['fab', 'facebook-f']} />
-            <FontAwesomeIcon icon={['fab', 'twitter']} />
-            <FontAwesomeIcon icon={['fab', 'instagram']} />
-            <H3>The Big News</H3>
-            <div>
-              My latest book For The Love of a Dog will be published in
-              paperback by Head of Zeus in May 2019. It is available now to buy,
-              both in hardback and Kindle e-book.
-            </div> */}
           </WelcomeText>
-          {/* <div>
-            <AnnouncementTitle>The Big News</AnnouncementTitle>
-            <div>
-              My latest book For The Love of a Dog will be published in
-              paperback by Head of Zeus in May 2019. It is available now to buy,
-              both in hardback and Kindle e-book.
-            </div>
-          </div> */}
+          <SocialMediaLinks />
           <MobileOnlySketch type="books" />
           <H2 margin>My Best-Sellers</H2>
           <Scroller>
@@ -156,7 +133,6 @@ export default class IndexPage extends React.Component {
         </Container>
         <ForTheLoveOfADogHero />
         <Container>
-          <MobileOnlySketch type="newspaper" />
           <H2 margin>Latest Releases</H2>
           <FeaturedBook bookId="for-the-love-of-a-dog">
             {`Published in November 2018, 'For the Love of a Dog' is a funny and
