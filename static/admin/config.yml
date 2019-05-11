@@ -1,6 +1,12 @@
 backend:
   name: git-gateway
   branch: master
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
 
 # If we use editorial_workflow, we cant have autotweet.
 # This is because it creates a PR instead of committing directly to master so we cant read the commit message
