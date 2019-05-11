@@ -22,7 +22,7 @@ const BlogIndexPage = ({data, selectedYear}) => {
     <Page>
       <HelmetHelper
         title="Blog"
-        description="My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives."
+        metaDescription="My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives."
       />
       <Container narrow>
         <MobileSketchHeading title="Blog" sketchType="blog" />

@@ -98,7 +98,7 @@ export default class IndexPage extends React.Component {
       <Page>
         <HelmetHelper
           title="Homepage"
-          content="Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1"
+          metaDescription="Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1"
         />
         <Container>
           <FullWidth>

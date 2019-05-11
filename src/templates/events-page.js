@@ -22,7 +22,7 @@ const EventsPageTemplate = ({events}) => {
     <Page>
       <HelmetHelper
         title="Events"
-        content="Get up-to-date news of my latest book events and public appearances. Come and meet me and my amazing dog, Mabel, for signings of my new memoir bestseller ‘For the Love of a Dog.’"
+        metaDescription="Get up-to-date news of my latest book events and public appearances. Come and meet me and my amazing dog, Mabel, for signings of my new memoir bestseller ‘For the Love of a Dog.’"
       />
       <Container narrow>
         <MobileSketchHeading title="Events" sketchType="events" />
