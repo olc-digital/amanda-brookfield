@@ -48,7 +48,7 @@ const BlogPost = ({data}) => {
       helmet={
         <HelmetHelper
           title={post.frontmatter.title}
-          description={post.frontmatter.description}
+          metaDescription={post.frontmatter.description}
         />
       }
       title={post.frontmatter.title}

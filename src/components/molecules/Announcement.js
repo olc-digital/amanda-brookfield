@@ -58,8 +58,6 @@ const ButtonWrapper = styled.div`
 `
 
 const Announcement = () => {
-  const [isVisible, setVisible] = useState(true)
-
   const {
     allMarkdownRemark: {
       edges: {
@@ -93,6 +91,13 @@ const Announcement = () => {
     html,
     frontmatter: {title, buttonLink, buttonText, isEnabled},
   } = announcement
+
+  const announcementString = JSON.stringify(announcement)
+  const existingAnnouncement = sessionStorage.getItem('announcement')
+  const isNewAnnouncement = announcementString !== existingAnnouncement
+  sessionStorage.setItem('announcement', announcementString)
+
+  const [isVisible, setVisible] = useState(isNewAnnouncement)
 
   if (!isEnabled || !isVisible) {
     return null

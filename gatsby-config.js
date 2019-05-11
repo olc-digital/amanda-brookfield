@@ -4,6 +4,16 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-37149508-1',
+        head: false,
+        anonymize: true,
+        respectDNT: false,
+        exclude: ['/admin/**'],
+      },
+    },
     'gatsby-plugin-styled-components',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support

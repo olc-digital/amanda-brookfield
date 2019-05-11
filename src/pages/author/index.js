@@ -85,7 +85,7 @@ const AuthorPage = () => {
     <Page>
       <HelmetHelper
         title="Author"
-        content="Read about my personal life-story and how I became a bestselling Penguin novelist. Discover the truth behind my literary inspirations and my private fears. Learn some secret writing tips."
+        metaDescription="Read about my personal life-story and how I became a bestselling Penguin novelist. Discover the truth behind my literary inspirations and my private fears. Learn some secret writing tips."
       />
       <Container narrow>
         <MobileSketchHeading title="Author" sketchType="author" />

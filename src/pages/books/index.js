@@ -79,7 +79,7 @@ export default class BooksPageQuery extends React.Component {
       <Page>
         <HelmetHelper
           title="Books"
-          description="My gallery of bestselling women’s fiction gives plot out-lines that will satisfy readers looking for romantic, realistic, heart-rending stories about love, loss, family secrets and hope."
+          metaDescription="My gallery of bestselling women’s fiction gives plot out-lines that will satisfy readers looking for romantic, realistic, heart-rending stories about love, loss, family secrets and hope."
         />
         <Container>
           <MobileSketchHeading title="Books" sketchType="books" />
