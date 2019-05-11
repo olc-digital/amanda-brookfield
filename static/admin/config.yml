@@ -2,7 +2,10 @@ backend:
   name: git-gateway
   branch: master
 
-publish_mode: editorial_workflow
+# If we use editorial_workflow, we cant have autotweet.
+# This is because it creates a PR instead of committing directly to master so we cant read the commit message
+
+# publish_mode: editorial_workflow
 
 media_folder: static/img
 public_folder: /img
