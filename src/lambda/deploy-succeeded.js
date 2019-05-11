@@ -22,7 +22,8 @@ const client = new Twitter({
   access_token_secret: TWITTER_ACCESS_TOKEN_SECRET,
 })
 
-exports.handler = async (event, context, callback) => {
+//eslint-disable-next-line no-unused-vars
+exports.handler = async (event, context) => {
   // This is triggered by deploy-succeeded event.  file must be called 'deploy-succeeded.js'
   // Then get data from JSON.parse(event.body).payload
   // Regular web-triggered functions get data from JSON.parse(event.body)
@@ -32,28 +33,32 @@ exports.handler = async (event, context, callback) => {
     console.log('CONTEXT:', context)
     console.log('TITLE:', title)
     if (
-      state !== stateCondition ||
-      context !== contextCondition ||
-      !title.startsWith(titlePrefixCondition)
+      state === stateCondition &&
+      context === contextCondition &&
+      typeof title === 'string' &&
+      title.startsWith(titlePrefixCondition)
     ) {
-      console.log('No new blogpost detected')
-      return callback(null, {
-        statusCode: 200,
-        body: `Non blogpost-ready call complete`,
+      console.log('New blogpost detected - Posting to twitter')
+      const slug = title.substring(
+        title.indexOf('“') + 1,
+        title.lastIndexOf('”'),
+      )
+      const href = `${urlPrefix}/${slug}`
+      await client.post('statuses/update', {
+        status: `${tweetCopy} ${href}`,
       })
+      return {
+        statusCode: 200,
+        body: `Tweeted Successfully`,
+      }
     }
-    console.log('New blogpost detected - Posting to twitter')
-    const slug = title.substring(title.indexOf('“') + 1, title.lastIndexOf('”'))
-    const href = `${urlPrefix}/${slug}`
-    await client.post('statuses/update', {
-      status: `${tweetCopy} ${href}`,
-    })
-    callback(null, {
+    console.log('No new blogpost detected')
+    return {
       statusCode: 200,
-      body: `Tweeted Successfully`,
-    })
+      body: `Non blogpost-ready call complete`,
+    }
   } catch (err) {
     console.log(err)
-    callback(err)
+    throw err
   }
 }
