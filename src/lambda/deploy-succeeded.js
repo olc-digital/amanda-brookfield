@@ -29,6 +29,7 @@ exports.handler = async (event, context) => {
   // Regular web-triggered functions get data from JSON.parse(event.body)
   try {
     const {state, context, title} = JSON.parse(event.body).payload
+    console.log('PAYLOAD:', JSON.stringify(JSON.parse(event.body).payload))
     console.log('STATE:', state)
     console.log('CONTEXT:', context)
     console.log('TITLE:', title)
