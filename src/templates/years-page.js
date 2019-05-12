@@ -23,7 +23,7 @@ export const yearPageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 1000
-      filter: {frontmatter: {date: {glob: $yearGlob}}}
+      filter: {fields: {year: {glob: $yearGlob}}}
     ) {
       group(field: fields___year) {
         fieldValue
