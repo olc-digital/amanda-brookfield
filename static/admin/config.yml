@@ -94,7 +94,12 @@ collections:
               fields:
                 [
                   {label: Title, name: title, widget: string},
-                  {label: Date, name: date, widget: date},
+                  {
+                    label: Date,
+                    name: formattedDate,
+                    widget: date,
+                    format: 'dddd, DD MMMM YYYY',
+                  },
                   {
                     label: "Time [eg '7pm']",
                     name: time,
