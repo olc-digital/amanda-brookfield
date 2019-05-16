@@ -42,7 +42,7 @@ const ReviewItemsWrapper = styled.div`
   `}
 `
 
-const BookPageTemplate = ({
+export const BookPageTemplate = ({
   title,
   bookId,
   content,
@@ -52,7 +52,7 @@ const BookPageTemplate = ({
   const [mobileReviewsVisible, setMobileReviewsVisible] = useState(false)
 
   const PageContent = contentComponent || Content
-
+  console.log('rr>', reviews)
   return (
     <Container narrow>
       <BackButton />

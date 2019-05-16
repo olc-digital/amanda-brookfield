@@ -17,7 +17,8 @@ const Event = styled.div`
   }
 `
 
-const EventsPageTemplate = ({events}) => {
+export const EventsPageTemplate = ({events}) => {
+  console.log('123', events)
   return (
     <Page>
       <HelmetHelper
@@ -29,7 +30,15 @@ const EventsPageTemplate = ({events}) => {
         {events.map(event => (
           <Event key={event.title}>
             <H3>{event.title}</H3>
-            <SubTitle css={'margin: 8px 0;'}>{event.date}</SubTitle>
+            <SubTitle css={'margin: 8px 0;'}>
+              {event.date &&
+                event.date.toLocaleDateString('default', {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: '2-digit',
+                })}
+            </SubTitle>
             <div>{event.description}</div>
           </Event>
         ))}

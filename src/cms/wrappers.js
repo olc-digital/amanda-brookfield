@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from '../components/Layout'
 import {StyleSheetManager} from 'styled-components'
 
 function StyledSheets({children}) {
@@ -13,7 +14,7 @@ function StyledSheets({children}) {
 }
 
 //eslint-disable-next-line react/display-name
-const withStyledSheets = Component => props => {
+export const withStyledSheets = Component => props => {
   return (
     <StyledSheets>
       <Component {...props} />
@@ -21,4 +22,14 @@ const withStyledSheets = Component => props => {
   )
 }
 
-export default withStyledSheets
+export const withLayout = Component =>
+  withStyledSheets(props => (
+    <Layout cms>
+      <Component {...props} />
+    </Layout>
+  ))
+
+//https://github.com/netlify/netlify-cms/issues/2026
+//https://github.com/gatsbyjs/gatsby/pull/13036
+//https://www.npmjs.com/package/gatsby-plugin-netlify-cms
+//https://www.npmjs.com/package/netlify-cms-app
