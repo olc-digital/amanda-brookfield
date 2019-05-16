@@ -97,8 +97,14 @@ collections:
                   {
                     label: Date,
                     name: date,
-                    widget: datetime,
+                    widget: date,
                     format: 'dddd, DD MMMM YYYY',
+                  },
+                  {
+                    label: "Time [eg '7pm']",
+                    name: time,
+                    widget: string,
+                    required: false,
                   },
                   {
                     label: Description,

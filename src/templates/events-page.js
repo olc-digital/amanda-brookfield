@@ -38,6 +38,7 @@ export const EventsPageTemplate = ({events}) => {
                     day: '2-digit',
                   })
                 : event.date}
+              {event.time && `, ${event.time}`}
             </SubTitle>
             <div>{event.description}</div>
           </Event>

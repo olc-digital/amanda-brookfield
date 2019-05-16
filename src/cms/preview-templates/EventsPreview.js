@@ -8,6 +8,7 @@ const BookPreview = ({widgetsFor}) => (
       title: event.getIn(['data', 'title']),
       date: event.getIn(['data', 'date']),
       description: event.getIn(['data', 'description']),
+      time: event.getIn(['data', 'time']),
     }))}
   />
 )
