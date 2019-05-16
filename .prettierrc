@@ -3,7 +3,7 @@
   "bracketSpacing": false,
   "jsxBracketSameLine": false,
   "printWidth": 80,
-  "proseWrap": "always",
+  "proseWrap": "preserve",
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
