@@ -9,7 +9,7 @@ const ArticlePagePreview = ({entry, widgetFor}) => {
       content={widgetFor('body')}
       buttonLink={entry.getIn(['data', 'buttonLink'])}
       buttonText={entry.getIn(['data', 'buttonText'])}
-      isHidden={entry.getIn(['data', 'isHidden'])} //NB: the prop is not passed this way in the real application
+      isDisabled={entry.getIn(['data', 'isDisabled'])} //NB: the prop is not passed this way in the real application
     />
   )
 }

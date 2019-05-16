@@ -29,20 +29,20 @@ const AnnouncementContainer = styled(Container)`
   padding-bottom: 24px;
   /* pseudo element below is just for cms preview  */
   &:after {
-    content: 'Announcement hidden';
+    content: 'Announcement disabled';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
     justify-content: center;
     align-items: center;
     font-size: 30px;
     color: #333;
     display: none;
-    ${({isHidden}) => isHidden && 'display: flex;'}
+    ${({isDisabled}) => isDisabled && 'display: flex;'}
   }
 `
 const StyledContent = styled.div`
@@ -92,12 +92,12 @@ export const AnnouncementTemplate = ({
   buttonLink,
   buttonText,
   contentComponent,
-  isHidden = false, //this prop is just for cms
+  isDisabled = false, //this prop is just for cms
 }) => {
   const AnnouncementContent = contentComponent || Content
   return (
     <BackDrop>
-      <AnnouncementContainer isHidden={isHidden}>
+      <AnnouncementContainer isDisabled={isDisabled}>
         <div css="position: relative;">
           <CloseIcon src={close} onClick={hide} />
           <ResponsiveWrapper>
@@ -148,7 +148,7 @@ const Announcement = () => {
                 title
                 buttonLink
                 buttonText
-                isEnabled
+                isDisabled
               }
             }
           }
@@ -158,7 +158,7 @@ const Announcement = () => {
   )
   const {
     html,
-    frontmatter: {title, buttonLink, buttonText, isEnabled},
+    frontmatter: {title, buttonLink, buttonText, isDisabled},
   } = announcement
 
   const [isVisible, setVisible] = useState(false)
@@ -171,7 +171,7 @@ const Announcement = () => {
     setVisible(isNewAnnouncement)
   }, [])
 
-  if (!isEnabled || !isVisible) {
+  if (isDisabled || !isVisible) {
     return null
   }
   return (

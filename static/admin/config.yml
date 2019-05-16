@@ -129,4 +129,4 @@ collections:
               required: false,
             }
           # - {label: Display Until, name: date, widget: datetime}
-          - {label: Hide Announcement?, name: isHidden, widget: boolean}
+          - {label: Disable Announcement?, name: isDisabled, widget: boolean}
