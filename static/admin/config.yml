@@ -32,7 +32,7 @@ collections:
           default: blog-post,
         }
       - {label: Title, name: title, widget: string}
-      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Publish Date, name: date, widget: date}
       - {label: Body, name: body, widget: markdown}
       - {label: Tags, name: tags, widget: list, required: false}
   - name: articles
@@ -48,7 +48,7 @@ collections:
           default: article-page,
         }
       - {label: Title, name: title, widget: string}
-      - {label: Publish Date, name: date, widget: datetime, required: false}
+      - {label: Publish Date, name: date, widget: date, required: false}
       - {label: Body, name: body, widget: markdown}
   - name: books
     label: Books
@@ -94,7 +94,12 @@ collections:
               fields:
                 [
                   {label: Title, name: title, widget: string},
-                  {label: Date, name: date, widget: datetime},
+                  {
+                    label: Date,
+                    name: date,
+                    widget: datetime,
+                    format: 'dddd, DD MMMM YYYY',
+                  },
                   {
                     label: Description,
                     name: description,
@@ -109,21 +114,21 @@ collections:
         create: false
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Publish Date, name: date, widget: datetime}
           - {label: Body, name: body, widget: markdown}
-          - {label: Display Announcement?, name: isEnabled, widget: boolean}
           - {
-              label: Button Text (optional),
+              label: Button Text,
               name: buttonText,
               widget: string,
               required: false,
             }
           - {
-              label: Button Link (optional),
+              label: Button Link,
               name: buttonLink,
               widget: string,
               required: false,
             }
+          - {label: Display Until, name: date, widget: datetime}
+          - {label: Hide Announcement?, name: isHidden, widget: boolean}
   #   label: Announcement
   #   folder: src/announcement
   #   create: false

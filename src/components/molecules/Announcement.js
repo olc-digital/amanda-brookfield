@@ -8,6 +8,7 @@ import H2 from '../atoms/H2'
 import Img from '../atoms/Img'
 import SketchButton from '../atoms/SketchButton'
 import media from '../../styles/mediaQueries'
+import {HTMLContent} from '../Content'
 
 import close from '../../img/close.svg'
 
@@ -18,10 +19,33 @@ const BackDrop = styled.div`
   left: 0;
   background: ${({theme}) => theme.orange};
   color: ${({theme}) => theme.white};
-  padding: 24px 0;
+  padding: 0;
   box-shadow: 0 -2px 4px 0 rgba(38, 40, 42, 0.25);
 `
-const Content = styled.div`
+
+const AnnouncementContainer = styled(Container)`
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  /* pseudo element below is just for cms preview  */
+  &:after {
+    content: 'Announcement hidden';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #333;
+    display: none;
+    ${({isHidden}) => isHidden && 'display: flex;'}
+  }
+`
+const StyledContent = styled(HTMLContent)`
   p {
     line-height: 1.5;
   }
@@ -56,6 +80,43 @@ const ButtonWrapper = styled.div`
     margin: 0 32px;
   `}
 `
+
+export const AnnouncementTemplate = ({
+  hide = () => null,
+  title,
+  content,
+  buttonLink,
+  buttonText,
+  isHidden = false, //this prop is just for cms
+}) => {
+  return (
+    <BackDrop>
+      <AnnouncementContainer isHidden={isHidden}>
+        <div css="position: relative;">
+          <CloseIcon src={close} onClick={hide} />
+          <ResponsiveWrapper>
+            <div>
+              <H2 css="margin-bottom: 8px;" center={false}>
+                {title}
+              </H2>
+              <StyledContent content={content} />
+            </div>
+            <ButtonWrapper onClick={hide}>
+              <SketchButton
+                as={Link}
+                to={buttonLink}
+                styleType="orange"
+                uppercase
+              >
+                {buttonText}
+              </SketchButton>
+            </ButtonWrapper>
+          </ResponsiveWrapper>
+        </div>
+      </AnnouncementContainer>
+    </BackDrop>
+  )
+}
 
 const Announcement = () => {
   const {
@@ -103,35 +164,13 @@ const Announcement = () => {
     return null
   }
   return (
-    <BackDrop>
-      <Container>
-        <div css="position: relative;">
-          <CloseIcon src={close} onClick={() => setVisible(false)} />
-          <ResponsiveWrapper>
-            <div>
-              <H2 css="margin-bottom: 8px;" center={false}>
-                {title}
-              </H2>
-              <Content dangerouslySetInnerHTML={{__html: html}} />
-            </div>
-            <ButtonWrapper
-              onClick={() => {
-                setVisible(false)
-              }}
-            >
-              <SketchButton
-                as={Link}
-                to={buttonLink}
-                styleType="orange"
-                uppercase
-              >
-                {buttonText}
-              </SketchButton>
-            </ButtonWrapper>
-          </ResponsiveWrapper>
-        </div>
-      </Container>
-    </BackDrop>
+    <AnnouncementTemplate
+      hide={() => setVisible(false)}
+      title={title}
+      content={html}
+      buttonLink={buttonLink}
+      buttonText={buttonText}
+    />
   )
 }
 

@@ -1,6 +1,8 @@
 import React from 'react'
+import {StyleSheetManager, ThemeProvider} from 'styled-components'
 import Layout from '../components/Layout'
-import {StyleSheetManager} from 'styled-components'
+import theme from '../styles/theme.js'
+import GlobalStyles from '../styles/globalStyles'
 
 function StyledSheets({children}) {
   const iframe = document.querySelector('#nc-root iframe')
@@ -17,17 +19,24 @@ function StyledSheets({children}) {
 export const withStyledSheets = Component => props => {
   return (
     <StyledSheets>
-      <Component {...props} />
+      <ThemeProvider theme={theme}>
+        <>
+          <Component {...props} />
+          <GlobalStyles />
+        </>
+      </ThemeProvider>
     </StyledSheets>
   )
 }
 
-export const withLayout = Component =>
-  withStyledSheets(props => (
+//eslint-disable-next-line react/display-name
+export const withLayout = Component => props => (
+  <StyledSheets>
     <Layout cms>
       <Component {...props} />
     </Layout>
-  ))
+  </StyledSheets>
+)
 
 //https://github.com/netlify/netlify-cms/issues/2026
 //https://github.com/gatsbyjs/gatsby/pull/13036

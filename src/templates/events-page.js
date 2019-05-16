@@ -18,7 +18,6 @@ const Event = styled.div`
 `
 
 export const EventsPageTemplate = ({events}) => {
-  console.log('123', events)
   return (
     <Page>
       <HelmetHelper
@@ -31,13 +30,14 @@ export const EventsPageTemplate = ({events}) => {
           <Event key={event.title}>
             <H3>{event.title}</H3>
             <SubTitle css={'margin: 8px 0;'}>
-              {event.date &&
-                event.date.toLocaleDateString('default', {
-                  weekday: 'long',
-                  year: 'numeric',
-                  month: 'long',
-                  day: '2-digit',
-                })}
+              {event.date instanceof Date
+                ? event.date.toLocaleDateString('default', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: '2-digit',
+                  })
+                : event.date}
             </SubTitle>
             <div>{event.description}</div>
           </Event>

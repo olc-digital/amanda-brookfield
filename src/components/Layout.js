@@ -32,6 +32,7 @@ const Layout = ({cms, children}) => (
         <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
         <link rel="shortcut icon" type="image/png" href={favicon64} />
       </Helmet>
+      <GlobalStyles />
       <PreloadFonts />
       <LayoutGrid>
         <Header />
@@ -39,7 +40,6 @@ const Layout = ({cms, children}) => (
         <div>{children}</div>
         <Footer />
       </LayoutGrid>
-      <GlobalStyles />
       {!cms && <Announcement />}
     </>
   </ThemeProvider>
