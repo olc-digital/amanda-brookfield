@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 import styled from 'styled-components'
 
@@ -161,15 +161,15 @@ const Announcement = () => {
     frontmatter: {title, buttonLink, buttonText, isEnabled},
   } = announcement
 
-  let isNewAnnouncement = true
-  if (sessionStorage) {
+  const [isVisible, setVisible] = useState(false)
+
+  useEffect(() => {
     const announcementString = JSON.stringify(announcement)
     const existingAnnouncement = sessionStorage.getItem('announcement')
-    isNewAnnouncement = announcementString !== existingAnnouncement
+    const isNewAnnouncement = announcementString !== existingAnnouncement
     sessionStorage.setItem('announcement', announcementString)
-  }
-
-  const [isVisible, setVisible] = useState(isNewAnnouncement)
+    setVisible(isNewAnnouncement)
+  }, [])
 
   if (!isEnabled || !isVisible) {
     return null
