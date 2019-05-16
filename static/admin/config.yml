@@ -19,61 +19,6 @@ public_folder: /img
 display_url: https://www.amandabrookfield.co.uk
 
 collections:
-  - name: blog
-    label: Blog Posts
-    folder: src/pages/blog
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    fields:
-      - {
-          label: Template Key,
-          name: templateKey,
-          widget: hidden,
-          default: blog-post,
-        }
-      - {label: Title, name: title, widget: string}
-      - {label: Publish Date, name: date, widget: date}
-      - {label: Body, name: body, widget: markdown}
-      - {label: Tags, name: tags, widget: list, required: false}
-  - name: articles
-    label: Articles
-    folder: src/pages/articles
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - {
-          label: Template Key,
-          name: templateKey,
-          widget: hidden,
-          default: article-page,
-        }
-      - {label: Title, name: title, widget: string}
-      - {label: Publish Date, name: date, widget: date, required: false}
-      - {label: Body, name: body, widget: markdown}
-  - name: books
-    label: Books
-    folder: src/pages/books
-    fields:
-      - {
-          label: Template Key,
-          name: templateKey,
-          widget: hidden,
-          default: book-page,
-        }
-      - {label: Book ID, name: bookId, widget: hidden}
-      - {label: Path, name: path, widget: hidden}
-      - {label: Title, name: title, widget: string}
-      - {label: Body, name: body, widget: markdown}
-      - {
-          label: Reviews,
-          name: reviews,
-          widget: list,
-          fields:
-            [
-              {label: Text, name: text, widget: text},
-              {label: Reviewer, name: reviewer, widget: string},
-            ],
-        }
   - name: announcements-and-events
     label: Announcements & Events
     files:
@@ -130,3 +75,58 @@ collections:
             }
           # - {label: Display Until, name: date, widget: datetime}
           - {label: Disable Announcement?, name: isDisabled, widget: boolean}
+  - name: blog
+    label: Blog Posts
+    folder: src/pages/blog
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: blog-post,
+        }
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: date}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Tags, name: tags, widget: list, required: false}
+  - name: articles
+    label: Articles
+    folder: src/pages/articles
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: article-page,
+        }
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: date, required: false}
+      - {label: Body, name: body, widget: markdown}
+  - name: books
+    label: Books
+    folder: src/pages/books
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: book-page,
+        }
+      - {label: Book ID, name: bookId, widget: hidden}
+      - {label: Path, name: path, widget: hidden}
+      - {label: Title, name: title, widget: string}
+      - {label: Body, name: body, widget: markdown}
+      - {
+          label: Reviews,
+          name: reviews,
+          widget: list,
+          fields:
+            [
+              {label: Text, name: text, widget: text},
+              {label: Reviewer, name: reviewer, widget: string},
+            ],
+        }
