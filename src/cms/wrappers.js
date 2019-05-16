@@ -37,8 +37,3 @@ export const withLayout = Component => props => (
     </Layout>
   </StyledSheets>
 )
-
-//https://github.com/netlify/netlify-cms/issues/2026
-//https://github.com/gatsbyjs/gatsby/pull/13036
-//https://www.npmjs.com/package/gatsby-plugin-netlify-cms
-//https://www.npmjs.com/package/netlify-cms-app

@@ -52,7 +52,6 @@ export const BookPageTemplate = ({
   const [mobileReviewsVisible, setMobileReviewsVisible] = useState(false)
 
   const PageContent = contentComponent || Content
-  console.log('rr>', reviews)
   return (
     <Container narrow>
       <BackButton />
