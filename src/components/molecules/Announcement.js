@@ -161,10 +161,13 @@ const Announcement = () => {
     frontmatter: {title, buttonLink, buttonText, isEnabled},
   } = announcement
 
-  const announcementString = JSON.stringify(announcement)
-  const existingAnnouncement = sessionStorage.getItem('announcement')
-  const isNewAnnouncement = announcementString !== existingAnnouncement
-  sessionStorage.setItem('announcement', announcementString)
+  let isNewAnnouncement = true
+  if (sessionStorage) {
+    const announcementString = JSON.stringify(announcement)
+    const existingAnnouncement = sessionStorage.getItem('announcement')
+    isNewAnnouncement = announcementString !== existingAnnouncement
+    sessionStorage.setItem('announcement', announcementString)
+  }
 
   const [isVisible, setVisible] = useState(isNewAnnouncement)
 
