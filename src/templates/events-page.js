@@ -17,7 +17,7 @@ const Event = styled.div`
   }
 `
 
-const EventsPageTemplate = ({events}) => {
+export const EventsPageTemplate = ({events}) => {
   return (
     <Page>
       <HelmetHelper
@@ -26,13 +26,23 @@ const EventsPageTemplate = ({events}) => {
       />
       <Container narrow>
         <MobileSketchHeading title="Events" sketchType="events" />
-        {events.map(event => (
-          <Event key={event.title}>
-            <H3>{event.title}</H3>
-            <SubTitle css={'margin: 8px 0;'}>{event.date}</SubTitle>
-            <div>{event.description}</div>
-          </Event>
-        ))}
+        {events && events.length
+          ? events.map(event => (
+              <Event key={event.title}>
+                <H3>{event.title}</H3>
+                <SubTitle css={'margin: 8px 0;'}>
+                  {new Date(event.date).toLocaleDateString('default', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: '2-digit',
+                  })}
+                  {event.time && `, ${event.time}`}
+                </SubTitle>
+                <div>{event.description}</div>
+              </Event>
+            ))
+          : 'No events planned at the moment, check back later'}
       </Container>
     </Page>
   )
@@ -61,7 +71,7 @@ export const eventPageQuery = graphql`
       frontmatter {
         events {
           title
-          date(formatString: "dddd Do MMMM, YYYY")
+          date
           description
         }
       }

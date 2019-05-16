@@ -16,8 +16,12 @@ const BlogLayout = styled.div`
 `
 
 const BlogIndexPage = ({data, selectedYear}) => {
-  const {edges: posts, group: years} = data.allMarkdownRemark
+  const {edges: posts, group} = data.allMarkdownRemark
 
+  const years = group.map(({fieldValue, ...rest}) => ({
+    fieldValue: fieldValue.substring(fieldValue.length - 4),
+    ...rest,
+  }))
   return (
     <Page>
       <HelmetHelper

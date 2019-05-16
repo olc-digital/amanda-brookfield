@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 import styled from 'styled-components'
 
@@ -8,6 +8,7 @@ import H2 from '../atoms/H2'
 import Img from '../atoms/Img'
 import SketchButton from '../atoms/SketchButton'
 import media from '../../styles/mediaQueries'
+import Content, {HTMLContent} from '../Content'
 
 import close from '../../img/close.svg'
 
@@ -18,12 +19,39 @@ const BackDrop = styled.div`
   left: 0;
   background: ${({theme}) => theme.orange};
   color: ${({theme}) => theme.white};
-  padding: 24px 0;
+  padding: 0;
   box-shadow: 0 -2px 4px 0 rgba(38, 40, 42, 0.25);
 `
-const Content = styled.div`
+
+const AnnouncementContainer = styled(Container)`
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  /* pseudo element below is just for cms preview  */
+  &:after {
+    content: 'Announcement disabled';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #333;
+    display: none;
+    ${({isDisabled}) => isDisabled && 'display: flex;'}
+  }
+`
+const StyledContent = styled.div`
+  &,
   p {
     line-height: 1.5;
+  }
+  p {
+    margin-bottom: 8px;
   }
   p:last-child {
     margin: 0;
@@ -57,6 +85,47 @@ const ButtonWrapper = styled.div`
   `}
 `
 
+export const AnnouncementTemplate = ({
+  hide = () => null,
+  title,
+  content,
+  buttonLink,
+  buttonText,
+  contentComponent,
+  isDisabled = false, //this prop is just for cms
+}) => {
+  const AnnouncementContent = contentComponent || Content
+  return (
+    <BackDrop>
+      <AnnouncementContainer isDisabled={isDisabled}>
+        <div css="position: relative;">
+          <CloseIcon src={close} onClick={hide} />
+          <ResponsiveWrapper>
+            <div>
+              <H2 css="margin-bottom: 8px;" center={false}>
+                {title}
+              </H2>
+              <StyledContent>
+                <AnnouncementContent content={content} />
+              </StyledContent>
+            </div>
+            <ButtonWrapper onClick={hide}>
+              <SketchButton
+                as={Link}
+                to={buttonLink}
+                styleType="orange"
+                uppercase
+              >
+                {buttonText}
+              </SketchButton>
+            </ButtonWrapper>
+          </ResponsiveWrapper>
+        </div>
+      </AnnouncementContainer>
+    </BackDrop>
+  )
+}
+
 const Announcement = () => {
   const {
     allMarkdownRemark: {
@@ -79,7 +148,7 @@ const Announcement = () => {
                 title
                 buttonLink
                 buttonText
-                isEnabled
+                isDisabled
               }
             }
           }
@@ -89,49 +158,31 @@ const Announcement = () => {
   )
   const {
     html,
-    frontmatter: {title, buttonLink, buttonText, isEnabled},
+    frontmatter: {title, buttonLink, buttonText, isDisabled},
   } = announcement
 
-  const announcementString = JSON.stringify(announcement)
-  const existingAnnouncement = sessionStorage.getItem('announcement')
-  const isNewAnnouncement = announcementString !== existingAnnouncement
-  sessionStorage.setItem('announcement', announcementString)
+  const [isVisible, setVisible] = useState(false)
 
-  const [isVisible, setVisible] = useState(isNewAnnouncement)
+  useEffect(() => {
+    const announcementString = JSON.stringify(announcement)
+    const existingAnnouncement = sessionStorage.getItem('announcement')
+    const isNewAnnouncement = announcementString !== existingAnnouncement
+    sessionStorage.setItem('announcement', announcementString)
+    setVisible(isNewAnnouncement)
+  }, [])
 
-  if (!isEnabled || !isVisible) {
+  if (isDisabled || !isVisible) {
     return null
   }
   return (
-    <BackDrop>
-      <Container>
-        <div css="position: relative;">
-          <CloseIcon src={close} onClick={() => setVisible(false)} />
-          <ResponsiveWrapper>
-            <div>
-              <H2 css="margin-bottom: 8px;" center={false}>
-                {title}
-              </H2>
-              <Content dangerouslySetInnerHTML={{__html: html}} />
-            </div>
-            <ButtonWrapper
-              onClick={() => {
-                setVisible(false)
-              }}
-            >
-              <SketchButton
-                as={Link}
-                to={buttonLink}
-                styleType="orange"
-                uppercase
-              >
-                {buttonText}
-              </SketchButton>
-            </ButtonWrapper>
-          </ResponsiveWrapper>
-        </div>
-      </Container>
-    </BackDrop>
+    <AnnouncementTemplate
+      hide={() => setVisible(false)}
+      title={title}
+      content={html}
+      buttonLink={buttonLink}
+      buttonText={buttonText}
+      contentComponent={HTMLContent}
+    />
   )
 }
 

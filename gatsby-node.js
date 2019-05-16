@@ -86,7 +86,7 @@ exports.createPages = ({actions, graphql}) => {
         component: path.resolve(`src/templates/years-page.js`),
         context: {
           year,
-          yearGlob: `${year}*`,
+          yearGlob: `*${year}`,
         },
       })
     })
@@ -108,7 +108,9 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     createNodeField({
       name: `year`,
       node,
-      value: new Date(date).getFullYear(),
+      value: `year-${new Date(date).getFullYear()}`,
+      //if value is date-like, it will be turned into a date instance,
+      //hence we add "year-" above to prevent the conversion
     })
   }
 }

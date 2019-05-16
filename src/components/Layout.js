@@ -23,28 +23,26 @@ const LayoutGrid = styled.div`
     width: 100vw;
   }
 `
-const Layout = ({children}) => (
-  <>
-    <ThemeProvider theme={theme}>
-      <>
-        <Helmet>
-          <title>Amanda Brookfield | Best-Selling Novelist</title>
-          <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
-          <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
-          <link rel="shortcut icon" type="image/png" href={favicon64} />
-        </Helmet>
-        <PreloadFonts />
-        <LayoutGrid>
-          <Header />
-          <Nav />
-          <div>{children}</div>
-          <Footer />
-        </LayoutGrid>
-        <GlobalStyles />
-        <Announcement />
-      </>
-    </ThemeProvider>
-  </>
+const Layout = ({cms, children}) => (
+  <ThemeProvider theme={theme}>
+    <>
+      <Helmet>
+        <title>Amanda Brookfield | Best-Selling Novelist</title>
+        <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
+        <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+        <link rel="shortcut icon" type="image/png" href={favicon64} />
+      </Helmet>
+      <GlobalStyles />
+      <PreloadFonts />
+      <LayoutGrid>
+        <Header />
+        <Nav />
+        <div>{children}</div>
+        <Footer />
+      </LayoutGrid>
+      {!cms && <Announcement />}
+    </>
+  </ThemeProvider>
 )
 
 export default Layout
