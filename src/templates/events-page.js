@@ -31,14 +31,14 @@ export const EventsPageTemplate = ({events = []}) => {
               <Event key={event.title}>
                 <H3>{event.title}</H3>
                 <SubTitle css={'margin: 8px 0;'}>
-                  {event.date instanceof Date
-                    ? event.date.toLocaleDateString('default', {
+                  {event.formattedDate instanceof Date
+                    ? event.formattedDate.toLocaleDateString('default', {
                         weekday: 'long',
                         year: 'numeric',
                         month: 'long',
                         day: '2-digit',
                       })
-                    : event.date}
+                    : event.formattedDate}
                   {event.time && `, ${event.time}`}
                 </SubTitle>
                 <div>{event.description}</div>
@@ -73,7 +73,7 @@ export const eventPageQuery = graphql`
       frontmatter {
         events {
           title
-          date
+          formattedDate
           description
         }
       }

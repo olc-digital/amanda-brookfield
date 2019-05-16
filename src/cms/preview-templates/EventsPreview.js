@@ -6,7 +6,7 @@ const BookPreview = ({widgetsFor}) => (
   <EventsPageTemplate
     events={widgetsFor('events').map(event => ({
       title: event.getIn(['data', 'title']),
-      date: event.getIn(['data', 'date']),
+      formattedDate: event.getIn(['data', 'formattedDate']),
       description: event.getIn(['data', 'description']),
       time: event.getIn(['data', 'time']),
     }))}
