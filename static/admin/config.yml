@@ -133,5 +133,5 @@ collections:
               widget: string,
               required: false,
             }
-          - {label: Display Until, name: date, widget: datetime}
+          # - {label: Display Until, name: date, widget: datetime}
           - {label: Hide Announcement?, name: isHidden, widget: boolean}

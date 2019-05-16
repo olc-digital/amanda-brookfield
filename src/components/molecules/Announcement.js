@@ -8,7 +8,7 @@ import H2 from '../atoms/H2'
 import Img from '../atoms/Img'
 import SketchButton from '../atoms/SketchButton'
 import media from '../../styles/mediaQueries'
-import {HTMLContent} from '../Content'
+import Content, {HTMLContent} from '../Content'
 
 import close from '../../img/close.svg'
 
@@ -45,9 +45,13 @@ const AnnouncementContainer = styled(Container)`
     ${({isHidden}) => isHidden && 'display: flex;'}
   }
 `
-const StyledContent = styled(HTMLContent)`
+const StyledContent = styled.div`
+  &,
   p {
     line-height: 1.5;
+  }
+  p {
+    margin-bottom: 8px;
   }
   p:last-child {
     margin: 0;
@@ -87,8 +91,10 @@ export const AnnouncementTemplate = ({
   content,
   buttonLink,
   buttonText,
+  contentComponent,
   isHidden = false, //this prop is just for cms
 }) => {
+  const AnnouncementContent = contentComponent || Content
   return (
     <BackDrop>
       <AnnouncementContainer isHidden={isHidden}>
@@ -99,7 +105,9 @@ export const AnnouncementTemplate = ({
               <H2 css="margin-bottom: 8px;" center={false}>
                 {title}
               </H2>
-              <StyledContent content={content} />
+              <StyledContent>
+                <AnnouncementContent content={content} />
+              </StyledContent>
             </div>
             <ButtonWrapper onClick={hide}>
               <SketchButton
@@ -170,6 +178,7 @@ const Announcement = () => {
       content={html}
       buttonLink={buttonLink}
       buttonText={buttonText}
+      contentComponent={HTMLContent}
     />
   )
 }
