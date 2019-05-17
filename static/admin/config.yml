@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: display-until-announcement
   commit_messages:
     create: Create {{collection}} “{{slug}}”
     update: Update {{collection}} “{{slug}}”
@@ -73,7 +73,12 @@ collections:
               widget: string,
               required: false,
             }
-          # - {label: Display Until, name: date, widget: datetime}
+          - {
+              label: Display Until,
+              name: date,
+              widget: datetime,
+              required: false,
+            }
           - {label: Disable Announcement?, name: isDisabled, widget: boolean}
   - name: blog
     label: Blog Posts

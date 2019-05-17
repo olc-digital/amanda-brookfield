@@ -149,6 +149,7 @@ const Announcement = () => {
                 buttonLink
                 buttonText
                 isDisabled
+                displayUntil
               }
             }
           }
@@ -158,7 +159,7 @@ const Announcement = () => {
   )
   const {
     html,
-    frontmatter: {title, buttonLink, buttonText, isDisabled},
+    frontmatter: {title, buttonLink, buttonText, isDisabled, displayUntil},
   } = announcement
 
   const [isVisible, setVisible] = useState(false)
@@ -171,7 +172,9 @@ const Announcement = () => {
     setVisible(isNewAnnouncement)
   }, [])
 
-  if (isDisabled || !isVisible) {
+  const isExpired = new Date() > new Date(displayUntil)
+
+  if (isDisabled || !isVisible || isExpired) {
     return null
   }
   return (
