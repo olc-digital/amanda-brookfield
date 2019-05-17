@@ -5,7 +5,7 @@ import {parseISO, isValid} from 'date-fns'
 
 import Link from '../atoms/Link'
 import Container from '../atoms/Container'
-import H2 from '../atoms/H2'
+import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
 import Img from '../atoms/Img'
 import SketchButton from '../atoms/SketchButton'
 import media from '../../styles/mediaQueries'
@@ -103,9 +103,7 @@ export const AnnouncementTemplate = ({
           <CloseIcon src={close} onClick={hide} />
           <ResponsiveWrapper>
             <div>
-              <H2 css="margin-bottom: 8px;" center={false}>
-                {title}
-              </H2>
+              <RobotoCapsTitle>{title}</RobotoCapsTitle>
               <StyledContent>
                 <AnnouncementContent content={content} />
               </StyledContent>

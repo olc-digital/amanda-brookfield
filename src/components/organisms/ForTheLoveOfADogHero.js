@@ -7,6 +7,7 @@ import H2 from '../atoms/H2'
 import P from '../atoms/P'
 import Img from '../atoms/Img'
 import BuyNowButton from '../atoms/BuyNowButton'
+import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
 import media from '../../styles/mediaQueries'
 import {books} from '../../data'
 
@@ -51,11 +52,6 @@ const GallerySection = styled.div`
   ${media.aboveContainer`
     margin-left: 44px;
   `}
-`
-const AllCapsTitle = styled.h2`
-  letter-spacing: 0.9px;
-  font-size: 18px;
-  margin-bottom: 16px;
 `
 
 const BlurbBody = styled(P)`
@@ -107,7 +103,7 @@ export default function ForTheLoveOfADogHero() {
     <HeroSection>
       <HeroContainer>
         <MainSection>
-          <AllCapsTitle>NEW</AllCapsTitle>
+          <RobotoCapsTitle>NEW</RobotoCapsTitle>
           <H2 css={'text-align: left; margin-bottom: 16px;'}>
             A memoir, ‘For the Love of a Dog’
           </H2>
