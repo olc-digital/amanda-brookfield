@@ -162,7 +162,7 @@ export const HomePageTemplate = ({welcomeText}) => {
 }
 
 HomePageTemplate.propTypes = {
-  welcomText: PropTypes.string.isRequired,
+  welcomeText: PropTypes.string.isRequired,
 }
 
 const HomePage = ({data}) => {

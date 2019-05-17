@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: display-until-annoncement
   commit_messages:
     create: Create {{collection}} “{{slug}}”
     update: Update {{collection}} “{{slug}}”
