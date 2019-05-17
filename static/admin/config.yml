@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: display-until-annoncement
   commit_messages:
     create: Create {{collection}} “{{slug}}”
     update: Update {{collection}} “{{slug}}”
@@ -19,9 +19,41 @@ public_folder: /img
 display_url: https://www.amandabrookfield.co.uk
 
 collections:
-  - name: announcements-and-events
-    label: Announcements & Events
+  - name: pages-and-announcements
+    label: Pages & Announcements
     files:
+      - file: src/pages/index.md
+        label: Home
+        name: home
+        fields:
+          - {label: Welcome Text, name: welcomeText, widget: text}
+      - file: src/announcement/index.md
+        label: Announcement
+        name: announcement
+        create: false
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+          - {
+              label: Button Text,
+              name: buttonText,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Button Link,
+              name: buttonLink,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Display Until,
+              name: displayUntil,
+              widget: datetime,
+              required: false,
+              default: '',
+            }
+          - {label: Disable Announcement?, name: isDisabled, widget: boolean}
       - file: src/pages/events/index.md
         label: Events
         name: events
@@ -54,27 +86,6 @@ collections:
                   },
                 ],
             }
-      - file: src/announcement/index.md
-        label: Announcement
-        name: announcement
-        create: false
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
-          - {
-              label: Button Text,
-              name: buttonText,
-              widget: string,
-              required: false,
-            }
-          - {
-              label: Button Link,
-              name: buttonLink,
-              widget: string,
-              required: false,
-            }
-          # - {label: Display Until, name: date, widget: datetime}
-          - {label: Disable Announcement?, name: isDisabled, widget: boolean}
   - name: blog
     label: Blog Posts
     folder: src/pages/blog
@@ -104,7 +115,22 @@ collections:
           default: article-page,
         }
       - {label: Title, name: title, widget: string}
-      - {label: Publish Date, name: date, widget: date, required: false}
+      - {label: Publish Date, name: date, widget: date}
+      - {label: Body, name: body, widget: markdown}
+  - name: short-stories
+    label: Short Stories
+    folder: src/pages/short-stories
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: article-page,
+        }
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: date}
       - {label: Body, name: body, widget: markdown}
   - name: books
     label: Books

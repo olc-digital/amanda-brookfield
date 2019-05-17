@@ -8,6 +8,9 @@ import H2 from '../components/atoms/H2'
 import Container from '../components/atoms/Container'
 import Page from '../components/atoms/Page'
 import BackButton from '../components/atoms/BackButton'
+import BlogListItem from '../components/molecules/BlogListItem'
+import ArticleSection from '../components/molecules/ArticleSection'
+import media from '../styles/mediaQueries'
 
 export const ArticlePageTemplate = ({
   title,
@@ -37,22 +40,71 @@ ArticlePageTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
+  }
+}
+
 const ArticlePage = ({data}) => {
-  const {markdownRemark: post} = data
+  const {
+    markdownRemark: article,
+    allMarkdownRemark: {edges: articles},
+  } = data
+
+  shuffleArray(articles)
+  const randomShortStory = articles.find(
+    ({node}) => node.frontmatter.articleType === 'short-story',
+  ).node
+  const randomArticle = articles.find(
+    ({node}) => node.frontmatter.articleType === 'article',
+  ).node
 
   return (
-    <ArticlePageTemplate
-      content={post.html}
-      contentComponent={HTMLContent}
-      description={post.frontmatter.description}
-      helmet={
-        <HelmetHelper
-          title={post.frontmatter.title}
-          metaDescription={post.frontmatter.description}
-        />
-      }
-      title={post.frontmatter.title}
-    />
+    <>
+      <ArticlePageTemplate
+        content={article.html}
+        contentComponent={HTMLContent}
+        description={article.frontmatter.description}
+        helmet={
+          <HelmetHelper
+            title={article.frontmatter.title}
+            metaDescription={article.frontmatter.description}
+          />
+        }
+        title={article.frontmatter.title}
+      />
+      <Container
+        css={`
+          margin-bottom: 48px;
+          ${media.aboveMobile`
+            margin-bottom: 72px;
+          `}
+        `}
+      >
+        <H2 css={'margin: 20px 0 48px;'}>Other Articles & Short Stories</H2>
+        <ArticleSection>
+          {[randomShortStory, randomArticle].map(post => (
+            <div key={post.id} css={'flex: 1; margin: 0 12px 48px;'}>
+              <BlogListItem
+                title={post.frontmatter.title}
+                to={post.fields.slug}
+                excerpt={post.excerpt}
+                readMoreText={
+                  post.frontmatter.articleType === 'short-story'
+                    ? 'Read Full Short Story >'
+                    : post.frontmatter.articleType === 'article'
+                    ? 'Read Full Article >'
+                    : null
+                }
+                metaText={`${post.timeToRead} min read`}
+              />
+            </div>
+          ))}
+        </ArticleSection>
+      </Container>
+    </>
   )
 }
 
@@ -72,6 +124,25 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+      }
+    }
+    allMarkdownRemark(
+      filter: {frontmatter: {templateKey: {in: ["article-page"]}}}
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 200)
+          id
+          fields {
+            slug
+          }
+          timeToRead
+          frontmatter {
+            title
+            templateKey
+            articleType
+          }
+        }
       }
     }
   }

@@ -45,7 +45,9 @@ const BlogIndexPage = ({data, selectedYear}) => {
                 to={post.fields.slug}
                 title={post.frontmatter.title}
                 excerpt={post.excerpt}
-                date={post.frontmatter.date}
+                metaText={`${post.frontmatter.date} |  ${
+                  post.timeToRead
+                } min read`}
               />
             ))}
           </div>
@@ -81,6 +83,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          timeToRead
           frontmatter {
             title
             templateKey

@@ -1,9 +1,7 @@
 ---
-templateKey: 'article-page'
-articleType: 'short-story'
-path: /short-stories/guardian-angel
+templateKey: article-page
 title: Guardian Angel
-description: ''
+date: 2019-05-17T20:48:16.046Z
 ---
 
 Love at first sight. It’s supposed to exist isn’t it? Eyes locking across a crowded room, wafting invisible chemicals, instant soul-mates and all that twaddle. When Brian and I decided to get married it was because we had lived together pretty amicably for four years and with me in my thirties we reckoned it was probably a good time to have a shot at kids. Not that we didn’t love each other…we did, but in the way I think love works best - as something one has actively chosen to do, rather than some sort of dodgy thunderbolt from the skies. The earth never moved when I was with Brian, not even at the beginning; but kissing was nice and he had kind eyes and I thought, here’s a chap who could look after me and be a decent Dad and frankly, after what had passed for parenting in my childhood those were pretty rare qualities.

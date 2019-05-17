@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 import styled from 'styled-components'
+import {parseISO, isValid} from 'date-fns'
 
 import Link from '../atoms/Link'
 import Container from '../atoms/Container'
-import H2 from '../atoms/H2'
+import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
 import Img from '../atoms/Img'
 import SketchButton from '../atoms/SketchButton'
 import media from '../../styles/mediaQueries'
@@ -102,9 +103,7 @@ export const AnnouncementTemplate = ({
           <CloseIcon src={close} onClick={hide} />
           <ResponsiveWrapper>
             <div>
-              <H2 css="margin-bottom: 8px;" center={false}>
-                {title}
-              </H2>
+              <RobotoCapsTitle>{title}</RobotoCapsTitle>
               <StyledContent>
                 <AnnouncementContent content={content} />
               </StyledContent>
@@ -149,6 +148,7 @@ const Announcement = () => {
                 buttonLink
                 buttonText
                 isDisabled
+                displayUntil
               }
             }
           }
@@ -158,25 +158,48 @@ const Announcement = () => {
   )
   const {
     html,
-    frontmatter: {title, buttonLink, buttonText, isDisabled},
+    frontmatter: {title, buttonLink, buttonText, isDisabled, displayUntil},
   } = announcement
 
-  const [isVisible, setVisible] = useState(false)
+  const [isClosed, setClosed] = useState(true)
+  const [isExpired, setExpired] = useState(false)
+
+  const close = () => {
+    sessionStorage.setItem('announcementClosed', 'true')
+    setClosed(true)
+  }
 
   useEffect(() => {
     const announcementString = JSON.stringify(announcement)
     const existingAnnouncement = sessionStorage.getItem('announcement')
     const isNewAnnouncement = announcementString !== existingAnnouncement
     sessionStorage.setItem('announcement', announcementString)
-    setVisible(isNewAnnouncement)
+    if (isNewAnnouncement) {
+      sessionStorage.setItem('announcementClosed', 'false')
+    }
+    if (
+      isNewAnnouncement ||
+      sessionStorage.getItem('announcementClosed') === 'false'
+    ) {
+      setClosed(false)
+    }
   }, [])
 
-  if (isDisabled || !isVisible) {
+  useEffect(() => {
+    const displayUntilDate = parseISO(displayUntil)
+    const expired = isValid(displayUntilDate)
+      ? new Date() > displayUntilDate
+      : false
+    setExpired(expired)
+  }, [])
+
+  if (isDisabled || isClosed || isExpired) {
     return null
   }
+
   return (
     <AnnouncementTemplate
-      hide={() => setVisible(false)}
+      hide={close}
       title={title}
       content={html}
       buttonLink={buttonLink}
