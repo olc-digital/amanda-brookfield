@@ -2,7 +2,7 @@
 title: The Big News
 buttonText: Learn More
 buttonLink: /books/for-the-love-of-a-dog
-displayUntil:
+displayUntil: ''
 isDisabled: false
 ---
 

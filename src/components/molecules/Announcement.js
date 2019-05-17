@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 import styled from 'styled-components'
+import {parseISO, isValid} from 'date-fns'
 
 import Link from '../atoms/Link'
 import Container from '../atoms/Container'
@@ -162,29 +163,45 @@ const Announcement = () => {
     frontmatter: {title, buttonLink, buttonText, isDisabled, displayUntil},
   } = announcement
 
-  const [isVisible, setVisible] = useState(false)
+  const [isClosed, setClosed] = useState(true)
+  const [isExpired, setExpired] = useState(false)
+
+  const close = () => {
+    sessionStorage.setItem('announcementClosed', 'true')
+    setClosed(true)
+  }
 
   useEffect(() => {
     const announcementString = JSON.stringify(announcement)
     const existingAnnouncement = sessionStorage.getItem('announcement')
     const isNewAnnouncement = announcementString !== existingAnnouncement
     sessionStorage.setItem('announcement', announcementString)
-    setVisible(isNewAnnouncement)
+    if (isNewAnnouncement) {
+      sessionStorage.setItem('announcementClosed', 'false')
+    }
+    if (
+      isNewAnnouncement ||
+      sessionStorage.getItem('announcementClosed') === 'false'
+    ) {
+      setClosed(false)
+    }
   }, [])
 
-  let isExpired = false
-  try {
-    isExpired = displayUntil ? new Date() > new Date(displayUntil) : false
-  } catch (err) {
-    console.log('issue parsing dates!', err)
-  }
+  useEffect(() => {
+    const displayUntilDate = parseISO(displayUntil)
+    const expired = isValid(displayUntilDate)
+      ? new Date() > displayUntilDate
+      : false
+    setExpired(expired)
+  }, [])
 
-  if (isDisabled || !isVisible || isExpired) {
+  if (isDisabled || isClosed || isExpired) {
     return null
   }
+
   return (
     <AnnouncementTemplate
-      hide={() => setVisible(false)}
+      hide={close}
       title={title}
       content={html}
       buttonLink={buttonLink}
