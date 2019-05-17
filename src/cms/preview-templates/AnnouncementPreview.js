@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {AnnouncementTemplate} from '../../components/molecules/Announcement'
 
-const ArticlePagePreview = ({entry, widgetFor}) => {
+const AnnouncementPreview = ({entry, widgetFor}) => {
   return (
     <AnnouncementTemplate
       title={entry.getIn(['data', 'title'])}
@@ -14,11 +14,11 @@ const ArticlePagePreview = ({entry, widgetFor}) => {
   )
 }
 
-ArticlePagePreview.propTypes = {
+AnnouncementPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 }
 
-export default ArticlePagePreview
+export default AnnouncementPreview

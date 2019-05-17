@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import {graphql} from 'gatsby'
 
 import H2 from '../components/atoms/H2'
 import SocialMediaLinks from '../components/molecules/SocialMediaLinks'
@@ -92,50 +93,45 @@ const selectedBooks = Object.values(books).filter(({id}) =>
   selectedIds.includes(id),
 )
 
-export default class IndexPage extends React.Component {
-  render() {
-    return (
-      <Page>
-        <HelmetHelper
-          title="Homepage"
-          metaDescription="Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1"
-        />
-        <Container>
-          <FullWidth>
-            <picture>
-              <source
-                srcSet={`${bannerDesktop1x} 1x, ${bannerDesktop2x} 2x, ${bannerDesktop3x} 3x,`}
-              />
-              <AmandaImage
-                src={bannerDesktop1x}
-                alt="Amanda Brookfield Portrait"
-              />
-            </picture>
-          </FullWidth>
-          <WelcomeText>
-            <FirstLetter>W</FirstLetter>
-            {`elcome to my official website. There’s
-            lots to dip into, with sneak-peeks at my inspirations as well as
-            information about all my sixteen best-sellers, including 'Alice
-            Alone', 'Relative Love' and 'Life Begins'.
-            `}
-          </WelcomeText>
-          <SocialMediaLinks />
-          <MobileOnlySketch type="books" />
-          <H2 margin>My Best-Sellers</H2>
-          <Scroller>
-            <SelectedBooks>
-              {selectedBooks.map(book => (
-                <BookWidget key={book.id} {...book} />
-              ))}
-            </SelectedBooks>
-          </Scroller>
-        </Container>
-        <ForTheLoveOfADogHero />
-        <Container>
-          <H2 margin>Latest Releases</H2>
-          <FeaturedBook bookId="for-the-love-of-a-dog">
-            {`Published in November 2018, 'For the Love of a Dog' is a funny and
+export const HomePageTemplate = ({welcomeText}) => {
+  return (
+    <Page>
+      <HelmetHelper
+        title="Homepage"
+        metaDescription="Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1"
+      />
+      <Container>
+        <FullWidth>
+          <picture>
+            <source
+              srcSet={`${bannerDesktop1x} 1x, ${bannerDesktop2x} 2x, ${bannerDesktop3x} 3x,`}
+            />
+            <AmandaImage
+              src={bannerDesktop1x}
+              alt="Amanda Brookfield Portrait"
+            />
+          </picture>
+        </FullWidth>
+        <WelcomeText>
+          <FirstLetter>{welcomeText.charAt(0)}</FirstLetter>
+          {welcomeText.substring(1)}
+        </WelcomeText>
+        <SocialMediaLinks />
+        <MobileOnlySketch type="books" />
+        <H2 margin>My Best-Sellers</H2>
+        <Scroller>
+          <SelectedBooks>
+            {selectedBooks.map(book => (
+              <BookWidget key={book.id} {...book} />
+            ))}
+          </SelectedBooks>
+        </Scroller>
+      </Container>
+      <ForTheLoveOfADogHero />
+      <Container>
+        <H2 margin>Latest Releases</H2>
+        <FeaturedBook bookId="for-the-love-of-a-dog">
+          {`Published in November 2018, 'For the Love of a Dog' is a funny and
             poignant memoir of emotional meltdown and recovery with the
             unwitting aid of a Golden Doodle puppy called Mabel. Following the
             death of my mother and the end of a post-divorce relationship, my
@@ -143,29 +139,51 @@ export default class IndexPage extends React.Component {
             was just to cheer myself up. I never thought I would actually go
             through with it; I was barely capable of looking after myself, let
             alone a dog…`}
-          </FeaturedBook>
-          <FeaturedBook bookId="the-love-child">
-            {`Published in Jan 2013, 'The Love Child' is a touching and heartfelt
+        </FeaturedBook>
+        <FeaturedBook bookId="the-love-child">
+          {`Published in Jan 2013, 'The Love Child' is a touching and heartfelt
             story about discovering what matters most in your life and having
             the courage to reach for it - not just once, but again and again.`}
-            <br />
-            {`When Janine and Dougie fell in love they thought it would be for
+          <br />
+          {`When Janine and Dougie fell in love they thought it would be for
             ever. Fifteen years later their relationship is well and truly over,
             their daughter Stevie their one remaining connection...`}
-          </FeaturedBook>
-          <FeaturedBook bookId="before-i-knew-you">
-            {`Released in March 2011, 'Before I Knew You' tells the unsettling story
+        </FeaturedBook>
+        <FeaturedBook bookId="before-i-knew-you">
+          {`Released in March 2011, 'Before I Knew You' tells the unsettling story
             of what happens when two very different families swap houses across
             the Atlantic one August. Strangers when they borrow each other's
             respective homes, their lives then start to intertwine in unexpected
             ways, throwing them at the mercy of their pasts and each other.`}
-          </FeaturedBook>
-        </Container>
-      </Page>
-    )
-  }
+        </FeaturedBook>
+      </Container>
+    </Page>
+  )
 }
 
-IndexPage.propTypes = {
-  data: PropTypes.shape({}),
+HomePageTemplate.propTypes = {
+  welcomText: PropTypes.string.isRequired,
 }
+
+const HomePage = ({data}) => {
+  const {markdownRemark: page} = data
+
+  return <HomePageTemplate welcomeText={page.frontmatter.welcomeText} />
+}
+
+HomePage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
+export default HomePage
+
+export const homePageQuery = graphql`
+  query HomePage($id: String!) {
+    markdownRemark(id: {eq: $id}) {
+      html
+      frontmatter {
+        welcomeText
+      }
+    }
+  }
+`
