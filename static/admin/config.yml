@@ -117,6 +117,21 @@ collections:
       - {label: Title, name: title, widget: string}
       - {label: Publish Date, name: date, widget: date}
       - {label: Body, name: body, widget: markdown}
+  - name: short-stories
+    label: Short Stories
+    folder: src/pages/short-stories
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: article-page,
+        }
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: date}
+      - {label: Body, name: body, widget: markdown}
   - name: books
     label: Books
     folder: src/pages/books

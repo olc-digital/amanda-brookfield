@@ -14,6 +14,7 @@ CMS.registerPreviewStyle(fontAwesomeCSS)
 CMS.registerPreviewTemplate('home', withLayout(HomePreview))
 CMS.registerPreviewTemplate('blog', withLayout(BlogPostPreview))
 CMS.registerPreviewTemplate('articles', withLayout(ArticlePreview))
+CMS.registerPreviewTemplate('short-stories', withLayout(ArticlePreview))
 CMS.registerPreviewTemplate('books', withLayout(BookPreview))
 CMS.registerPreviewTemplate('events', withLayout(EventsPreview))
 CMS.registerPreviewTemplate(
