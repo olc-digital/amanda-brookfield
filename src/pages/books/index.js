@@ -63,6 +63,7 @@ const ArticleList = ({title, items, displayType, readMoreText}) => (
             to={node.fields.slug}
             excerpt={node.excerpt}
             readMoreText={readMoreText}
+            metaText={`${node.timeToRead} min read`}
           />
         ))}
     </div>
@@ -125,6 +126,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          timeToRead
           frontmatter {
             title
             templateKey
