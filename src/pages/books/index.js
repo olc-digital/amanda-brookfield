@@ -9,8 +9,9 @@ import MobileSketchHeading from '../../components/molecules/MobileSketchHeading'
 import Container from '../../components/atoms/Container'
 import media from '../../styles/mediaQueries'
 import Page from '../../components/atoms/Page'
-import H2 from '../../components/atoms/H2'
-import BlogListItem from '../../components/molecules/BlogListItem'
+import ArticleList from '../../components/molecules/ArticleList'
+import ArticleSection from '../../components/molecules/ArticleSection'
+
 import HelmetHelper from '../../components/molecules/HelmetHelper'
 
 const booksArray = Object.values(books)
@@ -32,43 +33,6 @@ const BooksWrapper = styled.section`
   `}
 `
 
-const ArticleSection = styled.section`
-  margin: 0 -12px;
-  display: flex;
-  flex-direction: column;
-  ${media.aboveMobile`
-    flex-direction: row;
-  `}
-`
-
-const ArticleList = ({title, items, displayType, readMoreText}) => (
-  <div css={'flex: 1; margin: 0 12px;'}>
-    <H2
-      css={`
-        margin: 72px 0 48px;
-        ${media.aboveMobile`
-          margin-bottom: 72px;
-        `}
-      `}
-    >
-      {title}
-    </H2>
-    <div>
-      {items
-        .filter(({node}) => node.frontmatter.articleType === displayType)
-        .map(({node}) => (
-          <BlogListItem
-            key={node.id}
-            title={node.frontmatter.title}
-            to={node.fields.slug}
-            excerpt={node.excerpt}
-            readMoreText={readMoreText}
-            metaText={`${node.timeToRead} min read`}
-          />
-        ))}
-    </div>
-  </div>
-)
 export default class BooksPageQuery extends React.Component {
   render() {
     const {
@@ -92,15 +56,17 @@ export default class BooksPageQuery extends React.Component {
           <ArticleSection>
             <ArticleList
               title="Articles"
-              displayType="article"
               readMoreText="Read full article >"
-              items={articles}
+              items={articles.filter(
+                ({node}) => node.frontmatter.articleType === 'article',
+              )}
             />
             <ArticleList
               title="Short Stories"
-              displayType="short-story"
               readMoreText="Read full short story >"
-              items={articles}
+              items={articles.filter(
+                ({node}) => node.frontmatter.articleType === 'short-story',
+              )}
             />
           </ArticleSection>
         </Container>
