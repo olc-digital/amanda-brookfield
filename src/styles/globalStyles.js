@@ -102,5 +102,9 @@ export default createGlobalStyle`
     line-height: ${theme.lineHeight};
     margin-bottom: 16px;
   }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 
 `
