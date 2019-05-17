@@ -172,7 +172,12 @@ const Announcement = () => {
     setVisible(isNewAnnouncement)
   }, [])
 
-  const isExpired = new Date() > new Date(displayUntil)
+  let isExpired = false
+  try {
+    isExpired = displayUntil ? new Date() > new Date(displayUntil) : false
+  } catch (err) {
+    console.log('issue parsing dates!', err)
+  }
 
   if (isDisabled || !isVisible || isExpired) {
     return null
