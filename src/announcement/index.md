@@ -5,5 +5,4 @@ buttonLink: /books/for-the-love-of-a-dog
 displayUntil: ''
 isDisabled: false
 ---
-
-On Thursday 2nd May 2019 my latest book, 'For The Love of a Dog', will be published in paperback by Head of Zeus. It is currently available in hardback and Kindle e-book.
+'For the Love of a Dog', my 5 star rated memoir, is now available in paperback as well as hardback and Kindle ebook
