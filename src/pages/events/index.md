@@ -1,7 +1,9 @@
 ---
 templateKey: events-page
 events:
-  - date: 2019-05-01T23:00:00.000Z
-    description: ''
-    title: For the Love of a Dog paperback publication
+  - date: 2019-08-01T23:00:00.000Z
+    title: >-
+      New novel, 'GOOD GIRLS' to be published on OCTOBER 3RD 2019 by Boldwood
+      Books.
 ---
+
