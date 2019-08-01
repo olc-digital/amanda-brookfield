@@ -41,16 +41,19 @@ const strokes = {
   primary: theme.red,
   outline: theme.red,
   orange: '#ffffff',
+  blue: '#ffffff',
 }
 const fills = {
   primary: theme.red,
   outline: '#ffffff',
   orange: theme.orange,
+  blue: theme.blue,
 }
 const textColors = {
   primary: '#ffffff',
   outline: theme.red,
   orange: '#ffffff',
+  blue: '#ffffff',
 }
 
 const sizes = {

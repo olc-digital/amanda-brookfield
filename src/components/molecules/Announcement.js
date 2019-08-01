@@ -18,7 +18,7 @@ const BackDrop = styled.div`
   bottom: 0;
   right: 0;
   left: 0;
-  background: ${({theme}) => theme.orange};
+  background: ${({theme}) => theme.blue};
   color: ${({theme}) => theme.white};
   padding: 0;
   box-shadow: 0 -2px 4px 0 rgba(38, 40, 42, 0.25);
@@ -112,7 +112,7 @@ export const AnnouncementTemplate = ({
               <SketchButton
                 as={Link}
                 to={buttonLink}
-                styleType="orange"
+                styleType="blue"
                 uppercase
               >
                 {buttonText}

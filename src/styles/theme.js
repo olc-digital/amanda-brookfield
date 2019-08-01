@@ -7,6 +7,7 @@ const theme = {
   lightGrey: '#eff1f3',
   grey: '#5a5d60',
   orange: '#da5a33',
+  blue: 'rgba(47, 115, 184)',
   mobileBreakpoint: `${sizes.mobile}px`,
   containerWidth: `${sizes.container}px`,
   narrowContainerWidth: '664px',
