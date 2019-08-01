@@ -72,6 +72,7 @@ export const eventPageQuery = graphql`
         events {
           title
           date
+          time
           description
         }
       }
