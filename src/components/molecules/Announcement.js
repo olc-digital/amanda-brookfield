@@ -78,7 +78,6 @@ const ResponsiveWrapper = styled.div`
 `
 
 const ButtonWrapper = styled.div`
-  flex: 1 0 auto;
   align-self: center;
   margin: 16px 0 0;
   ${media.aboveMobile`
@@ -102,7 +101,7 @@ export const AnnouncementTemplate = ({
         <div css="position: relative;">
           <CloseIcon src={close} onClick={hide} />
           <ResponsiveWrapper>
-            <div>
+            <div style={{flex: '1 0 auto'}}>
               <RobotoCapsTitle>{title}</RobotoCapsTitle>
               <StyledContent>
                 <AnnouncementContent content={content} />
