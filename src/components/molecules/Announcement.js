@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import {parseISO, isValid} from 'date-fns'
 
 import Link from '../atoms/Link'
+import ExternalLink from '../atoms/ExternalLink'
 import Container from '../atoms/Container'
 import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
 import Img from '../atoms/Img'
@@ -109,8 +110,10 @@ export const AnnouncementTemplate = ({
             </div>
             <ButtonWrapper onClick={hide}>
               <SketchButton
-                as={Link}
+                as={buttonLink.startsWith('/') ? Link : ExternalLink}
+                //TODO - fix this clash
                 to={buttonLink}
+                href={buttonLink}
                 styleType="blue"
                 uppercase
               >
