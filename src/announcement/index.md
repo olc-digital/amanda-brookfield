@@ -1,8 +1,9 @@
 ---
 title: The Big News
-buttonText: Learn More
+buttonText: PRE-ORDER
 buttonLink: /books/for-the-love-of-a-dog
 displayUntil: ''
 isDisabled: false
 ---
-'For the Love of a Dog', my 5 star rated memoir, is now available in paperback as well as hardback and Kindle ebook.
+So excited to unveil the stunning look of my new novel, 'Good Girls'.
+Available to pre-order now!  Publication date October 3rd 2019
