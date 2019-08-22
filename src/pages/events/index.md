@@ -5,6 +5,7 @@ events:
     description: ''
     time: ''
     title: >-
-      New novel, 'GOOD GIRLS' to be published on OCTOBER 3rd 2019 by Boldwood
+      New novel, 'GOOD GIRLS' to be published on OCTOBER 8th 2019 by Boldwood
       Books
 ---
+
