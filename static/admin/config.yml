@@ -126,7 +126,13 @@ collections:
           default: article,
         }
       - {label: Title, name: title, widget: string}
-      - {label: Publish Date, name: date, widget: date}
+      - {
+          label: Original Publication Date,
+          name: date,
+          widget: date,
+          required: false,
+          default: '',
+        }
       - {label: Body, name: body, widget: markdown}
   - name: short-stories
     label: Short Stories
@@ -147,7 +153,13 @@ collections:
           default: short-story,
         }
       - {label: Title, name: title, widget: string}
-      - {label: Publish Date, name: date, widget: date}
+      - {
+          label: Original Publication Date,
+          name: date,
+          widget: date,
+          required: false,
+          default: '',
+        }
       - {label: Body, name: body, widget: markdown}
   - name: books
     label: Books
