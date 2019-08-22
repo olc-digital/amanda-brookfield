@@ -1,6 +1,6 @@
 ---
-templateKey: 'article-page'
-articleType: 'article'
+templateKey: article-page
+articleType: article
 path: /articles/losing-my-father
 title: Losing My Father
 description: ''

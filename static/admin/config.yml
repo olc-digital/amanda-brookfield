@@ -119,6 +119,12 @@ collections:
           widget: hidden,
           default: article-page,
         }
+      - {
+          label: Article Type,
+          name: articleType,
+          widget: hidden,
+          default: article,
+        }
       - {label: Title, name: title, widget: string}
       - {label: Publish Date, name: date, widget: date}
       - {label: Body, name: body, widget: markdown}
@@ -133,6 +139,12 @@ collections:
           name: templateKey,
           widget: hidden,
           default: article-page,
+        }
+      - {
+          label: Article Type,
+          name: articleType,
+          widget: hidden,
+          default: short-story,
         }
       - {label: Title, name: title, widget: string}
       - {label: Publish Date, name: date, widget: date}

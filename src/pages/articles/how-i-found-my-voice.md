@@ -1,6 +1,6 @@
 ---
-templateKey: 'article-page'
-articleType: 'article'
+templateKey: article-page
+articleType: article
 path: /articles/how-i-found-my-voice
 title: Finding My Voice
 description: ''

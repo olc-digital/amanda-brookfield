@@ -1,6 +1,6 @@
 ---
-templateKey: 'article-page'
-articleType: 'article'
+templateKey: article-page
+articleType: article
 path: /articles/under-one-roof
 title: Under One Roof
 description: ''

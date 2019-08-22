@@ -1,6 +1,6 @@
 ---
-templateKey: 'article-page'
-articleType: 'article'
+templateKey: article-page
+articleType: article
 path: /articles/gap-year-a-mothers-story
 title: Gap Year - A Mother's Story
 description: ''

@@ -1,6 +1,6 @@
 ---
-templateKey: 'article-page'
-articleType: 'short-story'
+templateKey: article-page
+articleType: short-story
 path: /short-stories/afterlife
 title: Afterlife
 description: ''

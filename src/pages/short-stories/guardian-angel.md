@@ -1,5 +1,6 @@
 ---
 templateKey: article-page
+articleType: short-story
 title: Guardian Angel
 date: 2019-05-17T20:48:16.046Z
 ---

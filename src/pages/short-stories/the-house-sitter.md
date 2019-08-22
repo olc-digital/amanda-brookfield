@@ -1,6 +1,6 @@
 ---
-templateKey: 'article-page'
-articleType: 'short-story'
+templateKey: article-page
+articleType: short-story
 path: /short-stories/the-house-sitter
 title: The House Sitter
 description: ''
