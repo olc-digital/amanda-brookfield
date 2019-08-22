@@ -139,6 +139,7 @@ collections:
       - {label: Body, name: body, widget: markdown}
   - name: books
     label: Books
+    delete: false
     folder: src/pages/books
     fields:
       - {
