@@ -21,6 +21,7 @@ display_url: https://www.amandabrookfield.co.uk
 collections:
   - name: pages-and-announcements
     label: Pages & Announcements
+    delete: false
     files:
       - file: src/pages/index.md
         label: Home
