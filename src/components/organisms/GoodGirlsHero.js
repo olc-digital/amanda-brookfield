@@ -1,0 +1,103 @@
+import React from 'react'
+import styled from 'styled-components'
+
+import Link from '../atoms/Link'
+import Container from '../atoms/Container'
+import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
+import H2 from '../atoms/H2'
+import P from '../atoms/P'
+import Img from '../atoms/Img'
+import BuyNowButton from '../atoms/BuyNowButton'
+import goodGirls from '../../img/good-girls.jpg'
+import {books} from '../../data'
+
+import media from '../../styles/mediaQueries'
+
+const goodGirlsData = books['good-girls']
+
+const HeroSection = styled.section`
+  background: ${({theme}) => theme.blue};
+  color: #ffffff;
+`
+const HeroContainer = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  ${media.aboveContainer`
+    flex-direction: row;
+  `}
+`
+
+const MainSection = styled.div`
+  flex: 1 0 auto;
+  align-self: center;
+  position: relative;
+  padding-top: 24px;
+  max-width: 434px;
+  width: 100%;
+  ${media.aboveContainer`
+    align-self: auto;
+  `}
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+`
+
+const BlurbBody = styled(P)`
+  font-size: 14px;
+  padding-right: 40px;
+  margin-bottom: 48px;
+  position: relative;
+  /* @media (max-width: 380px) {
+    padding: 0;
+  } */
+`
+
+const ReadMoreLink = styled(Link)`
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #ffffff !important;
+  text-decoration: none;
+  width: 166px;
+  padding: 10px 5px;
+  margin: 16px 0 32px;
+  ${media.aboveContainer`
+    margin-bottom: 0;
+  `}
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+`
+
+export default function GoodGirlsHero() {
+  return (
+    <HeroSection>
+      <HeroContainer>
+        <MainSection>
+          <RobotoCapsTitle>NEW</RobotoCapsTitle>
+          <H2 css={'text-align: left; margin: 20px 0 16px;'}>
+            A novel, ‘Good Girls‘
+          </H2>
+          <BlurbBody>
+            {`Good Girls is about the Keating sisters, Kat and Eleanor, and the turns their lives take after a childhood fraught with difficulties and adolescent rivalries.  It is a coming-of-age story, a mystery and a tear-jerker. But most of all it’s a reminder of whom to keep close and whom to trust with your darkest secrets. `}
+          </BlurbBody>
+          <BuyNowButton styleType="blue" bookId="good-girls" size="md" />
+          <ReadMoreLink to={goodGirlsData.link}>
+            Read more about Good Girls
+          </ReadMoreLink>
+        </MainSection>
+        <div style={{width: 276}}>
+          <Img css={'display: block'} src={goodGirls} />
+        </div>
+      </HeroContainer>
+    </HeroSection>
+  )
+}

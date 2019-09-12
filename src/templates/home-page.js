@@ -7,7 +7,7 @@ import H2 from '../components/atoms/H2'
 import SocialMediaLinks from '../components/molecules/SocialMediaLinks'
 import Container from '../components/atoms/Container'
 import BookWidget from '../components/molecules/BookWidget'
-import ForTheLoveOfADogHero from '../components/organisms/ForTheLoveOfADogHero'
+import GoodGirlsHero from '../components/organisms/GoodGirlsHero'
 import bannerDesktop1x from '../img/home-banner-desktop.jpg'
 import bannerDesktop2x from '../img/home-banner-desktop@2x.jpg'
 import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
@@ -127,7 +127,7 @@ export const HomePageTemplate = ({welcomeText}) => {
           </SelectedBooks>
         </Scroller>
       </Container>
-      <ForTheLoveOfADogHero />
+      <GoodGirlsHero />
       <Container>
         <H2 margin>Latest Releases</H2>
         <FeaturedBook bookId="for-the-love-of-a-dog">

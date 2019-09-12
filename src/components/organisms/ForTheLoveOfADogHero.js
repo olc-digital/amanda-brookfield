@@ -48,6 +48,7 @@ const MainSection = styled.div`
     display: table;
   }
 `
+
 const GallerySection = styled.div`
   ${media.aboveContainer`
     margin-left: 44px;

@@ -32,6 +32,19 @@ import aaCover from './img/covers/alice-alone-cover@2x.jpg'
 import aaSketch from './img/sketch-covers/alice-alone-sketch.jpg'
 
 export const books = {
+  'good-girls': {
+    title: 'Good Girls',
+    id: 'good-girls',
+    link: '/books/good-girls',
+    color: '#e1482d',
+    coverImage: ftloadCover,
+    coverSketch: ftloadSketch,
+    buyOptions: {
+      amazon: 'http://www.amazon.co.uk/dp/1788542924',
+      headOfZeus: 'http://headofzeus.com/books/love-dog',
+    },
+  },
+
   'for-the-love-of-a-dog': {
     title: 'For the Love of a Dog',
     id: 'for-the-love-of-a-dog',
