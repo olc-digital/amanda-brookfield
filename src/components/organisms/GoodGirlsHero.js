@@ -23,19 +23,16 @@ const HeroContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  ${media.aboveContainer`
+  ${media.aboveMobile`
     flex-direction: row;
   `}
 `
 
 const MainSection = styled.div`
-  flex: 1 0 auto;
-  align-self: center;
   position: relative;
   padding-top: 24px;
-  max-width: 434px;
   width: 100%;
-  ${media.aboveContainer`
+  ${media.aboveMobile`
     align-self: auto;
   `}
   &:after {
@@ -77,6 +74,12 @@ const ReadMoreLink = styled(Link)`
   }
 `
 
+const ImgHolder = styled.div`
+  width: 276px;
+  flex: 1 0 auto;
+  align-self: center;
+`
+
 export default function GoodGirlsHero() {
   return (
     <HeroSection>
@@ -94,9 +97,10 @@ export default function GoodGirlsHero() {
             Read more about Good Girls
           </ReadMoreLink>
         </MainSection>
-        <div style={{width: 276}}>
+        <ImgHolder>
+          {/* DONT DOWNLOAD THIS IMAGE ON MOBILE? */}
           <Img css={'display: block'} src={goodGirls} />
-        </div>
+        </ImgHolder>
       </HeroContainer>
     </HeroSection>
   )

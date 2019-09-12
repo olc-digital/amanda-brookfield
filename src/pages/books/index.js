@@ -21,13 +21,13 @@ const BooksWrapper = styled.section`
   flex-wrap: wrap;
   justify-content: space-around;
   margin-right: -30px;
-  & > div {
+  > div {
     margin-right: 30px;
     margin-bottom: 24px;
   }
   ${media.belowMobile`
     margin-right: -16px;
-    & > div {
+    > div {
     margin-right: 16px;
   }
   `}
