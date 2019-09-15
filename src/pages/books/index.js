@@ -31,12 +31,10 @@ const BooksWrapper = styled.section`
 `
 
 const BooksPage = ({data}) => {
-  console.log(data)
   const {
     allMarkdownRemarkArticles: {edges: articles},
     allMarkdownRemarkBooks: {edges: books},
   } = data
-  console.log('>>', books)
   return (
     <Page>
       <HelmetHelper

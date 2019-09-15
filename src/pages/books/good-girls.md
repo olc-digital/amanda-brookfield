@@ -5,7 +5,7 @@ path: /books/good-girls
 title: Good Girls
 originalPublicationDate: 2019-10-08T00:00:00.000Z
 coverImage: /img/covers/good-girls.jpg
-coverSketchImage: /img/covers/good-girls-sketch.jpg
+coverSketchImage: /img/covers/for-the-love-of-a-dog-sketch.jpg
 amazonLink: https://www.amazon.co.uk/dp/B07V2XF69J
 reviews:
   - reviewer: NetGalley Reviewer

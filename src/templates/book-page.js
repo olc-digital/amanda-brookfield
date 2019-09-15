@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
-import ImgG from 'gatsby-image'
+import Img from 'gatsby-image'
 
 import media from '../styles/mediaQueries'
 import {hideBelowMobile, hideAboveMobile} from '../styles/mixins'
@@ -10,9 +10,7 @@ import Content, {HTMLContent} from '../components/Content'
 import H2 from '../components/atoms/H2'
 import CursiveButton from '../components/atoms/CursiveButton'
 import BackButton from '../components/atoms/BackButton'
-import Img from '../components/atoms/Img'
 import Container from '../components/atoms/Container'
-import {books} from '../data'
 import BuyNowButton from '../components/atoms/BuyNowButton'
 import ReviewItem from '../components/molecules/ReviewItem'
 import HelmetHelper from '../components/molecules/HelmetHelper'
@@ -49,6 +47,7 @@ export const BookPageTemplate = ({
   content,
   reviews,
   contentComponent,
+  coverSketchImage,
 }) => {
   const [mobileReviewsVisible, setMobileReviewsVisible] = useState(false)
 
@@ -61,8 +60,8 @@ export const BookPageTemplate = ({
         metaDescription="My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives."
       />
       <Img
-        css={'width: 150px; padding: 4px; display: block; margin: 0 auto;'}
-        src={books[bookId].coverSketch}
+        style={{display: 'block', margin: '0 auto'}}
+        fixed={coverSketchImage.childImageSharp.fixed}
       />
       <BookTitle>{title}</BookTitle>
       <SwitchButtonsWrapper>
@@ -116,16 +115,15 @@ BookPageTemplate.propTypes = {
 
 const BookPage = ({data}) => {
   const {markdownRemark: post} = data
-  console.log('>>', post.frontmatter.image)
 
   return (
     <>
-      <ImgG fluid={post.frontmatter.image.childImageSharp.fluid} />
       <BookPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         bookId={post.frontmatter.bookId}
         reviews={post.frontmatter.reviews}
+        coverSketchImage={post.frontmatter.coverSketchImage}
         content={post.html}
       />
     </>
@@ -149,10 +147,10 @@ export const bookPageQuery = graphql`
           reviewer
           text
         }
-        image {
+        coverSketchImage {
           childImageSharp {
-            fluid(maxWidth: 150, quality: 100) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 150, quality: 100) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
