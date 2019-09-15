@@ -1,14 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 
 import Link from '../atoms/Link'
 import Container from '../atoms/Container'
 import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
 import H2 from '../atoms/H2'
 import P from '../atoms/P'
-import Img from '../atoms/Img'
 import BuyNowButton from '../atoms/BuyNowButton'
-import goodGirls from '../../img/good-girls.jpg'
 import goodGirlsTop from '../../img/good-girls-top.png'
 
 import {hideBelowMobile} from '../../styles/mixins'
@@ -95,7 +94,7 @@ const ImgHolder = styled.div`
   ${hideBelowMobile}
 `
 
-export default function GoodGirlsHero({pagePath, buyUrl}) {
+export default function GoodGirlsHero({pagePath, buyUrl, coverImage}) {
   return (
     <HeroSection>
       <HeroContainer>
@@ -112,7 +111,7 @@ export default function GoodGirlsHero({pagePath, buyUrl}) {
         </MainSection>
         <ImgHolder>
           {/* DONT DOWNLOAD THIS IMAGE ON MOBILE? */}
-          <Img css={'display: block'} src={goodGirls} />
+          <Img fixed={coverImage.childImageSharp.fixed} />
         </ImgHolder>
       </HeroContainer>
     </HeroSection>

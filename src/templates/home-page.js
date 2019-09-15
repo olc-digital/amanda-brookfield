@@ -108,6 +108,8 @@ export const HomePageTemplate = ({welcomeText, books}) => {
     ({node: book}) => book.frontmatter.bookId === 'before-i-knew-you',
   )
 
+  console.log(goodGirls)
+
   return (
     <Page>
       <HelmetHelper
@@ -150,12 +152,13 @@ export const HomePageTemplate = ({welcomeText, books}) => {
       <GoodGirlsHero
         pagePath={goodGirls.frontmatter.path}
         buyUrl={goodGirls.frontmatter.amazonLink}
+        coverImage={goodGirls.frontmatter.coverImage}
       />
       <Container>
         <H2 margin>Latest Releases</H2>
         <FeaturedBook
           title={ftLoad.frontmatter.title}
-          coverImage={ftLoad.frontmatter.coverImage}
+          coverImage={ftLoad.frontmatter.coverSketchImage}
           buyUrl={ftLoad.frontmatter.amazonLink}
           pagePath={ftLoad.frontmatter.path}
         >
@@ -170,7 +173,7 @@ export const HomePageTemplate = ({welcomeText, books}) => {
         </FeaturedBook>
         <FeaturedBook
           title={theLoveChild.frontmatter.title}
-          coverImage={theLoveChild.frontmatter.coverImage}
+          coverImage={theLoveChild.frontmatter.coverSketchImage}
           buyUrl={theLoveChild.frontmatter.amazonLink}
           pagePath={theLoveChild.frontmatter.path}
         >
@@ -184,7 +187,7 @@ export const HomePageTemplate = ({welcomeText, books}) => {
         </FeaturedBook>
         <FeaturedBook
           title={beforeIKnewYou.frontmatter.title}
-          coverImage={beforeIKnewYou.frontmatter.coverImage}
+          coverImage={beforeIKnewYou.frontmatter.coverSketchImage}
           buyUrl={beforeIKnewYou.frontmatter.amazonLink}
           pagePath={beforeIKnewYou.frontmatter.path}
         >
@@ -249,6 +252,13 @@ export const homePageQuery = graphql`
             path
             amazonLink
             coverImage {
+              childImageSharp {
+                fixed(width: 125, height: 192) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            coverSketchImage {
               childImageSharp {
                 fixed(width: 125, height: 192) {
                   ...GatsbyImageSharpFixed
