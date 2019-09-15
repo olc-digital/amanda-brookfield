@@ -44,15 +44,15 @@ const BlankButton = styled(ButtonBase)`
   }
 `
 
-export default function BookWidget({coverImage, title, id}) {
+export default function BookWidget({coverImage, title, buyUrl, pagePath}) {
   return (
     <Wrapper>
-      <Link to={`/books/${id}`}>
+      <Link to={pagePath}>
         <CoverImg fixed={coverImage.childImageSharp.fixed} />
         <BookTitle>{title}</BookTitle>
       </Link>
-      <BuyNowButton bookId={id} />
-      <BlankButton as={Link} to={`/books/${id}`}>
+      <BuyNowButton href={buyUrl} />
+      <BlankButton as={Link} to={pagePath}>
         Read More
       </BlankButton>
     </Wrapper>

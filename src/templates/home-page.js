@@ -12,7 +12,6 @@ import bannerDesktop1x from '../img/home-banner-desktop.jpg'
 import bannerDesktop2x from '../img/home-banner-desktop@2x.jpg'
 import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
 import {crimsonTextFont} from '../styles/mixins'
-import {books} from '../data'
 import FullWidth from '../components/atoms/FullWidth'
 import FeaturedBook from '../components/organisms/FeaturedBook'
 import Sketch from '../components/atoms/Sketch'
@@ -89,11 +88,25 @@ const selectedIds = [
   'life-begins',
   'the-lover',
 ]
-const selectedBooks = Object.values(books).filter(({id}) =>
-  selectedIds.includes(id),
-)
 
-export const HomePageTemplate = ({welcomeText}) => {
+export const HomePageTemplate = ({welcomeText, books}) => {
+  const selectedBooks = books.filter(({node: book}) =>
+    selectedIds.includes(book.frontmatter.bookId),
+  )
+
+  const {node: goodGirls} = books.find(
+    ({node: book}) => book.frontmatter.bookId === 'good-girls',
+  )
+  const {node: ftLoad} = books.find(
+    ({node: book}) => book.frontmatter.bookId === 'for-the-love-of-a-dog',
+  )
+  const {node: theLoveChild} = books.find(
+    ({node: book}) => book.frontmatter.bookId === 'the-love-child',
+  )
+  const {node: beforeIKnewYou} = books.find(
+    ({node: book}) => book.frontmatter.bookId === 'before-i-knew-you',
+  )
+
   return (
     <Page>
       <HelmetHelper
@@ -121,16 +134,30 @@ export const HomePageTemplate = ({welcomeText}) => {
         <H2 margin>My Best-Sellers</H2>
         <Scroller>
           <SelectedBooks>
-            {selectedBooks.map(book => (
-              <BookWidget key={book.id} {...book} />
+            {selectedBooks.map(({node: book}) => (
+              <BookWidget
+                key={book.id}
+                coverImage={book.frontmatter.coverImage}
+                title={book.frontmatter.title}
+                pagePath={book.frontmatter.path}
+                buyUrl={book.frontmatter.amazonLink}
+              />
             ))}
           </SelectedBooks>
         </Scroller>
       </Container>
-      <GoodGirlsHero />
+      <GoodGirlsHero
+        pagePath={goodGirls.frontmatter.path}
+        buyUrl={goodGirls.frontmatter.amazonLink}
+      />
       <Container>
         <H2 margin>Latest Releases</H2>
-        <FeaturedBook bookId="for-the-love-of-a-dog">
+        <FeaturedBook
+          title={ftLoad.frontmatter.title}
+          coverImage={ftLoad.frontmatter.coverImage}
+          buyUrl={ftLoad.frontmatter.amazonLink}
+          pagePath={ftLoad.frontmatter.path}
+        >
           {`Published in November 2018, 'For the Love of a Dog' is a funny and
             poignant memoir of emotional meltdown and recovery with the
             unwitting aid of a Golden Doodle puppy called Mabel. Following the
@@ -140,7 +167,12 @@ export const HomePageTemplate = ({welcomeText}) => {
             through with it; I was barely capable of looking after myself, let
             alone a dog…`}
         </FeaturedBook>
-        <FeaturedBook bookId="the-love-child">
+        <FeaturedBook
+          title={theLoveChild.frontmatter.title}
+          coverImage={theLoveChild.frontmatter.coverImage}
+          buyUrl={theLoveChild.frontmatter.amazonLink}
+          pagePath={theLoveChild.frontmatter.path}
+        >
           {`Published in Jan 2013, 'The Love Child' is a touching and heartfelt
             story about discovering what matters most in your life and having
             the courage to reach for it - not just once, but again and again.`}
@@ -149,7 +181,12 @@ export const HomePageTemplate = ({welcomeText}) => {
             ever. Fifteen years later their relationship is well and truly over,
             their daughter Stevie their one remaining connection...`}
         </FeaturedBook>
-        <FeaturedBook bookId="before-i-knew-you">
+        <FeaturedBook
+          title={beforeIKnewYou.frontmatter.title}
+          coverImage={beforeIKnewYou.frontmatter.coverImage}
+          buyUrl={beforeIKnewYou.frontmatter.amazonLink}
+          pagePath={beforeIKnewYou.frontmatter.path}
+        >
           {`Released in March 2011, 'Before I Knew You' tells the unsettling story
             of what happens when two very different families swap houses across
             the Atlantic one August. Strangers when they borrow each other's
@@ -166,9 +203,17 @@ HomePageTemplate.propTypes = {
 }
 
 const HomePage = ({data}) => {
-  const {markdownRemark: page} = data
+  const {
+    markdownRemark: page,
+    allMarkdownRemarkBooks: {edges: books},
+  } = data
 
-  return <HomePageTemplate welcomeText={page.frontmatter.welcomeText} />
+  return (
+    <HomePageTemplate
+      welcomeText={page.frontmatter.welcomeText}
+      books={books}
+    />
+  )
 }
 
 HomePage.propTypes = {
@@ -183,6 +228,35 @@ export const homePageQuery = graphql`
       html
       frontmatter {
         welcomeText
+      }
+    }
+    allMarkdownRemarkBooks: allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___originalPublicationDate]}
+      filter: {frontmatter: {templateKey: {in: ["book-page"]}}}
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 200)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            bookId
+            title
+            path
+            templateKey
+            path
+            amazonLink
+            coverImage {
+              childImageSharp {
+                fixed(width: 125, height: 192) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

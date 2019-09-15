@@ -10,12 +10,9 @@ import Img from '../atoms/Img'
 import BuyNowButton from '../atoms/BuyNowButton'
 import goodGirls from '../../img/good-girls.jpg'
 import goodGirlsTop from '../../img/good-girls-top.png'
-import {books} from '../../data'
 
 import {hideBelowMobile} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
-
-const goodGirlsData = books['good-girls']
 
 const HeroSection = styled.section`
   background: ${({theme}) => theme.blue};
@@ -98,7 +95,7 @@ const ImgHolder = styled.div`
   ${hideBelowMobile}
 `
 
-export default function GoodGirlsHero() {
+export default function GoodGirlsHero({pagePath, buyUrl}) {
   return (
     <HeroSection>
       <HeroContainer>
@@ -110,10 +107,8 @@ export default function GoodGirlsHero() {
           <BlurbBody>
             {`Good Girls is about the Keating sisters, Kat and Eleanor, and the turns their lives take after a childhood fraught with difficulties and adolescent rivalries.  It is a coming-of-age story, a mystery and a tear-jerker. But most of all it’s a reminder of whom to keep close and whom to trust with your darkest secrets. `}
           </BlurbBody>
-          <BuyNowButton styleType="blue" bookId="good-girls" size="md" />
-          <ReadMoreLink to={goodGirlsData.link}>
-            Read more about Good Girls
-          </ReadMoreLink>
+          <BuyNowButton styleType="blue" href={buyUrl} size="md" />
+          <ReadMoreLink to={pagePath}>Read more about Good Girls</ReadMoreLink>
         </MainSection>
         <ImgHolder>
           {/* DONT DOWNLOAD THIS IMAGE ON MOBILE? */}

@@ -44,25 +44,15 @@ const BooksPage = ({data}) => {
       <Container>
         <MobileSketchHeading title="Books" sketchType="books" />
         <BooksWrapper>
-          {/* {booksArray.map(book => (
+          {books.map(({node: book}) => (
             <BookWidget
               key={book.id}
-              id={book.id}
-              coverImage={book.coverImage}
-              title={book.title}
+              coverImage={book.frontmatter.coverImage}
+              title={book.frontmatter.title}
+              pagePath={book.frontmatter.path}
+              buyUrl={book.frontmatter.amazonLink}
             />
-          ))} */}
-          {books.map(({node: book}) => {
-            return (
-              <BookWidget
-                key={book.id}
-                id={book.frontmatter.bookId}
-                coverImage={book.frontmatter.coverImage}
-                title={book.frontmatter.title}
-                amazonLink={book.frontmatter.amazonLink}
-              />
-            )
-          })}
+          ))}
         </BooksWrapper>
         <ArticleSection>
           <ArticleList
@@ -128,6 +118,8 @@ export const pageQuery = graphql`
             bookId
             title
             templateKey
+            path
+            amazonLink
             coverImage {
               childImageSharp {
                 fixed(width: 125, height: 192) {
