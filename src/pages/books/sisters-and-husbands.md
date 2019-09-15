@@ -4,7 +4,8 @@ bookId: sisters-and-husbands
 path: /books/sisters-and-husbands
 title: Sisters and Husbands
 originalPublicationDate: 2002-04-04T00:00:00.000Z
-image: /img/covers/sisters-and-husbands.jpg
+coverImage: /img/covers/sisters-and-husbands.jpg
+coverSketchImage: /img/covers/sisters-and-husbands-sketch.jpg
 amazonLink: http://www.amazon.co.uk/dp/0340770120
 reviews:
   - reviewer: The Sunday Express

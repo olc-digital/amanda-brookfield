@@ -4,7 +4,8 @@ bookId: the-simple-rules-of-love
 path: /books/the-simple-rules-of-love
 title: The Simple Rules of Love
 originalPublicationDate: 2006-03-04T00:00:00.000Z
-image: /img/covers/the-simple-rules-of-love.jpg
+coverImage: /img/covers/the-simple-rules-of-love.jpg
+coverSketchImage: /img/covers/the-simple-rules-of-love-sketch.jpg
 amazonLink: http://www.amazon.co.uk/dp/0141021829
 reviews:
   - reviewer: Oxford Times

@@ -4,7 +4,8 @@ bookId: single-lives
 path: /books/single-lives
 title: Single Lives
 originalPublicationDate: 1999-08-19T00:00:00.000Z
-image: /img/covers/single-lives.jpg
+coverImage: /img/covers/single-lives.jpg
+coverSketchImage: /img/covers/single-lives-sketch.jpg
 amazonLink: http://www.amazon.co.uk/dp/034071266X
 reviews:
   - reviewer: Family Circle

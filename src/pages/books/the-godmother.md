@@ -4,7 +4,8 @@ bookId: the-godmother
 path: /books/the-godmother
 title: The Godmother
 originalPublicationDate: 1997-07-17T00:00:00.000Z
-image: /img/covers/the-godmother.jpg
+coverImage: /img/covers/the-godmother.jpg
+coverSketchImage: /img/covers/the-godmother-sketch.jpg
 amazonLink: http://www.amazon.co.uk/dp/0340671505
 reviews:
   - reviewer: Options

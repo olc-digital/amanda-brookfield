@@ -59,7 +59,7 @@ const BooksPage = ({data}) => {
               <BookWidget
                 key={book.id}
                 id={book.frontmatter.bookId}
-                coverImage={book.frontmatter.image}
+                coverImage={book.frontmatter.coverImage}
                 title={book.frontmatter.title}
                 amazonLink={book.frontmatter.amazonLink}
               />
@@ -130,7 +130,7 @@ export const pageQuery = graphql`
             bookId
             title
             templateKey
-            image {
+            coverImage {
               childImageSharp {
                 fixed(width: 125, height: 192) {
                   ...GatsbyImageSharpFixed

@@ -4,7 +4,8 @@ bookId: life-begins
 path: /books/life-begins
 title: Life Begins
 originalPublicationDate: 2008-10-16T00:00:00.000Z
-image: /img/covers/life-begins.jpg
+coverImage: /img/covers/life-begins.jpg
+coverSketchImage: /img/covers/life-begins-sketch.jpg
 amazonLink: http://www.amazon.co.uk/dp/0141021837
 reviews:
   - reviewer: Bella
