@@ -43,11 +43,11 @@ const ReviewItemsWrapper = styled.div`
 
 export const BookPageTemplate = ({
   title,
-  bookId,
   content,
   reviews,
   contentComponent,
   coverSketchImage,
+  buyUrl,
 }) => {
   const [mobileReviewsVisible, setMobileReviewsVisible] = useState(false)
 
@@ -82,8 +82,8 @@ export const BookPageTemplate = ({
         <PageContent content={content} />
       </div>
       <BuyNowButton
+        href={buyUrl}
         size="lg"
-        bookId={bookId}
         center
         css={`
           ${hideBelowMobile} margin-top: 48px
@@ -95,8 +95,8 @@ export const BookPageTemplate = ({
         ))}
       </ReviewItemsWrapper>
       <BuyNowButton
+        href={buyUrl}
         size="xl"
-        bookId={bookId}
         center
         css={`
           ${hideAboveMobile}
@@ -124,6 +124,7 @@ const BookPage = ({data}) => {
         bookId={post.frontmatter.bookId}
         reviews={post.frontmatter.reviews}
         coverSketchImage={post.frontmatter.coverSketchImage}
+        buyUrl={post.frontmatter.amazonLink}
         content={post.html}
       />
     </>
@@ -143,6 +144,7 @@ export const bookPageQuery = graphql`
       frontmatter {
         title
         bookId
+        amazonLink
         reviews {
           reviewer
           text

@@ -81,6 +81,7 @@ const MobileOnlySketch = styled(Sketch)`
   `}
 `
 
+//TODO - remove this and add to home page's CMS.  And for featured books
 const selectedIds = [
   'relative-love',
   'a-family-man',
@@ -244,7 +245,6 @@ export const homePageQuery = graphql`
           frontmatter {
             bookId
             title
-            path
             templateKey
             path
             amazonLink
