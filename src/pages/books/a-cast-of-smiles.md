@@ -3,6 +3,9 @@ templateKey: book-page
 bookId: a-cast-of-smiles
 path: /books/a-cast-of-smiles
 title: A Cast of Smiles
+originalPublicationDate: 2005-01-06T00:00:00.000Z
+image: /img/covers/a-cast-of-smiles.jpg
+amazonLink: http://www.amazon.co.uk/dp/0340624493
 reviews:
   - reviewer: The Guardian
     text: >

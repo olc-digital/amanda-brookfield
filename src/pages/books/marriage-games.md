@@ -3,6 +3,9 @@ templateKey: 'book-page'
 bookId: marriage-games
 path: /books/marriage-games
 title: Marriage Games
+originalPublicationDate: 1998-08-20T00:00:00.000Z
+image: /img/covers/marriage-games.jpg
+amazonLink: http://www.amazon.co.uk/dp/0340671521
 reviews:
   - reviewer: Bolton Evening News
     text: >

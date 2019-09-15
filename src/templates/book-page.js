@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
+import ImgG from 'gatsby-image'
 
 import media from '../styles/mediaQueries'
 import {hideBelowMobile, hideAboveMobile} from '../styles/mixins'
@@ -115,15 +116,19 @@ BookPageTemplate.propTypes = {
 
 const BookPage = ({data}) => {
   const {markdownRemark: post} = data
+  console.log('>>', post.frontmatter.image)
 
   return (
-    <BookPageTemplate
-      contentComponent={HTMLContent}
-      title={post.frontmatter.title}
-      bookId={post.frontmatter.bookId}
-      reviews={post.frontmatter.reviews}
-      content={post.html}
-    />
+    <>
+      <ImgG fluid={post.frontmatter.image.childImageSharp.fluid} />
+      <BookPageTemplate
+        contentComponent={HTMLContent}
+        title={post.frontmatter.title}
+        bookId={post.frontmatter.bookId}
+        reviews={post.frontmatter.reviews}
+        content={post.html}
+      />
+    </>
   )
 }
 
@@ -143,6 +148,13 @@ export const bookPageQuery = graphql`
         reviews {
           reviewer
           text
+        }
+        image {
+          childImageSharp {
+            fluid(maxWidth: 150, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }

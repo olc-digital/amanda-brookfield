@@ -9,8 +9,10 @@ import P from '../atoms/P'
 import Img from '../atoms/Img'
 import BuyNowButton from '../atoms/BuyNowButton'
 import goodGirls from '../../img/good-girls.jpg'
+import goodGirlsTop from '../../img/good-girls-top.png'
 import {books} from '../../data'
 
+import {hideBelowMobile} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
 
 const goodGirlsData = books['good-girls']
@@ -18,11 +20,26 @@ const goodGirlsData = books['good-girls']
 const HeroSection = styled.section`
   background: ${({theme}) => theme.blue};
   color: #ffffff;
+  position: relative;
+  ${media.belowMobile`
+    &::before {
+      content: '';
+      background-image: url(${goodGirlsTop});
+      background-size: cover;
+      opacity: 0.3;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+    }`}
 `
+
 const HeroContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   ${media.aboveMobile`
     flex-direction: row;
   `}
@@ -78,6 +95,7 @@ const ImgHolder = styled.div`
   width: 276px;
   flex: 1 0 auto;
   align-self: center;
+  ${hideBelowMobile}
 `
 
 export default function GoodGirlsHero() {

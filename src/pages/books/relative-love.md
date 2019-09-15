@@ -3,6 +3,9 @@ templateKey: 'book-page'
 bookId: relative-love
 path: /books/relative-love
 title: Relative Love
+originalPublicationDate: 2004-07-19T00:00:00.000Z
+image: /img/covers/relative-love.jpg
+amazonLink: http://www.amazon.co.uk/dp/B00H2GYBVO
 reviews:
   - reviewer: Family Circle
     text: >

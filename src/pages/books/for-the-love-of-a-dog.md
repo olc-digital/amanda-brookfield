@@ -3,6 +3,9 @@ templateKey: book-page
 bookId: for-the-love-of-a-dog
 path: /books/for-the-love-of-a-dog
 title: For the Love of a Dog
+originalPublicationDate: 2018-11-01T00:00:00.000Z
+image: /img/covers/for-the-love-of-a-dog.jpg
+amazonLink: http://www.amazon.co.uk/dp/1788542924
 reviews:
   - reviewer: Chris Manby
     text: >

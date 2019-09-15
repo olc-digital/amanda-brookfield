@@ -3,6 +3,9 @@ templateKey: 'book-page'
 bookId: the-love-child
 path: /books/the-love-child
 title: The Love Child
+originalPublicationDate: 2013-01-17T00:00:00.000Z
+image: /img/covers/the-love-child.jpg
+amazonLink: http://www.amazon.co.uk/dp/0718192346
 reviews:
   - reviewer: Amazon Reviewer
     text: >

@@ -3,6 +3,9 @@ templateKey: 'book-page'
 bookId: a-summer-affair
 path: /books/a-summer-affair
 title: A Summer Affair
+originalPublicationDate: 1996-08-15T00:00:00.000Z
+image: /img/covers/a-summer-affair.jpg
+amazonLink: http://www.amazon.co.uk/dp/0340623411
 reviews:
   - reviewer: Manchester Evening News
     text: >

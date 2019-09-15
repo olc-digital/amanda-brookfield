@@ -3,6 +3,9 @@ templateKey: 'book-page'
 bookId: the-lover
 path: /books/the-lover
 title: The Lover
+originalPublicationDate: 2000-03-02T00:00:00.000Z
+image: /img/covers/the-lover.jpg
+amazonLink: http://www.amazon.co.uk/dp/B00Q8NUXI2
 reviews:
   - reviewer: Oxford Times
     text: >

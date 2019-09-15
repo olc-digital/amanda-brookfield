@@ -40,8 +40,7 @@ export const books = {
     coverImage: ftloadCover,
     coverSketch: ftloadSketch,
     buyOptions: {
-      amazon: 'http://www.amazon.co.uk/dp/1788542924',
-      headOfZeus: 'http://headofzeus.com/books/love-dog',
+      amazon: 'https://www.amazon.co.uk/dp/B07V2XF69J',
     },
   },
 
