@@ -114,7 +114,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemarkBooks: allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___date]}
+      sort: {order: DESC, fields: [frontmatter___originalPublicationDate]}
       filter: {frontmatter: {templateKey: {in: ["book-page"]}}}
     ) {
       edges {
