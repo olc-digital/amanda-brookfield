@@ -42,6 +42,7 @@ const Actions = styled.div`
   grid-gap: 4px;
   grid-auto-flow: row;
   grid-auto-rows: min-content;
+  padding-top: 8px;
   ${media.aboveMobile`
     grid-gap: 16px;
     grid-auto-flow: column;

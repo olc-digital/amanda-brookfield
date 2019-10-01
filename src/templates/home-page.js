@@ -104,11 +104,6 @@ export const HomePageTemplate = ({welcomeText, books, heroData}) => {
   const {node: theLoveChild} = books.find(
     ({node: book}) => book.frontmatter.bookId === 'the-love-child',
   )
-  const {node: beforeIKnewYou} = books.find(
-    ({node: book}) => book.frontmatter.bookId === 'before-i-knew-you',
-  )
-
-  console.log(goodGirls)
 
   return (
     <Page>
@@ -157,6 +152,27 @@ export const HomePageTemplate = ({welcomeText, books, heroData}) => {
       <Container>
         <H2 margin>Latest Releases</H2>
         <FeaturedBook
+          title={goodGirls.frontmatter.title}
+          coverImage={goodGirls.frontmatter.coverSketchImage}
+          buyUrl={goodGirls.frontmatter.amazonLink}
+          pagePath={goodGirls.frontmatter.path}
+        >
+          {`Published in October 2019, 'Good Girls' tells the compelling story 
+          of the Keating sisters: Kat is mesmerising, beautiful, smart and 
+          charming - everything a good girl should be. Her elder sister Eleanor,
+          on the other hand, is on the awkward side of tall, clever enough to 
+          be bullied, and full of the responsibilities only an older sibling can
+          understand.  She adores her little sister but grows up certain that
+          she can never compete with her.`}
+          <br />
+          <br />
+          {`The story follows the girls through a childhood dark with adult 
+          secrets and sibling tensions, and on into adulthood with all its 
+          complexities and misunderstandings.  Until a terrible truth brings 
+          the sisters crashing together and finally Eleanor begins to uncover 
+          just how good Kat really was.`}
+        </FeaturedBook>
+        <FeaturedBook
           title={ftLoad.frontmatter.title}
           coverImage={ftLoad.frontmatter.coverSketchImage}
           buyUrl={ftLoad.frontmatter.amazonLink}
@@ -184,18 +200,6 @@ export const HomePageTemplate = ({welcomeText, books, heroData}) => {
           {`When Janine and Dougie fell in love they thought it would be for
             ever. Fifteen years later their relationship is well and truly over,
             their daughter Stevie their one remaining connection...`}
-        </FeaturedBook>
-        <FeaturedBook
-          title={beforeIKnewYou.frontmatter.title}
-          coverImage={beforeIKnewYou.frontmatter.coverSketchImage}
-          buyUrl={beforeIKnewYou.frontmatter.amazonLink}
-          pagePath={beforeIKnewYou.frontmatter.path}
-        >
-          {`Released in March 2011, 'Before I Knew You' tells the unsettling story
-            of what happens when two very different families swap houses across
-            the Atlantic one August. Strangers when they borrow each other's
-            respective homes, their lives then start to intertwine in unexpected
-            ways, throwing them at the mercy of their pasts and each other.`}
         </FeaturedBook>
       </Container>
     </Page>
