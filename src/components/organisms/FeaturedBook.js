@@ -60,11 +60,7 @@ export default function FeaturedBook({
   return (
     <Grid>
       <SketchCover>
-        <Img
-          style={{width: 125}}
-          fixed={coverImage.childImageSharp.fixed}
-          imgStyle={{padding: 4}}
-        />
+        <Img fixed={coverImage.childImageSharp.fixed} />
       </SketchCover>
       <Description>
         <H3 center={false}>{title}</H3>

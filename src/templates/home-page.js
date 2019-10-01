@@ -211,7 +211,6 @@ HomePageTemplate.propTypes = {
 }
 
 const HomePage = ({data}) => {
-  console.log(data)
   const {
     markdownRemark: page,
     allMarkdownRemarkBooks: {edges: books},
