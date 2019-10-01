@@ -90,7 +90,7 @@ const selectedIds = [
   'the-lover',
 ]
 
-export const HomePageTemplate = ({welcomeText, books}) => {
+export const HomePageTemplate = ({welcomeText, books, heroData}) => {
   const selectedBooks = books.filter(({node: book}) =>
     selectedIds.includes(book.frontmatter.bookId),
   )
@@ -152,7 +152,7 @@ export const HomePageTemplate = ({welcomeText, books}) => {
       <GoodGirlsHero
         pagePath={goodGirls.frontmatter.path}
         buyUrl={goodGirls.frontmatter.amazonLink}
-        coverImage={goodGirls.frontmatter.coverImage}
+        coverImage={heroData.frontmatter.coverImage}
       />
       <Container>
         <H2 margin>Latest Releases</H2>
@@ -207,15 +207,18 @@ HomePageTemplate.propTypes = {
 }
 
 const HomePage = ({data}) => {
+  console.log(data)
   const {
     markdownRemark: page,
     allMarkdownRemarkBooks: {edges: books},
+    heroData,
   } = data
 
   return (
     <HomePageTemplate
       welcomeText={page.frontmatter.welcomeText}
       books={books}
+      heroData={heroData}
     />
   )
 }
@@ -234,9 +237,20 @@ export const homePageQuery = graphql`
         welcomeText
       }
     }
+    heroData: markdownRemark(frontmatter: {bookId: {eq: "good-girls"}}) {
+      frontmatter {
+        coverImage {
+          childImageSharp {
+            fluid(maxWidth: 276) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
     allMarkdownRemarkBooks: allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___originalPublicationDate]}
-      filter: {frontmatter: {templateKey: {in: ["book-page"]}}}
+      filter: {frontmatter: {templateKey: {eq: "book-page"}}}
     ) {
       edges {
         node {
@@ -260,7 +274,7 @@ export const homePageQuery = graphql`
             }
             coverSketchImage {
               childImageSharp {
-                fixed(width: 125, height: 192) {
+                fixed(width: 117, height: 165) {
                   ...GatsbyImageSharpFixed
                 }
               }

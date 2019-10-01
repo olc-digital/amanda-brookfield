@@ -9,7 +9,7 @@ import media from '../../styles/mediaQueries'
 import SketchButton from '../atoms/SketchButton'
 import BuyNowButton from '../atoms/BuyNowButton'
 
-const Wrapper = styled.div`
+const Grid = styled.div`
   display: grid;
   margin: 72px 0;
   grid-template-areas:
@@ -57,11 +57,12 @@ export default function FeaturedBook({
   pagePath,
 }) {
   return (
-    <Wrapper>
+    <Grid>
       <SketchCover>
         <Img
-          style={{width: 125, padding: 4}}
+          style={{width: 125}}
           fixed={coverImage.childImageSharp.fixed}
+          imgStyle={{padding: 4}}
         />
       </SketchCover>
       <Description>
@@ -74,6 +75,6 @@ export default function FeaturedBook({
           Read More
         </SketchButton>
       </Actions>
-    </Wrapper>
+    </Grid>
   )
 }

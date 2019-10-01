@@ -43,7 +43,7 @@ const HeroContainer = styled(Container)`
 
 const MainSection = styled.div`
   position: relative;
-  padding-top: 24px;
+  padding: 24px 0;
   width: 100%;
   ${media.aboveMobile`
     align-self: auto;
@@ -111,7 +111,7 @@ export default function GoodGirlsHero({pagePath, buyUrl, coverImage}) {
         </MainSection>
         <ImgHolder>
           {/* DONT DOWNLOAD THIS IMAGE ON MOBILE? */}
-          <Img fixed={coverImage.childImageSharp.fixed} />
+          <Img fluid={coverImage.childImageSharp.fluid} />
         </ImgHolder>
       </HeroContainer>
     </HeroSection>
