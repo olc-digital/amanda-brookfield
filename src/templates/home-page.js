@@ -85,7 +85,7 @@ const MobileOnlySketch = styled(Sketch)`
 const selectedIds = [
   'relative-love',
   'a-family-man',
-  'sisters-and-husbands',
+  'before-i-knew-you',
   'life-begins',
   'the-lover',
 ]
@@ -164,13 +164,6 @@ export const HomePageTemplate = ({welcomeText, books, heroData}) => {
           be bullied, and full of the responsibilities only an older sibling can
           understand.  She adores her little sister but grows up certain that
           she can never compete with her.`}
-          <br />
-          <br />
-          {`The story follows the girls through a childhood dark with adult 
-          secrets and sibling tensions, and on into adulthood with all its 
-          complexities and misunderstandings.  Until a terrible truth brings 
-          the sisters crashing together and finally Eleanor begins to uncover 
-          just how good Kat really was.`}
         </FeaturedBook>
         <FeaturedBook
           title={ftLoad.frontmatter.title}

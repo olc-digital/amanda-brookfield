@@ -5,6 +5,7 @@ buttonLink: 'https://www.amazon.co.uk/Good-Girls-Amanda-Brookfield-ebook/dp/B07V
 displayUntil: ''
 isDisabled: false
 ---
-So excited to announce the arrival of my new novel, 'Good Girls'.
 
-Available to pre-order now!  Publication date October 8th 2019
+My new novel, 'Good Girls', is here!
+
+_"The depth - the beauty - of this evocative story is almost too difficult to encapsulate."_
