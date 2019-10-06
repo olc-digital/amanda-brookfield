@@ -1,6 +1,6 @@
 ---
 title: The Big News
-buttonText: PRE-ORDER
+buttonText: BUY NOW
 buttonLink: 'https://www.amazon.co.uk/Good-Girls-Amanda-Brookfield-ebook/dp/B07V2XF69J'
 displayUntil: ''
 isDisabled: false
