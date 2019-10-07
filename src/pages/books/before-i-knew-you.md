@@ -3,6 +3,10 @@ templateKey: 'book-page'
 bookId: before-i-knew-you
 path: /books/before-i-knew-you
 title: Before I Knew You
+originalPublicationDate: 2011-03-17T00:00:00.000Z
+coverImage: /img/covers/before-i-knew-you.jpg
+coverSketchImage: /img/covers/before-i-knew-you-sketch.jpg
+amazonLink: http://www.amazon.co.uk/dp/0141039949
 reviews:
   - reviewer: Irish Times
     text: >

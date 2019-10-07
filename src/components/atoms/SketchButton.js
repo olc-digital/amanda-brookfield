@@ -100,7 +100,7 @@ SketchButtonComponent.defaultProps = {
   size: 'md',
 }
 SketchButtonComponent.propTypes = {
-  styleType: PropTypes.oneOf(['primary', 'outline', 'orange']),
+  styleType: PropTypes.oneOf(['primary', 'outline', 'orange', 'blue']),
   size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
   uppercase: PropTypes.bool,
 }

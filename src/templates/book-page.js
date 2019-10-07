@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 
 import media from '../styles/mediaQueries'
 import {hideBelowMobile, hideAboveMobile} from '../styles/mixins'
@@ -9,9 +10,7 @@ import Content, {HTMLContent} from '../components/Content'
 import H2 from '../components/atoms/H2'
 import CursiveButton from '../components/atoms/CursiveButton'
 import BackButton from '../components/atoms/BackButton'
-import Img from '../components/atoms/Img'
 import Container from '../components/atoms/Container'
-import {books} from '../data'
 import BuyNowButton from '../components/atoms/BuyNowButton'
 import ReviewItem from '../components/molecules/ReviewItem'
 import HelmetHelper from '../components/molecules/HelmetHelper'
@@ -44,10 +43,11 @@ const ReviewItemsWrapper = styled.div`
 
 export const BookPageTemplate = ({
   title,
-  bookId,
   content,
   reviews,
   contentComponent,
+  coverSketchImage,
+  buyUrl,
 }) => {
   const [mobileReviewsVisible, setMobileReviewsVisible] = useState(false)
 
@@ -60,8 +60,8 @@ export const BookPageTemplate = ({
         metaDescription="My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives."
       />
       <Img
-        css={'width: 150px; padding: 4px; display: block; margin: 0 auto;'}
-        src={books[bookId].coverSketch}
+        style={{display: 'block', margin: '0 auto'}}
+        fixed={coverSketchImage.childImageSharp.fixed}
       />
       <BookTitle>{title}</BookTitle>
       <SwitchButtonsWrapper>
@@ -82,8 +82,8 @@ export const BookPageTemplate = ({
         <PageContent content={content} />
       </div>
       <BuyNowButton
+        href={buyUrl}
         size="lg"
-        bookId={bookId}
         center
         css={`
           ${hideBelowMobile} margin-top: 48px
@@ -95,8 +95,8 @@ export const BookPageTemplate = ({
         ))}
       </ReviewItemsWrapper>
       <BuyNowButton
+        href={buyUrl}
         size="xl"
-        bookId={bookId}
         center
         css={`
           ${hideAboveMobile}
@@ -117,13 +117,17 @@ const BookPage = ({data}) => {
   const {markdownRemark: post} = data
 
   return (
-    <BookPageTemplate
-      contentComponent={HTMLContent}
-      title={post.frontmatter.title}
-      bookId={post.frontmatter.bookId}
-      reviews={post.frontmatter.reviews}
-      content={post.html}
-    />
+    <>
+      <BookPageTemplate
+        contentComponent={HTMLContent}
+        title={post.frontmatter.title}
+        bookId={post.frontmatter.bookId}
+        reviews={post.frontmatter.reviews}
+        coverSketchImage={post.frontmatter.coverSketchImage}
+        buyUrl={post.frontmatter.amazonLink}
+        content={post.html}
+      />
+    </>
   )
 }
 
@@ -140,9 +144,17 @@ export const bookPageQuery = graphql`
       frontmatter {
         title
         bookId
+        amazonLink
         reviews {
           reviewer
           text
+        }
+        coverSketchImage {
+          childImageSharp {
+            fixed(width: 150, quality: 100) {
+              ...GatsbyImageSharpFixed
+            }
+          }
         }
       }
     }

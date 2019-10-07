@@ -3,6 +3,10 @@ templateKey: 'book-page'
 bookId: a-family-man
 path: /books/a-family-man
 title: A Family Man
+originalPublicationDate: 2001-07-05T00:00:00.000Z
+coverImage: /img/covers/a-family-man.jpg
+coverSketchImage: /img/covers/a-family-man-sketch.jpg
+amazonLink: http://www.amazon.co.uk/dp/B00H2GYBP0
 reviews:
   - reviewer: The Sunday Times
     text: >

@@ -9,14 +9,11 @@ import Img from '../atoms/Img'
 import BuyNowButton from '../atoms/BuyNowButton'
 import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
 import media from '../../styles/mediaQueries'
-import {books} from '../../data'
 
 import amandaWithMabel from '../../img/amanda-with-mabel.png'
 import amandaWithMabel2x from '../../img/amanda-with-mabel@2x.png'
 import amandaWithMabel3x from '../../img/amanda-with-mabel@3x.png'
 import MabelGallery from './MabelGallery'
-
-const ftloadData = books['for-the-love-of-a-dog']
 
 const HeroSection = styled.section`
   background: ${({theme}) => theme.orange};
@@ -48,6 +45,7 @@ const MainSection = styled.div`
     display: table;
   }
 `
+
 const GallerySection = styled.div`
   ${media.aboveContainer`
     margin-left: 44px;
@@ -98,7 +96,7 @@ const ReadMoreLink = styled(Link)`
   }
 `
 
-export default function ForTheLoveOfADogHero() {
+export default function ForTheLoveOfADogHero({pagePath, buyUrl}) {
   return (
     <HeroSection>
       <HeroContainer>
@@ -111,14 +109,8 @@ export default function ForTheLoveOfADogHero() {
           <BlurbBody>
             {`For the Love of a Dog is a poignant and often hilarious examination of how a zest for life can re-emerge from the rubble of loss.  Amanda teases out the truths at the heart of life's pitfalls, throwing light on the big issues that face us all.`}
           </BlurbBody>
-          <BuyNowButton
-            styleType="orange"
-            bookId="for-the-love-of-a-dog"
-            size="md"
-          />
-          <ReadMoreLink to={ftloadData.link}>
-            Read Amanda & Mabel’s Story
-          </ReadMoreLink>
+          <BuyNowButton styleType="orange" href={buyUrl} size="md" />
+          <ReadMoreLink to={pagePath}>Read Amanda & Mabel’s Story</ReadMoreLink>
         </MainSection>
         <GallerySection>
           <MabelGallery />

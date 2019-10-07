@@ -3,6 +3,10 @@ templateKey: 'book-page'
 bookId: alice-alone
 path: /books/alice-alone
 title: Alice Alone
+originalPublicationDate: 1989-01-26T00:00:00.000Z
+coverImage: /img/covers/alice-alone.jpg
+coverSketchImage: /img/covers/alice-alone-sketch.jpg
+amazonLink: http://www.amazon.co.uk/dp/0340624485
 reviews:
   - reviewer: The Financial Times
     text: >

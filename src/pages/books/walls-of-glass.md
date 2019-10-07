@@ -3,6 +3,10 @@ templateKey: 'book-page'
 bookId: walls-of-glass
 path: /books/walls-of-glass
 title: Walls of Glass
+originalPublicationDate: 1995-03-20T00:00:00.000Z
+coverImage: /img/covers/walls-of-glass.jpg
+coverSketchImage: /img/covers/walls-of-glass-sketch.jpg
+amazonLink: http://www.amazon.co.uk/dp/0340623403
 reviews:
   - reviewer: Sunday Telegraph
     text: >

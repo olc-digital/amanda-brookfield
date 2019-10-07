@@ -1,17 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 
 import Link from '../atoms/Link'
-import Img from '../atoms/Img'
 import H3 from '../atoms/H3'
 import P from '../atoms/P'
 import media from '../../styles/mediaQueries'
 import SketchButton from '../atoms/SketchButton'
 import BuyNowButton from '../atoms/BuyNowButton'
 
-import {books} from '../../data'
-
-const Wrapper = styled.div`
+const Grid = styled.div`
   display: grid;
   margin: 72px 0;
   grid-template-areas:
@@ -44,6 +42,7 @@ const Actions = styled.div`
   grid-gap: 4px;
   grid-auto-flow: row;
   grid-auto-rows: min-content;
+  padding-top: 8px;
   ${media.aboveMobile`
     grid-gap: 16px;
     grid-auto-flow: column;
@@ -51,30 +50,28 @@ const Actions = styled.div`
   `}
 `
 
-export default function FeaturedBook({children, bookId}) {
+export default function FeaturedBook({
+  children,
+  title,
+  coverImage,
+  buyUrl,
+  pagePath,
+}) {
   return (
-    <Wrapper>
+    <Grid>
       <SketchCover>
-        <Img
-          css={'width: 125px; padding: 4px;'}
-          src={books[bookId].coverSketch}
-        />
+        <Img fixed={coverImage.childImageSharp.fixed} />
       </SketchCover>
       <Description>
-        <H3 center={false}>{books[bookId].title}</H3>
-        <P>{children || books[bookId].blurb}</P>
+        <H3 center={false}>{title}</H3>
+        <P>{children}</P>
       </Description>
       <Actions>
-        <BuyNowButton styleType="primary" bookId={bookId} />
-        <SketchButton
-          as={Link}
-          to={`/books/${bookId}`}
-          size="sm"
-          styleType="outline"
-        >
+        <BuyNowButton styleType="primary" href={buyUrl} />
+        <SketchButton as={Link} to={pagePath} size="sm" styleType="outline">
           Read More
         </SketchButton>
       </Actions>
-    </Wrapper>
+    </Grid>
   )
 }

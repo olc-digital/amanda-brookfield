@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 import PropTypes from 'prop-types'
-import {Link} from 'gatsby'
+import {Link, graphql} from 'gatsby'
 import styled from 'styled-components'
 
 import media from '../../styles/mediaQueries'
@@ -10,7 +10,6 @@ import H2 from '../../components/atoms/H2'
 import H3 from '../../components/atoms/H3'
 import Container from '../../components/atoms/Container'
 import Page from '../../components/atoms/Page'
-import {books} from '../../data'
 import MobileSketchHeading from '../../components/molecules/MobileSketchHeading'
 import {kalamFont} from '../../styles/mixins'
 import HelmetHelper from '../../components/molecules/HelmetHelper'
@@ -78,9 +77,25 @@ const AuthorImageScroller = ({title, onClick, img}) => {
   )
 }
 
-const AuthorPage = () => {
+const getBook = (id, books) => {
+  const {node} =
+    books.find(({node: book}) => book.frontmatter.bookId === id) || {}
+  return node
+}
+
+const AuthorPage = ({data}) => {
   const inspRef = useRef(null)
   const bioRef = useRef(null)
+  const {
+    allMarkdownRemarkBooks: {edges: books},
+  } = data
+
+  const theGodmother = getBook('the-godmother', books)
+  const aFamilyMan = getBook('a-family-man', books)
+  const relativeLove = getBook('relative-love', books)
+  const lifeBegins = getBook('life-begins', books)
+  const theLoveChild = getBook('the-love-child', books)
+
   return (
     <Page>
       <HelmetHelper
@@ -151,7 +166,7 @@ const AuthorPage = () => {
           </p>
           <p>
             For example, in writing my novel{' '}
-            <Link to={books['the-godmother'].link}>The Godmother</Link>, I asked
+            <Link to={theGodmother.fields.slug}>The Godmother</Link>, I asked
             myself:
           </p>
           <BlockQuote>
@@ -160,8 +175,8 @@ const AuthorPage = () => {
             becoming a mother was important after all?
           </BlockQuote>
           <p>
-            Or, in writing{' '}
-            <Link to={books['a-family-man'].link}>A Family Man</Link>:
+            Or, in writing <Link to={aFamilyMan.fields.slug}>A Family Man</Link>
+            :
           </p>
           <BlockQuote>
             What if a decent, hard-working thirtysomething Dad came home one
@@ -170,14 +185,13 @@ const AuthorPage = () => {
           </BlockQuote>
           <p>
             Or, in writing{' '}
-            <Link to={books['relative-love'].link}>Relative Love</Link>:
+            <Link to={relativeLove.fields.slug}>Relative Love</Link>:
           </p>
           <BlockQuote>
             What if the worst, most unforeseeable tragedy befell a close family?
           </BlockQuote>
           <p>
-            Or, in writing{' '}
-            <Link to={books['life-begins'].link}>Life Begins</Link>:
+            Or, in writing <Link to={lifeBegins.fields.slug}>Life Begins</Link>:
           </p>
           <BlockQuote>
             What if the direction of an entire life was based on a single,
@@ -185,7 +199,7 @@ const AuthorPage = () => {
           </BlockQuote>
           <p>
             Or, in writing{' '}
-            <Link to={books['the-love-child'].link}>The Love Child</Link>:
+            <Link to={theLoveChild.fields.slug}>The Love Child</Link>:
           </p>
           <BlockQuote>
             {`What if a 40 year old had sex with his best friend's just-sixteen
@@ -313,3 +327,25 @@ AuthorPage.propTypes = {
 }
 
 export default AuthorPage
+
+export const pageQuery = graphql`
+  query AuthorPageQuery {
+    allMarkdownRemarkBooks: allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___originalPublicationDate]}
+      filter: {frontmatter: {templateKey: {in: ["book-page"]}}}
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 200)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            bookId
+          }
+        }
+      }
+    }
+  }
+`

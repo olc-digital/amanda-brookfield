@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 
 import Link from '../atoms/Link'
 import BuyNowButton from '../atoms/BuyNowButton'
-import Img from '../atoms/Img'
 import H3 from '../atoms/H3'
 import ButtonBase from '../atoms/ButtonBase'
 
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     }
   }
 `
-const Cover = styled(Img)`
+const CoverImg = styled(Img)`
   width: 125px;
   height: 192px;
   margin-bottom: 9px;
@@ -44,15 +44,15 @@ const BlankButton = styled(ButtonBase)`
   }
 `
 
-export default function BookWidget({coverImage, title, id}) {
+export default function BookWidget({coverImage, title, buyUrl, pagePath}) {
   return (
     <Wrapper>
-      <Link to={`/books/${id}`}>
-        <Cover src={coverImage} />
+      <Link to={pagePath}>
+        <CoverImg fixed={coverImage.childImageSharp.fixed} />
         <BookTitle>{title}</BookTitle>
       </Link>
-      <BuyNowButton bookId={id} />
-      <BlankButton as={Link} to={`/books/${id}`}>
+      <BuyNowButton href={buyUrl} />
+      <BlankButton as={Link} to={pagePath}>
         Read More
       </BlankButton>
     </Wrapper>
