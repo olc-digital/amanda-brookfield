@@ -6,6 +6,14 @@ import ButtonBase from './ButtonBase'
 import {kalamFont} from '../../styles/mixins'
 import theme from '../../styles/theme'
 
+const ButtonSvg = styled.svg`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`
+
 const SketchButton = styled(ButtonBase)`
   ${kalamFont}
   position: relative;
@@ -19,13 +27,6 @@ const SketchButton = styled(ButtonBase)`
   &:hover ${ButtonSvg} {
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
   }
-`
-const ButtonSvg = styled.svg`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 `
 const ButtonText = styled.div`
   position: relative;
