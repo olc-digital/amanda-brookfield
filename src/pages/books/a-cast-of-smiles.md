@@ -6,14 +6,14 @@ title: A Cast of Smiles
 originalPublicationDate: 2005-01-06T00:00:00.000Z
 coverImage: /img/covers/a-cast-of-smiles.jpg
 coverSketchImage: /img/covers/a-cast-of-smiles-sketch.jpg
-amazonLink: http://www.amazon.co.uk/dp/0340624493
+amazonLink: 'http://www.amazon.co.uk/dp/0340624493'
 reviews:
   - reviewer: The Guardian
     text: >
-      What is refreshing here is the author's conspicuous sanity and her sharp line in defence of reason… It could be sentimental, but it isn’t.
-
+      What is refreshing here is the author's conspicuous sanity and her sharp
+      line in defence of reason… It could be sentimental, but it isn’t.
   - reviewer: Observer
-    text: >
+    text: |
       Amanda Brookfield's voice is young and clear… keeps a firm authorial hand
 ---
 
