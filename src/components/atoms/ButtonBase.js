@@ -5,7 +5,7 @@ const ButtonBase = styled.button.attrs({type: 'button'})`
   cursor: pointer;
   background: transparent;
   outline: none;
-  -webkit-appearance: none;
+  -webkit-appearance: none !important;
   display: flex;
   justify-content: center;
   text-decoration: none;
