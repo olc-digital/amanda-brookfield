@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import Img from '../components/PreviewCompatibleImage'
 
 import media from '../styles/mediaQueries'
 import {hideBelowMobile, hideAboveMobile} from '../styles/mixins'
@@ -50,8 +50,8 @@ export const BookPageTemplate = ({
   buyUrl,
 }) => {
   const [mobileReviewsVisible, setMobileReviewsVisible] = useState(false)
-
   const PageContent = contentComponent || Content
+
   return (
     <Container narrow>
       <BackButton />
@@ -60,8 +60,8 @@ export const BookPageTemplate = ({
         metaDescription="My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives."
       />
       <Img
-        style={{display: 'block', margin: '0 auto'}}
-        fixed={coverSketchImage.childImageSharp.fixed}
+        style={{display: 'block', margin: '0 auto', width: 150}}
+        imageInfo={coverSketchImage}
       />
       <BookTitle>{title}</BookTitle>
       <SwitchButtonsWrapper>
@@ -107,12 +107,6 @@ export const BookPageTemplate = ({
   )
 }
 
-BookPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
-
 const BookPage = ({data}) => {
   const {markdownRemark: post} = data
 
@@ -151,8 +145,8 @@ export const bookPageQuery = graphql`
         }
         coverSketchImage {
           childImageSharp {
-            fixed(width: 150, quality: 100) {
-              ...GatsbyImageSharpFixed
+            fixed(width: 150, quality: 90) {
+              ...GatsbyImageSharpFixed_tracedSVG
             }
           }
         }

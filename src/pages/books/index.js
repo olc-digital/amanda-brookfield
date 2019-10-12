@@ -122,8 +122,8 @@ export const pageQuery = graphql`
             amazonLink
             coverImage {
               childImageSharp {
-                fixed(width: 125, height: 192) {
-                  ...GatsbyImageSharpFixed
+                fixed(width: 125, height: 192, quality: 90) {
+                  ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
             }
