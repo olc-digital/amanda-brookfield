@@ -145,8 +145,8 @@ export const bookPageQuery = graphql`
         }
         coverSketchImage {
           childImageSharp {
-            fixed(width: 150, quality: 100) {
-              ...GatsbyImageSharpFixed
+            fixed(width: 150, quality: 90) {
+              ...GatsbyImageSharpFixed_tracedSVG
             }
           }
         }
