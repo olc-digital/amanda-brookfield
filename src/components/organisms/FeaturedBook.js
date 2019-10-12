@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import Img from '../PreviewCompatibleImage'
 
 import Link from '../atoms/Link'
 import H3 from '../atoms/H3'
@@ -60,7 +60,7 @@ export default function FeaturedBook({
   return (
     <Grid>
       <SketchCover>
-        <Img fixed={coverImage.childImageSharp.fixed} />
+        <Img imageInfo={coverImage} />
       </SketchCover>
       <Description>
         <H3 center={false}>{title}</H3>

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import Img from '../PreviewCompatibleImage'
 
 import Link from '../atoms/Link'
 import BuyNowButton from '../atoms/BuyNowButton'
@@ -48,7 +48,7 @@ export default function BookWidget({coverImage, title, buyUrl, pagePath}) {
   return (
     <Wrapper>
       <Link to={pagePath}>
-        <CoverImg fixed={coverImage.childImageSharp.fixed} />
+        <CoverImg imageInfo={coverImage} />
         <BookTitle>{title}</BookTitle>
       </Link>
       <BuyNowButton href={buyUrl} />

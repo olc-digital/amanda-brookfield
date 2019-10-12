@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import Img from '../PreviewCompatibleImage'
 
 import Link from '../atoms/Link'
 import Container from '../atoms/Container'
@@ -111,7 +111,7 @@ export default function GoodGirlsHero({pagePath, buyUrl, coverImage}) {
         </MainSection>
         <ImgHolder>
           {/* DONT DOWNLOAD THIS IMAGE ON MOBILE? */}
-          <Img fluid={coverImage.childImageSharp.fluid} />
+          <Img imageInfo={coverImage} />
         </ImgHolder>
       </HeroContainer>
     </HeroSection>
