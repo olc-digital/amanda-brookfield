@@ -19,9 +19,9 @@ const PreviewCompatibleImage = ({imageInfo, style}) => {
     return null
   }
 
-  const {alt = '', childImageSharp, value: image} = imageInfo
+  const {alt = '', childImageSharp, image, path} = imageInfo
 
-  if (!!image && !!image.childImageSharp) {
+  if (image && image.childImageSharp) {
     return (
       <ImgFluidOrFixed
         style={style}
@@ -41,8 +41,8 @@ const PreviewCompatibleImage = ({imageInfo, style}) => {
     )
   }
 
-  if (!!image && typeof image === 'string') {
-    return <img style={style} src={image} alt={alt} />
+  if (path && typeof path === 'string') {
+    return <img style={style} src={path} alt={alt} />
   }
 
   return null

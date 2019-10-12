@@ -73,6 +73,7 @@
     ]
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-import": "^2.14.0",

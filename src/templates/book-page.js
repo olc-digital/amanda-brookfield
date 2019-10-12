@@ -107,12 +107,6 @@ export const BookPageTemplate = ({
   )
 }
 
-BookPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
-
 const BookPage = ({data}) => {
   const {markdownRemark: post} = data
 
