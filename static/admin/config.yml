@@ -175,6 +175,14 @@ collections:
       - {label: Book ID, name: bookId, widget: hidden}
       - {label: Path, name: path, widget: hidden}
       - {label: Title, name: title, widget: string}
+      - {
+          label: Original Publication Date,
+          name: originalPublicationDate,
+          widget: date,
+        }
+      - {label: Cover Image, name: coverImage, widget: hidden}
+      - {label: Cover Sketch Image, name: coverSketchImage, widget: hidden}
+      - {label: Amazon Link, name: amazonLink, widget: string}
       - {label: Body, name: body, widget: markdown}
       - {
           label: Reviews,
