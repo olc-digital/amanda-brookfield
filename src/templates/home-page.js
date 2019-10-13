@@ -81,18 +81,14 @@ const MobileOnlySketch = styled(Sketch)`
   `}
 `
 
-//TODO - remove this and add to home page's CMS.  And for featured books
-const selectedIds = [
-  'relative-love',
-  'a-family-man',
-  'before-i-knew-you',
-  'life-begins',
-  'the-lover',
-]
-
-export const HomePageTemplate = ({welcomeText, books, heroData}) => {
+export const HomePageTemplate = ({
+  welcomeText,
+  bestSellers,
+  books,
+  heroData,
+}) => {
   const selectedBooks = books.filter(({node: book}) =>
-    selectedIds.includes(book.frontmatter.bookId),
+    bestSellers.includes(book.frontmatter.bookId),
   )
 
   const {node: goodGirls} = books.find(
@@ -210,9 +206,25 @@ const HomePage = ({data}) => {
     heroData,
   } = data
 
+  const {
+    welcomeText,
+    bestSeller1,
+    bestSeller2,
+    bestSeller3,
+    bestSeller4,
+    bestSeller5,
+  } = page.frontmatter
+
   return (
     <HomePageTemplate
-      welcomeText={page.frontmatter.welcomeText}
+      welcomeText={welcomeText}
+      bestSellers={[
+        bestSeller1,
+        bestSeller2,
+        bestSeller3,
+        bestSeller4,
+        bestSeller5,
+      ]}
       books={books}
       heroData={heroData}
     />
@@ -231,6 +243,11 @@ export const homePageQuery = graphql`
       html
       frontmatter {
         welcomeText
+        bestSeller1
+        bestSeller2
+        bestSeller3
+        bestSeller4
+        bestSeller5
       }
     }
     heroData: markdownRemark(frontmatter: {bookId: {eq: "good-girls"}}) {

@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: fix-homepage-cms
   commit_messages:
     create: Create {{collection}} “{{slug}}”
     update: Update {{collection}} “{{slug}}”
@@ -27,7 +27,64 @@ collections:
         label: Home
         name: home
         fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: home-page,
+            }
           - {label: Welcome Text, name: welcomeText, widget: text}
+          - {
+              label: Best Seller 1,
+              name: bestSeller1,
+              widget: relation,
+              collection: books,
+              searchFields: [title],
+              valueField: bookId,
+              displayFields: [title],
+            }
+          - {
+              label: Best Seller 2,
+              name: bestSeller2,
+              widget: relation,
+              collection: books,
+              searchFields: [title],
+              valueField: bookId,
+              displayFields: [title],
+            }
+          - {
+              label: Best Seller 3,
+              name: bestSeller3,
+              widget: relation,
+              collection: books,
+              searchFields: [title],
+              valueField: bookId,
+              displayFields: [title],
+            }
+          - {
+              label: Best Seller 4,
+              name: bestSeller4,
+              widget: relation,
+              collection: books,
+              searchFields: [title],
+              valueField: bookId,
+              displayFields: [title],
+            }
+          - {
+              label: Best Seller 5,
+              name: bestSeller5,
+              widget: relation,
+              collection: books,
+              searchFields: [title],
+              valueField: bookId,
+              displayFields: [title],
+            }
+          # - {
+          #     label: Gallery,
+          #     name: galleryImages,
+          #     widget: list,
+          #     field: {label: Image, name: image, widget: image},
+          #   }
       - file: src/announcement/index.md
         label: Announcement
         name: announcement
