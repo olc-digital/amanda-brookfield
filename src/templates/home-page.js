@@ -206,25 +206,12 @@ const HomePage = ({data}) => {
     heroData,
   } = data
 
-  const {
-    welcomeText,
-    bestSeller1,
-    bestSeller2,
-    bestSeller3,
-    bestSeller4,
-    bestSeller5,
-  } = page.frontmatter
+  const {welcomeText, bestSellers} = page.frontmatter
 
   return (
     <HomePageTemplate
       welcomeText={welcomeText}
-      bestSellers={[
-        bestSeller1,
-        bestSeller2,
-        bestSeller3,
-        bestSeller4,
-        bestSeller5,
-      ]}
+      bestSellers={Object.values(bestSellers)}
       books={books}
       heroData={heroData}
     />
@@ -243,11 +230,13 @@ export const homePageQuery = graphql`
       html
       frontmatter {
         welcomeText
-        bestSeller1
-        bestSeller2
-        bestSeller3
-        bestSeller4
-        bestSeller5
+        bestSellers {
+          bestSeller1
+          bestSeller2
+          bestSeller3
+          bestSeller4
+          bestSeller5
+        }
       }
     }
     heroData: markdownRemark(frontmatter: {bookId: {eq: "good-girls"}}) {

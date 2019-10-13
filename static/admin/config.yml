@@ -34,51 +34,55 @@ collections:
               default: home-page,
             }
           - {label: Welcome Text, name: welcomeText, widget: text}
-          - {
-              label: Best Seller 1,
-              name: bestSeller1,
-              widget: relation,
-              collection: books,
-              searchFields: [title],
-              valueField: bookId,
-              displayFields: [title],
-            }
-          - {
-              label: Best Seller 2,
-              name: bestSeller2,
-              widget: relation,
-              collection: books,
-              searchFields: [title],
-              valueField: bookId,
-              displayFields: [title],
-            }
-          - {
-              label: Best Seller 3,
-              name: bestSeller3,
-              widget: relation,
-              collection: books,
-              searchFields: [title],
-              valueField: bookId,
-              displayFields: [title],
-            }
-          - {
-              label: Best Seller 4,
-              name: bestSeller4,
-              widget: relation,
-              collection: books,
-              searchFields: [title],
-              valueField: bookId,
-              displayFields: [title],
-            }
-          - {
-              label: Best Seller 5,
-              name: bestSeller5,
-              widget: relation,
-              collection: books,
-              searchFields: [title],
-              valueField: bookId,
-              displayFields: [title],
-            }
+          - label: Best Sellers
+            name: bestSellers
+            widget: object
+            fields:
+              - {
+                  label: Best Seller 1,
+                  name: bestSeller1,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: bookId,
+                  displayFields: [title],
+                }
+              - {
+                  label: Best Seller 2,
+                  name: bestSeller2,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: bookId,
+                  displayFields: [title],
+                }
+              - {
+                  label: Best Seller 3,
+                  name: bestSeller3,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: bookId,
+                  displayFields: [title],
+                }
+              - {
+                  label: Best Seller 4,
+                  name: bestSeller4,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: bookId,
+                  displayFields: [title],
+                }
+              - {
+                  label: Best Seller 5,
+                  name: bestSeller5,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: bookId,
+                  displayFields: [title],
+                }
           # - {
           #     label: Gallery,
           #     name: galleryImages,
