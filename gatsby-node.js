@@ -114,3 +114,5 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     })
   }
 }
+
+// NEXT STEP: follow something like this - https://stackoverflow.com/questions/49456106/how-to-make-a-one-to-many-connection-between-netlify-cms-and-gatsby
