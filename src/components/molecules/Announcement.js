@@ -82,7 +82,7 @@ const ButtonWrapper = styled.div`
   align-self: center;
   margin: 24px 0 0;
   ${media.aboveMobile`
-    margin: 0 0 0 32px;
+    margin: 16px 16px 16px 32px;
   `}
 `
 
