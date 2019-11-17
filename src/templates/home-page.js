@@ -202,12 +202,17 @@ const HomePage = ({data}) => {
     heroData,
   } = data
 
-  const {welcomeText, bestSellers} = page.frontmatter
+  const {welcomeText} = page.frontmatter
+  const bestSellersTitles = Object.values(page.frontmatter.bestSellers)
+
+  const bestSellers = books
+    .map(({node: {frontmatter: book}}) => book)
+    .filter(book => bestSellersTitles.includes(book.title))
 
   return (
     <HomePageTemplate
       welcomeText={welcomeText}
-      bestSellers={Object.values(bestSellers)}
+      bestSellers={bestSellers}
       books={books}
       heroData={heroData}
     />
