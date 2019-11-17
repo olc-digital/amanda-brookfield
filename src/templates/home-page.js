@@ -226,7 +226,13 @@ export const homePageQuery = graphql`
       html
       frontmatter {
         welcomeText
-        bestSellers
+        bestSellers {
+          bestSeller1
+          bestSeller2
+          bestSeller3
+          bestSeller4
+          bestSeller5
+        }
       }
     }
     heroData: markdownRemark(frontmatter: {bookId: {eq: "good-girls"}}) {

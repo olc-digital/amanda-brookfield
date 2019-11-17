@@ -1,51 +1,31 @@
 import React from 'react'
 import {HomePageTemplate} from '../../templates/home-page'
 
-const HomePreview = ({entry, fieldsMetaData, getAsset, widgetsFor}) => {
-  console.log('entry', entry.toJS())
-  console.log('meta', fieldsMetaData.toJS())
-  const bestSellers = fieldsMetaData.getIn([
-    'bestSellers',
-    'bestSeller',
-    'books',
-  ])
+const prepareBestSellers = (bestSellers, bestSellersData) => {
+  return Object.keys(bestSellers)
+    .map(bestSellerKey => {
+      const bestSellerData = bestSellersData[bestSellerKey]
 
-  if (!bestSellers) {
-    return 'loading...'
-  }
+      if (!bestSellerData) {
+        return null
+      }
 
-  console.log('bestSellers', bestSellers)
+      return bestSellerData.books[bestSellers[bestSellerKey]]
+    })
+    .filter(Boolean)
+}
 
-  const bsssers = widgetsFor('bestSellers').map(item => {
-    const bestSellerKey = item.get('data')
-    const x = bestSellers.toJS()
-    console.log('res:', x[bestSellerKey])
-
-    return x[bestSellerKey]
-  })
-
-  console.log('bsssers:', bsssers)
-
-  const bestSellersArr = bsssers.toJS().filter(Boolean)
-  console.log('bestSellersArr:', bestSellersArr)
-
-  // consider switching to array setup in CMS
-  // const bestSellersArr = Object.keys(bestSellers)
-  //   .sort()
-  //   .map(key => bestSellers[key])
-  //   .map(({books}) =>
-  //     Object.keys(books).reduce((acc, key) => {
-  //       // this is shit
-  //       return books[key]
-  //     }, {}),
-  //   )
-  //   .map(book => ({
-  //     ...book,
-  //     coverImage: getAsset(book.coverImage),
-  //     coverSketchImage: getAsset(book.coverSketchImage),
-  //   }))
-
-  // console.log('bs after', bestSellersArr)
+const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
+  const entryJS = entry.toJS()
+  const {bestSellers: bestSellersMeta = {}} = fieldsMetaData.toJS()
+  const {bestSellers} = entryJS.data
+  const bestSellersArr = prepareBestSellers(bestSellers, bestSellersMeta).map(
+    book => ({
+      ...book,
+      coverImage: getAsset(book.coverImage),
+      coverSketchImage: getAsset(book.coverSketchImage),
+    }),
+  )
 
   return (
     <HomePageTemplate
