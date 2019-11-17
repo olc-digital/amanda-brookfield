@@ -57,7 +57,7 @@ const Scroller = styled(FullWidth)`
   margin-bottom: 48px;
   -webkit-overflow-scrolling: touch;
 `
-const SelectedBooks = styled.div`
+const BestSellers = styled.div`
   display: flex;
   justify-content: space-between;
   width: ${({theme}) => theme.containerWidth};
@@ -87,19 +87,15 @@ export const HomePageTemplate = ({
   books,
   heroData,
 }) => {
-  const selectedBooks = books.filter(({node: book}) =>
-    bestSellers.includes(book.frontmatter.bookId),
-  )
-
-  const {node: goodGirls} = books.find(
-    ({node: book}) => book.frontmatter.bookId === 'good-girls',
-  )
-  const {node: ftLoad} = books.find(
-    ({node: book}) => book.frontmatter.bookId === 'for-the-love-of-a-dog',
-  )
-  const {node: theLoveChild} = books.find(
-    ({node: book}) => book.frontmatter.bookId === 'the-love-child',
-  )
+  // const {node: goodGirls} = books.find(
+  //   ({node: book}) => book.frontmatter.bookId === 'good-girls',
+  // )
+  // const {node: ftLoad} = books.find(
+  //   ({node: book}) => book.frontmatter.bookId === 'for-the-love-of-a-dog',
+  // )
+  // const {node: theLoveChild} = books.find(
+  //   ({node: book}) => book.frontmatter.bookId === 'the-love-child',
+  // )
 
   return (
     <Page>
@@ -127,25 +123,25 @@ export const HomePageTemplate = ({
         <MobileOnlySketch type="books" />
         <H2 margin>My Best-Sellers</H2>
         <Scroller>
-          <SelectedBooks>
-            {selectedBooks.map(({node: book}) => (
+          <BestSellers>
+            {bestSellers.map((book, index) => (
               <BookWidget
-                key={book.id}
-                coverImage={book.frontmatter.coverImage}
-                title={book.frontmatter.title}
-                pagePath={book.frontmatter.path}
-                buyUrl={book.frontmatter.amazonLink}
+                key={index}
+                coverImage={book.coverImage}
+                title={book.title}
+                pagePath={book.path}
+                buyUrl={book.amazonLink}
               />
             ))}
-          </SelectedBooks>
+          </BestSellers>
         </Scroller>
       </Container>
-      <GoodGirlsHero
+      {/* <GoodGirlsHero
         pagePath={goodGirls.frontmatter.path}
         buyUrl={goodGirls.frontmatter.amazonLink}
         coverImage={heroData.frontmatter.coverImage}
-      />
-      <Container>
+      /> */}
+      {/* <Container>
         <H2 margin>Latest Releases</H2>
         <FeaturedBook
           title={goodGirls.frontmatter.title}
@@ -190,7 +186,7 @@ export const HomePageTemplate = ({
             ever. Fifteen years later their relationship is well and truly over,
             their daughter Stevie their one remaining connection...`}
         </FeaturedBook>
-      </Container>
+      </Container> */}
     </Page>
   )
 }
@@ -230,13 +226,7 @@ export const homePageQuery = graphql`
       html
       frontmatter {
         welcomeText
-        bestSellers {
-          bestSeller1
-          bestSeller2
-          bestSeller3
-          bestSeller4
-          bestSeller5
-        }
+        bestSellers
       }
     }
     heroData: markdownRemark(frontmatter: {bookId: {eq: "good-girls"}}) {

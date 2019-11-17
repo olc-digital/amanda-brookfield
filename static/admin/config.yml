@@ -36,53 +36,67 @@ collections:
           - {label: Welcome Text, name: welcomeText, widget: text}
           - label: Best Sellers
             name: bestSellers
-            widget: object
-            fields:
-              - {
-                  label: Best Seller 1,
-                  name: bestSeller1,
-                  widget: relation,
-                  collection: books,
-                  searchFields: [title],
-                  valueField: bookId,
-                  displayFields: [title],
-                }
-              - {
-                  label: Best Seller 2,
-                  name: bestSeller2,
-                  widget: relation,
-                  collection: books,
-                  searchFields: [title],
-                  valueField: bookId,
-                  displayFields: [title],
-                }
-              - {
-                  label: Best Seller 3,
-                  name: bestSeller3,
-                  widget: relation,
-                  collection: books,
-                  searchFields: [title],
-                  valueField: bookId,
-                  displayFields: [title],
-                }
-              - {
-                  label: Best Seller 4,
-                  name: bestSeller4,
-                  widget: relation,
-                  collection: books,
-                  searchFields: [title],
-                  valueField: bookId,
-                  displayFields: [title],
-                }
-              - {
-                  label: Best Seller 5,
-                  name: bestSeller5,
-                  widget: relation,
-                  collection: books,
-                  searchFields: [title],
-                  valueField: bookId,
-                  displayFields: [title],
-                }
+            widget: list
+            allow_add: false
+            field:
+              {
+                label: Best Seller,
+                name: bestSeller,
+                widget: relation,
+                collection: books,
+                searchFields: [title],
+                valueField: title,
+                displayFields: [title],
+              }
+          # - label: Best Sellers
+          #   name: bestSellers
+          #   widget: object
+          #   fields:
+          #     - {
+          #         label: Best Seller 1,
+          #         name: bestSeller1,
+          #         widget: relation,
+          #         collection: books,
+          #         searchFields: [title],
+          #         valueField: title,
+          #         displayFields: [title],
+          #       }
+          #     - {
+          #         label: Best Seller 2,
+          #         name: bestSeller2,
+          #         widget: relation,
+          #         collection: books,
+          #         searchFields: [title],
+          #         valueField: title,
+          #         displayFields: [title],
+          #       }
+          #     - {
+          #         label: Best Seller 3,
+          #         name: bestSeller3,
+          #         widget: relation,
+          #         collection: books,
+          #         searchFields: [title],
+          #         valueField: title,
+          #         displayFields: [title],
+          #       }
+          #     - {
+          #         label: Best Seller 4,
+          #         name: bestSeller4,
+          #         widget: relation,
+          #         collection: books,
+          #         searchFields: [title],
+          #         valueField: title,
+          #         displayFields: [title],
+          #       }
+          #     - {
+          #         label: Best Seller 5,
+          #         name: bestSeller5,
+          #         widget: relation,
+          #         collection: books,
+          #         searchFields: [title],
+          #         valueField: title,
+          #         displayFields: [title],
+          #       }
           # - {
           #     label: Gallery,
           #     name: galleryImages,
@@ -224,7 +238,7 @@ collections:
       - {
           label: Original Publication Date,
           name: date,
-          widget: date,
+          widget: date, # todo -replace date with datetime as date is being deprecated
           dateFormat: DD MMM YYYY,
           required: false,
           default: '',
@@ -234,6 +248,7 @@ collections:
     label: Books
     delete: false
     folder: src/pages/books
+    slug: '{{slug}}'
     fields:
       - {
           label: Template Key,

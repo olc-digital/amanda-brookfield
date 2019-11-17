@@ -9,7 +9,7 @@ import BookPreview from './preview-templates/BookPreview'
 import EventsPreview from './preview-templates/EventsPreview'
 import AnnouncementPreview from './preview-templates/AnnouncementPreview'
 
-CMS.registerPreviewStyle(fontAwesomeCSS)
+CMS.registerPreviewStyle(fontAwesomeCSS) // TODO - fix this
 
 CMS.registerPreviewTemplate('home', withLayout(HomePreview))
 CMS.registerPreviewTemplate('blog', withLayout(BlogPostPreview))
