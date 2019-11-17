@@ -97,6 +97,13 @@ collections:
                   valueField: title,
                   displayFields: [title],
                 }
+          - label: Hero Section
+            name: heroSection
+            widget: object
+            fields:
+              - {label: Hero title, name: title, widget: string}
+              - {label: Hero text, name: text, widget: text}
+              - {label: Read more text, name: readMoreText, widget: string}
           # - {
           #     label: Gallery,
           #     name: galleryImages,

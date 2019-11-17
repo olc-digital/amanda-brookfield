@@ -84,6 +84,7 @@ const MobileOnlySketch = styled(Sketch)`
 export const HomePageTemplate = ({
   welcomeText,
   bestSellers,
+  hero,
   books,
   heroData,
 }) => {
@@ -136,11 +137,14 @@ export const HomePageTemplate = ({
           </BestSellers>
         </Scroller>
       </Container>
-      {/* <GoodGirlsHero
-        pagePath={goodGirls.frontmatter.path}
-        buyUrl={goodGirls.frontmatter.amazonLink}
-        coverImage={heroData.frontmatter.coverImage}
-      /> */}
+      <GoodGirlsHero
+        title={hero.title}
+        text={hero.text}
+        readMoreText={hero.readMoreText}
+        readMorePath={hero.path}
+        buyUrl={hero.amazonLink}
+        coverImage={hero.coverImage}
+      />
       {/* <Container>
         <H2 margin>Latest Releases</H2>
         <FeaturedBook
@@ -209,12 +213,14 @@ const HomePage = ({data}) => {
     .map(({node: {frontmatter: book}}) => book)
     .filter(book => bestSellersTitles.includes(book.title))
 
+  const hero = {...heroData.frontmatter, ...page.frontmatter.heroSection}
+
   return (
     <HomePageTemplate
       welcomeText={welcomeText}
       bestSellers={bestSellers}
+      hero={hero}
       books={books}
-      heroData={heroData}
     />
   )
 }
@@ -231,6 +237,11 @@ export const homePageQuery = graphql`
       html
       frontmatter {
         welcomeText
+        heroSection {
+          title
+          text
+          readMoreText
+        }
         bestSellers {
           bestSeller1
           bestSeller2
@@ -242,6 +253,9 @@ export const homePageQuery = graphql`
     }
     heroData: markdownRemark(frontmatter: {bookId: {eq: "good-girls"}}) {
       frontmatter {
+        title
+        path
+        amazonLink
         coverImage {
           childImageSharp {
             fluid(maxWidth: 276) {

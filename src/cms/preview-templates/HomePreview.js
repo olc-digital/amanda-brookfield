@@ -17,8 +17,9 @@ const prepareBestSellers = (bestSellers, bestSellersData) => {
 
 const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
   const entryJS = entry.toJS()
+  const {bestSellers, heroSection} = entryJS.data
   const {bestSellers: bestSellersMeta = {}} = fieldsMetaData.toJS()
-  const {bestSellers} = entryJS.data
+
   const bestSellersArr = prepareBestSellers(bestSellers, bestSellersMeta).map(
     book => ({
       ...book,
@@ -27,10 +28,17 @@ const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
     }),
   )
 
+  const hero = {
+    // we need to get title, path, amazonLink and coverImage for hero.
+    // probably have to create a relation like we did for best sellers
+    ...heroSection,
+  }
+
   return (
     <HomePageTemplate
       welcomeText={entry.getIn(['data', 'welcomeText'])}
       bestSellers={bestSellersArr}
+      hero={hero}
     />
   )
 }

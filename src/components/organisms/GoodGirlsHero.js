@@ -94,20 +94,23 @@ const ImgHolder = styled.div`
   ${hideBelowMobile}
 `
 
-export default function GoodGirlsHero({pagePath, buyUrl, coverImage}) {
+export default function GoodGirlsHero({
+  title,
+  text,
+  readMoreText,
+  readMorePath,
+  buyUrl,
+  coverImage,
+}) {
   return (
     <HeroSection>
       <HeroContainer>
         <MainSection>
           <RobotoCapsTitle>NEW</RobotoCapsTitle>
-          <H2 css={'text-align: left; margin: 20px 0 16px;'}>
-            A novel, ‘Good Girls‘
-          </H2>
-          <BlurbBody>
-            {`Good Girls is about the Keating sisters, Kat and Eleanor, and the turns their lives take after a childhood fraught with difficulties and adolescent rivalries.  It is a coming-of-age story, a mystery and a tear-jerker. But most of all it’s a reminder of whom to keep close and whom to trust with your darkest secrets. `}
-          </BlurbBody>
+          <H2 css={'text-align: left; margin: 20px 0 16px;'}>{title}</H2>
+          <BlurbBody>{text}</BlurbBody>
           <BuyNowButton styleType="blue" href={buyUrl} size="md" />
-          <ReadMoreLink to={pagePath}>Read more about Good Girls</ReadMoreLink>
+          <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
         </MainSection>
         <ImgHolder>
           {/* DONT DOWNLOAD THIS IMAGE ON MOBILE? */}
