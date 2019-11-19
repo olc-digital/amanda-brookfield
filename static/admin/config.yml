@@ -104,12 +104,15 @@ collections:
               - {label: Hero title, name: title, widget: string}
               - {label: Hero text, name: text, widget: text}
               - {label: Read more text, name: readMoreText, widget: string}
-          # - {
-          #     label: Gallery,
-          #     name: galleryImages,
-          #     widget: list,
-          #     field: {label: Image, name: image, widget: image},
-          #   }
+              - {
+                  label: Linked Book,
+                  name: linkedBook,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: title,
+                  displayFields: [title],
+                }
       - file: src/announcement/index.md
         label: Announcement
         name: announcement

@@ -1,16 +1,16 @@
 import React from 'react'
 import {HomePageTemplate} from '../../templates/home-page'
 
-const prepareBestSellers = (bestSellers, bestSellersData) => {
-  return Object.keys(bestSellers)
-    .map(bestSellerKey => {
-      const bestSellerData = bestSellersData[bestSellerKey]
+const extractCollectionData = (collection, data) => {
+  return Object.keys(collection)
+    .map(key => {
+      const itemData = data[key]
 
-      if (!bestSellerData) {
+      if (!itemData) {
         return null
       }
 
-      return bestSellerData.books[bestSellers[bestSellerKey]]
+      return itemData.books[collection[key]]
     })
     .filter(Boolean)
 }
@@ -18,20 +18,30 @@ const prepareBestSellers = (bestSellers, bestSellersData) => {
 const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
   const entryJS = entry.toJS()
   const {bestSellers, heroSection} = entryJS.data
-  const {bestSellers: bestSellersMeta = {}} = fieldsMetaData.toJS()
+  const {
+    bestSellers: bestSellersMeta = {},
+    heroSection: heroSectionMeta = {},
+  } = fieldsMetaData.toJS()
+  console.log(fieldsMetaData.toJS())
 
-  const bestSellersArr = prepareBestSellers(bestSellers, bestSellersMeta).map(
-    book => ({
-      ...book,
-      coverImage: getAsset(book.coverImage),
-      coverSketchImage: getAsset(book.coverSketchImage),
-    }),
-  )
+  const bestSellersArr = extractCollectionData(
+    bestSellers,
+    bestSellersMeta,
+  ).map(book => ({
+    ...book,
+    coverImage: getAsset(book.coverImage),
+    coverSketchImage: getAsset(book.coverSketchImage),
+  }))
+
+  const [heroData = {}] = extractCollectionData(heroSection, heroSectionMeta)
 
   const hero = {
-    // we need to get title, path, amazonLink and coverImage for hero.
-    // probably have to create a relation like we did for best sellers
-    ...heroSection,
+    title: heroSection.title,
+    text: heroSection.text,
+    readMoreText: heroSection.readMoreText,
+    path: heroData.path,
+    buyUrl: heroData.amazonLink,
+    coverImage: getAsset(heroData.coverImage),
   }
 
   return (

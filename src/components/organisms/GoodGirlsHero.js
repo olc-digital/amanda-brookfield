@@ -91,6 +91,7 @@ const ImgHolder = styled.div`
   width: 276px;
   flex: 1 0 auto;
   align-self: center;
+  display: flex;
   ${hideBelowMobile}
 `
 
