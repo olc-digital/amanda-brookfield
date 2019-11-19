@@ -42,7 +42,7 @@ const PreviewCompatibleImage = ({imageInfo, style}) => {
   }
 
   if (path && typeof path === 'string') {
-    return <img style={style} src={path} alt={alt} />
+    return <img style={{display: 'block', ...style}} src={path} alt={alt} />
   }
 
   return null

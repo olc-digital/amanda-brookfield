@@ -115,4 +115,5 @@ exports.onCreateNode = ({node, actions, getNode}) => {
   }
 }
 
-// NEXT STEP: follow something like this - https://stackoverflow.com/questions/49456106/how-to-make-a-one-to-many-connection-between-netlify-cms-and-gatsby
+// Alternative approach for querying all the required data on the homepage:
+// https://stackoverflow.com/questions/49456106/how-to-make-a-one-to-many-connection-between-netlify-cms-and-gatsby
