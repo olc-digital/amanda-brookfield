@@ -8,10 +8,31 @@ import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
 import H2 from '../atoms/H2'
 import P from '../atoms/P'
 import BuyNowButton from '../atoms/BuyNowButton'
-import goodGirlsTop from '../../img/good-girls-top.png'
+// import goodGirlsTop from '../../img/good-girls-top.png'
 
 import {hideBelowMobile} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
+
+const getBackgroundSrc = (srcSet, minWidth) => {
+  // Make this compatible with the CMS preview
+  // Crop the image using css or some other way
+  try {
+    const backgrounds = srcSet.split(',').map(background => {
+      const splitPosition = background.lastIndexOf(' ')
+      return {
+        src: background.slice(0, splitPosition),
+        width: Number(background.slice(splitPosition + 1, -1)) || 0, // to just get the number without the w
+      }
+    })
+
+    const {src = ''} =
+      backgrounds.find(v => v.width > minWidth) || backgrounds.pop()
+
+    return src
+  } catch (err) {
+    return ''
+  }
+}
 
 const HeroSection = styled.section`
   background: ${({theme}) => theme.blue};
@@ -20,7 +41,8 @@ const HeroSection = styled.section`
   ${media.belowMobile`
     &::before {
       content: '';
-      background-image: url(${goodGirlsTop});
+      background-image: url(${({background}) =>
+        getBackgroundSrc(background, 500)});
       background-size: cover;
       opacity: 0.3;
       top: 0;
@@ -57,12 +79,11 @@ const MainSection = styled.div`
 
 const BlurbBody = styled(P)`
   font-size: 14px;
-  padding-right: 40px;
   margin-bottom: 48px;
   position: relative;
-  /* @media (max-width: 380px) {
-    padding: 0;
-  } */
+  ${media.aboveMobile`
+    padding-right: 40px;
+  `}
 `
 
 const ReadMoreLink = styled(Link)`
@@ -91,7 +112,6 @@ const ImgHolder = styled.div`
   width: 276px;
   flex: 1 0 auto;
   align-self: center;
-  display: flex;
   ${hideBelowMobile}
 `
 
@@ -104,7 +124,10 @@ export default function GoodGirlsHero({
   coverImage,
 }) {
   return (
-    <HeroSection>
+    <HeroSection
+      background={coverImage.childImageSharp.fluid.srcSet}
+      x={console.log(coverImage)}
+    >
       <HeroContainer>
         <MainSection>
           <RobotoCapsTitle>NEW</RobotoCapsTitle>
