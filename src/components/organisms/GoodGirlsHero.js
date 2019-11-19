@@ -124,10 +124,7 @@ export default function GoodGirlsHero({
   coverImage,
 }) {
   return (
-    <HeroSection
-      background={coverImage.childImageSharp.fluid.srcSet}
-      x={console.log(coverImage)}
-    >
+    <HeroSection background={coverImage.childImageSharp.fluid.srcSet}>
       <HeroContainer>
         <MainSection>
           <RobotoCapsTitle>NEW</RobotoCapsTitle>
