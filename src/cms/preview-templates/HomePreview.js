@@ -46,6 +46,7 @@ const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
   }
   //TODO - check hero background works properly
 
+  // Next up - fix this latest releases items to be displayed in here properly
   const latestReleasesArr = extractCollectionData(
     latestReleases,
     latestReleasesMeta,

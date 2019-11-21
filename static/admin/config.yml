@@ -131,7 +131,7 @@ collections:
                       displayFields: [title],
                     }
                   - {label: Blurb, name: blurb, widget: text}
-              - label: Latest Release 1
+              - label: Latest Release 2
                 name: latestRelease2
                 widget: object
                 fields:
