@@ -15,4 +15,8 @@ heroSection:
   text: Good Girls is about the Keating sisters, Kat and Eleanor, and the turns their lives take after a childhood fraught with difficulties and adolescent rivalries.  It is a coming-of-age story, a mystery and a tear-jerker. But most of all it’s a reminder of whom to keep close and whom to trust with your darkest secrets.
   readMoreText: Read more about Good Girls
   linkedBook: Good Girls
+latestReleases:
+  latestRelease1: Good Girls
+  latestRelease1: For the Love of a Dog
+  latestRelease1: The Love Child
 ---
