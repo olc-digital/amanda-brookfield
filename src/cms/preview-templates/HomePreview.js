@@ -17,10 +17,11 @@ const extractCollectionData = (collection, data) => {
 
 const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
   const entryJS = entry.toJS()
-  const {bestSellers, heroSection} = entryJS.data
+  const {bestSellers, heroSection, latestReleases} = entryJS.data
   const {
     bestSellers: bestSellersMeta = {},
     heroSection: heroSectionMeta = {},
+    latestReleases: latestReleasesMeta = {},
   } = fieldsMetaData.toJS()
   console.log(fieldsMetaData.toJS())
 
@@ -43,12 +44,23 @@ const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
     buyUrl: heroData.amazonLink,
     coverImage: getAsset(heroData.coverImage),
   }
+  //TODO - check hero background works properly
+
+  const latestReleasesArr = extractCollectionData(
+    latestReleases,
+    latestReleasesMeta,
+  ).map(book => ({
+    ...book,
+    coverImage: getAsset(book.coverImage),
+    coverSketchImage: getAsset(book.coverSketchImage),
+  }))
 
   return (
     <HomePageTemplate
       welcomeText={entry.getIn(['data', 'welcomeText'])}
       bestSellers={bestSellersArr}
       hero={hero}
+      latestReleases={latestReleasesArr}
     />
   )
 }
