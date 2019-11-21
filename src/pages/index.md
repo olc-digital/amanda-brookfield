@@ -16,7 +16,10 @@ heroSection:
   readMoreText: Read more about Good Girls
   linkedBook: Good Girls
 latestReleases:
-  latestRelease1: Good Girls
-  latestRelease2: For the Love of a Dog
-  latestRelease3: The Love Child
+  latestRelease1:
+    book: Good Girls
+    text: hello
+  latestRelease1:
+    book: Good Girls
+    text: goodbye
 ---
