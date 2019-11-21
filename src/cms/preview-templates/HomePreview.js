@@ -55,12 +55,14 @@ const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
     coverSketchImage: getAsset(book.coverSketchImage),
   }))
 
+  console.log(latestReleasesArr)
+
   return (
     <HomePageTemplate
       welcomeText={entry.getIn(['data', 'welcomeText'])}
       bestSellers={bestSellersArr}
       hero={hero}
-      latestReleases={latestReleasesArr}
+      // latestReleases={latestReleasesArr}
     />
   )
 }

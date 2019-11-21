@@ -19,7 +19,7 @@ latestReleases:
   latestRelease1:
     book: Good Girls
     text: hello
-  latestRelease1:
+  latestRelease2:
     book: Good Girls
-    text: goodbye
+    text: hello
 ---
