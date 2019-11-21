@@ -17,6 +17,6 @@ heroSection:
   linkedBook: Good Girls
 latestReleases:
   latestRelease1: Good Girls
-  latestRelease1: For the Love of a Dog
-  latestRelease1: The Love Child
+  latestRelease2: For the Love of a Dog
+  latestRelease3: The Love Child
 ---
