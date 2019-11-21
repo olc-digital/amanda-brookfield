@@ -13,27 +13,6 @@ import BuyNowButton from '../atoms/BuyNowButton'
 import {hideBelowMobile} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
 
-const getBackgroundSrc = (srcSet, minWidth) => {
-  // Make this compatible with the CMS preview
-  // Crop the image using css or some other way
-  try {
-    const backgrounds = srcSet.split(',').map(background => {
-      const splitPosition = background.lastIndexOf(' ')
-      return {
-        src: background.slice(0, splitPosition),
-        width: Number(background.slice(splitPosition + 1, -1)) || 0, // to just get the number without the w
-      }
-    })
-
-    const {src = ''} =
-      backgrounds.find(v => v.width > minWidth) || backgrounds.pop()
-
-    return src
-  } catch (err) {
-    return ''
-  }
-}
-
 const HeroSection = styled.section`
   background: ${({theme}) => theme.blue};
   color: #ffffff;
@@ -41,8 +20,7 @@ const HeroSection = styled.section`
   ${media.belowMobile`
     &::before {
       content: '';
-      background-image: url(${({background}) =>
-        getBackgroundSrc(background, 500)});
+      background-image: url(${({background}) => background});
       background-size: cover;
       opacity: 0.3;
       top: 0;
@@ -115,6 +93,51 @@ const ImgHolder = styled.div`
   ${hideBelowMobile}
 `
 
+const previewCompatibleImage = imageInfo => {
+  if (!imageInfo) {
+    return null
+  }
+
+  const {childImageSharp, path} = imageInfo
+
+  if (childImageSharp && childImageSharp.fluid) {
+    return childImageSharp.fluid
+  }
+
+  if (childImageSharp && childImageSharp.fixed) {
+    return childImageSharp.fixed
+  }
+
+  if (path && typeof path === 'string') {
+    return {path}
+  }
+
+  return null
+}
+
+const getSrcFromSrcSet = (srcSet, minWidth = 500) => {
+  if (!srcSet) {
+    return null
+  }
+  // Make this compatible with the CMS preview
+  // Crop the image using css or some other way
+  try {
+    const items = srcSet.split(',').map(background => {
+      const splitPosition = background.lastIndexOf(' ')
+      return {
+        src: background.slice(0, splitPosition),
+        width: Number(background.slice(splitPosition + 1, -1)) || 0, // to just get the number without the w
+      }
+    })
+
+    const {src = ''} = items.find(v => v.width > minWidth) || items.pop()
+
+    return src
+  } catch (err) {
+    return ''
+  }
+}
+
 export default function GoodGirlsHero({
   title,
   text,
@@ -123,8 +146,11 @@ export default function GoodGirlsHero({
   buyUrl,
   coverImage,
 }) {
+  const {srcSet, path} = previewCompatibleImage(coverImage) || {}
+  const background = getSrcFromSrcSet(srcSet, 500) || path
+
   return (
-    <HeroSection background={coverImage.childImageSharp.fluid.srcSet}>
+    <HeroSection background={background}>
       <HeroContainer>
         <MainSection>
           <RobotoCapsTitle>NEW</RobotoCapsTitle>
