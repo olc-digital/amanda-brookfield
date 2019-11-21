@@ -85,8 +85,7 @@ export const HomePageTemplate = ({
   welcomeText,
   bestSellers,
   hero,
-  books,
-  heroData,
+  latestReleases,
 }) => {
   // const {node: goodGirls} = books.find(
   //   ({node: book}) => book.frontmatter.bookId === 'good-girls',
@@ -145,9 +144,26 @@ export const HomePageTemplate = ({
         buyUrl={hero.amazonLink}
         coverImage={hero.coverImage}
       />
-      {/* <Container>
+      <Container>
         <H2 margin>Latest Releases</H2>
-        <FeaturedBook
+        {latestReleases.map((latestRelease, i) => (
+          <FeaturedBook
+            key={i}
+            title={latestRelease.title}
+            coverImage={latestRelease.coverSketchImage}
+            buyUrl={latestRelease.amazonLink}
+            pagePath={latestRelease.path}
+          >
+            {`Published in October 2019, 'Good Girls' tells the compelling story 
+          of the Keating sisters: Kat is mesmerising, beautiful, smart and 
+          charming - everything a good girl should be. Her elder sister Eleanor,
+          on the other hand, is on the awkward side of tall, clever enough to 
+          be bullied, and full of the responsibilities only an older sibling can
+          understand.  She adores her little sister but grows up certain that
+          she can never compete with her.`}
+          </FeaturedBook>
+        ))}
+        {/* <FeaturedBook
           title={goodGirls.frontmatter.title}
           coverImage={goodGirls.frontmatter.coverSketchImage}
           buyUrl={goodGirls.frontmatter.amazonLink}
@@ -189,8 +205,8 @@ export const HomePageTemplate = ({
           {`When Janine and Dougie fell in love they thought it would be for
             ever. Fifteen years later their relationship is well and truly over,
             their daughter Stevie their one remaining connection...`}
-        </FeaturedBook>
-      </Container> */}
+        </FeaturedBook> */}
+      </Container>
     </Page>
   )
 }
