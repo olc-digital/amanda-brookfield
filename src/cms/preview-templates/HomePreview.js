@@ -2,13 +2,6 @@ import React from 'react'
 import {HomePageTemplate} from '../../templates/home-page'
 import get from 'lodash/get'
 
-/**
- * Blend two colors together.
- * @param {object} collection - a key value pair of field name and value which is a book id, eg { bestSeller1: 'Good Girls', bestSeller2: 'Love Child' }
- * @param {object} data - the metadata of a book, eg { bestSeller1: 'Good Girls', bestSeller2: 'Love Child' }
- * @return {array} An array of objects
- */
-
 const extractCollectionData = ({
   collection,
   data,
