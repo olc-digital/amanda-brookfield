@@ -13,7 +13,7 @@ It has just been nominated for The People's Book Prize and needs YOUR VOTE to wi
 
 Here is the easypeasy link:
 
-https://peoplesbookprize.com/winter-2019/good-girls/  
+<https://peoplesbookprize.com/winter-2019/good-girls>
 
 Thank you x
 
