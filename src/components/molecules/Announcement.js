@@ -115,18 +115,20 @@ export const AnnouncementTemplate = ({
                 <AnnouncementContent content={content} />
               </StyledContent>
             </div>
-            <ButtonWrapper onClick={hide}>
-              <SketchButton
-                as={buttonLink.startsWith('/') ? Link : ExternalLink}
-                //TODO - fix this clash
-                to={buttonLink}
-                href={buttonLink}
-                styleType="blue"
-                uppercase
-              >
-                {buttonText}
-              </SketchButton>
-            </ButtonWrapper>
+            {buttonLink && buttonText && (
+              <ButtonWrapper onClick={hide}>
+                <SketchButton
+                  as={buttonLink.startsWith('/') ? Link : ExternalLink}
+                  //TODO - fix this clash
+                  to={buttonLink}
+                  href={buttonLink}
+                  styleType="blue"
+                  uppercase
+                >
+                  {buttonText}
+                </SketchButton>
+              </ButtonWrapper>
+            )}
           </ResponsiveWrapper>
         </div>
       </AnnouncementContainer>
