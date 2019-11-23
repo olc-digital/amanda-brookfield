@@ -85,18 +85,8 @@ export const HomePageTemplate = ({
   welcomeText,
   bestSellers,
   hero,
-  latestReleases,
+  latestReleases = [],
 }) => {
-  // const {node: goodGirls} = books.find(
-  //   ({node: book}) => book.frontmatter.bookId === 'good-girls',
-  // )
-  // const {node: ftLoad} = books.find(
-  //   ({node: book}) => book.frontmatter.bookId === 'for-the-love-of-a-dog',
-  // )
-  // const {node: theLoveChild} = books.find(
-  //   ({node: book}) => book.frontmatter.bookId === 'the-love-child',
-  // )
-
   return (
     <Page>
       <HelmetHelper
@@ -154,58 +144,9 @@ export const HomePageTemplate = ({
             buyUrl={latestRelease.amazonLink}
             pagePath={latestRelease.path}
           >
-            {`Published in October 2019, 'Good Girls' tells the compelling story 
-          of the Keating sisters: Kat is mesmerising, beautiful, smart and 
-          charming - everything a good girl should be. Her elder sister Eleanor,
-          on the other hand, is on the awkward side of tall, clever enough to 
-          be bullied, and full of the responsibilities only an older sibling can
-          understand.  She adores her little sister but grows up certain that
-          she can never compete with her.`}
+            {latestRelease.blurb}
           </FeaturedBook>
         ))}
-        {/* <FeaturedBook
-          title={goodGirls.frontmatter.title}
-          coverImage={goodGirls.frontmatter.coverSketchImage}
-          buyUrl={goodGirls.frontmatter.amazonLink}
-          pagePath={goodGirls.frontmatter.path}
-        >
-          {`Published in October 2019, 'Good Girls' tells the compelling story 
-          of the Keating sisters: Kat is mesmerising, beautiful, smart and 
-          charming - everything a good girl should be. Her elder sister Eleanor,
-          on the other hand, is on the awkward side of tall, clever enough to 
-          be bullied, and full of the responsibilities only an older sibling can
-          understand.  She adores her little sister but grows up certain that
-          she can never compete with her.`}
-        </FeaturedBook>
-        <FeaturedBook
-          title={ftLoad.frontmatter.title}
-          coverImage={ftLoad.frontmatter.coverSketchImage}
-          buyUrl={ftLoad.frontmatter.amazonLink}
-          pagePath={ftLoad.frontmatter.path}
-        >
-          {`Published in November 2018, 'For the Love of a Dog' is a funny and
-            poignant memoir of emotional meltdown and recovery with the
-            unwitting aid of a Golden Doodle puppy called Mabel. Following the
-            death of my mother and the end of a post-divorce relationship, my
-            world fell apart and desolation closed in. Talk of getting a puppy
-            was just to cheer myself up. I never thought I would actually go
-            through with it; I was barely capable of looking after myself, let
-            alone a dog…`}
-        </FeaturedBook>
-        <FeaturedBook
-          title={theLoveChild.frontmatter.title}
-          coverImage={theLoveChild.frontmatter.coverSketchImage}
-          buyUrl={theLoveChild.frontmatter.amazonLink}
-          pagePath={theLoveChild.frontmatter.path}
-        >
-          {`Published in Jan 2013, 'The Love Child' is a touching and heartfelt
-            story about discovering what matters most in your life and having
-            the courage to reach for it - not just once, but again and again.`}
-          <br />
-          {`When Janine and Dougie fell in love they thought it would be for
-            ever. Fifteen years later their relationship is well and truly over,
-            their daughter Stevie their one remaining connection...`}
-        </FeaturedBook> */}
       </Container>
     </Page>
   )
@@ -218,18 +159,26 @@ HomePageTemplate.propTypes = {
 const HomePage = ({data}) => {
   const {
     markdownRemark: page,
-    allMarkdownRemarkBooks: {edges: books},
+    allMarkdownRemarkBooks: {edges},
     heroData,
   } = data
 
   const {welcomeText} = page.frontmatter
-  const bestSellersTitles = Object.values(page.frontmatter.bestSellers)
 
-  const bestSellers = books
-    .map(({node: {frontmatter: book}}) => book)
-    .filter(book => bestSellersTitles.includes(book.title))
+  const books = edges.map(({node: {frontmatter: book}}) => book)
+
+  const bestSellersTitles = Object.values(page.frontmatter.bestSellers)
+  const bestSellers = books.filter(book =>
+    bestSellersTitles.includes(book.title),
+  )
 
   const hero = {...heroData.frontmatter, ...page.frontmatter.heroSection}
+
+  const latestReleasesItems = Object.values(page.frontmatter.latestReleases)
+  const latestReleasesTitles = latestReleasesItems.map(({book}) => book)
+  const latestReleases = books
+    .filter(book => latestReleasesTitles.includes(book.title))
+    .map((book, i) => ({...book, blurb: latestReleasesItems[i].blurb}))
 
   return (
     <HomePageTemplate
@@ -237,6 +186,7 @@ const HomePage = ({data}) => {
       bestSellers={bestSellers}
       hero={hero}
       books={books}
+      latestReleases={latestReleases}
     />
   )
 }
@@ -253,17 +203,31 @@ export const homePageQuery = graphql`
       html
       frontmatter {
         welcomeText
-        heroSection {
-          title
-          text
-          readMoreText
-        }
         bestSellers {
           bestSeller1
           bestSeller2
           bestSeller3
           bestSeller4
           bestSeller5
+        }
+        heroSection {
+          title
+          text
+          readMoreText
+        }
+        latestReleases {
+          latestRelease1 {
+            book
+            blurb
+          }
+          latestRelease2 {
+            book
+            blurb
+          }
+          latestRelease3 {
+            book
+            blurb
+          }
         }
       }
     }

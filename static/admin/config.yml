@@ -145,6 +145,20 @@ collections:
                       displayFields: [title],
                     }
                   - {label: Blurb, name: blurb, widget: text}
+              - label: Latest Release 3
+                name: latestRelease3
+                widget: object
+                fields:
+                  - {
+                      label: Book,
+                      name: book,
+                      widget: relation,
+                      collection: books,
+                      searchFields: [title],
+                      valueField: title,
+                      displayFields: [title],
+                    }
+                  - {label: Blurb, name: blurb, widget: text}
 
       - file: src/announcement/index.md
         label: Announcement

@@ -1,16 +1,35 @@
 import React from 'react'
 import {HomePageTemplate} from '../../templates/home-page'
+import get from 'lodash/get'
 
-const extractCollectionData = (collection, data) => {
+/**
+ * Blend two colors together.
+ * @param {object} collection - a key value pair of field name and value which is a book id, eg { bestSeller1: 'Good Girls', bestSeller2: 'Love Child' }
+ * @param {object} data - the metadata of a book, eg { bestSeller1: 'Good Girls', bestSeller2: 'Love Child' }
+ * @return {array} An array of objects
+ */
+
+const extractCollectionData = ({
+  collection,
+  data,
+  path = [],
+  collectionName = 'books',
+}) => {
   return Object.keys(collection)
-    .map(key => {
-      const itemData = data[key]
+    .map(fieldName => {
+      const itemData = data[fieldName]
 
       if (!itemData) {
         return null
       }
 
-      return itemData.books[collection[key]]
+      const value = collection[fieldName]
+      const bookName = typeof value === 'string' ? value : get(value, [...path])
+
+      return {
+        ...(typeof value === 'object' ? value : {}),
+        ...get(itemData, [...path, collectionName, bookName]),
+      }
     })
     .filter(Boolean)
 }
@@ -23,18 +42,20 @@ const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
     heroSection: heroSectionMeta = {},
     latestReleases: latestReleasesMeta = {},
   } = fieldsMetaData.toJS()
-  console.log(fieldsMetaData.toJS())
 
-  const bestSellersArr = extractCollectionData(
-    bestSellers,
-    bestSellersMeta,
-  ).map(book => ({
+  const bestSellersArr = extractCollectionData({
+    collection: bestSellers,
+    data: bestSellersMeta,
+  }).map(book => ({
     ...book,
     coverImage: getAsset(book.coverImage),
     coverSketchImage: getAsset(book.coverSketchImage),
   }))
 
-  const [heroData = {}] = extractCollectionData(heroSection, heroSectionMeta)
+  const [heroData = {}] = extractCollectionData({
+    collection: heroSection,
+    data: heroSectionMeta,
+  })
 
   const hero = {
     title: heroSection.title,
@@ -44,26 +65,23 @@ const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
     buyUrl: heroData.amazonLink,
     coverImage: getAsset(heroData.coverImage),
   }
-  //TODO - check hero background works properly
 
-  // Next up - fix this latest releases items to be displayed in here properly
-  const latestReleasesArr = extractCollectionData(
-    latestReleases,
-    latestReleasesMeta,
-  ).map(book => ({
+  const latestReleasesArr = extractCollectionData({
+    collection: latestReleases,
+    data: latestReleasesMeta,
+    path: ['book'],
+  }).map(book => ({
     ...book,
     coverImage: getAsset(book.coverImage),
     coverSketchImage: getAsset(book.coverSketchImage),
   }))
-
-  console.log(latestReleasesArr)
 
   return (
     <HomePageTemplate
       welcomeText={entry.getIn(['data', 'welcomeText'])}
       bestSellers={bestSellersArr}
       hero={hero}
-      // latestReleases={latestReleasesArr}
+      latestReleases={latestReleasesArr}
     />
   )
 }

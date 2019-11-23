@@ -11,17 +11,18 @@ bestSellers:
   bestSeller4: A Family Man
   bestSeller5: The Lover
 heroSection:
+  title: "A novel, 'Good Girls'"
   linkedBook: Good Girls
-  readMoreText: Read more about Good Girls
   text: >-
     Good Girls is about the Keating sisters, Kat and Eleanor, and the turns
     their lives take after a childhood fraught with difficulties and adolescent
     rivalries.  It is a coming-of-age story, a mystery and a tear-jerker. But
     most of all it’s a reminder of whom to keep close and whom to trust with
     your darkest secrets.
-  title: 'A novel, ''Good Girls'''
+  readMoreText: Read more about Good Girls
 latestReleases:
   latestRelease1:
+    book: Good Girls
     blurb: >-
       Published in October 2019, 'Good Girls' tells the compelling story of the
       Keating sisters: Kat is mesmerising, beautiful, smart and charming -
@@ -30,8 +31,8 @@ latestReleases:
       full of the responsibilities only an older sibling can understand. She
       adores her little sister but grows up certain that she can never compete
       with her.
-    book: Good Girls
   latestRelease2:
+    book: For the Love of a Dog
     blurb: >-
       Published in November 2018, 'For the Love of a Dog' is a funny and
       poignant memoir of emotional meltdown and recovery with the unwitting aid
@@ -40,8 +41,8 @@ latestReleases:
       desolation closed in. Talk of getting a puppy was just to cheer myself up.
       I never thought I would actually go through with it; I was barely capable
       of looking after myself, let alone a dog…
-    book: For the Love of a Dog
   latestRelease3:
+    book: The Love Child
     blurb: >-
       Published in Jan 2013, 'The Love Child' is a touching and heartfelt story
       about discovering what matters most in your life and having the courage to
@@ -50,6 +51,4 @@ latestReleases:
       When Janine and Dougie fell in love they thought it would be for ever.
       Fifteen years later their relationship is well and truly over, their
       daughter Stevie their one remaining connection...
-    book: The Love Child
 ---
-
