@@ -23,6 +23,7 @@ const SketchButton = styled(ButtonBase)`
   font-size: ${({size}) => (size === 'xl' ? '12px' : '14px')};
   letter-spacing: 2px;
   text-transform: ${({uppercase}) => uppercase && 'uppercase'};
+  text-decoration: none !important;
   ${({center}) => center && `display: block; margin: 0 auto;`}
   &:hover ${ButtonSvg} {
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
