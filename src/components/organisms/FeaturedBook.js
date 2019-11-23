@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import Img from '../PreviewCompatibleImage'
 
 import Link from '../atoms/Link'
 import H3 from '../atoms/H3'
@@ -12,11 +12,13 @@ import BuyNowButton from '../atoms/BuyNowButton'
 const Grid = styled.div`
   display: grid;
   margin: 72px 0;
+  grid-template-columns: 140px 1fr;
   grid-template-areas:
     'cover desc'
     'actions desc';
   grid-template-rows: max-content;
   ${media.aboveMobile`
+    grid-template-columns: 188px 1fr;
     grid-template-areas:
       'cover desc'
       'cover actions';
@@ -25,11 +27,12 @@ const Grid = styled.div`
 
 const SketchCover = styled.div`
   grid-area: cover;
-  padding: 0 24px 16px 0;
+  margin-bottom: 16px;
   ${media.aboveMobile`
-    padding: 0 46px 0 24px;
+    margin-left: 24px;
   `}
 `
+
 const Description = styled.div`
   grid-area: desc;
   p {
@@ -60,7 +63,7 @@ export default function FeaturedBook({
   return (
     <Grid>
       <SketchCover>
-        <Img fixed={coverImage.childImageSharp.fixed} />
+        <Img style={{width: 117}} imageInfo={coverImage} />
       </SketchCover>
       <Description>
         <H3 center={false}>{title}</H3>

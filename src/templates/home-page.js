@@ -8,9 +8,7 @@ import SocialMediaLinks from '../components/molecules/SocialMediaLinks'
 import Container from '../components/atoms/Container'
 import BookWidget from '../components/molecules/BookWidget'
 import GoodGirlsHero from '../components/organisms/GoodGirlsHero'
-import bannerDesktop1x from '../img/home-banner-desktop.jpg'
-import bannerDesktop2x from '../img/home-banner-desktop@2x.jpg'
-import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
+import Img from '../components/PreviewCompatibleImage'
 import {crimsonTextFont} from '../styles/mixins'
 import FullWidth from '../components/atoms/FullWidth'
 import FeaturedBook from '../components/organisms/FeaturedBook'
@@ -19,19 +17,17 @@ import Page from '../components/atoms/Page'
 import HelmetHelper from '../components/molecules/HelmetHelper'
 import media from '../styles/mediaQueries'
 
-const AmandaImage = styled.img`
+const BannerImage = styled(Img)`
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-  height: 280px;
+  height: 220px;
   max-width: 764px;
   object-fit: cover;
-  ${media.aboveMobile`
-    height: 220px;
-  `}
   ${media.aboveContainer`
     border-radius: 5px;
+    overflow: hidden;
   `}
 `
 const WelcomeText = styled.div`
@@ -57,7 +53,7 @@ const Scroller = styled(FullWidth)`
   margin-bottom: 48px;
   -webkit-overflow-scrolling: touch;
 `
-const SelectedBooks = styled.div`
+const BestSellers = styled.div`
   display: flex;
   justify-content: space-between;
   width: ${({theme}) => theme.containerWidth};
@@ -81,30 +77,13 @@ const MobileOnlySketch = styled(Sketch)`
   `}
 `
 
-//TODO - remove this and add to home page's CMS.  And for featured books
-const selectedIds = [
-  'relative-love',
-  'a-family-man',
-  'before-i-knew-you',
-  'life-begins',
-  'the-lover',
-]
-
-export const HomePageTemplate = ({welcomeText, books, heroData}) => {
-  const selectedBooks = books.filter(({node: book}) =>
-    selectedIds.includes(book.frontmatter.bookId),
-  )
-
-  const {node: goodGirls} = books.find(
-    ({node: book}) => book.frontmatter.bookId === 'good-girls',
-  )
-  const {node: ftLoad} = books.find(
-    ({node: book}) => book.frontmatter.bookId === 'for-the-love-of-a-dog',
-  )
-  const {node: theLoveChild} = books.find(
-    ({node: book}) => book.frontmatter.bookId === 'the-love-child',
-  )
-
+export const HomePageTemplate = ({
+  bannerImage,
+  welcomeText,
+  bestSellers,
+  hero,
+  latestReleases = [],
+}) => {
   return (
     <Page>
       <HelmetHelper
@@ -113,15 +92,10 @@ export const HomePageTemplate = ({welcomeText, books, heroData}) => {
       />
       <Container>
         <FullWidth>
-          <picture>
-            <source
-              srcSet={`${bannerDesktop1x} 1x, ${bannerDesktop2x} 2x, ${bannerDesktop3x} 3x,`}
-            />
-            <AmandaImage
-              src={bannerDesktop1x}
-              alt="Amanda Brookfield Portrait"
-            />
-          </picture>
+          <BannerImage
+            imageInfo={bannerImage}
+            style={{margin: '0 auto', width: '100%'}}
+          />
         </FullWidth>
         <WelcomeText>
           <FirstLetter>{welcomeText.charAt(0)}</FirstLetter>
@@ -131,69 +105,40 @@ export const HomePageTemplate = ({welcomeText, books, heroData}) => {
         <MobileOnlySketch type="books" />
         <H2 margin>My Best-Sellers</H2>
         <Scroller>
-          <SelectedBooks>
-            {selectedBooks.map(({node: book}) => (
+          <BestSellers>
+            {bestSellers.map((book, index) => (
               <BookWidget
-                key={book.id}
-                coverImage={book.frontmatter.coverImage}
-                title={book.frontmatter.title}
-                pagePath={book.frontmatter.path}
-                buyUrl={book.frontmatter.amazonLink}
+                key={index}
+                coverImage={book.coverImage}
+                title={book.title}
+                pagePath={book.path}
+                buyUrl={book.amazonLink}
               />
             ))}
-          </SelectedBooks>
+          </BestSellers>
         </Scroller>
       </Container>
       <GoodGirlsHero
-        pagePath={goodGirls.frontmatter.path}
-        buyUrl={goodGirls.frontmatter.amazonLink}
-        coverImage={heroData.frontmatter.coverImage}
+        title={hero.title}
+        text={hero.text}
+        readMoreText={hero.readMoreText}
+        readMorePath={hero.path}
+        buyUrl={hero.amazonLink}
+        coverImage={hero.coverImage}
       />
       <Container>
         <H2 margin>Latest Releases</H2>
-        <FeaturedBook
-          title={goodGirls.frontmatter.title}
-          coverImage={goodGirls.frontmatter.coverSketchImage}
-          buyUrl={goodGirls.frontmatter.amazonLink}
-          pagePath={goodGirls.frontmatter.path}
-        >
-          {`Published in October 2019, 'Good Girls' tells the compelling story 
-          of the Keating sisters: Kat is mesmerising, beautiful, smart and 
-          charming - everything a good girl should be. Her elder sister Eleanor,
-          on the other hand, is on the awkward side of tall, clever enough to 
-          be bullied, and full of the responsibilities only an older sibling can
-          understand.  She adores her little sister but grows up certain that
-          she can never compete with her.`}
-        </FeaturedBook>
-        <FeaturedBook
-          title={ftLoad.frontmatter.title}
-          coverImage={ftLoad.frontmatter.coverSketchImage}
-          buyUrl={ftLoad.frontmatter.amazonLink}
-          pagePath={ftLoad.frontmatter.path}
-        >
-          {`Published in November 2018, 'For the Love of a Dog' is a funny and
-            poignant memoir of emotional meltdown and recovery with the
-            unwitting aid of a Golden Doodle puppy called Mabel. Following the
-            death of my mother and the end of a post-divorce relationship, my
-            world fell apart and desolation closed in. Talk of getting a puppy
-            was just to cheer myself up. I never thought I would actually go
-            through with it; I was barely capable of looking after myself, let
-            alone a dog…`}
-        </FeaturedBook>
-        <FeaturedBook
-          title={theLoveChild.frontmatter.title}
-          coverImage={theLoveChild.frontmatter.coverSketchImage}
-          buyUrl={theLoveChild.frontmatter.amazonLink}
-          pagePath={theLoveChild.frontmatter.path}
-        >
-          {`Published in Jan 2013, 'The Love Child' is a touching and heartfelt
-            story about discovering what matters most in your life and having
-            the courage to reach for it - not just once, but again and again.`}
-          <br />
-          {`When Janine and Dougie fell in love they thought it would be for
-            ever. Fifteen years later their relationship is well and truly over,
-            their daughter Stevie their one remaining connection...`}
-        </FeaturedBook>
+        {latestReleases.map((latestRelease, i) => (
+          <FeaturedBook
+            key={i}
+            title={latestRelease.title}
+            coverImage={latestRelease.coverSketchImage}
+            buyUrl={latestRelease.amazonLink}
+            pagePath={latestRelease.path}
+          >
+            {latestRelease.blurb}
+          </FeaturedBook>
+        ))}
       </Container>
     </Page>
   )
@@ -206,15 +151,37 @@ HomePageTemplate.propTypes = {
 const HomePage = ({data}) => {
   const {
     markdownRemark: page,
-    allMarkdownRemarkBooks: {edges: books},
+    allMarkdownRemarkBooks: {edges},
     heroData,
   } = data
 
+  const {bannerImage, welcomeText} = page.frontmatter
+
+  const books = edges.map(({node: {frontmatter: book}}) => book)
+
+  const bestSellersTitles = Object.values(page.frontmatter.bestSellers)
+  const bestSellers = books.filter(book =>
+    bestSellersTitles.includes(book.title),
+  )
+
+  const hero = {...heroData.frontmatter, ...page.frontmatter.heroSection}
+
+  const latestReleasesItems = Object.keys(page.frontmatter.latestReleases)
+    .sort()
+    .map(key => page.frontmatter.latestReleases[key])
+  const latestReleasesTitles = latestReleasesItems.map(({book}) => book)
+  const latestReleases = books
+    .filter(book => latestReleasesTitles.includes(book.title))
+    .map((book, i) => ({...book, blurb: latestReleasesItems[i].blurb}))
+
   return (
     <HomePageTemplate
-      welcomeText={page.frontmatter.welcomeText}
+      bannerImage={bannerImage}
+      welcomeText={welcomeText}
+      bestSellers={bestSellers}
+      hero={hero}
       books={books}
-      heroData={heroData}
+      latestReleases={latestReleases}
     />
   )
 }
@@ -230,15 +197,51 @@ export const homePageQuery = graphql`
     markdownRemark(id: {eq: $id}) {
       html
       frontmatter {
+        bannerImage {
+          childImageSharp {
+            fixed(width: 764, height: 220, quality: 90) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         welcomeText
+        bestSellers {
+          bestSeller1
+          bestSeller2
+          bestSeller3
+          bestSeller4
+          bestSeller5
+        }
+        heroSection {
+          title
+          text
+          readMoreText
+        }
+        latestReleases {
+          latestRelease1 {
+            book
+            blurb
+          }
+          latestRelease2 {
+            book
+            blurb
+          }
+          latestRelease3 {
+            book
+            blurb
+          }
+        }
       }
     }
     heroData: markdownRemark(frontmatter: {bookId: {eq: "good-girls"}}) {
       frontmatter {
+        title
+        path
+        amazonLink
         coverImage {
           childImageSharp {
             fluid(maxWidth: 276) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -264,14 +267,14 @@ export const homePageQuery = graphql`
             coverImage {
               childImageSharp {
                 fixed(width: 125, height: 192) {
-                  ...GatsbyImageSharpFixed
+                  ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
             }
             coverSketchImage {
               childImageSharp {
                 fixed(width: 117, height: 165) {
-                  ...GatsbyImageSharpFixed
+                  ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
             }

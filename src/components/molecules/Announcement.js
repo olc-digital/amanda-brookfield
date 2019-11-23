@@ -3,6 +3,7 @@ import {graphql, useStaticQuery} from 'gatsby'
 import styled from 'styled-components'
 import {parseISO, isValid} from 'date-fns'
 
+import PreviewCompatibleImg from '../PreviewCompatibleImage'
 import Link from '../atoms/Link'
 import ExternalLink from '../atoms/ExternalLink'
 import Container from '../atoms/Container'
@@ -79,18 +80,22 @@ const CloseIcon = styled(Img)`
 const ResponsiveWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
-  ${media.aboveMobile`
-    flex-direction: row;
+  flex-direction: row;
+`
+
+const ImageWrapper = styled.div`
+  flex: 1 0 auto;
+  width: 140px;
+  max-width: 160px;
+  padding-left: 20px;
+  ${media.belowMobile`
+    display: none;
   `}
 `
 
 const ButtonWrapper = styled.div`
   align-self: center;
   margin: 24px 0 0;
-  ${media.aboveMobile`
-    margin: 16px 16px 16px 32px;
-  `}
 `
 
 export const AnnouncementTemplate = ({
@@ -101,33 +106,40 @@ export const AnnouncementTemplate = ({
   buttonText,
   contentComponent,
   isDisabled = false, //this prop is just for cms
+  image,
 }) => {
   const AnnouncementContent = contentComponent || Content
+
   return (
     <BackDrop>
       <AnnouncementContainer isDisabled={isDisabled}>
         <div css="position: relative;">
+          <RobotoCapsTitle>{title}</RobotoCapsTitle>
           <CloseIcon src={close} onClick={hide} />
           <ResponsiveWrapper>
             <div>
-              <RobotoCapsTitle>{title}</RobotoCapsTitle>
               <StyledContent>
                 <AnnouncementContent content={content} />
               </StyledContent>
+              {buttonLink && buttonText && (
+                <ButtonWrapper>
+                  <SketchButton
+                    as={buttonLink.startsWith('/') ? Link : ExternalLink}
+                    //TODO - fix this clash
+                    to={buttonLink}
+                    href={buttonLink}
+                    styleType="blue"
+                    uppercase
+                  >
+                    {buttonText}
+                  </SketchButton>
+                </ButtonWrapper>
+              )}
             </div>
-            {buttonLink && buttonText && (
-              <ButtonWrapper onClick={hide}>
-                <SketchButton
-                  as={buttonLink.startsWith('/') ? Link : ExternalLink}
-                  //TODO - fix this clash
-                  to={buttonLink}
-                  href={buttonLink}
-                  styleType="blue"
-                  uppercase
-                >
-                  {buttonText}
-                </SketchButton>
-              </ButtonWrapper>
+            {image && (
+              <ImageWrapper>
+                <PreviewCompatibleImg imageInfo={image} />
+              </ImageWrapper>
             )}
           </ResponsiveWrapper>
         </div>
@@ -160,6 +172,13 @@ const Announcement = () => {
                 buttonText
                 isDisabled
                 displayUntil
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 276) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
@@ -169,7 +188,14 @@ const Announcement = () => {
   )
   const {
     html,
-    frontmatter: {title, buttonLink, buttonText, isDisabled, displayUntil},
+    frontmatter: {
+      title,
+      buttonLink,
+      buttonText,
+      isDisabled,
+      displayUntil,
+      image,
+    },
   } = announcement
 
   const [isClosed, setClosed] = useState(true)
@@ -216,6 +242,7 @@ const Announcement = () => {
       buttonLink={buttonLink}
       buttonText={buttonText}
       contentComponent={HTMLContent}
+      image={image}
     />
   )
 }
