@@ -8,9 +8,7 @@ import SocialMediaLinks from '../components/molecules/SocialMediaLinks'
 import Container from '../components/atoms/Container'
 import BookWidget from '../components/molecules/BookWidget'
 import GoodGirlsHero from '../components/organisms/GoodGirlsHero'
-import bannerDesktop1x from '../img/home-banner-desktop.jpg'
-import bannerDesktop2x from '../img/home-banner-desktop@2x.jpg'
-import bannerDesktop3x from '../img/home-banner-desktop@3x.jpg'
+import Img from '../components/PreviewCompatibleImage'
 import {crimsonTextFont} from '../styles/mixins'
 import FullWidth from '../components/atoms/FullWidth'
 import FeaturedBook from '../components/organisms/FeaturedBook'
@@ -19,19 +17,17 @@ import Page from '../components/atoms/Page'
 import HelmetHelper from '../components/molecules/HelmetHelper'
 import media from '../styles/mediaQueries'
 
-const AmandaImage = styled.img`
+const BannerImage = styled(Img)`
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-  height: 280px;
+  height: 220px;
   max-width: 764px;
   object-fit: cover;
-  ${media.aboveMobile`
-    height: 220px;
-  `}
   ${media.aboveContainer`
     border-radius: 5px;
+    overflow: hidden;
   `}
 `
 const WelcomeText = styled.div`
@@ -82,6 +78,7 @@ const MobileOnlySketch = styled(Sketch)`
 `
 
 export const HomePageTemplate = ({
+  bannerImage,
   welcomeText,
   bestSellers,
   hero,
@@ -95,15 +92,19 @@ export const HomePageTemplate = ({
       />
       <Container>
         <FullWidth>
-          <picture>
-            <source
-              srcSet={`${bannerDesktop1x} 1x, ${bannerDesktop2x} 2x, ${bannerDesktop3x} 3x,`}
-            />
-            <AmandaImage
-              src={bannerDesktop1x}
-              alt="Amanda Brookfield Portrait"
-            />
-          </picture>
+          <BannerImage
+            imageInfo={bannerImage}
+            style={{margin: '0 auto', width: '100%'}}
+          />
+          {/* // <picture>
+          //   <source
+          //     srcSet={`${bannerDesktop1x} 1x, ${bannerDesktop2x} 2x, ${bannerDesktop3x} 3x,`}
+          //   />
+          //   <AmandaImage
+          //     src={bannerDesktop1x}
+          //     alt="Amanda Brookfield Portrait"
+          //   />
+          // </picture> */}
         </FullWidth>
         <WelcomeText>
           <FirstLetter>{welcomeText.charAt(0)}</FirstLetter>
@@ -163,7 +164,7 @@ const HomePage = ({data}) => {
     heroData,
   } = data
 
-  const {welcomeText} = page.frontmatter
+  const {bannerImage, welcomeText} = page.frontmatter
 
   const books = edges.map(({node: {frontmatter: book}}) => book)
 
@@ -174,7 +175,9 @@ const HomePage = ({data}) => {
 
   const hero = {...heroData.frontmatter, ...page.frontmatter.heroSection}
 
-  const latestReleasesItems = Object.values(page.frontmatter.latestReleases)
+  const latestReleasesItems = Object.keys(page.frontmatter.latestReleases)
+    .sort()
+    .map(key => page.frontmatter.latestReleases[key])
   const latestReleasesTitles = latestReleasesItems.map(({book}) => book)
   const latestReleases = books
     .filter(book => latestReleasesTitles.includes(book.title))
@@ -182,6 +185,7 @@ const HomePage = ({data}) => {
 
   return (
     <HomePageTemplate
+      bannerImage={bannerImage}
       welcomeText={welcomeText}
       bestSellers={bestSellers}
       hero={hero}
@@ -202,6 +206,13 @@ export const homePageQuery = graphql`
     markdownRemark(id: {eq: $id}) {
       html
       frontmatter {
+        bannerImage {
+          childImageSharp {
+            fixed(width: 764, height: 220, quality: 90) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         welcomeText
         bestSellers {
           bestSeller1
@@ -239,7 +250,7 @@ export const homePageQuery = graphql`
         coverImage {
           childImageSharp {
             fluid(maxWidth: 276) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -265,14 +276,14 @@ export const homePageQuery = graphql`
             coverImage {
               childImageSharp {
                 fixed(width: 125, height: 192) {
-                  ...GatsbyImageSharpFixed
+                  ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
             }
             coverSketchImage {
               childImageSharp {
                 fixed(width: 117, height: 165) {
-                  ...GatsbyImageSharpFixed
+                  ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
             }

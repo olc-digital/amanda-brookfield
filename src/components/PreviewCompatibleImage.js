@@ -2,19 +2,33 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
-const ImgFluidOrFixed = ({style, childImageSharp, alt}) => {
+const ImgFluidOrFixed = ({style, childImageSharp, alt, className}) => {
   if (childImageSharp.fluid) {
-    return <Img style={style} fluid={childImageSharp.fluid} alt={alt} />
+    return (
+      <Img
+        style={style}
+        className={className}
+        fluid={childImageSharp.fluid}
+        alt={alt}
+      />
+    )
   }
 
   if (childImageSharp.fixed) {
-    return <Img style={style} fixed={childImageSharp.fixed} alt={alt} />
+    return (
+      <Img
+        style={style}
+        className={className}
+        fixed={childImageSharp.fixed}
+        alt={alt}
+      />
+    )
   }
 
   return null
 }
 
-const PreviewCompatibleImage = ({imageInfo, style}) => {
+const PreviewCompatibleImage = ({imageInfo, style, className}) => {
   if (!imageInfo) {
     return null
   }
@@ -24,6 +38,7 @@ const PreviewCompatibleImage = ({imageInfo, style}) => {
   if (image && image.childImageSharp) {
     return (
       <ImgFluidOrFixed
+        className={className}
         style={style}
         childImageSharp={image.childImageSharp}
         alt={alt}
@@ -34,6 +49,7 @@ const PreviewCompatibleImage = ({imageInfo, style}) => {
   if (childImageSharp) {
     return (
       <ImgFluidOrFixed
+        className={className}
         style={style}
         childImageSharp={childImageSharp}
         alt={alt}
@@ -42,7 +58,14 @@ const PreviewCompatibleImage = ({imageInfo, style}) => {
   }
 
   if (path && typeof path === 'string') {
-    return <img style={{display: 'block', ...style}} src={path} alt={alt} />
+    return (
+      <img
+        style={{display: 'block', ...style}}
+        className={className}
+        src={path}
+        alt={alt}
+      />
+    )
   }
 
   return null
