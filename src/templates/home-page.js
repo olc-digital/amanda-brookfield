@@ -96,15 +96,6 @@ export const HomePageTemplate = ({
             imageInfo={bannerImage}
             style={{margin: '0 auto', width: '100%'}}
           />
-          {/* // <picture>
-          //   <source
-          //     srcSet={`${bannerDesktop1x} 1x, ${bannerDesktop2x} 2x, ${bannerDesktop3x} 3x,`}
-          //   />
-          //   <AmandaImage
-          //     src={bannerDesktop1x}
-          //     alt="Amanda Brookfield Portrait"
-          //   />
-          // </picture> */}
         </FullWidth>
         <WelcomeText>
           <FirstLetter>{welcomeText.charAt(0)}</FirstLetter>

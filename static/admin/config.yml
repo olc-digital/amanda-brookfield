@@ -34,20 +34,6 @@ collections:
               default: home-page,
             }
           - {label: Welcome Text, name: welcomeText, widget: text}
-          # - label: Best Sellers
-          #   name: bestSellers
-          #   widget: list
-          #   allow_add: false
-          #   field:
-          #     {
-          #       label: Best Seller,
-          #       name: bestSeller,
-          #       widget: relation,
-          #       collection: books,
-          #       searchFields: [title],
-          #       valueField: title,
-          #       displayFields: [title],
-          #     }
           - label: Best Sellers
             name: bestSellers
             widget: object
