@@ -18,8 +18,11 @@ heroSection:
 latestReleases:
   latestRelease1:
     book: Good Girls
-    text: hello
+    blurb: hello
   latestRelease2:
-    book: Good Girls
-    text: hello
+    book: The Love Child
+    blurb: hello
+  latestRelease3:
+    book: For the Love of a Dog
+    blurb: hello
 ---
