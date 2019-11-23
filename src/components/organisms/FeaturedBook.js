@@ -63,7 +63,7 @@ export default function FeaturedBook({
   return (
     <Grid>
       <SketchCover>
-        <Img imageInfo={coverImage} />
+        <Img style={{width: 117}} imageInfo={coverImage} />
       </SketchCover>
       <Description>
         <H3 center={false}>{title}</H3>
