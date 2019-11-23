@@ -23,6 +23,13 @@ const BackDrop = styled.div`
   color: ${({theme}) => theme.white};
   padding: 0;
   box-shadow: 0 -2px 4px 0 rgba(38, 40, 42, 0.25);
+  a {
+    text-decoration: underline;
+    color: currentColor;
+    &:hover {
+      color: currentColor;
+    }
+  }
 `
 
 const AnnouncementContainer = styled(Container)`
