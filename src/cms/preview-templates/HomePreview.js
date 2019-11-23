@@ -68,9 +68,10 @@ const HomePreview = ({entry, fieldsMetaData, getAsset}) => {
     coverImage: getAsset(book.coverImage),
     coverSketchImage: getAsset(book.coverSketchImage),
   }))
-
+  console.log('>>>', entry.getIn(['data', 'bannerImage']))
   return (
     <HomePageTemplate
+      bannerImage={getAsset(entry.getIn(['data', 'bannerImage']))}
       welcomeText={entry.getIn(['data', 'welcomeText'])}
       bestSellers={bestSellersArr}
       hero={hero}

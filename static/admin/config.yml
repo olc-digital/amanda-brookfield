@@ -33,6 +33,7 @@ collections:
               widget: hidden,
               default: home-page,
             }
+          - {label: Banner Image, name: bannerImage, widget: hidden}
           - {label: Welcome Text, name: welcomeText, widget: text}
           - label: Best Sellers
             name: bestSellers
