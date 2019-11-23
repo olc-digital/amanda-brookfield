@@ -16,5 +16,3 @@ Here is the easypeasy link:
 <https://peoplesbookprize.com/winter-2019/good-girls>
 
 Thank you x
-
-__
