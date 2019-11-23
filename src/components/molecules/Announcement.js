@@ -122,7 +122,7 @@ export const AnnouncementTemplate = ({
                 <AnnouncementContent content={content} />
               </StyledContent>
               {buttonLink && buttonText && (
-                <ButtonWrapper onClick={hide}>
+                <ButtonWrapper>
                   <SketchButton
                     as={buttonLink.startsWith('/') ? Link : ExternalLink}
                     //TODO - fix this clash

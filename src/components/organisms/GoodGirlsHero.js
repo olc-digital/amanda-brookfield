@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import Img from '../PreviewCompatibleImage'
 
 import Link from '../atoms/Link'
 import Container from '../atoms/Container'
@@ -8,7 +8,7 @@ import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
 import H2 from '../atoms/H2'
 import P from '../atoms/P'
 import BuyNowButton from '../atoms/BuyNowButton'
-import goodGirlsTop from '../../img/good-girls-top.png'
+// import goodGirlsTop from '../../img/good-girls-top.png'
 
 import {hideBelowMobile} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
@@ -20,7 +20,7 @@ const HeroSection = styled.section`
   ${media.belowMobile`
     &::before {
       content: '';
-      background-image: url(${goodGirlsTop});
+      background-image: url(${({background}) => background});
       background-size: cover;
       opacity: 0.3;
       top: 0;
@@ -57,12 +57,11 @@ const MainSection = styled.div`
 
 const BlurbBody = styled(P)`
   font-size: 14px;
-  padding-right: 40px;
   margin-bottom: 48px;
   position: relative;
-  /* @media (max-width: 380px) {
-    padding: 0;
-  } */
+  ${media.aboveMobile`
+    padding-right: 40px;
+  `}
 `
 
 const ReadMoreLink = styled(Link)`
@@ -94,24 +93,75 @@ const ImgHolder = styled.div`
   ${hideBelowMobile}
 `
 
-export default function GoodGirlsHero({pagePath, buyUrl, coverImage}) {
+const previewCompatibleImage = imageInfo => {
+  if (!imageInfo) {
+    return null
+  }
+
+  const {childImageSharp, path} = imageInfo
+
+  if (childImageSharp && childImageSharp.fluid) {
+    return childImageSharp.fluid
+  }
+
+  if (childImageSharp && childImageSharp.fixed) {
+    return childImageSharp.fixed
+  }
+
+  if (path && typeof path === 'string') {
+    return {path}
+  }
+
+  return null
+}
+
+const getSrcFromSrcSet = (srcSet, minWidth = 500) => {
+  if (!srcSet) {
+    return null
+  }
+  // Make this compatible with the CMS preview
+  // Crop the image using css or some other way
+  try {
+    const items = srcSet.split(',').map(background => {
+      const splitPosition = background.lastIndexOf(' ')
+      return {
+        src: background.slice(0, splitPosition),
+        width: Number(background.slice(splitPosition + 1, -1)) || 0, // to just get the number without the w
+      }
+    })
+
+    const {src = ''} = items.find(v => v.width > minWidth) || items.pop()
+
+    return src
+  } catch (err) {
+    return ''
+  }
+}
+
+export default function GoodGirlsHero({
+  title,
+  text,
+  readMoreText,
+  readMorePath,
+  buyUrl,
+  coverImage,
+}) {
+  const {srcSet, path} = previewCompatibleImage(coverImage) || {}
+  const background = getSrcFromSrcSet(srcSet, 500) || path
+
   return (
-    <HeroSection>
+    <HeroSection background={background}>
       <HeroContainer>
         <MainSection>
           <RobotoCapsTitle>NEW</RobotoCapsTitle>
-          <H2 css={'text-align: left; margin: 20px 0 16px;'}>
-            A novel, ‘Good Girls‘
-          </H2>
-          <BlurbBody>
-            {`Good Girls is about the Keating sisters, Kat and Eleanor, and the turns their lives take after a childhood fraught with difficulties and adolescent rivalries.  It is a coming-of-age story, a mystery and a tear-jerker. But most of all it’s a reminder of whom to keep close and whom to trust with your darkest secrets. `}
-          </BlurbBody>
+          <H2 css={'text-align: left; margin: 20px 0 16px;'}>{title}</H2>
+          <BlurbBody>{text}</BlurbBody>
           <BuyNowButton styleType="blue" href={buyUrl} size="md" />
-          <ReadMoreLink to={pagePath}>Read more about Good Girls</ReadMoreLink>
+          <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
         </MainSection>
         <ImgHolder>
           {/* DONT DOWNLOAD THIS IMAGE ON MOBILE? */}
-          <Img fluid={coverImage.childImageSharp.fluid} />
+          <Img imageInfo={coverImage} />
         </ImgHolder>
       </HeroContainer>
     </HeroSection>

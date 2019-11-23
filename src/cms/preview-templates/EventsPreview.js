@@ -7,13 +7,12 @@ const BookPreview = ({widgetsFor}) => {
     <EventsPageTemplate
       events={Array.from(
         widgetsFor('events').map(event => {
-          let date = event.getIn(['data', 'date'])
-          if (date instanceof Date) {
-            date = date.toISOString()
-          }
+          const date = event.getIn(['data', 'date'])
+          const dateISO = date instanceof Date ? date.toISOString() : date
+
           return {
             title: event.getIn(['data', 'title']),
-            date,
+            date: dateISO,
             description: event.getIn(['data', 'description']),
             time: event.getIn(['data', 'time']),
           }

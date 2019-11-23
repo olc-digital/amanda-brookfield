@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: fix-homepage-cms
   commit_messages:
     create: Create {{collection}} “{{slug}}”
     update: Update {{collection}} “{{slug}}”
@@ -27,7 +27,126 @@ collections:
         label: Home
         name: home
         fields:
+          - {
+              label: Template Key,
+              name: templateKey,
+              widget: hidden,
+              default: home-page,
+            }
+          - {label: Banner Image, name: bannerImage, widget: hidden}
           - {label: Welcome Text, name: welcomeText, widget: text}
+          - label: Best Sellers
+            name: bestSellers
+            widget: object
+            fields:
+              - {
+                  label: Best Seller 1,
+                  name: bestSeller1,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: title,
+                  displayFields: [title],
+                }
+              - {
+                  label: Best Seller 2,
+                  name: bestSeller2,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: title,
+                  displayFields: [title],
+                }
+              - {
+                  label: Best Seller 3,
+                  name: bestSeller3,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: title,
+                  displayFields: [title],
+                }
+              - {
+                  label: Best Seller 4,
+                  name: bestSeller4,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: title,
+                  displayFields: [title],
+                }
+              - {
+                  label: Best Seller 5,
+                  name: bestSeller5,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: title,
+                  displayFields: [title],
+                }
+          - label: Hero Section
+            name: heroSection
+            widget: object
+            fields:
+              - {label: Hero title, name: title, widget: string}
+              - {label: Hero text, name: text, widget: text}
+              - {label: Read more text, name: readMoreText, widget: string}
+              - {
+                  label: Linked Book,
+                  name: linkedBook,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: title,
+                  displayFields: [title],
+                }
+          - label: Latest Releases
+            name: latestReleases
+            widget: object
+            fields:
+              - label: Latest Release 1
+                name: latestRelease1
+                widget: object
+                fields:
+                  - {
+                      label: Book,
+                      name: book,
+                      widget: relation,
+                      collection: books,
+                      searchFields: [title],
+                      valueField: title,
+                      displayFields: [title],
+                    }
+                  - {label: Blurb, name: blurb, widget: text}
+              - label: Latest Release 2
+                name: latestRelease2
+                widget: object
+                fields:
+                  - {
+                      label: Book,
+                      name: book,
+                      widget: relation,
+                      collection: books,
+                      searchFields: [title],
+                      valueField: title,
+                      displayFields: [title],
+                    }
+                  - {label: Blurb, name: blurb, widget: text}
+              - label: Latest Release 3
+                name: latestRelease3
+                widget: object
+                fields:
+                  - {
+                      label: Book,
+                      name: book,
+                      widget: relation,
+                      collection: books,
+                      searchFields: [title],
+                      valueField: title,
+                      displayFields: [title],
+                    }
+                  - {label: Blurb, name: blurb, widget: text}
+
       - file: src/announcement/index.md
         label: Announcement
         name: announcement
@@ -170,7 +289,7 @@ collections:
       - {
           label: Original Publication Date,
           name: date,
-          widget: date,
+          widget: date, # todo -replace date with datetime as date is being deprecated
           dateFormat: DD MMM YYYY,
           required: false,
           default: '',
@@ -180,6 +299,7 @@ collections:
     label: Books
     delete: false
     folder: src/pages/books
+    slug: '{{slug}}'
     fields:
       - {
           label: Template Key,
