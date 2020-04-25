@@ -13,6 +13,7 @@ import menuIcon from '../../img/menu-icon.svg'
 
 const menuWidth = '220px'
 const shiftDistance = '230px'
+
 const MobileNav = styled.nav`
   position: fixed;
   top: 0;
@@ -73,7 +74,7 @@ const NavItemWrapper = styled.div`
     }
   }
   ${media.aboveMobile`
-    margin: 0 20px;
+    margin: 0 10px;
   `}
 `
 
@@ -97,7 +98,10 @@ const NavLinkText = styled(H2)`
 const DesktopNav = styled.nav`
   display: flex;
   justify-content: center;
-  margin: 32px 0 70px;
+  margin: 32px auto 70px;
+  max-width: 708px;
+  justify-content: space-around;
+  padding: 0 20px;
   ${media.belowMobile`
     display: none;
   `}
@@ -108,6 +112,7 @@ const NavLinks = [
   {to: '/books', name: 'books', text: 'Books'},
   {to: '/author', name: 'author', text: 'Author'},
   {to: '/blog', name: 'blog', text: 'Blog'},
+  {to: '/features', name: 'features', text: 'Features'},
   {to: '/events', name: 'events', text: 'Events'},
 ]
 
@@ -116,11 +121,8 @@ const NavItem = ({text, to, name, handleClick = () => null}) => (
     <Link
       to={to}
       getProps={props => {
-        const {isCurrent, isPartiallyCurrent, href, location} = props
-        return isCurrent ||
-          (href !== '/' && isPartiallyCurrent) ||
-          (href === '/books' && location.pathname.startsWith('/articles')) ||
-          (href === '/books' && location.pathname.startsWith('/short-stories'))
+        const {isCurrent, isPartiallyCurrent, href} = props
+        return isCurrent || (href !== '/' && isPartiallyCurrent)
           ? {className: 'active'}
           : null
       }}

@@ -8,6 +8,7 @@ const map = {
   author: 1,
   blog: 2,
   events: 3,
+  features: 4,
 }
 const Sketch = styled.div`
   width: 92px;
@@ -16,7 +17,7 @@ const Sketch = styled.div`
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url(${sketchSprite2x});
   }
-  @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  @media (min-device-pixel-ratio: 2.5), (min-resolution: 288dpi) {
     background-image: url(${sketchSprite3x});
   }
   background-size: 200% auto;
