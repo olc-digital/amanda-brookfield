@@ -47,9 +47,21 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        username: 'amanda_and_mabel_brookfield',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-layout',
       options: {
         component: require.resolve('./src/components/Layout.js'),
+      },
+    },
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        username: 'amanda_and_mabel_brookfield',
       },
     },
     {
