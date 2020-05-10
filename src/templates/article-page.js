@@ -16,13 +16,13 @@ export const ArticlePageTemplate = ({
   title,
   content,
   contentComponent,
-  helmet,
+  metaDescription,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
     <Page>
-      {helmet}
+      <HelmetHelper title={title} metaDescription={metaDescription} />
       <Container narrow>
         <BackButton />
         <H2 css={'margin: 20px 0 48px;'}>{title}</H2>
@@ -35,7 +35,6 @@ export const ArticlePageTemplate = ({
 ArticlePageTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -66,13 +65,7 @@ const ArticlePage = ({data}) => {
       <ArticlePageTemplate
         content={article.html}
         contentComponent={HTMLContent}
-        description={article.frontmatter.description}
-        helmet={
-          <HelmetHelper
-            title={article.frontmatter.title}
-            metaDescription={article.frontmatter.description}
-          />
-        }
+        metaDescription={article.frontmatter.metaDescription}
         title={article.frontmatter.title}
       />
       <Container
@@ -123,7 +116,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        description
       }
     }
     allMarkdownRemark(

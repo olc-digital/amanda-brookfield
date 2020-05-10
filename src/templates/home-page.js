@@ -78,6 +78,7 @@ const MobileOnlySketch = styled(Sketch)`
 `
 
 export const HomePageTemplate = ({
+  metaDescription,
   bannerImage,
   welcomeText,
   bestSellers,
@@ -86,10 +87,7 @@ export const HomePageTemplate = ({
 }) => {
   return (
     <Page>
-      <HelmetHelper
-        title="Homepage"
-        metaDescription="Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1"
-      />
+      <HelmetHelper title="Homepage" metaDescription={metaDescription} />
       <Container>
         <FullWidth>
           <BannerImage
@@ -155,7 +153,7 @@ const HomePage = ({data}) => {
     heroData,
   } = data
 
-  const {bannerImage, welcomeText} = page.frontmatter
+  const {metaDescription, bannerImage, welcomeText} = page.frontmatter
 
   const books = edges.map(({node: {frontmatter: book}}) => book)
 
@@ -176,6 +174,7 @@ const HomePage = ({data}) => {
 
   return (
     <HomePageTemplate
+      metaDescription={metaDescription}
       bannerImage={bannerImage}
       welcomeText={welcomeText}
       bestSellers={bestSellers}
@@ -197,6 +196,7 @@ export const homePageQuery = graphql`
     markdownRemark(id: {eq: $id}) {
       html
       frontmatter {
+        metaDescription
         bannerImage {
           childImageSharp {
             fixed(width: 764, height: 220, quality: 90) {

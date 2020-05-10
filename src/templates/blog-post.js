@@ -9,17 +9,12 @@ import Page from '../components/atoms/Page'
 import BackButton from '../components/atoms/BackButton'
 import HelmetHelper from '../components/molecules/HelmetHelper'
 
-export const BlogPostTemplate = ({
-  title,
-  content,
-  contentComponent,
-  helmet,
-}) => {
+export const BlogPostTemplate = ({title, content, contentComponent}) => {
   const PostContent = contentComponent || Content
 
   return (
     <Page>
-      {helmet}
+      <HelmetHelper title={title} />
       <Container narrow>
         <BackButton />
         <H2 css={'margin: 20px 0 48px;'}>{title}</H2>
@@ -32,9 +27,7 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
 }
 
 const BlogPost = ({data}) => {
@@ -44,13 +37,6 @@ const BlogPost = ({data}) => {
     <BlogPostTemplate
       content={post.html}
       contentComponent={HTMLContent}
-      description={post.frontmatter.description}
-      helmet={
-        <HelmetHelper
-          title={post.frontmatter.title}
-          metaDescription={post.frontmatter.description}
-        />
-      }
       title={post.frontmatter.title}
     />
   )
@@ -72,7 +58,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
       }
     }
   }
