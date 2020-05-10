@@ -2,9 +2,10 @@
 title: Biography
 templateKey: author-page
 metaDescription: ''
+inspirationImage: /img/inspiration.jpg
+biographyImage: /img/biography.jpg
+mabelImage: /img/author-mabel.jpg
 ---
-
-## Biography
 
 My twin brother and I were born in 1960 to Foreign Office parents having a spell in England between postings. I would have liked a more exotic place of birth, (like my two elder sisters, born in Saigon and Singapore respectively), but had to settle instead for St George’s hospital, in Hyde Park, where it then was. With four kids under the age of four and no disposable nappies or washing machines, my Mum was pretty pleased when they headed off to man the British Consulate in Shanghai for a couple of years, a job that involved living in a grand house in a compound with hot and cold running servants. We even had a governess – a lovely person who is still a family friend – as there was no school for us to attend. So protected was our world, that we only really left the compound for ballet and piano lessons, or tea parties with the children of other diplomats. I can remember still the sea of faces that would press up against the car as our driver edged through the crowded streets, the bafflement of being stared at.
 
