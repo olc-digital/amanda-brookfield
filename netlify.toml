@@ -4,3 +4,5 @@
   functions = "./built-lambda"
 [build.environment]
   YARN_FLAGS = "--immutable"
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
