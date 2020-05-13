@@ -6,6 +6,7 @@ import Container from '../components/atoms/Container'
 
 const Explanation = styled.div`
   text-align: center;
+  margin-bottom: 72px;
 `
 
 const NotFoundPage = () => (
