@@ -1,6 +1,6 @@
 backend:
-  name: master
-  branch: preset-gallry-images
+  name: git-gateway
+  branch: master
   commit_messages:
     create: Create {{collection}} “{{slug}}”
     update: Update {{collection}} “{{slug}}”
