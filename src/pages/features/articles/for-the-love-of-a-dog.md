@@ -2,7 +2,7 @@
 templateKey: article-page
 articleType: article
 title: For the Love of a Dog
-date: 2019-08-10T10:53:04.516Z
+date: 2018-07-18T10:53:04.516Z
 ---
 
 GOOD HOUSEKEEPING
