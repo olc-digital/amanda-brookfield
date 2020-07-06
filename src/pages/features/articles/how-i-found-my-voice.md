@@ -2,6 +2,7 @@
 templateKey: article-page
 articleType: article
 title: Finding My Voice
+date: 2011-01-21T00:00:00.000Z
 ---
 
 The most dispiriting aspect of growing older is the loss of that once taken-for-granted luxury of getting better at things. Sport, memory, eyesight – even tiddlywinks will become a challenge in the end. Adapting with grace is of course the way forward. My late father managed this brilliantly, moving, as the years passed, from being a keen, cunning tennis player, to a competitor of equal guile on the croquet lawn, followed by the bowling green and, eventually, in his last decade, the local pub dartboard, where blind instinct compensated brilliantly (and often dangerously) for lack of actual eyesight.
