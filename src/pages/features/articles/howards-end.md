@@ -2,7 +2,7 @@
 templateKey: article-page
 articleType: article
 title: Howards End
-date: 2019-08-10T10:55:03.172Z
+date: 2009-01-13T00:00:00.000Z
 ---
 
 HOWARDS END by E M Forster
