@@ -165,7 +165,7 @@ export default function TheOtherWomanHero({
             size="md"
             text="Pre-order"
           />
-          <ReadMoreLink to="/the-other-woman">
+          <ReadMoreLink to="/books/the-other-woman">
             READ MORE ABOUT THE OTHER WOMAN
           </ReadMoreLink>
         </MainSection>
