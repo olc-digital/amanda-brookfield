@@ -89,7 +89,7 @@ export const BookPageTemplate = ({
         `}
       />
       <ReviewItemsWrapper css={!mobileReviewsVisible && hideBelowMobile}>
-        {reviews.map(review => (
+        {reviews?.map(review => (
           <ReviewItem key={review.text} {...review} />
         ))}
       </ReviewItemsWrapper>

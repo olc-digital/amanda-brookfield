@@ -1,7 +1,7 @@
 import React from 'react'
 import SketchButton from './SketchButton'
 
-const BuyButton = ({href, ...props}) => (
+const BuyButton = ({href, text, ...props}) => (
   <SketchButton
     as="a"
     size="sm"
@@ -11,7 +11,7 @@ const BuyButton = ({href, ...props}) => (
     uppercase
     {...props}
   >
-    Buy Now
+    {text || 'Buy Now'}
   </SketchButton>
 )
 

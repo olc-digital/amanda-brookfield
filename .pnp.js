@@ -79,7 +79,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "eslint-plugin-react",
-        "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.0"
+        "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.3"
       ],
       [
         "gatsby",
@@ -245,7 +245,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:6.11.0"],
             ["eslint-import-resolver-node", "npm:0.3.4"],
             ["eslint-plugin-import", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.21.2"],
-            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.0"],
+            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.3"],
             ["gatsby", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.23.7"],
             ["gatsby-cli", "npm:2.12.21"],
             ["gatsby-image", "npm:2.4.7"],
@@ -7013,7 +7013,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:6.11.0"],
             ["eslint-import-resolver-node", "npm:0.3.4"],
             ["eslint-plugin-import", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.21.2"],
-            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.0"],
+            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.3"],
             ["gatsby", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.23.7"],
             ["gatsby-cli", "npm:2.12.21"],
             ["gatsby-image", "npm:2.4.7"],
@@ -7620,6 +7620,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["array.prototype.flat", "npm:1.2.3"],
             ["define-properties", "npm:1.1.3"],
             ["es-abstract", "npm:1.17.5"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["array.prototype.flatmap", [
+        ["npm:1.2.3", {
+          "packageLocation": "./.yarn/cache/array.prototype.flatmap-npm-1.2.3-5a87b1ccec-adbf30f271.zip/node_modules/array.prototype.flatmap/",
+          "packageDependencies": [
+            ["array.prototype.flatmap", "npm:1.2.3"],
+            ["define-properties", "npm:1.1.3"],
+            ["es-abstract", "npm:1.17.5"],
+            ["function-bind", "npm:1.1.1"]
           ],
           "linkType": "HARD",
         }]
@@ -12589,22 +12601,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.0", {
-          "packageLocation": "./.yarn/$$virtual/eslint-plugin-react-virtual-f6132f01c9/0/cache/eslint-plugin-react-npm-7.20.0-0586546de2-7033e1a422.zip/node_modules/eslint-plugin-react/",
+        ["virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.3", {
+          "packageLocation": "./.yarn/$$virtual/eslint-plugin-react-virtual-446938cf20/0/cache/eslint-plugin-react-npm-7.20.3-676a5958d1-00b1e5045e.zip/node_modules/eslint-plugin-react/",
           "packageDependencies": [
-            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.0"],
+            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.3"],
             ["array-includes", "npm:3.1.1"],
+            ["array.prototype.flatmap", "npm:1.2.3"],
             ["doctrine", "npm:2.1.0"],
             ["eslint", "npm:7.3.0"],
             ["has", "npm:1.0.3"],
-            ["jsx-ast-utils", "npm:2.2.3"],
-            ["object.entries", "npm:1.1.1"],
+            ["jsx-ast-utils", "npm:2.4.1"],
+            ["object.entries", "npm:1.1.2"],
             ["object.fromentries", "npm:2.0.2"],
             ["object.values", "npm:1.1.1"],
             ["prop-types", "npm:15.7.2"],
-            ["resolve", "patch:resolve@npm%3A1.15.1#builtin<compat/resolve>::version=1.15.1&hash=3388aa"],
-            ["string.prototype.matchall", "npm:4.0.2"],
-            ["xregexp", "npm:4.3.0"]
+            ["resolve", "patch:resolve@npm%3A1.17.0#builtin<compat/resolve>::version=1.17.0&hash=3388aa"],
+            ["string.prototype.matchall", "npm:4.0.2"]
           ],
           "packagePeers": [
             "eslint"
@@ -18499,6 +18511,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/jsx-ast-utils-npm-2.2.3-0afe9e42fb-a5eaa22bb2.zip/node_modules/jsx-ast-utils/",
           "packageDependencies": [
             ["jsx-ast-utils", "npm:2.2.3"],
+            ["array-includes", "npm:3.1.1"],
+            ["object.assign", "npm:4.1.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.4.1", {
+          "packageLocation": "./.yarn/cache/jsx-ast-utils-npm-2.4.1-81203927bc-36471d635b.zip/node_modules/jsx-ast-utils/",
+          "packageDependencies": [
+            ["jsx-ast-utils", "npm:2.4.1"],
             ["array-includes", "npm:3.1.1"],
             ["object.assign", "npm:4.1.0"]
           ],

@@ -7,6 +7,7 @@ import SocialMediaLinks from '../components/molecules/SocialMediaLinks'
 import Container from '../components/atoms/Container'
 import BookWidget from '../components/molecules/BookWidget'
 import GoodGirlsHero from '../components/organisms/GoodGirlsHero'
+import TheOtherWomanHero from '../components/organisms/TheOtherWomanHero'
 import Img from '../components/PreviewCompatibleImage'
 import {crimsonTextFont} from '../styles/mixins'
 import FullWidth from '../components/atoms/FullWidth'
@@ -115,7 +116,7 @@ export const HomePageTemplate = ({
           </BestSellers>
         </Scroller>
       </Container>
-      <GoodGirlsHero
+      <TheOtherWomanHero
         title={hero.title}
         text={hero.text}
         readMoreText={hero.readMoreText}
@@ -224,7 +225,7 @@ export const homePageQuery = graphql`
         }
       }
     }
-    heroData: markdownRemark(frontmatter: {bookId: {eq: "good-girls"}}) {
+    heroData: markdownRemark(frontmatter: {bookId: {eq: "the-other-woman"}}) {
       frontmatter {
         title
         path

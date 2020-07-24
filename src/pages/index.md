@@ -25,6 +25,11 @@ heroSection:
   readMoreText: Read more about Good Girls
 latestReleases:
   latestRelease1:
+    book: The Other Woman
+    blurb: >-
+      To be published on October 13 th 2020, ‘The Other Woman’ is a crackling story about love, marriage, lies and fate, showing how our destinies turn on the smallest connections and decisions.
+      On a normal day, in a normal house, on a normal street, wife and mother Fran has had enough. She packs a case, leaves a note for her menacing bully of a husband, Pete, and one for her beloved twenty-year-old son, Harry, and heads to the airport in a last-ditch bid for freedom.
+  latestRelease2:
     book: Good Girls
     blurb: >-
       Published in October 2019, 'Good Girls' tells the compelling story of the
@@ -34,7 +39,7 @@ latestReleases:
       full of the responsibilities only an older sibling can understand. She
       adores her little sister but grows up certain that she can never compete
       with her.
-  latestRelease2:
+  latestRelease3:
     book: For the Love of a Dog
     blurb: >-
       Published in November 2018, 'For the Love of a Dog' is a funny and
@@ -44,7 +49,7 @@ latestReleases:
       desolation closed in. Talk of getting a puppy was just to cheer myself up.
       I never thought I would actually go through with it; I was barely capable
       of looking after myself, let alone a dog…
-  latestRelease3:
+  latestRelease4:
     book: The Love Child
     blurb: >-
       Published in Jan 2013, 'The Love Child' is a touching and heartfelt story
