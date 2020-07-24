@@ -17,5 +17,3 @@ On a normal day, in a normal house, on a normal street, wife and mother Fran has
 In another house, on another street, Helena is despairingly baiting her husband Jack into a fight. He has grown so distant lately, it feels like the only way to get him to take notice of her. Passionate, volatile, increasingly fragile, she is fast running out of hope.
 
 Equally trapped, equally desperate, Helena and Fran do not know that their lives are about to collide. As their worlds tangle the fall-out is terrible, taking loyalties to breaking point and shifting boundaries of allegiance in ways no one could have foreseen.
-
-Amanda Brookfield is back with a triumphant, crackling story about love, marriage, lies and fate, showing how our destinies turn on the smallest connections and decisions.
