@@ -16,22 +16,11 @@ const HeroSection = styled.section`
   background: ${({theme}) => theme.blue};
   color: #ffffff;
   position: relative;
-  ${media.belowMobile`
-    &::before {
-      content: '';
-      background-image: url(${({background}) => background});
-      background-size: cover;
-      opacity: 0.3;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-    }`}
 `
 
 const HeroContainer = styled(Container)`
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: space-between;
 
@@ -89,7 +78,13 @@ const ImgHolder = styled.div`
   width: 276px;
   flex: 1 0 auto;
   align-self: center;
-  ${hideBelowMobile}
+  ${media.belowMobile`
+    position: absolute;
+    width: 124px;
+    bottom: 24px;
+    right: 24px;
+    max-width: 33%;
+  `}
 `
 
 const previewCompatibleImage = imageInfo => {
