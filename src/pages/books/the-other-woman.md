@@ -5,7 +5,7 @@ path: /books/the-other-woman
 title: The Other Woman
 originalPublicationDate: 2020-10-13T00:00:00.000Z
 coverImage: /img/covers/the-other-woman.jpg
-coverSketchImage: /img/covers/the-other-woman.jpg
+coverSketchImage: /img/covers/the-other-woman-sketch.jpg
 amazonLink: https://www.amazon.co.uk/dp/B08CV34NBR
 reviews:
 ---
