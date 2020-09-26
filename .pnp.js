@@ -79,7 +79,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "eslint-plugin-react",
-        "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.3"
+        "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.21.2"
       ],
       [
         "gatsby",
@@ -245,7 +245,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:6.11.0"],
             ["eslint-import-resolver-node", "npm:0.3.4"],
             ["eslint-plugin-import", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.21.2"],
-            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.3"],
+            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.21.2"],
             ["gatsby", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.23.7"],
             ["gatsby-cli", "npm:2.12.21"],
             ["gatsby-image", "npm:2.4.7"],
@@ -7013,7 +7013,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:6.11.0"],
             ["eslint-import-resolver-node", "npm:0.3.4"],
             ["eslint-plugin-import", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.21.2"],
-            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.3"],
+            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.21.2"],
             ["gatsby", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:2.23.7"],
             ["gatsby-cli", "npm:2.12.21"],
             ["gatsby-image", "npm:2.4.7"],
@@ -12601,10 +12601,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.3", {
-          "packageLocation": "./.yarn/$$virtual/eslint-plugin-react-virtual-446938cf20/0/cache/eslint-plugin-react-npm-7.20.3-676a5958d1-00b1e5045e.zip/node_modules/eslint-plugin-react/",
+        ["virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.21.2", {
+          "packageLocation": "./.yarn/$$virtual/eslint-plugin-react-virtual-653736540a/0/cache/eslint-plugin-react-npm-7.21.2-8a3fade120-48ec4da08a.zip/node_modules/eslint-plugin-react/",
           "packageDependencies": [
-            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.20.3"],
+            ["eslint-plugin-react", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:7.21.2"],
             ["array-includes", "npm:3.1.1"],
             ["array.prototype.flatmap", "npm:1.2.3"],
             ["doctrine", "npm:2.1.0"],
