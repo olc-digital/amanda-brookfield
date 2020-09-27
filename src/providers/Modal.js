@@ -38,7 +38,10 @@ const Modal = ({body, heading}) => {
   )
 }
 
-export const ModalContext = React.createContext(undefined)
+export const ModalContext = React.createContext({
+  openModal: () => {},
+  closeModal: () => {},
+})
 
 export const ModalProvider = ({children}) => {
   const [modalBody, setModalBody] = useState([])
@@ -83,3 +86,5 @@ export const ModalProvider = ({children}) => {
     </ModalContext.Provider>
   )
 }
+
+export default ModalContext

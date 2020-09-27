@@ -21,8 +21,7 @@ const BannerImage = styled(Img)`
   height: auto;
   display: block;
   margin: 0 auto;
-  height: 220px;
-  max-width: 764px;
+  padding-bottom: 30.5%;
   object-fit: cover;
   ${media.aboveContainer`
     border-radius: 5px;
@@ -48,7 +47,7 @@ const FirstLetter = styled.span`
 `
 
 const Scroller = styled(FullWidth)`
-  overflow-x: scroll;
+  overflow-x: auto;
   margin-bottom: 48px;
   -webkit-overflow-scrolling: touch;
 `

@@ -166,8 +166,8 @@ const Nav = () => {
         {NavLinks.map(
           item => !item.mobileOnly && <NavItem key={item.text} {...item} />,
         )}
-        <NewsletterShout />
       </DesktopNav>
+      <NewsletterShout />
     </div>
   )
 }
