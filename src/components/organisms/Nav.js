@@ -1,15 +1,12 @@
-import React, {Component, useContext, useState} from 'react'
+import React, {Component} from 'react'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
-
-import {ModalContext} from '../../providers/Modal'
 
 import ButtonBase from '../atoms/ButtonBase'
 import Img from '../atoms/Img'
 import Sketch from '../atoms/Sketch'
 import media from '../../styles/mediaQueries'
 import H2 from '../atoms/H2'
-import SketchButton from '../atoms/SketchButton'
 
 import close from '../../img/cursive-close.svg'
 import menuIcon from '../../img/menu-icon.svg'
@@ -144,54 +141,40 @@ const NavItem = ({text, to, name, handleClick = () => null}) => (
   </NavItemWrapper>
 )
 
-const Nav = () => {
-  const [isMobileNavVisible, setIsMobileNavVisible] = useState(false)
-  const {openModal} = useContext(ModalContext)
-
-  const hideMobileNav = () => setIsMobileNavVisible(false)
-  const showMobileNav = () => setIsMobileNavVisible(true)
-
-  return (
-    <div>
-      <>
-        <MobileHamburger onClick={showMobileNav} />
-        {isMobileNavVisible && <BackdropClickTarget onClick={hideMobileNav} />}
-        <MobileNav className={isMobileNavVisible ? 'slideIn' : ''}>
-          <CloseNavButton onClick={hideMobileNav}>
-            <Img src={close} />
-          </CloseNavButton>
-          {NavLinks.map(item => (
-            <NavItem key={item.text} {...item} handleClick={hideMobileNav} />
-          ))}
-        </MobileNav>
-      </>
-      <DesktopNav>
-        {NavLinks.map(
-          item => !item.mobileOnly && <NavItem key={item.text} {...item} />,
-        )}
-        <SketchButton
-          as="a"
-          size="xl"
-          onClick={() => {
-            openModal(
-              <iframe
-                style={{
-                  outline: 'none',
-                  border: 'none',
-                  margin: -12,
-                  width: 'calc(100% + 24px)',
-                  height: 'calc(100% + 24px)',
-                }}
-                src="http://bit.ly/AmandaBrookfieldNewsletter"
-              />,
-            )
-          }}
-        >
-          Subscribe to my Newsletter
-        </SketchButton>
-      </DesktopNav>
-    </div>
-  )
+class Nav extends Component {
+  state = {isMobileNavVisible: false}
+  hideMobileNav = () => this.setState({isMobileNavVisible: false})
+  showMobileNav = () => this.setState({isMobileNavVisible: true})
+  render() {
+    const {isMobileNavVisible} = this.state
+    return (
+      <div>
+        <>
+          <MobileHamburger onClick={this.showMobileNav} />
+          {isMobileNavVisible && (
+            <BackdropClickTarget onClick={this.hideMobileNav} />
+          )}
+          <MobileNav className={isMobileNavVisible ? 'slideIn' : ''}>
+            <CloseNavButton onClick={this.hideMobileNav}>
+              <Img src={close} />
+            </CloseNavButton>
+            {NavLinks.map(item => (
+              <NavItem
+                key={item.text}
+                {...item}
+                handleClick={this.hideMobileNav}
+              />
+            ))}
+          </MobileNav>
+        </>
+        <DesktopNav>
+          {NavLinks.map(
+            item => !item.mobileOnly && <NavItem key={item.text} {...item} />,
+          )}
+        </DesktopNav>
+      </div>
+    )
+  }
 }
 
 export default Nav
