@@ -14,6 +14,7 @@ import Announcement from './molecules/Announcement'
 import favicon16 from '../img/favicons/favicon-16x16.png'
 import favicon32 from '../img/favicons/favicon-32x32.png'
 import favicon64 from '../img/favicons/favicon-64x64.png'
+import {ModalProvider} from '../providers/Modal'
 
 const LayoutGrid = styled.div`
   display: grid;
@@ -35,10 +36,12 @@ const Layout = ({cms, children}) => (
       <GlobalStyles />
       <PreloadFonts />
       <LayoutGrid>
-        <Header />
-        <Nav />
-        <div>{children}</div>
-        <Footer />
+        <ModalProvider>
+          <Header />
+          <Nav />
+          <div>{children}</div>
+          <Footer />
+        </ModalProvider>
       </LayoutGrid>
       {!cms && <Announcement />}
     </>
