@@ -15,6 +15,7 @@ import Sketch from '../components/atoms/Sketch'
 import Page from '../components/atoms/Page'
 import HelmetHelper from '../components/molecules/HelmetHelper'
 import media from '../styles/mediaQueries'
+import NewsletterShout from '../components/organisms/NewsletterShout'
 
 const BannerImage = styled(Img)`
   width: 100%;
@@ -87,6 +88,9 @@ export const HomePageTemplate = ({
     <Page>
       <HelmetHelper title="Homepage" metaDescription={metaDescription} />
       <Container>
+        <FullWidth>
+          <NewsletterShout large={true} />
+        </FullWidth>
         <FullWidth>
           <BannerImage
             imageInfo={bannerImage}

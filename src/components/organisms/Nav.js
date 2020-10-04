@@ -10,7 +10,6 @@ import H2 from '../atoms/H2'
 
 import close from '../../img/cursive-close.svg'
 import menuIcon from '../../img/menu-icon.svg'
-import NewsletterShout from './NewsletterShout'
 
 const menuWidth = '220px'
 const shiftDistance = '230px'
@@ -167,7 +166,6 @@ const Nav = () => {
           item => !item.mobileOnly && <NavItem key={item.text} {...item} />,
         )}
       </DesktopNav>
-      <NewsletterShout />
     </div>
   )
 }

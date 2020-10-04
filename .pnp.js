@@ -186,6 +186,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.0.5"
       ],
       [
+        "reach-router",
+        "npm:0.0.0"
+      ],
+      [
         "react",
         "npm:16.13.1"
       ],
@@ -272,6 +276,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["netlify-lambda", "npm:1.6.3"],
             ["parcel-bundler", "npm:1.12.4"],
             ["prettier", "npm:2.0.5"],
+            ["reach-router", "npm:0.0.0"],
             ["react", "npm:16.13.1"],
             ["react-dom", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:16.13.1"],
             ["react-helmet", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:6.1.0"],
@@ -7040,6 +7045,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["netlify-lambda", "npm:1.6.3"],
             ["parcel-bundler", "npm:1.12.4"],
             ["prettier", "npm:2.0.5"],
+            ["reach-router", "npm:0.0.0"],
             ["react", "npm:16.13.1"],
             ["react-dom", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:16.13.1"],
             ["react-helmet", "virtual:d8afab758f061877f54290cb7af994bfc059940b13ae1e8be6416f3d15a300c1029581f2446053188169a4407bd4c8988b8682e536580451a667a2d0064b3404#npm:6.1.0"],
@@ -24170,6 +24176,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/re-resizable-npm-4.11.0-5bc249a543-8862a7629f.zip/node_modules/re-resizable/",
           "packageDependencies": [
             ["re-resizable", "npm:4.11.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["reach-router", [
+        ["npm:0.0.0", {
+          "packageLocation": "./.yarn/cache/reach-router-npm-0.0.0-6008138c86-2e870d0c41.zip/node_modules/reach-router/",
+          "packageDependencies": [
+            ["reach-router", "npm:0.0.0"]
           ],
           "linkType": "HARD",
         }]

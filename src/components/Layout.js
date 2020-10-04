@@ -39,7 +39,7 @@ const Layout = ({cms, children}) => (
         <ModalProvider>
           <Header />
           <Nav />
-          <div>{children}</div>
+          <main>{children}</main>
           <Footer />
         </ModalProvider>
       </LayoutGrid>
