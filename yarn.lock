@@ -5026,7 +5026,6 @@ __metadata:
     netlify-lambda: ^1.6.3
     parcel-bundler: ^1.12.4
     prettier: ^2.0.5
-    reach-router: ^0.0.0
     react: ^16.13.1
     react-dom: ^16.13.1
     react-helmet: ^6.1.0
@@ -20226,13 +20225,6 @@ fsevents@~2.1.2:
   version: 4.11.0
   resolution: "re-resizable@npm:4.11.0"
   checksum: 8862a7629f73dc4f7ac42eda91bca951e55c6ce8b27568f42cbe054e54fc3992356d23483e3c45345735f46c45d4cd5374f77d10f51e2875e416b1c96f84a45d
-  languageName: node
-  linkType: hard
-
-"reach-router@npm:^0.0.0":
-  version: 0.0.0
-  resolution: "reach-router@npm:0.0.0"
-  checksum: 2e870d0c41a205a874f6038b42a94854f748a66312ca449904ebd4c409f9047963d564ff32a0d8970edd1110ccd13fee82b51ce51fab1477bd59b9ee26ccc429
   languageName: node
   linkType: hard
 
