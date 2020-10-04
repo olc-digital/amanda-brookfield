@@ -23,7 +23,7 @@ const useNewsletterSignup = () => {
           width: 'calc(100% + 24px)',
           height: 'calc(100% + 24px)',
         }}
-        src="http://bit.ly/AmandaBrookfieldNewsletter"
+        src="https://bit.ly/AmandaBrookfieldNewsletter"
       />,
     )
   }
