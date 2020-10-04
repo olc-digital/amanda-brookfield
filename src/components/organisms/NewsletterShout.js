@@ -6,6 +6,7 @@ import {crimsonTextFont} from '../../styles/mixins'
 import useNewsletterSignup from '../../hooks/useNewsletterSignup'
 
 import newsletterIcon from '../../img/newsletter.svg'
+import media from '../../styles/mediaQueries'
 
 // cool blue - rgba(20, 90, 156, 0.76);
 // awesome purple - rgba(64, 20, 156, 0.66);
@@ -21,7 +22,7 @@ const NewsletterShoutWrapper = styled.div`
   padding: 16px;
   justify-content: space-between;
   max-width: 616px;
-  margin: -48px auto 40px;
+  margin: -48px auto 66px;
 
   .newsletter-shout__cta {
     margin: 0 12px;
@@ -45,6 +46,10 @@ const NewsletterShoutWrapper = styled.div`
     max-width: none;
     margin: 0 auto 66px;
   }
+
+  ${media.belowMobile`
+    display: none;
+  `}
 `
 
 const NewsletterShoutHeading = styled.h3`

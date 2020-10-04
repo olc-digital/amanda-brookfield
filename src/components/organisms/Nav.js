@@ -10,6 +10,7 @@ import H2 from '../atoms/H2'
 
 import close from '../../img/cursive-close.svg'
 import menuIcon from '../../img/menu-icon.svg'
+import MobileNewsletterShout from './MobileNewsletterShout'
 
 const menuWidth = '220px'
 const shiftDistance = '230px'
@@ -81,7 +82,7 @@ const NavItemWrapper = styled.div`
 const NavLinkText = styled(H2)`
   /* mobile only */
   margin: 0;
-  padding: 24px 0 20px;
+  padding: 16px 0 11px;
   border-bottom: solid 1px ${({theme}) => theme.lightGrey};
   .active & {
     color: ${({theme}) => theme.red};
@@ -159,6 +160,7 @@ const Nav = () => {
           {NavLinks.map(item => (
             <NavItem key={item.text} {...item} handleClick={hideMobileNav} />
           ))}
+          <MobileNewsletterShout />
         </MobileNav>
       </>
       <DesktopNav>

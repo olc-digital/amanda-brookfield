@@ -8,6 +8,7 @@ import ArticleList from '../../components/molecules/ArticleList'
 import ArticleSection from '../../components/molecules/ArticleSection'
 
 import HelmetHelper from '../../components/molecules/HelmetHelper'
+import NewsletterShout from '../../components/organisms/NewsletterShout'
 
 const FeaturesPage = ({data}) => {
   const {

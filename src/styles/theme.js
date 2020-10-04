@@ -8,6 +8,7 @@ const theme = {
   grey: '#5a5d60',
   orange: '#da5a33',
   blue: 'rgba(20, 90, 156, 0.76)',
+  purple: '#8164be',
   mobileBreakpoint: `${sizes.mobile}px`,
   containerWidth: `${sizes.container}px`,
   narrowContainerWidth: '664px',

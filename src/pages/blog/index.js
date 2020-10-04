@@ -9,6 +9,7 @@ import Container from '../../components/atoms/Container'
 import BlogSidebar from '../../components/organisms/BlogSidebar'
 import BlogListItem from '../../components/molecules/BlogListItem'
 import {hideBelowMobile} from '../../styles/mixins'
+import NewsletterShout from '../../components/organisms/NewsletterShout'
 
 const BlogLayout = styled.div`
   display: flex;
@@ -27,6 +28,7 @@ const BlogIndexPage = ({data, selectedYear}) => {
         title="Blog"
         metaDescription="My blog is a welcoming space where I share candid, funny real-life experiences and thoughts about my personal struggles and milestones, as well as issues we all face in our everyday lives."
       />
+      <NewsletterShout />
       <Container narrow>
         <MobileSketchHeading title="Blog" sketchType="blog" />
         <BlogLayout>
