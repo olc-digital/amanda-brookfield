@@ -10,7 +10,7 @@ amazonLink: https://www.amazon.co.uk/dp/B08CV34NBR
 reviews:
 ---
 
-To be published on October 13 th 2020, ‘The Other Woman’ is a crackling story about love, marriage, lies and fate, showing how our destinies turn on the smallest connections and decisions.
+Published on October 13 th 2020, ‘The Other Woman’ is a crackling story about love, marriage, lies and fate, showing how our destinies turn on the smallest connections and decisions.
 
 On a normal day, in a normal house, on a normal street, wife and mother Fran has had enough. She packs a case, leaves a note for her menacing bully of a husband, Pete, and one for her beloved twenty-year-old son, Harry, and heads to the airport in a last-ditch bid for freedom.
 
