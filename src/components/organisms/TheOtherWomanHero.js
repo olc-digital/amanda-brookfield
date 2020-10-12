@@ -150,16 +150,11 @@ export default function TheOtherWomanHero({
             A novel, &lsquo;The Other Woman&rsquo;
           </H2>
           <BlurbBody>
-            To be published on October 13 th 2020, ‘The Other Woman’ is a
-            crackling story about love, marriage, lies and fate, showing how our
-            destinies turn on the smallest connections and decisions.
+            Published on October 13 th 2020, ‘The Other Woman’ is a crackling
+            story about love, marriage, lies and fate, showing how our destinies
+            turn on the smallest connections and decisions.
           </BlurbBody>
-          <BuyNowButton
-            styleType="blue"
-            href={buyUrl}
-            size="md"
-            text="Pre-order"
-          />
+          <BuyNowButton styleType="blue" href={buyUrl} size="md" />
           <ReadMoreLink to="/books/the-other-woman">
             READ MORE ABOUT THE OTHER WOMAN
           </ReadMoreLink>
