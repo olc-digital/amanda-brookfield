@@ -39,6 +39,10 @@ const NewsletterShoutWrapper = styled.div`
       fill: #fff;
     }
   }
+
+  @media \\0 screen {
+    bottom: 24px;
+  }
 `
 
 const NewsletterShoutHeading = styled.h3`

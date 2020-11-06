@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import media from '../styles/mediaQueries'
 
 const Modal = ({body, heading}) => {
   const ModalWrapper = styled.div`
@@ -10,6 +11,11 @@ const Modal = ({body, heading}) => {
     width: 55vw;
     height: 60vh;
     transform: translate(-50%, -50%);
+
+    ${media.belowMobile`
+      width: calc(100vw - 30px);
+      height: calc(100vh - 90px);
+    `}
   `
 
   const ModalHeader = styled.div`
