@@ -54,9 +54,17 @@ export const ModalProvider = ({children}) => {
     setModalBody(body)
     setModalHeading(heading)
     setModalOpen(true)
+
+    if (window?.document?.body) {
+      window.document.body.style.overflow = 'hidden'
+    }
   }
 
   const closeModal = () => {
+    if (window?.document?.body) {
+      window.document.body.style.overflow = 'visible'
+    }
+
     setModalOpen(false)
     setModalBody([])
     setModalHeading('')
@@ -73,7 +81,10 @@ export const ModalProvider = ({children}) => {
   `
 
   return (
-    <ModalContext.Provider value={{openModal, closeModal}}>
+    <ModalContext.Provider
+      value={{openModal, closeModal}}
+      style={modalOpen ? {overflow: 'hidden'} : null}
+    >
       {children}
       <ModalWrapper
         onClick={() => {
