@@ -15,7 +15,7 @@ import newsletterIcon from '../../img/newsletter.svg'
 
 const NewsletterShoutWrapper = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 24px;
   background-color: #8164be;
   display: flex;
   padding: 12px 0;
@@ -38,10 +38,6 @@ const NewsletterShoutWrapper = styled.div`
       stroke: #fff;
       fill: #fff;
     }
-  }
-
-  @media \\0 screen {
-    bottom: 24px;
   }
 `
 
