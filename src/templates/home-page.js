@@ -15,14 +15,14 @@ import Sketch from '../components/atoms/Sketch'
 import Page from '../components/atoms/Page'
 import HelmetHelper from '../components/molecules/HelmetHelper'
 import media from '../styles/mediaQueries'
+import NewsletterShout from '../components/organisms/NewsletterShout'
 
 const BannerImage = styled(Img)`
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-  height: 220px;
-  max-width: 764px;
+  padding-bottom: 30.5%;
   object-fit: cover;
   ${media.aboveContainer`
     border-radius: 5px;
@@ -48,7 +48,7 @@ const FirstLetter = styled.span`
 `
 
 const Scroller = styled(FullWidth)`
-  overflow-x: scroll;
+  overflow-x: auto;
   margin-bottom: 48px;
   -webkit-overflow-scrolling: touch;
 `
@@ -88,6 +88,9 @@ export const HomePageTemplate = ({
     <Page>
       <HelmetHelper title="Homepage" metaDescription={metaDescription} />
       <Container>
+        <FullWidth>
+          <NewsletterShout large={true} />
+        </FullWidth>
         <FullWidth>
           <BannerImage
             imageInfo={bannerImage}

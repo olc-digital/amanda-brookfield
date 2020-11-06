@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {useState} from 'react'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
 
@@ -10,6 +10,7 @@ import H2 from '../atoms/H2'
 
 import close from '../../img/cursive-close.svg'
 import menuIcon from '../../img/menu-icon.svg'
+import MobileNewsletterShout from './MobileNewsletterShout'
 
 const menuWidth = '220px'
 const shiftDistance = '230px'
@@ -81,7 +82,7 @@ const NavItemWrapper = styled.div`
 const NavLinkText = styled(H2)`
   /* mobile only */
   margin: 0;
-  padding: 24px 0 20px;
+  padding: 16px 0 11px;
   border-bottom: solid 1px ${({theme}) => theme.lightGrey};
   .active & {
     color: ${({theme}) => theme.red};
@@ -141,40 +142,34 @@ const NavItem = ({text, to, name, handleClick = () => null}) => (
   </NavItemWrapper>
 )
 
-class Nav extends Component {
-  state = {isMobileNavVisible: false}
-  hideMobileNav = () => this.setState({isMobileNavVisible: false})
-  showMobileNav = () => this.setState({isMobileNavVisible: true})
-  render() {
-    const {isMobileNavVisible} = this.state
-    return (
-      <div>
-        <>
-          <MobileHamburger onClick={this.showMobileNav} />
-          {isMobileNavVisible && (
-            <BackdropClickTarget onClick={this.hideMobileNav} />
-          )}
-          <MobileNav className={isMobileNavVisible ? 'slideIn' : ''}>
-            <CloseNavButton onClick={this.hideMobileNav}>
-              <Img src={close} />
-            </CloseNavButton>
-            {NavLinks.map(item => (
-              <NavItem
-                key={item.text}
-                {...item}
-                handleClick={this.hideMobileNav}
-              />
-            ))}
-          </MobileNav>
-        </>
-        <DesktopNav>
-          {NavLinks.map(
-            item => !item.mobileOnly && <NavItem key={item.text} {...item} />,
-          )}
-        </DesktopNav>
-      </div>
-    )
-  }
+const Nav = () => {
+  const [isMobileNavVisible, setIsMobileNavVisible] = useState(false)
+
+  const hideMobileNav = () => setIsMobileNavVisible(false)
+  const showMobileNav = () => setIsMobileNavVisible(true)
+
+  return (
+    <div>
+      <>
+        <MobileHamburger onClick={showMobileNav} />
+        {isMobileNavVisible && <BackdropClickTarget onClick={hideMobileNav} />}
+        <MobileNav className={isMobileNavVisible ? 'slideIn' : ''}>
+          <CloseNavButton onClick={hideMobileNav}>
+            <Img src={close} />
+          </CloseNavButton>
+          {NavLinks.map(item => (
+            <NavItem key={item.text} {...item} handleClick={hideMobileNav} />
+          ))}
+          <MobileNewsletterShout />
+        </MobileNav>
+      </>
+      <DesktopNav>
+        {NavLinks.map(
+          item => !item.mobileOnly && <NavItem key={item.text} {...item} />,
+        )}
+      </DesktopNav>
+    </div>
+  )
 }
 
 export default Nav

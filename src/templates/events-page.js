@@ -8,6 +8,7 @@ import H3 from '../components/atoms/H3'
 import Container from '../components/atoms/Container'
 import MobileSketchHeading from '../components/molecules/MobileSketchHeading'
 import HelmetHelper from '../components/molecules/HelmetHelper'
+import NewsletterShout from '../components/organisms/NewsletterShout'
 
 const Event = styled.div`
   margin-bottom: 24px;
@@ -23,6 +24,7 @@ export const EventsPageTemplate = ({events}) => {
         title="Events"
         metaDescription="Get up-to-date news of my latest book events and public appearances. Come and meet me and my amazing dog, Mabel, for signings of my new memoir bestseller ‘For the Love of a Dog.’"
       />
+      <NewsletterShout />
       <Container narrow>
         <MobileSketchHeading title="Events" sketchType="events" />
         {events && events.length
