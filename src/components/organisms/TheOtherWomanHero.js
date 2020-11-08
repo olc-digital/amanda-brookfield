@@ -147,12 +147,14 @@ export default function TheOtherWomanHero({
         <MainSection>
           <RobotoCapsTitle>NEW</RobotoCapsTitle>
           <H2 css={'text-align: left; margin: 20px 0 16px !important;'}>
-            A novel, &lsquo;The Other Woman&rsquo;
+            Latest novel: &lsquo;The Other Woman&rsquo;
           </H2>
           <BlurbBody>
-            Published on October 13 th 2020, ‘The Other Woman’ is a crackling
-            story about love, marriage, lies and fate, showing how our destinies
-            turn on the smallest connections and decisions.
+            A crackling story about love, marriage, lies and fate, showing how
+            our destinies turn on the smallest connections and decisions.
+            <br />
+            &ldquo;Utterly brilliant! This book grabs you from the first page,
+            and never lets you go...&rdquo;
           </BlurbBody>
           <BuyNowButton styleType="blue" href={buyUrl} size="md" />
           <ReadMoreLink to="/books/the-other-woman">
