@@ -106,6 +106,12 @@ collections:
                   valueField: title,
                   displayFields: [title],
                 }
+          - label: Video Hero Section
+            name: videoHeroSection
+            widget: object
+            fields:
+              - {label: Hero text, name: text, widget: text}
+              - {label: Linked Video, name: videoId, widget: string}
           - label: Latest Releases
             name: latestReleases
             widget: object

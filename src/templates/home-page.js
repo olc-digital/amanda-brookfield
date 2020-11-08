@@ -16,6 +16,7 @@ import Page from '../components/atoms/Page'
 import HelmetHelper from '../components/molecules/HelmetHelper'
 import media from '../styles/mediaQueries'
 import NewsletterShout from '../components/organisms/NewsletterShout'
+import Hero from '../components/organisms/Hero'
 
 const BannerImage = styled(Img)`
   width: 100%;
@@ -82,6 +83,7 @@ export const HomePageTemplate = ({
   welcomeText,
   bestSellers,
   hero,
+  videoHero,
   latestReleases = [],
 }) => {
   return (
@@ -118,14 +120,17 @@ export const HomePageTemplate = ({
           </BestSellers>
         </Scroller>
       </Container>
-      <TheOtherWomanHero
-        title={hero.title}
-        text={hero.text}
-        readMoreText={hero.readMoreText}
-        readMorePath={hero.path}
-        buyUrl={hero.amazonLink}
-        coverImage={hero.coverImage}
-      />
+      {videoHero && <Hero {...videoHero} />}
+      {!videoHero && (
+        <TheOtherWomanHero
+          title={hero.title}
+          text={hero.text}
+          readMoreText={hero.readMoreText}
+          readMorePath={hero.path}
+          buyUrl={hero.amazonLink}
+          coverImage={hero.coverImage}
+        />
+      )}
       <Container>
         <H2 margin>Latest Releases</H2>
         {latestReleases.map((latestRelease, i) => (
@@ -161,6 +166,7 @@ const HomePage = ({data}) => {
   )
 
   const hero = {...heroData.frontmatter, ...page.frontmatter.heroSection}
+  const videoHero = page.frontmatter.videoHeroSection
 
   const latestReleasesItems = Object.keys(page.frontmatter.latestReleases)
     .sort()
@@ -177,6 +183,7 @@ const HomePage = ({data}) => {
       welcomeText={welcomeText}
       bestSellers={bestSellers}
       hero={hero}
+      videoHero={videoHero}
       books={books}
       latestReleases={latestReleases}
     />
@@ -210,6 +217,10 @@ export const homePageQuery = graphql`
           title
           text
           readMoreText
+        }
+        videoHeroSection {
+          text
+          videoId
         }
         latestReleases {
           latestRelease1 {

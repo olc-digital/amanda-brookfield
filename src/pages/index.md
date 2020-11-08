@@ -9,6 +9,9 @@ bestSellers:
   bestSeller3: Relative Love
   bestSeller4: A Family Man
   bestSeller5: The Lover
+videoHeroSection:
+  text: Here's some text
+  videoId: MTAzNzM2Mg==
 heroSection:
   title: A novel, 'Good Girls'
   linkedBook: Good Girls
