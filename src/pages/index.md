@@ -1,8 +1,12 @@
 ---
 templateKey: home-page
-metaDescription: Meet me, Amanda Brookfield and my page - turning emotional bestselling novels. My latest, ‘For the Love  of a Dog’, is a poignant, uplifting memoir about finding happiness after divorce. @ABrookfield1
+metaDescription: Meet me, Amanda Brookfield and my page - turning emotional
+  bestselling novels. My latest, ‘For the Love  of a Dog’, is a poignant,
+  uplifting memoir about finding happiness after divorce. @ABrookfield1
 bannerImage: /img/home-banner.jpg
-welcomeText: Welcome to my official website. There’s lots to dip into, with sneak-peeks at my inspirations as well as information about all my sixteen best-sellers, including 'Alice Alone', 'Relative Love' and 'Life Begins'.
+welcomeText: Welcome to my official website. There’s lots to dip into, with
+  sneak-peeks at my inspirations as well as information about all my sixteen
+  best-sellers, including 'Alice Alone', 'Relative Love' and 'Life Begins'.
 bestSellers:
   bestSeller1: Good Girls
   bestSeller2: Before I Knew You
@@ -10,19 +14,18 @@ bestSellers:
   bestSeller4: A Family Man
   bestSeller5: The Lover
 heroSection:
-  title: A novel, 'Good Girls'
-  linkedBook: Good Girls
-  text: Good Girls is about the Keating sisters, Kat and Eleanor, and the turns
-    their lives take after a childhood fraught with difficulties and adolescent
-    rivalries.  It is a coming-of-age story, a mystery and a tear-jerker. But
-    most of all it’s a reminder of whom to keep close and whom to trust with
-    your darkest secrets.
-  readMoreText: Read more about Good Girls
+  title: "Latest novel: 'The Other Woman'"
+  linkedBook: The Other Woman
+  text: >-
+    A crackling story about love, marriage, lies and fate, showing how our
+    destinies turn on the smallest connections and decisions.
+
+    “Utterly brilliant! This book grabs you from the first page, and never lets you go...”
+  readMoreText: Read more about The Other Woman
 latestReleases:
   latestRelease1:
     book: The Other Woman
-    blurb:
-      Published on October 13 th 2020, ‘The Other Woman’ is a crackling story
+    blurb: Published on October 13 th 2020, ‘The Other Woman’ is a crackling story
       about love, marriage, lies and fate, showing how our destinies turn on the
       smallest connections and decisions. On a normal day, in a normal house, on
       a normal street, wife and mother Fran has had enough. She packs a case,
@@ -31,8 +34,7 @@ latestReleases:
       last-ditch bid for freedom.
   latestRelease2:
     book: Good Girls
-    blurb:
-      "Published in October 2019, 'Good Girls' tells the compelling story of
+    blurb: "Published in October 2019, 'Good Girls' tells the compelling story of
       the Keating sisters: Kat is mesmerising, beautiful, smart and charming -
       everything a good girl should be. Her elder sister Eleanor, on the other
       hand, is on the awkward side of tall, clever enough to be bullied, and
