@@ -202,6 +202,8 @@ export const homePageQuery = graphql`
         heroSection {
           title
           text
+          video
+          prefix
           readMoreText
         }
         latestReleases {

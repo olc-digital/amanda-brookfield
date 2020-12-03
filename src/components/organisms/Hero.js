@@ -174,8 +174,12 @@ export default function GoodGirlsHero({
             {title}
           </H2>
           <BlurbBody>{text}</BlurbBody>
-          <BuyNowButton styleType="blue" href={buyUrl} size="md" />
-          <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
+          {!video && (
+            <>
+              <BuyNowButton styleType="blue" href={buyUrl} size="md" />
+              <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
+            </>
+          )}
         </MainSection>
         {video ? (
           <VideoHolder>
