@@ -94,6 +94,7 @@ collections:
             name: heroSection
             widget: object
             fields:
+              - {label: Hero prefix, name: prefix, widget: string}
               - {label: Hero title, name: title, widget: string}
               - {label: Hero text, name: text, widget: text}
               - {label: Read more text, name: readMoreText, widget: string}
@@ -105,6 +106,11 @@ collections:
                   searchFields: [title],
                   valueField: title,
                   displayFields: [title],
+                }
+              - {
+                  label: Hero video (Youtube ID e.g WFP_Ru0wjOE),
+                  name: video,
+                  widget: string,
                 }
           - label: Latest Releases
             name: latestReleases

@@ -6,7 +6,7 @@ import H2 from '../components/atoms/H2'
 import SocialMediaLinks from '../components/molecules/SocialMediaLinks'
 import Container from '../components/atoms/Container'
 import BookWidget from '../components/molecules/BookWidget'
-import TheOtherWomanHero from '../components/organisms/TheOtherWomanHero'
+import Hero from '../components/organisms/Hero'
 import Img from '../components/PreviewCompatibleImage'
 import {crimsonTextFont} from '../styles/mixins'
 import FullWidth from '../components/atoms/FullWidth'
@@ -118,14 +118,7 @@ export const HomePageTemplate = ({
           </BestSellers>
         </Scroller>
       </Container>
-      <TheOtherWomanHero
-        title={hero.title}
-        text={hero.text}
-        readMoreText={hero.readMoreText}
-        readMorePath={hero.path}
-        buyUrl={hero.amazonLink}
-        coverImage={hero.coverImage}
-      />
+      <Hero {...hero} />
       <Container>
         <H2 margin>Latest Releases</H2>
         {latestReleases.map((latestRelease, i) => (
