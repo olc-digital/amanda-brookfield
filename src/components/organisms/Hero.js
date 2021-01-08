@@ -20,7 +20,11 @@ const HeroSection = styled.section`
   ${media.belowMobile`
     &::before {
       content: '';
-      background-image: url(${({background}) => background});
+      ${({isVideo, background}) => {
+        if (!isVideo) {
+          return `background-image: url(${background});`
+        }
+      }}
       background-size: cover;
       opacity: 0.3;
       top: 0;
@@ -94,16 +98,20 @@ const ImgHolder = styled.div`
 `
 
 const VideoHolder = styled.div`
-  width: 276px;
-  height: 0;
-  padding-bottom: 56.22%;
-  flex: 1 0 auto;
-  align-self: center;
+  position: relative;
+  margin-bottom: 24px;
 
-  iframe {
+  img {
     display: block;
     width: 100%;
-    height: 100%;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% !important;
   }
 `
 
@@ -165,6 +173,32 @@ export default function GoodGirlsHero({
   const {srcSet, path} = previewCompatibleImage(coverImage) || {}
   const background = getSrcFromSrcSet(srcSet, 500) || path
 
+  if (video) {
+    return (
+      <HeroSection background={background} isVideo={!!video}>
+        <div style={{maxWidth: 792, margin: '0 auto', padding: '0 24px'}}>
+          <MainSection>
+            <RobotoCapsTitle>{prefix}</RobotoCapsTitle>
+            <H2 css={'text-align: left; margin: 20px 0 16px !important;'}>
+              {title}
+            </H2>
+            <BlurbBody>{text}</BlurbBody>
+            <VideoHolder>
+              <img src="data:image/png;base64,R0lGODlhEAAJAIAAAP///wAAACwAAAAAEAAJAAACCoSPqcvtD6OclBUAOw==" />
+              <iframe
+                src={`https://www.youtube.com/embed/${video}`}
+                frameBorder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{width: '100%', height: 'auto'}}
+              />
+            </VideoHolder>
+          </MainSection>
+        </div>
+      </HeroSection>
+    )
+  }
+
   return (
     <HeroSection background={background}>
       <HeroContainer>
@@ -174,28 +208,13 @@ export default function GoodGirlsHero({
             {title}
           </H2>
           <BlurbBody>{text}</BlurbBody>
-          {!video && (
-            <>
-              <BuyNowButton styleType="blue" href={buyUrl} size="md" />
-              <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
-            </>
-          )}
+          <BuyNowButton styleType="blue" href={buyUrl} size="md" />
+          <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
         </MainSection>
-        {video ? (
-          <VideoHolder>
-            <iframe
-              src={`https://www.youtube.com/embed/${video}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </VideoHolder>
-        ) : (
-          <ImgHolder>
-            {/* DONT DOWNLOAD THIS IMAGE ON MOBILE? */}
-            <Img imageInfo={coverImage} />
-          </ImgHolder>
-        )}
+        <ImgHolder>
+          {/* DONT DOWNLOAD THIS IMAGE ON MOBILE? */}
+          <Img imageInfo={coverImage} />
+        </ImgHolder>
       </HeroContainer>
     </HeroSection>
   )

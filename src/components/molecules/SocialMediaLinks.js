@@ -42,7 +42,7 @@ const NewsletterButton = styled.button`
   */
 
   svg {
-    margin: 0;
+    margin: auto 0;
     width: 26px;
     height: auto;
     transform: translate(-1px, -1px);
