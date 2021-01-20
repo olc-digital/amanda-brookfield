@@ -22,6 +22,8 @@ heroSection:
 
     “Utterly brilliant! This book grabs you from the first page, and never lets you go...”
   readMoreText: Read more about The Other Woman
+  prefix: VIDEO
+  video: WFP_Ru0wjOE
 latestReleases:
   latestRelease1:
     book: The Other Woman
