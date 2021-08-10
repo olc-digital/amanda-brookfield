@@ -126,7 +126,7 @@ export const MabelPageTemplate = ({
 const MabelPage = ({data}) => {
   const {
     markdownRemark: post,
-    allInstaNode: {edges: instagramImages},
+    // allInstaNode: {edges: instagramImages},
   } = data
 
   return (
@@ -137,7 +137,7 @@ const MabelPage = ({data}) => {
       inspirationImage={post.frontmatter.inspirationImage}
       biographyImage={post.frontmatter.biographyImage}
       mabelImage={post.frontmatter.mabelImage}
-      instagramImages={instagramImages}
+      // instagramImages={instagramImages}
       presetGalleryImage1={post.frontmatter.presetGalleryImage1}
       presetGalleryImage2={post.frontmatter.presetGalleryImage2}
     />
