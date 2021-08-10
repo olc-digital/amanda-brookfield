@@ -197,36 +197,36 @@ export const mabelPageQuery = graphql`
         }
       }
     }
-    allInstaNode {
-      edges {
-        node {
-          id
-          likes
-          comments
-          mediaType
-          preview
-          original
-          timestamp
-          caption
-          localFile {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
-            }
-          }
-          # Only available with the public api scraper
-          thumbnails {
-            src
-            config_width
-            config_height
-          }
-          dimensions {
-            height
-            width
-          }
-        }
-      }
-    }
+    # allInstaNode {
+    #   edges {
+    #     node {
+    #       id
+    #       likes
+    #       comments
+    #       mediaType
+    #       preview
+    #       original
+    #       timestamp
+    #       caption
+    #       localFile {
+    #         childImageSharp {
+    #           fluid {
+    #             ...GatsbyImageSharpFluid_tracedSVG
+    #           }
+    #         }
+    #       }
+    #       # Only available with the public api scraper
+    #       thumbnails {
+    #         src
+    #         config_width
+    #         config_height
+    #       }
+    #       dimensions {
+    #         height
+    #         width
+    #       }
+    #     }
+    #   }
+    # }
   }
 `
