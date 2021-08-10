@@ -133,5 +133,9 @@ exports.createSchemaCustomization = ({actions}) => {
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
     }
+
+    type InstaNode implements Node {
+      id: String
+    }
   `)
 }

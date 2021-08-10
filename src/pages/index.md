@@ -14,16 +14,14 @@ bestSellers:
   bestSeller4: A Family Man
   bestSeller5: The Lover
 heroSection:
-  prefix: VIDEO
-  title: "Latest novel: 'The Other Woman'"
+  title: 'Thought for the Day: '
   linkedBook: The Other Woman
-  text: >-
-    A crackling story about love, marriage, lies and fate, showing how our
-    destinies turn on the smallest connections and decisions.
-
-    “Utterly brilliant! This book grabs you from the first page, and never lets you go...”
-  readMoreText: Read more about The Other Woman
-  video: WFP_Ru0wjOE
+  text: >
+    D H Lawrence's tiny gem of a poem, 'Piano', is full of hope and inspiration
+    for us all.
+  readMoreText: 'Reading a powerful story is like a holiday for the mind. '
+  prefix: VIDEO
+  video: wNTO-buOCiM
 latestReleases:
   latestRelease1:
     book: The Other Woman
