@@ -204,7 +204,13 @@ export const homePageQuery = graphql`
           text
           video
           prefix
-          image
+          image {
+            childImageSharp {
+              fluid(maxWidth: 276) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
           link
           readMoreText
         }
