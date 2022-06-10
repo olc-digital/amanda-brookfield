@@ -15,7 +15,7 @@ bestSellers:
   bestSeller5: The Lover
 heroSection:
   linkedBook: ""
-  linkText: Pre-order on Amazon
+  linkText: Pre-order
   text: ""
   prefix: Coming soon...
   readMoreText: ""
