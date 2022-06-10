@@ -211,9 +211,12 @@ export default function GoodGirlsHero({
             {title}
           </H2>
           <BlurbBody>{text}</BlurbBody>
-          <BuyNowButton styleType="blue" href={link || buyUrl} size="md">
-            {linkText}
-          </BuyNowButton>
+          <BuyNowButton
+            styleType="blue"
+            href={link || buyUrl}
+            text={linkText}
+            size="md"
+          />
           {readMoreText && (
             <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
           )}

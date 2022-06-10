@@ -206,7 +206,7 @@ export const homePageQuery = graphql`
           prefix
           image {
             childImageSharp {
-              fluid(maxWidth: 276) {
+              fluid(maxWidth: 420) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }
