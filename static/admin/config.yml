@@ -96,8 +96,13 @@ collections:
             fields:
               - {label: Hero prefix, name: prefix, widget: string}
               - {label: Hero title, name: title, widget: string}
-              - {label: Hero text, name: text, widget: text}
-              - {label: Read more text, name: readMoreText, widget: string}
+              - {label: Hero text, name: text, widget: text, required: false}
+              - {
+                  label: Read more text,
+                  name: readMoreText,
+                  widget: string,
+                  required: false,
+                }
               - {
                   label: Linked Book,
                   name: linkedBook,
@@ -106,19 +111,28 @@ collections:
                   searchFields: [title],
                   valueField: title,
                   displayFields: [title],
+                  required: false,
                 }
               - {
                   label: Hero video (Youtube ID e.g WFP_Ru0wjOE),
                   name: video,
                   widget: string,
+                  required: false,
                 }
               - {
                   label: Hero image,
                   name: image,
                   widget: image,
+                  required: false,
                   media_library: {config: {multiple: false}},
                 }
-              - {label: Link, name: link, widget: string}
+              - {label: Link, name: link, widget: string, required: false}
+              - {
+                  label: Link text,
+                  name: linkText,
+                  widget: string,
+                  required: false,
+                }
           - label: Latest Releases
             name: latestReleases
             widget: object
