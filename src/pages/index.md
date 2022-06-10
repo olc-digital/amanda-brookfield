@@ -14,14 +14,14 @@ bestSellers:
   bestSeller4: A Family Man
   bestSeller5: The Lover
 heroSection:
-  title: "Thought for the Day: "
+  title: The Split
   linkedBook: The Other Woman
-  text: >
-    D H Lawrence's tiny gem of a poem, 'Piano', is full of hope and inspiration
-    for us all.
-  readMoreText: "Reading a powerful story is like a holiday for the mind. "
-  prefix: VIDEO
-  video: wNTO-buOCiM
+  text: " "
+  readMoreText: Pre-order on Amazon
+  prefix: Coming soon...
+  video: " "
+  image: /img/amanda-the-split.jpeg
+  link: https://www.amazon.com/Split-Amanda-Brookfield-ebook/dp/B09ZXP7WGR
 latestReleases:
   latestRelease1:
     book: The Other Woman
