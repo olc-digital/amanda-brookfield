@@ -204,8 +204,6 @@ export const homePageQuery = graphql`
           text
           video
           prefix
-          image
-          link
           readMoreText
         }
         latestReleases {
