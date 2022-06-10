@@ -14,14 +14,15 @@ bestSellers:
   bestSeller4: A Family Man
   bestSeller5: The Lover
 heroSection:
-  title: The Split
-  linkedBook: The Other Woman
-  text: " "
-  readMoreText: Pre-order on Amazon
+  linkedBook: ""
+  linkText: Pre-order on Amazon
+  text: ""
   prefix: Coming soon...
-  video: " "
-  image: /img/amanda-the-split.jpeg
+  readMoreText: ""
+  title: The Split
   link: https://www.amazon.com/Split-Amanda-Brookfield-ebook/dp/B09ZXP7WGR
+  video: ""
+  image: /img/amanda-the-split.jpeg
 latestReleases:
   latestRelease1:
     book: The Other Woman
