@@ -112,6 +112,13 @@ collections:
                   name: video,
                   widget: string,
                 }
+              - {
+                  label: Hero image,
+                  name: image,
+                  widget: image,
+                  media_library: {config: {multiple: false}},
+                }
+              - {label: Link, name: link, widget: string}
           - label: Latest Releases
             name: latestReleases
             widget: object

@@ -169,6 +169,8 @@ export default function GoodGirlsHero({
   video,
   buyUrl,
   coverImage,
+  image,
+  link,
 }) {
   const {srcSet, path} = previewCompatibleImage(coverImage) || {}
   const background = getSrcFromSrcSet(srcSet, 500) || path
@@ -209,11 +211,10 @@ export default function GoodGirlsHero({
           </H2>
           <BlurbBody>{text}</BlurbBody>
           <BuyNowButton styleType="blue" href={buyUrl} size="md" />
-          <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
+          <ReadMoreLink to={link || readMorePath}>{readMoreText}</ReadMoreLink>
         </MainSection>
         <ImgHolder>
-          {/* DONT DOWNLOAD THIS IMAGE ON MOBILE? */}
-          <Img imageInfo={coverImage} />
+          <Img imageInfo={image || coverImage} />
         </ImgHolder>
       </HeroContainer>
     </HeroSection>
