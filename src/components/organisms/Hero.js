@@ -12,11 +12,13 @@ import BuyNowButton from '../atoms/BuyNowButton'
 
 import {hideBelowMobile} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
+import FullWidth from '../atoms/FullWidth'
 
 const HeroSection = styled.section`
   background: ${({theme}) => theme.blue};
   color: #ffffff;
   position: relative;
+  border-radius: 5px;
   ${media.belowMobile`
     &::before {
       content: '';
@@ -203,28 +205,32 @@ export default function GoodGirlsHero({
   }
 
   return (
-    <HeroSection background={background}>
-      <HeroContainer>
-        <MainSection>
-          <RobotoCapsTitle>{prefix}</RobotoCapsTitle>
-          <H2 css={'text-align: left; margin: 20px 0 16px !important;'}>
-            {title}
-          </H2>
-          <BlurbBody>{text}</BlurbBody>
-          <BuyNowButton
-            styleType="blue"
-            href={link || buyUrl}
-            text={linkText}
-            size="md"
-          />
-          {readMoreText && (
-            <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
-          )}
-        </MainSection>
-        <ImgHolder>
-          <Img imageInfo={image || coverImage} />
-        </ImgHolder>
-      </HeroContainer>
-    </HeroSection>
+    <Container>
+      <FullWidth>
+        <HeroSection background={background}>
+          <HeroContainer>
+            <MainSection>
+              <RobotoCapsTitle>{prefix}</RobotoCapsTitle>
+              <H2 css={'text-align: left; margin: 20px 0 16px !important;'}>
+                {title}
+              </H2>
+              <BlurbBody>{text}</BlurbBody>
+              <BuyNowButton
+                styleType="blue"
+                href={link || buyUrl}
+                text={linkText}
+                size="md"
+              />
+              {readMoreText && (
+                <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
+              )}
+            </MainSection>
+            <ImgHolder>
+              <Img imageInfo={image || coverImage} />
+            </ImgHolder>
+          </HeroContainer>
+        </HeroSection>
+      </FullWidth>
+    </Container>
   )
 }
