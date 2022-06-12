@@ -16,10 +16,26 @@ bestSellers:
 heroSection:
   linkedBook: ""
   linkText: Pre-order
-  text: ""
+  text: >-
+    Newly divorced twenty years after a passionate courtship and marriage,
+    Esther’s and Lucas’s
+
+    lives are veering off course, as are the inner worlds of their two grown-up children. But can a
+
+    family ever really be sliced in two?
+
+
+    Is it better to have “someone” than no one?
+
+    Do love-stories ever end?
+
+    Who owns the truth in a relationship?
+
+
+    Publication: 10 August 2022
   prefix: Coming soon...
   readMoreText: ""
-  title: The Split
+  title: " "
   link: https://www.amazon.com/Split-Amanda-Brookfield-ebook/dp/B09ZXP7WGR
   video: ""
   image: /img/amanda-the-split.jpeg
