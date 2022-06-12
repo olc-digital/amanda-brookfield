@@ -16,26 +16,10 @@ import FullWidth from '../atoms/FullWidth'
 import {FirstLetter} from '../../templates/home-page'
 
 const HeroSection = styled.section`
-  background: ${({theme}) => theme.blue};
-  color: #ffffff;
+  background: rgb(226, 226, 236);
+  color: black;
   position: relative;
   border-radius: 5px;
-  ${media.belowMobile`
-    &::before {
-      content: '';
-      ${({isVideo, background}) => {
-        if (!isVideo) {
-          return `background-image: url(${background});`
-        }
-      }}
-      background-size: cover;
-      opacity: 0.3;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-    }`}
 `
 
 const HeroContainer = styled(Container)`
@@ -117,6 +101,13 @@ const VideoHolder = styled.div`
     left: 0;
     width: 100%;
     height: 100% !important;
+  }
+`
+
+const BlueButton = styled(BuyNowButton)`
+  svg path {
+    fill: rgb(226, 226, 236);
+    stroke: inherit;
   }
 `
 
@@ -211,7 +202,7 @@ export default function GoodGirlsHero({
     <HeroSection background={background}>
       <HeroContainer>
         <MainSection>
-          <H2>{prefix}</H2>
+          <H2 style={{color: 'rgb(226, 226, 236)'}}>{prefix}</H2>
           <ImgHolder>
             <Img imageInfo={image || coverImage} />
           </ImgHolder>
@@ -233,7 +224,7 @@ export default function GoodGirlsHero({
             </p>
             <p>Publication:10 August 2022</p>
           </BlurbBody>
-          <BuyNowButton
+          <BlueButton
             styleType="blue"
             href={link || buyUrl}
             text={linkText}
