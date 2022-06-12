@@ -65,7 +65,7 @@ const BestSellers = styled.div`
     margin-right: 0;
     padding-right: ${({theme}) => theme.gutterSize};
     ${media.aboveMobile`
-      padding-right: 0;
+      padding-right: 0
     `}
   }
 `
