@@ -79,7 +79,7 @@ const ImgHolder = styled.div`
   width: 100%;
   flex: 1 0 auto;
   align-self: center;
-  max-width: 380px;
+  max-width: 486px;
   margin: 45px auto;
   border-radius: 12px;
   overflow: hidden;
@@ -208,10 +208,11 @@ export default function GoodGirlsHero({
           </ImgHolder>
           <BlurbBody>
             <p>
-              <FirstLetter>N</FirstLetter>ewly divorced twenty years after a
-              passionate courtship and marriage, Esther's and Lucas's lives are
-              veering off course, as are the inner worlds of their two grown-up
-              children. But can a family ever really be sliced in two?
+              <FirstLetter style={{transform: 'translateX(0)'}}>N</FirstLetter>
+              ewly divorced twenty years after a passionate courtship and
+              marriage, Esther's and Lucas's lives are veering off course, as
+              are the inner worlds of their two grown-up children. But can a
+              family ever really be sliced in two?
             </p>
             <p>
               <strong>
