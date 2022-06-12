@@ -204,35 +204,42 @@ export default function GoodGirlsHero({
   }
 
   return (
-    <Container>
-      <FullWidth>
-        <HeroSection background={background}>
-          <HeroContainer>
-            <MainSection>
-              <RobotoCapsTitle>{prefix}</RobotoCapsTitle>
-              {title && (
-                <H2 css={'text-align: left; margin: 20px 0 16px !important;'}>
-                  {title}
-                </H2>
-              )}
-
-              <ImgHolder>
-                <Img imageInfo={image || coverImage} />
-              </ImgHolder>
-              <BlurbBody>{text}</BlurbBody>
-              <BuyNowButton
-                styleType="blue"
-                href={link || buyUrl}
-                text={linkText}
-                size="md"
-              />
-              {readMoreText && (
+    <HeroSection background={background}>
+      <HeroContainer>
+        <MainSection>
+          <H2>{prefix}</H2>
+          <ImgHolder>
+            <Img imageInfo={image || coverImage} />
+          </ImgHolder>
+          <BlurbBody>
+            <p>
+              Newly divorced twenty years after a passionate courtship and
+              marriage, Esther's and Lucas's lives are veering off course, as
+              are the inner worlds of their two grown-up children. But can a
+              family ever really be sliced in two?
+            </p>
+            <p>
+              <strong>
+                Is it better to have “someone” than no one?
+                <br />
+                Do love-stories ever end?
+                <br />
+                Who owns the truth in a relationship?
+              </strong>
+            </p>
+            <p>Publication:10 August 2022</p>
+          </BlurbBody>
+          <BuyNowButton
+            styleType="blue"
+            href={link || buyUrl}
+            text={linkText}
+            size="md"
+          />
+          {/* {readMoreText && (
                 <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
-              )}
-            </MainSection>
-          </HeroContainer>
-        </HeroSection>
-      </FullWidth>
-    </Container>
+              )} */}
+        </MainSection>
+      </HeroContainer>
+    </HeroSection>
   )
 }
