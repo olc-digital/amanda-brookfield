@@ -36,7 +36,7 @@ const WelcomeText = styled.div`
   text-align: center;
   line-height: ${({theme}) => theme.lineHeight};
 `
-const FirstLetter = styled.span`
+export const FirstLetter = styled.span`
   ${crimsonTextFont}
   font-weight: normal;
   float: left;
@@ -57,6 +57,7 @@ const BestSellers = styled.div`
   justify-content: space-between;
   width: ${({theme}) => theme.containerWidth};
   padding: 0 ${({theme}) => theme.gutterSize} 24px;
+  margin: 0 auto;
   & > * {
     box-sizing: content-box;
     margin-right: 30px;
@@ -65,7 +66,7 @@ const BestSellers = styled.div`
     margin-right: 0;
     padding-right: ${({theme}) => theme.gutterSize};
     ${media.aboveMobile`
-      padding-right: 0;
+      padding-right: 0
     `}
   }
 `
@@ -206,7 +207,7 @@ export const homePageQuery = graphql`
           prefix
           image {
             childImageSharp {
-              fluid(maxWidth: 420) {
+              fluid(maxWidth: 700) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }

@@ -95,7 +95,12 @@ collections:
             widget: object
             fields:
               - {label: Hero prefix, name: prefix, widget: string}
-              - {label: Hero title, name: title, widget: string}
+              - {
+                  label: Hero title,
+                  name: title,
+                  widget: string,
+                  required: false,
+                }
               - {label: Hero text, name: text, widget: text, required: false}
               - {
                   label: Read more text,

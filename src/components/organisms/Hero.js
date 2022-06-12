@@ -12,27 +12,14 @@ import BuyNowButton from '../atoms/BuyNowButton'
 
 import {hideBelowMobile} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
+import FullWidth from '../atoms/FullWidth'
+import {FirstLetter} from '../../templates/home-page'
 
 const HeroSection = styled.section`
-  background: ${({theme}) => theme.blue};
-  color: #ffffff;
+  background: rgb(226, 226, 236);
+  color: black;
   position: relative;
-  ${media.belowMobile`
-    &::before {
-      content: '';
-      ${({isVideo, background}) => {
-        if (!isVideo) {
-          return `background-image: url(${background});`
-        }
-      }}
-      background-size: cover;
-      opacity: 0.3;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-    }`}
+  border-radius: 5px;
 `
 
 const HeroContainer = styled(Container)`
@@ -47,7 +34,7 @@ const HeroContainer = styled(Container)`
 
 const MainSection = styled.div`
   position: relative;
-  padding: 24px 0;
+  padding: 72px 0px;
   width: 100%;
   ${media.aboveMobile`
     align-self: auto;
@@ -59,13 +46,11 @@ const MainSection = styled.div`
   }
 `
 
-const BlurbBody = styled(P)`
-  font-size: 14px;
-  margin-bottom: 48px;
+const BlurbBody = styled.div`
+  font-size: 15px;
+  max-width: 486px;
+  margin: 20px auto;
   position: relative;
-  ${media.aboveMobile`
-    padding-right: 40px;
-  `}
 `
 
 const ReadMoreLink = styled(Link)`
@@ -91,10 +76,14 @@ const ReadMoreLink = styled(Link)`
 `
 
 const ImgHolder = styled.div`
-  width: 276px;
+  width: 100%;
   flex: 1 0 auto;
   align-self: center;
-  ${hideBelowMobile}
+  max-width: 486px;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
 `
 
 const VideoHolder = styled.div`
@@ -112,6 +101,13 @@ const VideoHolder = styled.div`
     left: 0;
     width: 100%;
     height: 100% !important;
+  }
+`
+
+const BlueButton = styled(BuyNowButton)`
+  svg path {
+    fill: rgb(94, 94, 202);
+    stroke: inherit;
   }
 `
 
@@ -206,24 +202,44 @@ export default function GoodGirlsHero({
     <HeroSection background={background}>
       <HeroContainer>
         <MainSection>
-          <RobotoCapsTitle>{prefix}</RobotoCapsTitle>
-          <H2 css={'text-align: left; margin: 20px 0 16px !important;'}>
-            {title}
-          </H2>
-          <BlurbBody>{text}</BlurbBody>
-          <BuyNowButton
+          <H2 style={{color: 'rgb(94, 94, 202)'}}>{prefix}</H2>
+          <ImgHolder>
+            <Img imageInfo={image || coverImage} />
+          </ImgHolder>
+          <BlurbBody>
+            <p>
+              <FirstLetter
+                style={{transform: 'translateX(0)', paddingRight: '8px'}}
+              >
+                N
+              </FirstLetter>
+              ewly divorced twenty years after a passionate courtship and
+              marriage, Esther&apos;s and Lucas&apos;s lives are veering off
+              course, as are the inner worlds of their two grown-up children.
+              But can a family ever really be sliced in two?
+            </p>
+            <p>
+              <strong>
+                Is it better to have “someone” than no one?
+                <br />
+                Do love-stories ever end?
+                <br />
+                Who owns the truth in a relationship?
+              </strong>
+            </p>
+            <p>Publication:10 August 2022</p>
+          </BlurbBody>
+          <BlueButton
             styleType="blue"
             href={link || buyUrl}
             text={linkText}
             size="md"
+            style={{margin: '0 auto'}}
           />
-          {readMoreText && (
-            <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
-          )}
+          {/* {readMoreText && (
+                <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
+              )} */}
         </MainSection>
-        <ImgHolder>
-          <Img imageInfo={image || coverImage} />
-        </ImgHolder>
       </HeroContainer>
     </HeroSection>
   )
