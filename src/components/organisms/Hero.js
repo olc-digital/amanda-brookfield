@@ -34,7 +34,7 @@ const HeroContainer = styled(Container)`
 
 const MainSection = styled.div`
   position: relative;
-  padding: 45px 0px;
+  padding: 72px 0px;
   width: 100%;
   ${media.aboveMobile`
     align-self: auto;
@@ -80,7 +80,7 @@ const ImgHolder = styled.div`
   flex: 1 0 auto;
   align-self: center;
   max-width: 486px;
-  margin: 45px auto;
+  margin: 20px auto;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -106,7 +106,7 @@ const VideoHolder = styled.div`
 
 const BlueButton = styled(BuyNowButton)`
   svg path {
-    fill: rgb(226, 226, 236);
+    fill: rgb(94, 94, 202);
     stroke: inherit;
   }
 `
@@ -202,7 +202,7 @@ export default function GoodGirlsHero({
     <HeroSection background={background}>
       <HeroContainer>
         <MainSection>
-          <H2 style={{color: 'rgb(226, 226, 236)'}}>{prefix}</H2>
+          <H2 style={{color: 'rgb(94, 94, 202)'}}>{prefix}</H2>
           <ImgHolder>
             <Img imageInfo={image || coverImage} />
           </ImgHolder>
