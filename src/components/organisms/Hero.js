@@ -208,11 +208,15 @@ export default function GoodGirlsHero({
           </ImgHolder>
           <BlurbBody>
             <p>
-              <FirstLetter style={{transform: 'translateX(0)'}}>N</FirstLetter>
+              <FirstLetter
+                style={{transform: 'translateX(0)', paddingRight: '8px'}}
+              >
+                N
+              </FirstLetter>
               ewly divorced twenty years after a passionate courtship and
-              marriage, Esther's and Lucas's lives are veering off course, as
-              are the inner worlds of their two grown-up children. But can a
-              family ever really be sliced in two?
+              marriage, Esther&apos;s and Lucas&apos;s lives are veering off
+              course, as are the inner worlds of their two grown-up children.
+              But can a family ever really be sliced in two?
             </p>
             <p>
               <strong>
