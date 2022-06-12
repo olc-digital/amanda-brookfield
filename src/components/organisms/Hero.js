@@ -93,10 +93,9 @@ const ReadMoreLink = styled(Link)`
 `
 
 const ImgHolder = styled.div`
-  width: 276px;
+  width: 100%;
   flex: 1 0 auto;
   align-self: center;
-  ${hideBelowMobile}
 `
 
 const VideoHolder = styled.div`
@@ -211,9 +210,15 @@ export default function GoodGirlsHero({
           <HeroContainer>
             <MainSection>
               <RobotoCapsTitle>{prefix}</RobotoCapsTitle>
-              <H2 css={'text-align: left; margin: 20px 0 16px !important;'}>
-                {title}
-              </H2>
+              {title && (
+                <H2 css={'text-align: left; margin: 20px 0 16px !important;'}>
+                  {title}
+                </H2>
+              )}
+
+              <ImgHolder>
+                <Img imageInfo={image || coverImage} />
+              </ImgHolder>
               <BlurbBody>{text}</BlurbBody>
               <BuyNowButton
                 styleType="blue"
@@ -225,9 +230,6 @@ export default function GoodGirlsHero({
                 <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
               )}
             </MainSection>
-            <ImgHolder>
-              <Img imageInfo={image || coverImage} />
-            </ImgHolder>
           </HeroContainer>
         </HeroSection>
       </FullWidth>
