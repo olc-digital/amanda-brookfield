@@ -57,6 +57,7 @@ const BestSellers = styled.div`
   justify-content: space-between;
   width: ${({theme}) => theme.containerWidth};
   padding: 0 ${({theme}) => theme.gutterSize} 24px;
+  margin: 0 auto;
   & > * {
     box-sizing: content-box;
     margin-right: 30px;
