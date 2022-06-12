@@ -13,6 +13,7 @@ import BuyNowButton from '../atoms/BuyNowButton'
 import {hideBelowMobile} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
 import FullWidth from '../atoms/FullWidth'
+import {FirstLetter} from '../../templates/home-page'
 
 const HeroSection = styled.section`
   background: ${({theme}) => theme.blue};
@@ -49,7 +50,7 @@ const HeroContainer = styled(Container)`
 
 const MainSection = styled.div`
   position: relative;
-  padding: 24px 0;
+  padding: 45px 0px;
   width: 100%;
   ${media.aboveMobile`
     align-self: auto;
@@ -61,13 +62,11 @@ const MainSection = styled.div`
   }
 `
 
-const BlurbBody = styled(P)`
-  font-size: 14px;
-  margin-bottom: 48px;
+const BlurbBody = styled.div`
+  font-size: 15px;
+  max-width: 486px;
+  margin: 20px auto;
   position: relative;
-  ${media.aboveMobile`
-    padding-right: 40px;
-  `}
 `
 
 const ReadMoreLink = styled(Link)`
@@ -96,6 +95,11 @@ const ImgHolder = styled.div`
   width: 100%;
   flex: 1 0 auto;
   align-self: center;
+  max-width: 380px;
+  margin: 45px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
 `
 
 const VideoHolder = styled.div`
@@ -213,10 +217,10 @@ export default function GoodGirlsHero({
           </ImgHolder>
           <BlurbBody>
             <p>
-              Newly divorced twenty years after a passionate courtship and
-              marriage, Esther's and Lucas's lives are veering off course, as
-              are the inner worlds of their two grown-up children. But can a
-              family ever really be sliced in two?
+              <FirstLetter>N</FirstLetter>ewly divorced twenty years after a
+              passionate courtship and marriage, Esther's and Lucas's lives are
+              veering off course, as are the inner worlds of their two grown-up
+              children. But can a family ever really be sliced in two?
             </p>
             <p>
               <strong>
@@ -234,6 +238,7 @@ export default function GoodGirlsHero({
             href={link || buyUrl}
             text={linkText}
             size="md"
+            style={{margin: '0 auto'}}
           />
           {/* {readMoreText && (
                 <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>

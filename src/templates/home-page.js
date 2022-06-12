@@ -36,7 +36,7 @@ const WelcomeText = styled.div`
   text-align: center;
   line-height: ${({theme}) => theme.lineHeight};
 `
-const FirstLetter = styled.span`
+export const FirstLetter = styled.span`
   ${crimsonTextFont}
   font-weight: normal;
   float: left;
