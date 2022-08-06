@@ -15,7 +15,7 @@ bestSellers:
   bestSeller5: The Lover
 heroSection:
   linkedBook: ""
-  linkText: Pre-order
+  linkText: BUY NOW
   text: >-
     Newly divorced twenty years after a passionate courtship and marriage,
     Esther’s and Lucas’s
@@ -33,7 +33,7 @@ heroSection:
 
 
     Publication: 10 August 2022
-  prefix: Coming soon...
+  prefix: "Latest Release: 'The Split'"
   readMoreText: ""
   title: " "
   link: https://www.amazon.com/Split-Amanda-Brookfield-ebook/dp/B09ZXP7WGR
