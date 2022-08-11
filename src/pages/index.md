@@ -36,7 +36,7 @@ heroSection:
   prefix: "Latest Release: 'The Split'"
   readMoreText: ""
   title: " "
-  link: https://www.amazon.com/Split-Amanda-Brookfield-ebook/dp/B09ZXP7WGR
+  link: https://www.amazon.co.uk/Split-Amanda-Brookfield-ebook/dp/B09ZXP7WGR
   video: ""
   image: /img/amanda-the-split.jpeg
 latestReleases:
