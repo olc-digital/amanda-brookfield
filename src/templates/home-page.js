@@ -160,9 +160,10 @@ const HomePage = ({data}) => {
     .sort()
     .map(key => page.frontmatter.latestReleases[key])
   const latestReleasesTitles = latestReleasesItems.map(({book}) => book)
+  console.log(latestReleasesItems)
   const latestReleases = books
     .filter(book => latestReleasesTitles.includes(book.title))
-    .map((book, i) => ({...book, blurb: latestReleasesItems[i].blurb}))
+    .map((book, i) => ({...book, blurb: latestReleasesItems[i]?.blurb || ''}))
 
   return (
     <HomePageTemplate
