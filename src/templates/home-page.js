@@ -216,6 +216,7 @@ export const homePageQuery = graphql`
           linkText
           link
           readMoreText
+          readMorePath
         }
         latestReleases {
           latestRelease1 {

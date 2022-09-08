@@ -6,13 +6,10 @@ import Link from '../atoms/Link'
 import Container from '../atoms/Container'
 import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
 import H2 from '../atoms/H2'
-import P from '../atoms/P'
 import BuyNowButton from '../atoms/BuyNowButton'
 // import goodGirlsTop from '../../img/good-girls-top.png'
 
-import {hideBelowMobile} from '../../styles/mixins'
 import media from '../../styles/mediaQueries'
-import FullWidth from '../atoms/FullWidth'
 import {FirstLetter} from '../../templates/home-page'
 
 const HeroSection = styled.section`
@@ -59,16 +56,12 @@ const ReadMoreLink = styled(Link)`
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-align: center;
-  color: #ffffff !important;
+  color: #5e5eca !important;
+  font-weight: 600;
   text-decoration: none;
-  width: 166px;
-  padding: 10px 5px;
-  margin: 16px 0 32px;
-  ${media.aboveContainer`
-    margin-bottom: 0;
-  `}
+  padding: 15px 0;
   &:hover {
     color: inherit;
     text-decoration: underline;
@@ -109,6 +102,14 @@ const BlueButton = styled(BuyNowButton)`
     fill: rgb(94, 94, 202);
     stroke: inherit;
   }
+`
+
+const Actions = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
 `
 
 const previewCompatibleImage = imageInfo => {
@@ -229,16 +230,17 @@ export default function GoodGirlsHero({
             </p>
             <p>Publication:10 August 2022</p>
           </BlurbBody>
-          <BlueButton
-            styleType="blue"
-            href={link || buyUrl}
-            text={linkText}
-            size="md"
-            style={{margin: '0 auto'}}
-          />
-          {/* {readMoreText && (
-                <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
-              )} */}
+          <Actions>
+            {readMoreText && (
+              <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
+            )}
+            <BlueButton
+              styleType="blue"
+              href={link || buyUrl}
+              text={linkText}
+              size="md"
+            />
+          </Actions>
         </MainSection>
       </HeroContainer>
     </HeroSection>
