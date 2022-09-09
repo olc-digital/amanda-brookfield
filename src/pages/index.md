@@ -14,7 +14,7 @@ bestSellers:
   bestSeller4: A Family Man
   bestSeller5: The Lover
 heroSection:
-  linkedBook: ''
+  linkedBook: ""
   linkText: BUY NOW
   text: >-
     Newly divorced twenty years after a passionate courtship and marriage,
@@ -33,18 +33,19 @@ heroSection:
 
 
     Publication: 10 August 2022
+  readMorePath: /books/the-split
   prefix: "Latest Release: 'The Split'"
-  readMoreText: 'Read more'
-  readMorePath: '/books/the-split'
-  title: ' '
+  readMoreText: Read more
+  title: " "
+  youtubeVideo1: https://www.youtube.com/watch?v=QoSC0oF6bqg
+  youtubeVideo2: https://www.youtube.com/watch?v=pS2jv6EJywY
   link: https://www.amazon.co.uk/Split-Amanda-Brookfield-ebook/dp/B09ZXP7WGR
-  video: ''
+  video: ""
   image: /img/amanda-the-split.jpeg
 latestReleases:
   latestRelease1:
     book: The Other Woman
-    blurb:
-      Published on October 13 th 2020, ‘The Other Woman’ is a crackling story
+    blurb: Published on October 13 th 2020, ‘The Other Woman’ is a crackling story
       about love, marriage, lies and fate, showing how our destinies turn on the
       smallest connections and decisions. On a normal day, in a normal house, on
       a normal street, wife and mother Fran has had enough. She packs a case,
@@ -53,8 +54,7 @@ latestReleases:
       last-ditch bid for freedom.
   latestRelease2:
     book: Good Girls
-    blurb:
-      "Published in October 2019, 'Good Girls' tells the compelling story of
+    blurb: "Published in October 2019, 'Good Girls' tells the compelling story of
       the Keating sisters: Kat is mesmerising, beautiful, smart and charming -
       everything a good girl should be. Her elder sister Eleanor, on the other
       hand, is on the awkward side of tall, clever enough to be bullied, and
