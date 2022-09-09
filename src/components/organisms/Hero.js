@@ -121,6 +121,12 @@ const MediaWrapper = styled.div`
   border-radius: 12px;
   max-width: calc(486px + 60px);
   margin: 45px auto 0;
+
+  ${media.belowMobile`
+    padding: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+  `}
 `
 
 const MediaTitle = styled(H3)`
@@ -155,6 +161,10 @@ const MediaInner = styled.div`
     opacity: 0.8;
     width: auto;
     height: 48px;
+
+    ${media.belowMobile`
+      height: 40px;
+    `}
   }
 
   a:hover svg {
