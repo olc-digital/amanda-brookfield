@@ -11,6 +11,8 @@ import BuyNowButton from '../atoms/BuyNowButton'
 
 import media from '../../styles/mediaQueries'
 import {FirstLetter} from '../../templates/home-page'
+import H3 from '../atoms/H3'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const HeroSection = styled.section`
   background: rgb(226, 226, 236);
@@ -112,6 +114,65 @@ const Actions = styled.div`
   gap: 45px;
 `
 
+const MediaWrapper = styled.div`
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: calc(486px + 60px);
+  margin: 45px auto 0;
+`
+
+const MediaTitle = styled(H3)`
+  position: absolute;
+  top: -12px;
+  margin: 0;
+  left: 50%;
+  letter-spacing: 1px;
+  transform: translateX(-50%);
+  background-color: #eeeef3;
+  padding: 6px 12px 3px;
+  line-height: 1;
+  border-radius: 20px;
+`
+
+const MediaInner = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  a {
+    width: 100%;
+    position: relative;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: invert(1) drop-shadow(0px 0px 15px black);
+    opacity: 0.8;
+    width: auto;
+    height: 48px;
+  }
+
+  a:hover svg {
+    opacity: 1;
+  }
+`
+
+const MediaImage = styled.div`
+  position: relative;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 54%;
+  background-image: ${props => props.backgroundImage};
+  background-size: cover;
+  background-position: center;
+`
+
 const previewCompatibleImage = imageInfo => {
   if (!imageInfo) {
     return null
@@ -169,9 +230,20 @@ export default function GoodGirlsHero({
   image,
   link,
   linkText,
+  youtubeVideo1,
+  youtubeVideo2,
 }) {
   const {srcSet, path} = previewCompatibleImage(coverImage) || {}
   const background = getSrcFromSrcSet(srcSet, 500) || path
+
+  const mediaItems = [youtubeVideo1, youtubeVideo2]
+    .filter(Boolean)
+    .map(mItem => ({
+      thumbnail: `https://img.youtube.com/vi/${
+        mItem.split('v=')[1].split('&')[0]
+      }/hqdefault.jpg`,
+      url: mItem,
+    }))
 
   if (video) {
     return (
@@ -241,6 +313,34 @@ export default function GoodGirlsHero({
               size="md"
             />
           </Actions>
+          <MediaWrapper>
+            <MediaTitle>Media</MediaTitle>
+            <FontAwesomeIcon icon="play" />
+            <MediaInner>
+              {mediaItems.map(({thumbnail, url}, index) => (
+                <a key={index} href={url} target="_blank" rel="noreferrer">
+                  <MediaImage backgroundImage={`url(${thumbnail})`} />
+                  <svg
+                    width="24px"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-labelledby="videoIconTitle"
+                    stroke="#000000"
+                    strokeWidth="1"
+                    strokeLinecap="square"
+                    strokeLinejoin="miter"
+                    fill="none"
+                    color="#000000"
+                  >
+                    <polygon points="18 12 9 16.9 9 7" />{' '}
+                    <circle cx="12" cy="12" r="10" />
+                  </svg>
+                </a>
+              ))}
+            </MediaInner>
+          </MediaWrapper>
         </MainSection>
       </HeroContainer>
     </HeroSection>
