@@ -324,7 +324,7 @@ export default function GoodGirlsHero({
             />
           </Actions>
           <MediaWrapper>
-            <MediaTitle>Media</MediaTitle>
+            <MediaTitle>Video Clips</MediaTitle>
             <FontAwesomeIcon icon="play" />
             <MediaInner>
               {mediaItems.map(({thumbnail, url}, index) => (
