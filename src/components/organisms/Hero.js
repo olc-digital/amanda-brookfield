@@ -111,7 +111,11 @@ const Actions = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  gap: 45px;
+  margin: -22px;
+
+  & > * {
+    padding: 22px;
+  }
 `
 
 const MediaWrapper = styled.div`
@@ -145,7 +149,11 @@ const MediaTitle = styled(H3)`
 const MediaInner = styled.div`
   display: flex;
   justify-content: center;
-  gap: 20px;
+  margin: -10px;
+
+  > * {
+    padding: 10px;
+  }
 
   a {
     width: 100%;
@@ -314,14 +322,18 @@ export default function GoodGirlsHero({
           </BlurbBody>
           <Actions>
             {readMoreText && (
-              <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
+              <div>
+                <ReadMoreLink to={readMorePath}>{readMoreText}</ReadMoreLink>
+              </div>
             )}
-            <BlueButton
-              styleType="blue"
-              href={link || buyUrl}
-              text={linkText}
-              size="md"
-            />
+            <div>
+              <BlueButton
+                styleType="blue"
+                href={link || buyUrl}
+                text={linkText}
+                size="md"
+              />
+            </div>
           </Actions>
           <MediaWrapper>
             <MediaTitle>Video Clips</MediaTitle>
