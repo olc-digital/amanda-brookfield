@@ -108,7 +108,7 @@ const BlueButton = styled(BuyNowButton)`
 
 const Actions = styled.div`
   display: flex;
-  width: 100%;
+  min-width: 100%;
   justify-content: center;
   align-items: center;
   margin: -22px;
