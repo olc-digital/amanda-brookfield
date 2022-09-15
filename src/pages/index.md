@@ -42,6 +42,8 @@ heroSection:
   link: https://www.amazon.co.uk/Split-Amanda-Brookfield-ebook/dp/B09ZXP7WGR
   video: ""
   image: /img/amanda-the-split.jpeg
+  youtubeVideo1: 'https://www.youtube.com/watch?v=wV7xPAZcb5M'
+  youtubeVideo2: 'https://www.youtube.com/watch?v=XaA_e0A89Hg'
 latestReleases:
   latestRelease1:
     book: The Other Woman

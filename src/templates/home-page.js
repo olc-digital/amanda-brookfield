@@ -217,6 +217,8 @@ export const homePageQuery = graphql`
           link
           readMoreText
           readMorePath
+          youtubeVideo1
+          youtubeVideo2
         }
         latestReleases {
           latestRelease1 {

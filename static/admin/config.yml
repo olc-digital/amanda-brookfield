@@ -109,6 +109,12 @@ collections:
                   required: false,
                 }
               - {
+                  label: Read more path,
+                  name: readMorePath,
+                  widget: string,
+                  required: false,
+                }
+              - {
                   label: Linked Book,
                   name: linkedBook,
                   widget: relation,
@@ -135,6 +141,18 @@ collections:
               - {
                   label: Link text,
                   name: linkText,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Media video 1,
+                  name: youtubeVideo1,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Media video 2,
+                  name: youtubeVideo2,
                   widget: string,
                   required: false,
                 }
