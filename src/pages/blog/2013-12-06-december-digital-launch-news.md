@@ -6,7 +6,7 @@ tags:
   - newsletters
 ---
 
-**December 6th: Digital Publication Day for my novels '[Relative Love](http://www.amazon.co.uk/dp/B00H2GYBVO)' and '[A Family Man](http://www.amazon.co.uk/dp/B00H2GYBP0)':**
+**December 6th: Digital Publication Day for my novels '[Relative Love](https://www.amazon.co.uk/dp/B085G3BSYS)' and '[A Family Man](https://www.amazon.co.uk/dp/B085FTJHP1)':**
 
 I can dimly - very dimly - remember when I thought 'digital publishing' wasn't going to be something that would affect me too much... a ha ha.
 

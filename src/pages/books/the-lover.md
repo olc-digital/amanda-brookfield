@@ -6,7 +6,7 @@ title: The Lover
 originalPublicationDate: 2000-03-02T00:00:00.000Z
 coverImage: /img/covers/the-lover.jpg
 coverSketchImage: /img/covers/the-lover-sketch.jpg
-amazonLink: http://www.amazon.co.uk/dp/B00Q8NUXI2
+amazonLink: https://www.amazon.co.uk/dp/B085HBV41W
 reviews:
   - reviewer: Oxford Times
     text: >

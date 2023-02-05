@@ -12,9 +12,9 @@ Family Man': **
 
 &nbsp;
 
-**<a href="http://www.amazon.co.uk/dp/B00H2GYBVO">http://www.amazon.co.uk/dp/B00H2GYBVO</a>**
+**<a href="https://www.amazon.co.uk/dp/B085G3BSYS">https://www.amazon.co.uk/dp/B085G3BSYS</a>**
 
-**<a href="http://www.amazon.co.uk/dp/B00H2GYBP0">http://www.amazon.co.uk/dp/B00H2GYBP0</a>**
+**<a href="https://www.amazon.co.uk/dp/B085FTJHP1">https://www.amazon.co.uk/dp/B085FTJHP1</a>**
 
 I can dimly - very dimly - remember when I thought 'digital publishing' wasn't
 going to be something that would affect me too much....ha ha ha.
