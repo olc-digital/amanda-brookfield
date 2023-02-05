@@ -37,8 +37,6 @@ heroSection:
   prefix: "Latest Release: 'The Split'"
   readMoreText: Read more
   title: " "
-  youtubeVideo1: https://www.youtube.com/watch?v=QoSC0oF6bqg
-  youtubeVideo2: https://www.youtube.com/watch?v=pS2jv6EJywY
   link: https://www.amazon.co.uk/Split-Amanda-Brookfield-ebook/dp/B09ZXP7WGR
   video: ""
   image: /img/amanda-the-split.jpeg
