@@ -153,7 +153,7 @@ const HomePage = ({data}) => {
     bestSellersTitles.includes(book.title),
   )
 
-  const hero = {}
+  const hero = page.frontmatter.heroSection
 
   const latestReleasesItems = Object.keys(page.frontmatter.latestReleases)
     .sort()
@@ -199,6 +199,21 @@ export const homePageQuery = graphql`
           bestSeller3
           bestSeller4
           bestSeller5
+        }
+        heroSection {
+          prefix
+          books {
+            coverImage
+            title
+            path
+            amazonLink
+          }
+          bookIntros {
+            bookIntro
+          }
+          videos {
+            videourl
+          }
         }
         latestReleases {
           latestRelease1 {

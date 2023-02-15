@@ -236,16 +236,13 @@ const getSrcFromSrcSet = (srcSet, minWidth = 500) => {
   }
 }
 
-export default function GoodGirlsHero({
-  readMoreText,
-  image,
-  linkText,
-  newReleases,
-  youtubeVideo1,
-  youtubeVideo2,
+export default function Hero({
+  prefix,
+  books,
+  bookIntros,
+  videos
 }) {
-
-  const mediaItems = [youtubeVideo1, youtubeVideo2]
+  const mediaItems = videos
     .filter(Boolean)
     .map(mItem => ({
       thumbnail: `https://img.youtube.com/vi/${
@@ -284,38 +281,27 @@ export default function GoodGirlsHero({
     <HeroSection>
       <HeroContainer>
         <MainSection>
-          <H2 style={{ color: 'rgb(94, 94, 202)' }}>Latest Release{newReleases?.length > 1 ? 's' : ''}</H2>
-          {newReleases?.map(({ title, amazonLink, coverImage, path }) => (
+          <H2 style={{ color: 'rgb(94, 94, 202)' }}>{prefix}</H2>
+          {books?.map(({ title, amazonLink, coverImage, path }, index) => (
             <>
               <ImgHolder>
-                <Img imageInfo={image || coverImage} />
+                <Img imageInfo={coverImage} />
               </ImgHolder>
               <BlurbBody>
                 <H3>{title}</H3>
-                <p>
-                  <FirstLetter
-                    style={{ transform: 'translateX(0)', paddingRight: '8px' }}
-                  >
-                    N
-                  </FirstLetter>
-                  ewly divorced twenty years after a passionate courtship and
-                  marriage, Esther&apos;s and Lucas&apos;s lives are veering off
-                  course, as are the inner worlds of their two grown-up children.
-                  But can a family ever really be sliced in two?
-                </p>
-                <p>Publication: 10 August 2022</p>
+                {bookIntros?.[index] || <></>}
               </BlurbBody>
               <Actions>
-                {readMoreText && (
+                {path && (
                   <div>
-                    <ReadMoreLink to={path}>{readMoreText}</ReadMoreLink>
+                    <ReadMoreLink to={path}>Read more</ReadMoreLink>
                   </div>
                 )}
                 <div>
                   <BlueButton
                     styleType="blue"
                     href={amazonLink}
-                    text={linkText}
+                    text="Buy now"
                     size="md"
                   />
                 </div>
