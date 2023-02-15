@@ -121,7 +121,7 @@ export const HomePageTemplate = ({
       </Container>
       <Hero {...hero} />
       <Container>
-        <H2 margin>Latest Releases</H2>
+        <H2 margin>Recent Releases</H2>
         {latestReleases.map((latestRelease, i) => (
           <FeaturedBook
             key={i}
@@ -142,7 +142,8 @@ const HomePage = ({data}) => {
   const {
     markdownRemark: page,
     allMarkdownRemarkBooks: {edges},
-    heroData,
+    newRelease1,
+    newRelease2,
   } = data
 
   const {metaDescription, bannerImage, welcomeText} = page.frontmatter
@@ -154,7 +155,7 @@ const HomePage = ({data}) => {
     bestSellersTitles.includes(book.title),
   )
 
-  const hero = {...heroData.frontmatter, ...page.frontmatter.heroSection}
+  const hero = {newReleases: [newRelease1, newRelease2], ...page.frontmatter.heroSection}
 
   const latestReleasesItems = Object.keys(page.frontmatter.latestReleases)
     .sort()
@@ -236,7 +237,21 @@ export const homePageQuery = graphql`
         }
       }
     }
-    heroData: markdownRemark(frontmatter: {bookId: {eq: "the-other-woman"}}) {
+    newRelease1: markdownRemark(frontmatter: {bookId: {eq: "the-other-woman"}}) {
+      frontmatter {
+        title
+        path
+        amazonLink
+        coverImage {
+          childImageSharp {
+            fluid(maxWidth: 276) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
+      }
+    }
+    newRelease2: markdownRemark(frontmatter: {bookId: {eq: "alice-alone"}}) {
       frontmatter {
         title
         path
