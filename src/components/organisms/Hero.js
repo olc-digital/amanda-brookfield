@@ -71,12 +71,11 @@ const ReadMoreLink = styled(Link)`
 `
 
 const ImgHolder = styled.div`
-  width: 100%;
+  width: 50%;
   flex: 1 0 auto;
   align-self: center;
-  max-width: 486px;
+  max-width: 180px;
   margin: 20px auto;
-  border-radius: 12px;
   overflow: hidden;
 }
 `
