@@ -202,18 +202,9 @@ export const homePageQuery = graphql`
         }
         heroSection {
           prefix
-          books {
-            coverImage
-            title
-            path
-            amazonLink
-          }
-          bookIntros {
-            bookIntro
-          }
-          videos {
-            videourl
-          }
+          books
+          bookIntros
+          videos
         }
         latestReleases {
           latestRelease1 {
