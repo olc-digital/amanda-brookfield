@@ -6,7 +6,6 @@ import Link from '../atoms/Link'
 import Container from '../atoms/Container'
 import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
 import H2 from '../atoms/H2'
-import H3 from '../atoms/H3'
 import BuyNowButton from '../atoms/BuyNowButton'
 // import goodGirlsTop from '../../img/good-girls-top.png'
 
