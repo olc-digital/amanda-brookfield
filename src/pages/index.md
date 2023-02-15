@@ -14,29 +14,9 @@ bestSellers:
   bestSeller4: A Family Man
   bestSeller5: The Lover
 heroSection:
-  linkedBook: ""
-  linkText: BUY NOW
   books:
     - Alice Alone
     - The Split
-  text: >-
-    Newly divorced twenty years after a passionate courtship and marriage,
-    Esther’s and Lucas’s
-
-    lives are veering off course, as are the inner worlds of their two grown-up children. But can a
-
-    family ever really be sliced in two?
-
-
-    Is it better to have “someone” than no one?
-
-    Do love-stories ever end?
-
-    Who owns the truth in a relationship?
-
-
-    Publication: 10 August 2022
-  readMorePath: /books/the-split
   bookIntros:
     - On the day that her youngest child leaves home, Alice Hatton is forced to
       confront the fact that she no longer loves her husband and that, without
@@ -46,16 +26,9 @@ heroSection:
       of their two grown-up children. But can a family ever really be sliced in
       two?
   prefix: Latest Releases
-  readMoreText: Read more
-  title: " "
   videos:
     - https://www.youtube.com/watch?v=wV7xPAZcb5M
     - https://www.youtube.com/watch?v=XaA_e0A89Hg
-  youtubeVideo1: https://www.youtube.com/watch?v=wV7xPAZcb5M
-  youtubeVideo2: https://www.youtube.com/watch?v=XaA_e0A89Hg
-  link: https://www.amazon.co.uk/Split-Amanda-Brookfield-ebook/dp/B09ZXP7WGR
-  video: ""
-  image: /img/amanda-the-split.jpeg
 latestReleases:
   latestRelease1:
     book: The Other Woman
