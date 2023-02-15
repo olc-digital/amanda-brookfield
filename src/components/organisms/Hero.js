@@ -284,8 +284,8 @@ export default function GoodGirlsHero({
     <HeroSection>
       <HeroContainer>
         <MainSection>
-          <H2 style={{ color: 'rgb(94, 94, 202)' }}>Latest Release{newReleases.length > 1 ? 's' : ''}</H2>
-          {newReleases.map(({ title, amazonLink, coverImage, path }) => (
+          <H2 style={{ color: 'rgb(94, 94, 202)' }}>Latest Release{newReleases?.length > 1 ? 's' : ''}</H2>
+          {newReleases?.map(({ title, amazonLink, coverImage, path }) => (
             <>
               <ImgHolder>
                 <Img imageInfo={image || coverImage} />
