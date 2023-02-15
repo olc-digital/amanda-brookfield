@@ -277,6 +277,8 @@ export default function Hero({
   //   )
   // }
 
+  console.log(books)
+
   return (
     <HeroSection>
       <HeroContainer>

@@ -52,9 +52,9 @@ export default function BookWidget({coverImage, title, buyUrl, pagePath}) {
         <BookTitle>{title}</BookTitle>
       </Link>
       <BuyNowButton href={buyUrl} />
-      <BlankButton as={Link} to={pagePath}>
+      {/* <BlankButton as={Link} to={pagePath}>
         Read More
-      </BlankButton>
+      </BlankButton> */}
     </Wrapper>
   )
 }
