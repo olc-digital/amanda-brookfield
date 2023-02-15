@@ -90,72 +90,35 @@ collections:
                   valueField: title,
                   displayFields: [title],
                 }
+
           - label: Hero Section
             name: heroSection
             widget: object
             fields:
               - {label: Hero prefix, name: prefix, widget: string}
               - {
-                  label: Hero title,
-                  name: title,
-                  widget: string,
-                  required: false,
-                }
-              - {label: Hero text, name: text, widget: text, required: false}
+                label: Books,
+                name: books,
+                widget: relation,
+                collection: books,
+                searchFields: [title],
+                valueField: title,
+              }
               - {
-                  label: Read more text,
-                  name: readMoreText,
-                  widget: string,
-                  required: false,
-                }
+                label: Book intros,
+                name: bookIntros,
+                widget: list,
+                field: {label: Book intro, name: bookIntro, widget: markdown}
+              }
               - {
-                  label: Read more path,
-                  name: readMorePath,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Linked Book,
-                  name: linkedBook,
-                  widget: relation,
-                  collection: books,
-                  searchFields: [title],
-                  valueField: title,
-                  displayFields: [title],
-                  required: false,
-                }
-              - {
-                  label: Hero video (Youtube ID e.g WFP_Ru0wjOE),
-                  name: video,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Hero image,
-                  name: image,
-                  widget: image,
-                  required: false,
-                  media_library: {config: {multiple: false}},
-                }
-              - {label: Link, name: link, widget: string, required: false}
-              - {
-                  label: Link text,
-                  name: linkText,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Media video 1,
-                  name: youtubeVideo1,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Media video 2,
-                  name: youtubeVideo2,
-                  widget: string,
-                  required: false,
-                }
+                label: Videos,
+                name: videos,
+                widget: list,
+                label_singular: Video,
+                min: 0,
+                max: 3,
+                add_to_top: true,
+              }
           - label: Latest Releases
             name: latestReleases
             widget: object

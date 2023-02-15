@@ -203,23 +203,7 @@ export const homePageQuery = graphql`
           bestSeller5
         }
         heroSection {
-          title
-          text
-          video
-          prefix
-          image {
-            childImageSharp {
-              fluid(maxWidth: 700) {
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
-            }
-          }
-          linkText
-          link
-          readMoreText
-          readMorePath
-          youtubeVideo1
-          youtubeVideo2
+
         }
         latestReleases {
           latestRelease1 {
@@ -233,34 +217,6 @@ export const homePageQuery = graphql`
           latestRelease3 {
             book
             blurb
-          }
-        }
-      }
-    }
-    newRelease1: markdownRemark(frontmatter: {bookId: {eq: "the-other-woman"}}) {
-      frontmatter {
-        title
-        path
-        amazonLink
-        coverImage {
-          childImageSharp {
-            fluid(maxWidth: 276) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
-        }
-      }
-    }
-    newRelease2: markdownRemark(frontmatter: {bookId: {eq: "alice-alone"}}) {
-      frontmatter {
-        title
-        path
-        amazonLink
-        coverImage {
-          childImageSharp {
-            fluid(maxWidth: 276) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
           }
         }
       }
