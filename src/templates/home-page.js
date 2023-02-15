@@ -142,8 +142,6 @@ const HomePage = ({data}) => {
   const {
     markdownRemark: page,
     allMarkdownRemarkBooks: {edges},
-    newRelease1,
-    newRelease2,
   } = data
 
   const {metaDescription, bannerImage, welcomeText} = page.frontmatter
@@ -155,7 +153,7 @@ const HomePage = ({data}) => {
     bestSellersTitles.includes(book.title),
   )
 
-  const hero = {newReleases: [newRelease1, newRelease2], ...page.frontmatter.heroSection}
+  const hero = {}
 
   const latestReleasesItems = Object.keys(page.frontmatter.latestReleases)
     .sort()
@@ -201,9 +199,6 @@ export const homePageQuery = graphql`
           bestSeller3
           bestSeller4
           bestSeller5
-        }
-        heroSection {
-
         }
         latestReleases {
           latestRelease1 {
