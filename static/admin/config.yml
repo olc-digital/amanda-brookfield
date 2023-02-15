@@ -101,6 +101,8 @@ collections:
                 name: books,
                 widget: relation,
                 collection: books,
+                multiple: true,
+                max: 2,
                 searchFields: [title],
                 valueField: title,
               }
@@ -108,12 +110,14 @@ collections:
                 label: Book intros,
                 name: bookIntros,
                 widget: list,
+                max: 2,
                 field: {label: Book intro, name: bookIntro, widget: markdown}
               }
               - {
                 label: Videos,
                 name: videos,
                 widget: list,
+                field: {label: Video URL, name: videoUrl, widget: string},
                 label_singular: Video,
                 min: 0,
                 max: 3,
@@ -226,6 +230,7 @@ collections:
           dateFormat: DD MMM YYYY,
         }
       - {label: Cover Image, name: coverImage, widget: hidden}
+      - {label: Press Image, name: pressImage, widget: hidden, required: false}
       - {label: Cover Sketch Image, name: coverSketchImage, widget: hidden}
       - {label: Amazon Link, name: amazonLink, widget: string}
       - {label: Body, name: body, widget: markdown}
