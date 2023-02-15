@@ -153,7 +153,10 @@ const HomePage = ({data}) => {
     bestSellersTitles.includes(book.title),
   )
 
-  const hero = page.frontmatter.heroSection
+  const hero = {
+    ...page.frontmatter.heroSection,
+    books: books.filter(book => page.frontmatter.heroSection.books.includes(book.title))
+  }
 
   const latestReleasesItems = Object.keys(page.frontmatter.latestReleases)
     .sort()
