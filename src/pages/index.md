@@ -27,6 +27,7 @@ heroSection:
       two?
   prefix: Latest Releases
   videos:
+    - https://www.youtube.com/watch?v=qAyl1Xefxxk
     - https://www.youtube.com/watch?v=wV7xPAZcb5M
     - https://www.youtube.com/watch?v=XaA_e0A89Hg
 latestReleases:
