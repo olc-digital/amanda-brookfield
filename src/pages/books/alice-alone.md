@@ -7,7 +7,7 @@ originalPublicationDate: 1989-01-26T00:00:00.000Z
 coverImage: /img/covers/alice-alone.jpg
 promoImage: /img/covers/alice-alone-promo.jpg
 coverSketchImage: /img/covers/alice-alone-sketch.jpg
-amazonLink: http://www.amazon.co.uk/dp/0340624485
+amazonLink: https://www.amazon.co.uk/dp/B0BLRV5B57
 reviews:
   - reviewer: The Financial Times
     text: >
