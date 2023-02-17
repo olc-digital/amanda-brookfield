@@ -18,7 +18,6 @@ const HeroSection = styled.section`
   background: rgb(226, 226, 236);
   color: black;
   position: relative;
-  border-radius: 5px;
 `
 
 const HeroContainer = styled(Container)`
@@ -74,8 +73,9 @@ const ImgHolder = styled.div`
   width: 50%;
   flex: 1 0 auto;
   align-self: center;
-  max-width: 180px;
+  max-width: 192px;
   margin: 20px auto;
+  border-radius: 6px;
   overflow: hidden;
 }
 `

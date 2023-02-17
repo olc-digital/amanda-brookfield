@@ -155,7 +155,7 @@ const HomePage = ({data}) => {
 
   const hero = {
     ...page.frontmatter.heroSection,
-    books: books.filter(book => page.frontmatter.heroSection.books.includes(book.title))
+    books: page.frontmatter.heroSection.books.map(({ title }) => books.find(book => book.title === title)),
   }
 
   const latestReleasesItems = Object.keys(page.frontmatter.latestReleases)
@@ -242,6 +242,13 @@ export const homePageQuery = graphql`
             templateKey
             path
             amazonLink
+            pressImage {
+              childImageSharp {
+                fixed(width: 192, height: 192) {
+                  ...GatsbyImageSharpFixed_tracedSVG
+                }
+              }
+            }
             coverImage {
               childImageSharp {
                 fixed(width: 125, height: 192) {

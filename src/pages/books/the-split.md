@@ -4,6 +4,7 @@ bookId: the-split
 path: /books/the-split
 title: The Split
 originalPublicationDate: 2022-08-10T00:00:00.000Z
+promoImage: /img/covers/the-split-promo.jpg
 coverImage: /img/covers/the-split.jpg
 coverSketchImage: /img/covers/the-split-sketch.jpg
 amazonLink: https://www.amazon.co.uk/dp/1802808442
