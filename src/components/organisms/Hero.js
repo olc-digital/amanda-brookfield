@@ -71,13 +71,16 @@ const ReadMoreLink = styled(Link)`
 `
 
 const ImgHolder = styled.div`
-  width: 50%;
+  width: calc(75vw - 48px);
+  height: calc(75vw - 48px);
   flex: 1 0 auto;
   align-self: center;
-  max-width: 192px;
+  max-width: 226px;
+  max-height: 226px;
   margin: 20px auto;
   border-radius: 6px;
   overflow: hidden;
+  line-height: 0;
 }
 `
 
@@ -193,12 +196,9 @@ const MediaImage = styled.div`
 
 const Divider = styled.div`
   width: 75%;
-  max-width: 288px;
   height: 3px;
-  background-color: #5e5eca;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 60px auto;
 `
 
 const previewCompatibleImage = imageInfo => {
