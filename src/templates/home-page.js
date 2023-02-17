@@ -242,7 +242,7 @@ export const homePageQuery = graphql`
             templateKey
             path
             amazonLink
-            pressImage {
+            promoImage {
               childImageSharp {
                 fixed(width: 192, height: 192) {
                   ...GatsbyImageSharpFixed_tracedSVG
