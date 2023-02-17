@@ -191,6 +191,16 @@ const MediaImage = styled.div`
   background-position: center;
 `
 
+const Divider = styled.div`
+  width: 75%;
+  max-width: 288px;
+  height: 3px;
+  background-color: #5e5eca;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+`
+
 const previewCompatibleImage = imageInfo => {
   if (!imageInfo) {
     return null
@@ -277,17 +287,16 @@ export default function Hero({
   //   )
   // }
 
-  console.log(books)
-
   return (
     <HeroSection>
       <HeroContainer>
         <MainSection>
           <H2 style={{ color: 'rgb(94, 94, 202)' }}>{prefix}</H2>
           {books?.map(({ title, amazonLink, coverImage, promoImage, path }, index) => (
-            <>
+            <div key={index}>
+              {index > 0 && <Divider />}
               <ImgHolder>
-                <Img imageInfo={coverImage} />
+                <Img imageInfo={promoImage || coverImage} alt={title} />
               </ImgHolder>
               <BlurbBody>
                 {bookIntros?.[index] || <></>}
@@ -307,7 +316,7 @@ export default function Hero({
                   />
                 </div>
               </Actions>
-            </>
+            </div>
           ))}
           <MediaWrapper>
             <MediaTitle>Video Clips</MediaTitle>
