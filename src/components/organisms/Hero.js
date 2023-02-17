@@ -49,6 +49,7 @@ const BlurbBody = styled.div`
   max-width: 486px;
   margin: 20px auto;
   position: relative;
+  text-align: center;
 `
 
 const ReadMoreLink = styled(Link)`
@@ -283,13 +284,12 @@ export default function Hero({
       <HeroContainer>
         <MainSection>
           <H2 style={{ color: 'rgb(94, 94, 202)' }}>{prefix}</H2>
-          {books?.map(({ title, amazonLink, coverImage, path }, index) => (
+          {books?.map(({ title, amazonLink, coverImage, promoImage, path }, index) => (
             <>
               <ImgHolder>
                 <Img imageInfo={coverImage} />
               </ImgHolder>
               <BlurbBody>
-                <H3>{title}</H3>
                 {bookIntros?.[index] || <></>}
               </BlurbBody>
               <Actions>
