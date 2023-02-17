@@ -244,7 +244,7 @@ export const homePageQuery = graphql`
             amazonLink
             promoImage {
               childImageSharp {
-                fixed(width: 192, height: 192) {
+                fixed(width: 226, height: 226) {
                   ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
