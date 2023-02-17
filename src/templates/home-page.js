@@ -155,7 +155,7 @@ const HomePage = ({data}) => {
 
   const hero = {
     ...page.frontmatter.heroSection,
-    books: page.frontmatter.heroSection.books.map(({ title }) => books.find(book => book.title === title)),
+    books: page.frontmatter.heroSection.books.map(bookTitle => books.find(book => book.title === bookTitle)),
   }
 
   const latestReleasesItems = Object.keys(page.frontmatter.latestReleases)
