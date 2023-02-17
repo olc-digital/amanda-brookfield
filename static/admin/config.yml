@@ -230,7 +230,7 @@ collections:
           dateFormat: DD MMM YYYY,
         }
       - {label: Cover Image, name: coverImage, widget: hidden}
-      - {label: Press Image, name: pressImage, widget: hidden, required: false}
+      - {label: Promo Image, name: promoImage, widget: hidden, required: false}
       - {label: Cover Sketch Image, name: coverSketchImage, widget: hidden}
       - {label: Amazon Link, name: amazonLink, widget: string}
       - {label: Body, name: body, widget: markdown}
