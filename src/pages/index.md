@@ -19,16 +19,9 @@ heroSection:
     - Alice Alone
     - The Split
   bookIntros:
-    - A single, attractive, senior director of a successful advertising agency, Rachel Elliot has a
-    handsome lover, close friends, and a clutch of beloved godchildren. But as her fortieth
-    birthday approaches, so does a creeping sense of emptiness...
-    - On the day that her youngest child leaves home, Alice Hatton is forced to
-      confront the fact that she no longer loves her husband and that, without
-      motherhood, her life is empty...
-    - Newly divorced twenty years after a passionate courtship and marriage,
-      Esther's and Lucas's lives are veering off course, as are the inner worlds
-      of their two grown-up children. But can a family ever really be sliced in
-      two?
+    - A single, attractive, senior director of a successful advertising agency, Rachel Elliot has a handsome lover, close friends, and a clutch of beloved godchildren. But as her fortieth birthday approaches, so does a creeping sense of emptiness...
+    - On the day that her youngest child leaves home, Alice Hatton is forced to confront the fact that she no longer loves her husband and that, without motherhood, her life is empty...
+    - Newly divorced twenty years after a passionate courtship and marriage, Esther's and Lucas's lives are veering off course, as are the inner worlds of their two grown-up children. But can a family ever really be sliced in two?
   prefix: Latest Releases
   videos:
     - https://www.youtube.com/watch?v=rIjz2zEdoLk
