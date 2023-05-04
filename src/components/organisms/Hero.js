@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import Img from '../PreviewCompatibleImage'
 
@@ -50,6 +50,13 @@ const BlurbBody = styled.div`
   margin: 20px auto;
   position: relative;
   text-align: center;
+
+  ${media.aboveContainer`
+    font-size: 16px;
+    line-height: 1.45;
+    margin: 0;
+    text-align: left;
+  `}
 `
 
 const ReadMoreLink = styled(Link)`
@@ -81,6 +88,10 @@ const ImgHolder = styled.div`
   border-radius: 6px;
   overflow: hidden;
   line-height: 0;
+
+  ${media.aboveContainer`
+    margin: 0;
+  `}
 }
 `
 
@@ -119,6 +130,11 @@ const Actions = styled.div`
   & > * {
     padding: 22px;
   }
+
+  ${media.aboveContainer`
+    justify-content: flex-end;
+    margin: 0;
+  `}
 `
 
 const MediaWrapper = styled.div`
@@ -201,50 +217,21 @@ const Divider = styled.div`
   margin: 60px auto;
 `
 
-const previewCompatibleImage = imageInfo => {
-  if (!imageInfo) {
-    return null
-  }
+const PromoItem = styled.div`
 
-  const {childImageSharp, path} = imageInfo
+  ${media.aboveContainer`
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: 45px 0;
 
-  if (childImageSharp && childImageSharp.fluid) {
-    return childImageSharp.fluid
-  }
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+  `}
+`
 
-  if (childImageSharp && childImageSharp.fixed) {
-    return childImageSharp.fixed
-  }
 
-  if (path && typeof path === 'string') {
-    return {path}
-  }
-
-  return null
-}
-
-const getSrcFromSrcSet = (srcSet, minWidth = 500) => {
-  if (!srcSet) {
-    return null
-  }
-  // Make this compatible with the CMS preview
-  // Crop the image using css or some other way
-  try {
-    const items = srcSet.split(',').map(background => {
-      const splitPosition = background.lastIndexOf(' ')
-      return {
-        src: background.slice(0, splitPosition),
-        width: Number(background.slice(splitPosition + 1, -1)) || 0, // to just get the number without the w
-      }
-    })
-
-    const {src = ''} = items.find(v => v.width > minWidth) || items.pop()
-
-    return src
-  } catch (err) {
-    return ''
-  }
-}
 
 export default function Hero({
   prefix,
@@ -293,30 +280,32 @@ export default function Hero({
         <MainSection>
           <H2 style={{ color: 'rgb(94, 94, 202)' }}>{prefix}</H2>
           {books?.map(({ title, amazonLink, coverImage, promoImage, path }, index) => (
-            <div key={index}>
+            <Fragment key={index}>
               {index > 0 && <Divider />}
-              <ImgHolder>
-                <Img imageInfo={promoImage || coverImage} alt={title} />
-              </ImgHolder>
-              <BlurbBody>
-                {bookIntros?.[index] || <></>}
-              </BlurbBody>
-              <Actions>
-                {path && (
-                  <div>
-                    <ReadMoreLink to={path}>Read more</ReadMoreLink>
-                  </div>
-                )}
-                <div>
-                  <BlueButton
-                    styleType="blue"
-                    href={amazonLink}
-                    text="Buy now"
-                    size="md"
-                  />
-                </div>
-              </Actions>
-            </div>
+              <PromoItem key={index}>
+                <ImgHolder>
+                  <Img imageInfo={promoImage || coverImage} alt={title} />
+                </ImgHolder>
+                <BlurbBody>
+                  {bookIntros?.[index] || <></>}
+                  <Actions>
+                    {path && (
+                      <div>
+                        <ReadMoreLink to={path}>Read more</ReadMoreLink>
+                      </div>
+                    )}
+                    <div>
+                      <BlueButton
+                        styleType="blue"
+                        href={amazonLink}
+                        text="Buy now"
+                        size="md"
+                      />
+                    </div>
+                  </Actions>
+                </BlurbBody>
+              </PromoItem>
+            </Fragment>
           ))}
           <MediaWrapper>
             <MediaTitle>Video Clips</MediaTitle>

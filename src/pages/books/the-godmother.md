@@ -6,7 +6,8 @@ title: The Godmother
 originalPublicationDate: 1997-07-17T00:00:00.000Z
 coverImage: /img/covers/the-godmother.jpg
 coverSketchImage: /img/covers/the-godmother-sketch.jpg
-amazonLink: http://www.amazon.co.uk/dp/0340671505
+promoImage: /img/covers/the-godmother-promo.jpg
+amazonLink: https://www.amazon.co.uk/dp/B0BVTZLR5V
 reviews:
   - reviewer: Options
     text: >
