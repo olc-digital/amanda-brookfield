@@ -15,9 +15,13 @@ bestSellers:
   bestSeller5: The Lover
 heroSection:
   books:
+    - The Godmother
     - Alice Alone
     - The Split
   bookIntros:
+    - A single, attractive, senior director of a successful advertising agency, Rachel Elliot has a
+    handsome lover, close friends, and a clutch of beloved godchildren. But as her fortieth
+    birthday approaches, so does a creeping sense of emptiness...
     - On the day that her youngest child leaves home, Alice Hatton is forced to
       confront the fact that she no longer loves her husband and that, without
       motherhood, her life is empty...
@@ -27,9 +31,9 @@ heroSection:
       two?
   prefix: Latest Releases
   videos:
+    - https://www.youtube.com/watch?v=rIjz2zEdoLk
     - https://www.youtube.com/watch?v=qAyl1Xefxxk
     - https://www.youtube.com/watch?v=wV7xPAZcb5M
-    - https://www.youtube.com/watch?v=XaA_e0A89Hg
 latestReleases:
   latestRelease1:
     book: The Other Woman
