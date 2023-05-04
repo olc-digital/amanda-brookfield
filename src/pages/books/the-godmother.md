@@ -9,9 +9,23 @@ coverSketchImage: /img/covers/the-godmother-sketch.jpg
 promoImage: /img/covers/the-godmother-promo.jpg
 amazonLink: https://www.amazon.co.uk/dp/B0BVTZLR5V
 reviews:
-  - reviewer: Options
+  - reviewer: Michelle Gorman
     text: >
-      Take this book on holiday with you – its a wonderful beach read with a happy, if rather unexpected, ending.
+      An engaging, emotionally-charged and intriguing story.
+
+  - reviewer: The Mirror
+    text: >
+      No one gets to the heart of human relationships quite so perceptively as Brookfield.
+
+  - reviewer: bestselling author Patricia Scanlan on Before I Knew You
+    text: >
+      No one gets to the heart of human relationships quite so perceptively as Brookfield.
+
+  - reviewer: Oxford Times
+    text: >
+      If Joanna Trollope is the queen of the Aga Saga, then Amanda Brookfield must be a strong contender for princess.
 ---
 
-Rachel Elliot is singe and attractive, a director of a successful advertising agency, with a handsome lover, several close friends and a clutch of young godchildren. But as her fortieth birthday approaches so does a sneaking sense of futility. With typical resolution, she decides that the answer to this new problem is to have a child of her own. Her quest, however, proves fraught with problems. An unforeseen disaster at work, lack of comprehension and cooperation from friends and lovers lead her to the difficult realisation that it takes more than a determined mind to find true emotional fulfilment.
+A single, attractive, senior director of a successful advertising agency, Rachel Elliot has a handsome lover, close friends, and a clutch of beloved godchildren. But as her fortieth birthday approaches, so does a creeping sense of emptiness and the fear that turning her back on motherhood might become something she regrets.
+
+Under constant pressure from her parents to settle down and never having been envious of friends who have started families, Rachel’s confusion grows. Managing a shocking incident at work is soon taking up all her energies and she adores her godchildren. So, is a child of her own what she really wants? Or is motherhood just what everyone else wants for her? If she picks the wrong path, there will be no turning back...
