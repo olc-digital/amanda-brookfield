@@ -126,6 +126,7 @@ const Actions = styled.div`
   justify-content: center;
   align-items: center;
   margin: -22px;
+  margin-top: 0;
 
   & > * {
     padding: 22px;
@@ -133,7 +134,6 @@ const Actions = styled.div`
 
   ${media.aboveContainer`
     justify-content: flex-end;
-    margin: 0;
   `}
 `
 
@@ -225,7 +225,7 @@ const PromoItem = styled.div`
     align-items: center;
     margin: 45px 0;
 
-    &:nth-child(odd) {
+    &:nth-child(even of &) {
       flex-direction: row-reverse;
     }
   `}
