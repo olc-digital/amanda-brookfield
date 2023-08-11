@@ -7,7 +7,7 @@ originalPublicationDate: 2023-08-12T00:00:00.000Z
 coverImage: /img/covers/the-wrong-man.jpg
 coverSketchImage: /img/covers/the-wrong-man-sketch.jpg
 promoImage: /img/covers/the-wrong-man-promo.jpg
-amazonLink: https://www.amazon.co.uk/dp/B0BVTZLR5V
+amazonLink: https://www.amazon.co.uk/dp/B0C458FBK1
 reviews:
   - reviewer: The Mirror
     text: >
