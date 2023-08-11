@@ -15,10 +15,12 @@ bestSellers:
   bestSeller5: The Lover
 heroSection:
   books:
+    - The Wrong Man
     - The Godmother
     - Alice Alone
     - The Split
   bookIntros:
+    - Being with the 'wrong' man does not make finding the 'right' one any easier... While many regard her marriage with admiration and a touch of envy, Jane Lytton quietly reaches the shocking conclusion that her relationship with Michael, a successful banker with little time for her - or the nitty-gritty of family life - is failing.
     - A single, attractive, senior director of a successful advertising agency, Rachel Elliot has a handsome lover, close friends, and a clutch of beloved godchildren. But as her fortieth birthday approaches, so does a creeping sense of emptiness...
     - On the day that her youngest child leaves home, Alice Hatton is forced to confront the fact that she no longer loves her husband and that, without motherhood, her life is empty...
     - Newly divorced twenty years after a passionate courtship and marriage, Esther's and Lucas's lives are veering off course, as are the inner worlds of their two grown-up children. But can a family ever really be sliced in two?

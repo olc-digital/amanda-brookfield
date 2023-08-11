@@ -17,10 +17,6 @@ reviews:
     text: >
       No one gets to the heart of human relationships quite so perceptively as Brookfield.
 
-  - reviewer: bestselling author Patricia Scanlan on Before I Knew You
-    text: >
-      No one gets to the heart of human relationships quite so perceptively as Brookfield.
-
   - reviewer: Oxford Times
     text: >
       If Joanna Trollope is the queen of the Aga Saga, then Amanda Brookfield must be a strong contender for princess.
