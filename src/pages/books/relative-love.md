@@ -6,27 +6,21 @@ title: Relative Love
 originalPublicationDate: 2004-07-19T00:00:00.000Z
 coverImage: /img/covers/relative-love.jpg
 coverSketchImage: /img/covers/relative-love-sketch.jpg
-amazonLink: http://www.amazon.co.uk/dp/B00H2GYBVO
+promoImage: /img/covers/relative-love-promo.jpg
+amazonLink: https://www.amazon.co.uk/dp/1838896171
 reviews:
-  - reviewer: Family Circle
+  - reviewer: Amazon Reviewer
     text: >
-      This book, about deep and complex family love from this accomplished author, is told with true passion
+      Amanda Brookfield writes beautifully about family relations. This was my first Amanda Brookfield. It will not be my last.
 
   - reviewer: Amazon Reviewer
     text: >
-      My favorite Amanda Brookfield read! The characters are so life like and the descriptions are excellent - just read the first page of this book and I am certain you will want to read more!
+      I absolutely loved this book.
 
-  - reviewer: Amazon Reviewer
-    text: >
-      Great family saga
-
-  - reviewer: Amazon Reviewer
-    text: >
-      As always a thoroughly enjoyable read.
-
-  - reviewer: Amazon Reviewer
-    text: >
-      Loved this , got it for a good price on kindle and couldent wait to buy the sequel ,The simple rules of love.
 ---
 
-The Harrison family, gathering for Christmas at their big country house, inhabit a tight safe world of privilege and tradition. But this year, time is catching up with the elderly Pamela and John, while troubles are brewing in the lives of their four children: Cassie, the cosseted youngest, is in the throes of a secret affair with a married man, while awkward Elizabeth struggles with a faltering second marriage. Peter, who will inherit Ashley House, is beginning to meet resistance to the idea from his career-orientated wife, Helen. Only carefree Charlie and his wife, Serena, seem truly content, with nothing to vex them but their adolescent twin girls and the simpler teething troubles of their toddler. But tragedy, of the most unforeseeable and devastating kind, is lying in wait. The family, so apparently secure, is rocked to its core. Hidden turmoil, secrets past and present, are forced to the surface, laying bare the fragility of human happiness and the myriad faces of love in an imperfect world.
+The Harrison family gathers as usual for Christmas in their big Sussex house. This year however, outside realities are pressing hard; Pamela and John, married for four decades, know that time is catching up with them. And trouble is brewing in the lives of their four
+children.
+Cassie, the cossetted youngest, is in the throes of an affair with a married man; Elizabeth, her awkward older sister, is struggling with a faltering second marriage; Peter, the eldest and designated inheritor of Ashley House, is beginning to meet resistance to such a prospect from his career-orientated wife.
+Only Charlie, the charming and carefree younger son, and his wife Serena, seem truly content, with nothing to worry about except their adolescent twin girls and the simpler teething troubles of their toddler.
+Absorbed in their own lives, not one of them is prepared when real tragedy strikes, rocking their world to its core, changing them all forever.

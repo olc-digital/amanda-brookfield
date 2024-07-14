@@ -16,14 +16,12 @@ bestSellers:
   bestSeller6: The Other Woman
 heroSection:
   books:
-    - The Wrong Man
-    - The Godmother
-    - Alice Alone
+    - Relative Love
+    - The Simple Rules of Love
     - The Split
   bookIntros:
-    - Being with the 'wrong' man does not make finding the 'right' one any easier... While many regard her marriage with admiration and a touch of envy, Jane Lytton quietly reaches the shocking conclusion that her relationship with Michael, a successful banker with little time for her - or the nitty-gritty of family life - is failing.
-    - A single, attractive, senior director of a successful advertising agency, Rachel Elliot has a handsome lover, close friends, and a clutch of beloved godchildren. But as her fortieth birthday approaches, so does a creeping sense of emptiness...
-    - On the day that her youngest child leaves home, Alice Hatton is forced to confront the fact that she no longer loves her husband and that, without motherhood, her life is empty...
+    - The Harrison family gathers as usual for Christmas in their big Sussex house. This year however, outside realities are pressing hard; Pamela and John, married for four decades, know that time is catching up with them. And trouble is brewing in the lives of their four children.
+    - For some families, a year can feel like a lifetime. The Harrisons were always a close-knit family. But with the grandchildren fast becoming adults and elderly Pamela struggling to adapt to widowhood, the four children of the middle generation find themselves equally lost in a changing world.
     - Newly divorced twenty years after a passionate courtship and marriage, Esther's and Lucas's lives are veering off course, as are the inner worlds of their two grown-up children. But can a family ever really be sliced in two?
   prefix: Latest Releases
   videos:

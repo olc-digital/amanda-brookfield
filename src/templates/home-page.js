@@ -250,21 +250,21 @@ export const homePageQuery = graphql`
             amazonLink
             promoImage {
               childImageSharp {
-                fixed(width: 226, height: 226) {
+                fixed(width: 226, height: 226, quality: 90) {
                   ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
             }
             coverImage {
               childImageSharp {
-                fixed(width: 210, height: 324) {
+                fixed(width: 210, height: 324, quality: 90) {
                   ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
             }
             coverSketchImage {
               childImageSharp {
-                fixed(width: 117, height: 165) {
+                fixed(width: 117, height: 165, quality: 90) {
                   ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
