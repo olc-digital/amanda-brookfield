@@ -54,20 +54,14 @@ const Scroller = styled(FullWidth)`
 `
 const BestSellers = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 30px;
   width: ${({theme}) => theme.containerWidth};
   padding: 0 ${({theme}) => theme.gutterSize} 24px;
   margin: 0 auto;
   & > * {
     box-sizing: content-box;
-    margin-right: 30px;
-  }
-  & > *:last-child {
-    margin-right: 0;
-    padding-right: ${({theme}) => theme.gutterSize};
-    ${media.aboveMobile`
-      padding-right: 0
-    `}
   }
 `
 const MobileOnlySketch = styled(Sketch)`
@@ -107,11 +101,20 @@ export const HomePageTemplate = ({
         <H2 margin>My Best-Sellers</H2>
         <Scroller>
           <BestSellers>
-            {bestSellers.map((book, index) => (
+            {bestSellers.slice(0, 3).map((book, index) => (
               <BookWidget
                 key={index}
                 coverImage={book.coverImage}
-                title={book.title}
+                pagePath={book.path}
+                buyUrl={book.amazonLink}
+              />
+            ))}
+          </BestSellers>
+          <BestSellers>
+            {bestSellers.slice(3).map((book, index) => (
+              <BookWidget
+                key={index}
+                coverImage={book.coverImage}
                 pagePath={book.path}
                 buyUrl={book.amazonLink}
               />
@@ -162,7 +165,7 @@ const HomePage = ({data}) => {
     .sort()
     .map(key => page.frontmatter.latestReleases[key])
   const latestReleasesTitles = latestReleasesItems.map(({book}) => book)
-  console.log(latestReleasesItems)
+
   const latestReleases = books
     .filter(book => latestReleasesTitles.includes(book.title))
     .map((book, i) => ({...book, blurb: latestReleasesItems[i]?.blurb || ''}))
@@ -251,7 +254,7 @@ export const homePageQuery = graphql`
             }
             coverImage {
               childImageSharp {
-                fixed(width: 125, height: 192) {
+                fixed(width: 210, height: 324) {
                   ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
