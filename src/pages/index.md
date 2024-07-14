@@ -8,11 +8,12 @@ welcomeText: Welcome to my official website. There’s lots to dip into, with
   sneak-peeks at my inspirations as well as information about all my sixteen
   best-sellers, including 'Alice Alone', 'Relative Love' and 'Life Begins'.
 bestSellers:
-  bestSeller1: The Other Woman
-  bestSeller2: Good Girls
-  bestSeller3: Relative Love
-  bestSeller4: A Family Man
-  bestSeller5: The Lover
+  bestSeller1: The Split
+  bestSeller2: The Wrong Man
+  bestSeller3: Good Girls
+  bestSeller4: The Godmother
+  bestSeller5: Alice Alone
+  bestSeller6: The Other Woman
 heroSection:
   books:
     - The Wrong Man

@@ -90,6 +90,15 @@ collections:
                   valueField: title,
                   displayFields: [title],
                 }
+              - {
+                  label: Best Seller 6,
+                  name: bestSeller6,
+                  widget: relation,
+                  collection: books,
+                  searchFields: [title],
+                  valueField: title,
+                  displayFields: [title],
+                }
 
           - label: Hero Section
             name: heroSection

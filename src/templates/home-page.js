@@ -110,6 +110,8 @@ export const HomePageTemplate = ({
               />
             ))}
           </BestSellers>
+        </Scroller>
+        <Scroller>
           <BestSellers>
             {bestSellers.slice(3).map((book, index) => (
               <BookWidget
@@ -205,6 +207,7 @@ export const homePageQuery = graphql`
           bestSeller3
           bestSeller4
           bestSeller5
+          bestSeller6
         }
         heroSection {
           prefix
