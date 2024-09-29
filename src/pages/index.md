@@ -10,18 +10,18 @@ welcomeText: Welcome to my official website. There’s lots to dip into, with
 bestSellers:
   bestSeller1: The Split
   bestSeller2: The Wrong Man
-  bestSeller3: Good Girls
-  bestSeller4: The Godmother
-  bestSeller5: Alice Alone
-  bestSeller6: The Other Woman
+  bestSeller3: The Godmother
+  bestSeller4: The Other Woman
+  bestSeller5: Relative Love
+  bestSeller6: The Simple Rules of Love
 heroSection:
   books:
-    - Relative Love
-    - The Simple Rules of Love
+    - Before I Knew You
+    - The Love Child
     - The Split
   bookIntros:
-    - The Harrison family gathers as usual for Christmas in their big Sussex house. This year however, outside realities are pressing hard; Pamela and John, married for four decades, know that time is catching up with them. And trouble is brewing in the lives of their four children.
-    - For some families, a year can feel like a lifetime. The Harrisons were always a close-knit family. But with the grandchildren fast becoming adults and elderly Pamela struggling to adapt to widowhood, the four children of the middle generation find themselves equally lost in a changing world.
+    - Before I Knew You tells the unsettling story of what happens when two very different families swap houses across the Atlantic one August. William and Beth, newly-weds from Connecticut, need to visit London so that William can spend time with his three sons from his first marriage, while Sophie and Andrew, who have two teenage daughters, are looking for a holiday that might rescue them both from the daily grind and a gradual disintegration of their relationship.
+    - When Janine and Dougie fell in love they thought it would be for ever.Fifteen years later their relationship is well and truly over, their daughter Stevie their one remaining connection.
     - Newly divorced twenty years after a passionate courtship and marriage, Esther's and Lucas's lives are veering off course, as are the inner worlds of their two grown-up children. But can a family ever really be sliced in two?
   prefix: Latest Releases
   videos:

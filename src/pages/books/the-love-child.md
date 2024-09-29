@@ -6,6 +6,7 @@ title: The Love Child
 originalPublicationDate: 2013-01-17T00:00:00.000Z
 coverImage: /img/covers/the-love-child.jpg
 coverSketchImage: /img/covers/the-love-child-sketch.jpg
+promoImage: /img/covers/the-love-child-promo.jpg
 amazonLink: http://www.amazon.co.uk/dp/0718192346
 reviews:
   - reviewer: Amazon Reviewer
