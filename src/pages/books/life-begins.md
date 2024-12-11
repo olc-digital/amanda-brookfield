@@ -6,7 +6,8 @@ title: Life Begins
 originalPublicationDate: 2008-10-16T00:00:00.000Z
 coverImage: /img/covers/life-begins.jpg
 coverSketchImage: /img/covers/life-begins-sketch.jpg
-amazonLink: http://www.amazon.co.uk/dp/0141021837
+promoImage: /img/covers/life-begins-promo.jpg
+amazonLink: https://www.amazon.co.uk/dp/1835614205
 reviews:
   - reviewer: Bella
     text: >

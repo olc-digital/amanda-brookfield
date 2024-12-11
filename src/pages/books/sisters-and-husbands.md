@@ -6,7 +6,8 @@ title: Sisters and Husbands
 originalPublicationDate: 2002-04-04T00:00:00.000Z
 coverImage: /img/covers/sisters-and-husbands.jpg
 coverSketchImage: /img/covers/sisters-and-husbands-sketch.jpg
-amazonLink: http://www.amazon.co.uk/dp/0340770120
+promoImage: /img/covers/sisters-and-husbands-promo.jpg
+amazonLink: https://www.amazon.co.uk/dp/1805495313
 reviews:
   - reviewer: The Sunday Express
     text: >

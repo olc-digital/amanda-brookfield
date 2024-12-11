@@ -9,19 +9,19 @@ welcomeText: Welcome to my official website. There’s lots to dip into, with
   best-sellers, including 'Alice Alone', 'Relative Love' and 'Life Begins'.
 bestSellers:
   bestSeller1: The Split
-  bestSeller2: The Wrong Man
-  bestSeller3: The Godmother
+  bestSeller2: Before I Knew You
+  bestSeller3: The Love Child
   bestSeller4: The Other Woman
   bestSeller5: Relative Love
   bestSeller6: The Simple Rules of Love
 heroSection:
   books:
-    - Before I Knew You
-    - The Love Child
+    - Sisters and Husbands
+    - Life Begins
     - The Split
   bookIntros:
-    - Before I Knew You tells the unsettling story of what happens when two very different families swap houses across the Atlantic one August. William and Beth, newly-weds from Connecticut, need to visit London so that William can spend time with his three sons from his first marriage, while Sophie and Andrew, who have two teenage daughters, are looking for a holiday that might rescue them both from the daily grind and a gradual disintegration of their relationship.
-    - When Janine and Dougie fell in love they thought it would be for ever.Fifteen years later their relationship is well and truly over, their daughter Stevie their one remaining connection.
+    - Ever since the death of their father twenty years before, beautiful thirty-two-year-old Anna has acted as her younger sister Becky’s support, playing the peace-maker in her stormy relationship with their mother, and counselling her through the traumas of a life that has always appeared charmless and problematic in comparison to her own.
+    - Life Begins tells the story of 39-year-old Charlotte Turner, trying to get her life back on track after a miserable marriage. She discovers in the process that readiness to embrace a better future is not in itself a reliable route to happiness.
     - Newly divorced twenty years after a passionate courtship and marriage, Esther's and Lucas's lives are veering off course, as are the inner worlds of their two grown-up children. But can a family ever really be sliced in two?
   prefix: Latest Releases
   videos:
