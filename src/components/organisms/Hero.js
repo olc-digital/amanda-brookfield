@@ -317,7 +317,8 @@ export default function Hero({
               {mediaItems.map(({thumbnail, url}, index) => (
                 <a key={index} href={url} target="_blank" rel="noreferrer">
                   <MediaImage backgroundImage={`url(${thumbnail})`} />
-                  <svg id="Controls_Play_24" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="24" height="24" stroke="none" fill="FFFFFF" opacity="0"></rect>
+                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" stroke="none" fill="FFFFFF" opacity="0" />
                     <g transform="matrix(0.83 0 0 0.83 12 12)">
                       <path transform="translate(-12, -12)" d="M 23.14 10.61 L 2.25 0.16 C 1.7663217178274575 -0.07853658252351811 1.1937449421366766 -0.0503347246239442 0.7358488008575956 0.23457842994970587 C 0.27795265957851467 0.519491584523356 -0.00030880732756832785 1.0207001886840523 0 1.5599999999999985 L 0 22.44 C -0.0003088073275680349 22.979299811315947 0.2779526595785151 23.480508415476645 0.7358488008575962 23.765421570050293 C 1.1937449421366773 24.050334724623944 1.7663217178274584 24.07853658252352 2.250000000000001 23.84 L 23.14 13.39 C 23.6691359352227 13.128912479969442 24.00414287202071 12.590043668773516 24.00414287202071 12 C 24.00414287202071 11.409956331226484 23.6691359352227 10.871087520030558 23.14 10.61 Z" strokeLinecap="round" />
                     </g>
