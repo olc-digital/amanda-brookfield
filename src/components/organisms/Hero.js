@@ -314,22 +314,9 @@ export default function Hero({
               {mediaItems.map(({thumbnail, url}, index) => (
                 <a key={index} href={url} target="_blank" rel="noreferrer">
                   <MediaImage backgroundImage={`url(${thumbnail})`} />
-                  <svg
-                    width="24px"
-                    height="24px"
-                    viewBox="0 0 24 24"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-labelledby="videoIconTitle"
-                    stroke="#000000"
-                    strokeWidth="1"
-                    strokeLinecap="square"
-                    strokeLinejoin="miter"
-                    fill="none"
-                    color="#000000"
-                  >
-                    <polygon points="18 12 9 16.9 9 7" />{' '}
-                    <circle cx="12" cy="12" r="10" />
+                  <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 16C0 7.163 7.163 0 16 0s16 7.163 16 16-7.163 16-16 16S0 24.837 0 16Z" />
+                    <path d="M13 10.92v10.16a1 1 0 0 0 1.573.819l7.257-5.08a1 1 0 0 0 0-1.638l-7.256-5.08a1 1 0 0 0-1.574.82Z" />
                   </svg>
                 </a>
               ))}

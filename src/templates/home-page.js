@@ -98,6 +98,7 @@ export const HomePageTemplate = ({
         </WelcomeText>
         <SocialMediaLinks />
         <MobileOnlySketch type="books" />
+        <Hero {...hero} />
         <H2 margin>My Best-Sellers</H2>
         <Scroller>
           <BestSellers>
@@ -124,7 +125,6 @@ export const HomePageTemplate = ({
           </BestSellers>
         </Scroller>
       </Container>
-      <Hero {...hero} />
       <Container>
         <H2 margin>Recent Releases</H2>
         {latestReleases.map((latestRelease, i) => (
