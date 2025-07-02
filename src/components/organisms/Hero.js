@@ -4,13 +4,10 @@ import Img from '../PreviewCompatibleImage'
 
 import Link from '../atoms/Link'
 import Container from '../atoms/Container'
-import RobotoCapsTitle from '../atoms/RobotoCapsTitle'
 import H2 from '../atoms/H2'
 import BuyNowButton from '../atoms/BuyNowButton'
-// import goodGirlsTop from '../../img/good-girls-top.png'
 
 import media from '../../styles/mediaQueries'
-import {FirstLetter} from '../../templates/home-page'
 import H3 from '../atoms/H3'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
@@ -18,6 +15,11 @@ const HeroSection = styled.section`
   background: rgb(226, 226, 236);
   color: black;
   position: relative;
+
+  ${media.aboveMobile`
+    border-radius: 64px;
+    border: 20px solid rgb(219, 219, 235);
+  `}
 `
 
 const HeroContainer = styled(Container)`
@@ -27,6 +29,7 @@ const HeroContainer = styled(Container)`
 
   ${media.aboveMobile`
     flex-direction: row;
+    padding: 0 48px;
   `}
 `
 
