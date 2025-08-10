@@ -1,0 +1,16 @@
+
+> new-site@0.1.0 dev
+> next dev --turbopack
+
+ ⚠ Warning: Found multiple lockfiles. Selecting /Users/george/core/amanda-brookfield/pnpm-lock.yaml.
+   Consider removing the lockfiles at:
+   * /Users/george/core/amanda-brookfield/new-site/package-lock.json
+
+ ⚠ Port 3000 is in use by process 20070, using available port 3001 instead.
+   ▲ Next.js 15.4.6 (Turbopack)
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.0.97:3001
+
+ ✓ Starting...
+ ✓ Ready in 798ms
+[?25h
