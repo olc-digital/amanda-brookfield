@@ -3,13 +3,13 @@ templateKey: blog-post
 title: "December 2025: Writerly Prescience..."
 date: 2025-12-22T13:25:00.742Z
 ---
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <o:OfficeDocumentSettings>
   <o:AllowPNG/>
  </o:OfficeDocumentSettings>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -48,9 +48,9 @@ date: 2025-12-22T13:25:00.742Z
    <m:intLim m:val="subSup"/>
    <m:naryLim m:val="undOvr"/>
   </m:mathPr></w:WordDocument>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
   LatentStyleCount="376">
@@ -629,9 +629,9 @@ date: 2025-12-22T13:25:00.742Z
   <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
    Name="Smart Link"/>
  </w:LatentStyles>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 10]>
+<!--\\[if gte mso 10]>
 <style>
  /* Style Definitions */
  table.MsoNormalTable
@@ -660,7 +660,7 @@ date: 2025-12-22T13:25:00.742Z
 	mso-ligatures:standardcontextual;
 	mso-fareast-language:EN-US;}
 </style>
-<!\[endif]-->
+<!\\[endif]-->
 
 <!--StartFragment-->
 
@@ -674,7 +674,7 @@ Ha ha – of course not! I was simply sick and a little bonkers with early panic
 
 ‘The Twin’ was published in July, as planned, to lovely reviews. By then I was in the thick of treatment, as I shall be for some time to come, my energies mostly channelled against the vileness of side-effects. But each appreciative reader has made me so happy! Indeed, despite everything, and perhaps even weirder than my wild theories about the workings of the subconscious, I can honestly say that 2025 has been a year full of joy. How could it not be, with the tsunami of loving-kindness – from family, friends, doctors, acquaintances, total strangers – that has been coming my way, literally sweeping me off my feet. Carrying me. And then there’s the new, sharpened focus on the daily miracle of being on this planet, with every *moment* of every hour of every day gleaming like the treasure it is. LIFE! It is so precious. So fleeting. So inexplicable. So glorious!
 
-HAPPY CHRISTMAS world, and bring on 2026.
+Bring on 2026...
 
 Amanda x
 
